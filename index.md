@@ -1,10 +1,9 @@
 ---
 title: Thorne's Old-Fashioned Homepage
+subtitle: (just like your mom used to make)
 author: Evans Winner
 date: 2022-08-25
 ---
-
-*(just like your mom used to make)*
 
 <img src="me.jpg" style="max-width:50%;float:left;">
 
