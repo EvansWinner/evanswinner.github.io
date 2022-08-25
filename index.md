@@ -1,19 +1,21 @@
 ---
-title: Thorne’s Old-fashioned Homepage
+title: Thorne's Old-Fashioned Homepage
+author: Evans Winner
+date: 2022-08-25
 ---
 
 *(just like your mom used to make)*
 
 <img src="me.jpg" style="max-width:50%;float:left;">
 
-I am Evans Hawthorne Winner, 50-year-old IT worker livingin Evergreen, Colorado.
+I am Evans Hawthorne Winner, 50-year-old IT worker living in Evergreen, Colorado.
 
 I used to be a casual rock climber in Boulder,
 later a casual scuba diver in Seattle;
 I studied music composition fairly seriously at university in Boulder for several years;
-later studied literature and philosophy in New Mexico where I finally graduated *summa*.
+later studied literature and philosophy in New Mexico where I finally graduated *Summa*.
 
-I am looking for more analytical work in process improvement, operations, or systems analysis.
+**I am looking for more analytical work in process improvement, operations, or systems analysis**.
 
 I have the somewhat ambitiously named "[portfolio](./portfolio.html)"
 of miscellaneous nerdy things I've done;
