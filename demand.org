@@ -1,0 +1,65 @@
+#+TITLE:       Demanding Satisfaction in Emacs Lisp
+#+AUTHOR:      Evans Winner
+#+DATE:        <2018-04-03 Tue>
+#+OPTIONS:     num:nil toc:nil
+
+I move around between a lot of computers and like every
+other Emacs user who does that, I have to deal with the
+problem of moving my configuration around. There are several
+tricks to doing that, foremost of which is to put your
+.emacs on Github, of course. Another is predicating on the
+system types and system hostnames so that you can get
+specialized behavior depending on which system you’re on.
+
+But both of those things address your own configurations,
+but don’t handle the problem of all the libraries you want
+active and available and loaded as soon as you fire up
+Emacs. Who wants to do ~M-x list-packages RET~ and then
+scroll through the myriad packages trying to remember which
+ones you need — or more likely, start up Emacs, see what
+errors appear and then one-by-one find the libraries and
+install them.
+
+My solution is below. The function ~demand~ is a drop-in
+replacement for ~require~. A call to it looks like this, for
+example:
+
+      : (demand ‘markdown-mode)
+
+~demand~ first trieso simply reqire a package. Only if it
+can’t be required, it will try to install the package from
+whatever archives you have defined in your
+~package-archives~ variable. Then only if that too fails, it
+tries to refresh your package list and then tries again to
+install the package. Only if that fails, it then finally
+gives up and sends a message (that does not stop your init
+file in its tracks) that the package couldn’t be loaded.
+
+#+begin_src emacs-lisp
+(defun demand (symbol)
+  (cond ((require symbol nil t)	t)	;first just try to require
+	((progn				;no? then try to install and require
+	   (condition-case nil
+	       (package-install symbol)
+	     (error nil))
+	   (require symbol nil t)) t)
+	((progn				;no? then refresh package db, install and require
+	   (condition-case nil
+	       (package-refresh-contents)
+	     (error nil))
+	   (condition-case nil
+	       (package-install symbol)
+	     (error nil))
+	   (require symbol nil t)) t)
+	(t (message "%s could not be loaded." symbol)))) ;then it's a loss
+#+end_src
+
+This process, at least in my case (I have 87 calls to
+~demand~ in my init file at the moment) can make your init
+file take several minutes to complete the first time it is
+run; but after that everything Just Works the way you would
+hope, and since it tries a normal ~require~ first,
+thereafter it takes no significant time more than simply
+calling ~require~.
+
+Evans Winner is a Professional IT Minion in Golden, Colorado.

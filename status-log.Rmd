@@ -1,0 +1,119 @@
+---
+title: "Do \"ultradian\" rhythms mediate my productivity throughout the day?"
+author: "Evans Winner"
+date: "January 29, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(out.width='350px', dpi=200)
+```
+
+[Rmarkdown source](status-log.Rmd)
+
+# Introduction
+
+Among productivity bloggers there is a popular idea that the existence of so-called "ultradian rhythms" implies that one can usefully schedule one's work time around such rhythms (see eg. [1], [2], [3] and [4]). The only plausible citation from the scientific literature that I have found in these blogs is Ericsson, 1993, which indicates that high-performing violinsts and students of the violin rated as "good" may tend to practice (in the aggrigate) more in the morning, and then later in the afternoon [5, pg. 376], creating a time graph with two peaks.
+
+In order to determine the best times of the day to try to be productive (as suggested in broad outline in the Asian Efficiency blog [1] I rated my subjective sense of productivity every hour on the hour for seven days, from Saturday morning at 5 am through the following Friday at 8 pm. I logged every hour from 5 am to 8 pm each week day, and from 10 am to 8 pm on the weekend days, this roughly coresponding to my hours of wakefulness.
+
+The scale used was a qualitative scale, notionally from 0 to 5, although zero, corresponding to being dead, asleep or in a coma, was never used, and 5, corresponding to something like psychotic mania was also not used, so the scale effectively ran from 1 to 4, with 4 denoting great productivity and 1 denoting very little. The question asked in collecting the data was "how productive do I feel like I am being or could be if allowed the opportunity." The question was not just "how productive would I like to be?" as the point was to measure actual physiological or psychical arrousal. The question was also not, "how productive am I being right now?" as it was not always possible to be working even if I wanted to be. Also note that questions such as "how to I feel?" and "am I really getting something valuable done" are not at issue. The Asian Efficiency blog referenced above recommends recording three separate variables: "Each hour, write down in the box your level of physical energy, concentration, and mood." My approach wraps all three into the single variable, as the issue of interest is simply, "Am I feeling willing and able to be productive right now?"
+
+Let `data` be the table of data. Column 1 (`day.of.the.week`) is a numeric code denoting the day of the week (Monday = 1); column 2 (`hour`) is the hour number in 24-hour format; column 3 (`status`) is the dependent variable of interest; column 4 is a text string with notes. We split the data into seven individual days.
+
+Raw data is in the file [status-log.csv](status-log.csv) in the same directory as this file.
+
+```{r}
+setwd("./")
+data=read.csv("status-log.csv")
+mo <- data[data$day.of.the.week == 1,]
+tu <- data[data$day.of.the.week == 2,]
+we <- data[data$day.of.the.week == 3,]
+th <- data[data$day.of.the.week == 4,]
+fr <- data[data$day.of.the.week == 5,]
+sa <- data[data$day.of.the.week == 6,]
+su <- data[data$day.of.the.week == 7,]
+sd <- sd(data$status)
+m <- mean(data$status)
+```
+
+The data consists of `r nrow(data)` observations. If `status` were symetrically distrubuted, we would expect the mean to be around `r mean(c(1,2,3,4))`. The observed mean is `r round(m, digits = 2)` (SD = `r round(sd, digits=2)`), well within 1 SD of expected.
+
+# Analysis
+
+First, we generate a basic line plot for all the data. It's value is only in showing that there is plausibly a basic periodicity to the data:
+
+``` {r}
+plot(data$status, type="l", main="All data", ylab="Value", xlab="Observation Number")
+```
+
+Next, we break the data into a plot for each of the seven days:
+
+``` {r}
+ylabel <- "Value"
+xlab_weekdays <- "Hours past 5 am"
+xlab_weekends <- "Hours past 10 am"
+plot(mo$status, type="l", main = "Monday", xlab=xlab_weekdays, ylab=ylabel)
+plot(tu$status, type="l", main = "Tuesday", xlab=xlab_weekdays, ylab=ylabel)
+plot(we$status, type="l", main = "Wendesday", xlab=xlab_weekdays, ylab=ylabel)
+plot(th$status, type="l", main = "Thursday", xlab=xlab_weekdays, ylab=ylabel)
+plot(fr$status, type="l", main = "Friday", xlab=xlab_weekdays, ylab=ylabel)
+plot(sa$status, type="l", main = "Saturday", xlab=xlab_weekends, ylab=ylabel)
+plot(su$status, type="l", main = "Sunday", xlab=xlab_weekends, ylab=ylabel)
+```
+
+Since my schedule is highly unpredictable on weekends, let's ignore that and take the mean hour-wise for Monday through Friday:
+
+```{r}
+weekday_means = (mo$status + tu$status + we$status + th$status + fr$status) / 5
+plot(weekday_means, type="l", xlab="Hours from 5 AM", main="Mean of Weekdays", ylab="Value")
+```
+
+Finally, let's plot it along with a 90% confidence interval:
+
+```{r}
+weekdays <- data.frame(mo$status, tu$status, we$status, th$status, fr$status)
+weekdays$means <- apply(as.matrix(weekdays[,1:5]),1,mean)
+weekdays$sds <- apply(as.matrix(weekdays[,1:5]),1,sd)
+number_of_weekdays <- 5
+weekdays$error <- qnorm(0.95) * weekdays$sds/sqrt(number_of_weekdays)
+weekdays$left <- weekdays$means - weekdays$error
+weekdays$right <- weekdays$means + weekdays$error
+
+require(ggplot2)
+#hours<-c("5am","6am","7am","8am","9am","10am","11am","12pm","1pm","2pm","3pm","4pm","5pm","6pm","7pm","8pm")
+ggplot(weekdays, aes(x=mo$hour)) +
+  ggtitle("Mean values by hour with 90% confidence interval") +
+  labs(x="Time of Day",y="Mean value") +
+  geom_line(aes(y = weekdays$right), color="red") +
+  geom_line(aes(y=weekdays$means), color="black") +
+  geom_line(aes(y=weekdays$left), color="blue")
+```
+
+## Discussion
+
+The graph does suggest that I experience at least 1 and possibly as many as 4 peaks throughout the course of the day, which is consistent with claims made about ultradian rhythms. Unlike many such claims, the peaks appear to come about 4 hours apart, centered around 6AM, 9AM, 1PM, and 5PM. Most claims seem to indicate cycles of around 1.5 to 2 hours.
+
+### Limitations
+
+Only a single week of data were obtained, which means that if there are systematic cycles on a week scale, they are not accounted for (i.e, if I am more productive on Mondays than on Fridays, that does not show up clearly in a single week of data.)
+
+It appears that the results, though suggestive of a line with four peaks, could actually be fit with a line with only a single peak or with a single, monotonically decreasing curve, and still remain within the 90% CI.
+
+The method of data collection is subjective and may depend in part and most obviously on bias introduced by vagueness in the standards used, other psychological factors operative at the time of data collection, and the fact that the person collecting the data knew the hypothesis being tested.
+
+# Conclusions and further actions
+
+It is probably reasonable to take some heed of the possibility that I am at my best around 9 to 10 am and to schedule my productive time accordingly, and to take breaks and focus on work in such a way as to produce roughly 4-hour chunks, and to be cognizant of the possibility that it could be helpful.
+
+# References
+[1] http://www.asianefficiency.com/habits/hero-mode/
+
+[2] https://lateralaction.com/articles/productivity-ultradian-rhythms/
+
+[3] http://www.asianefficiency.com/productivity/ultradian-rhythms/
+
+[4] https://hackernoon.com/why-working-in-sprints-maximizes-human-productivity-e01c605ec296
+
+[5] Ericsson, K. A., Krampe, R. T., & Tesch-Römer, C. (1993). The role of deliberate practice in the acquisition of expert performance. Psychological review, 100(3), 363. (http://projects.ict.usc.edu/itw/gel/EricssonDeliberatePracticePR93.PDF)

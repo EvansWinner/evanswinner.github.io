@@ -1,0 +1,73 @@
+---
+title: "Sound-pressure level at a large datacenter"
+author: "Evans Winner"
+date: "February 15, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+At a particular building (of several) at a large datacenter in Colorado, the tape operators and tier 1 Hands & Eyes personnel sit in a comparatively  quiet edge of of one of the raised-floor datacenter rooms. Deeper into the room are numerous noise-generating server systems and Automatic Tape Libraries (ATLs). In an ajdacent room are many more servers. 
+
+I took three sound pressure level (SPL) readings for approximately one minute each using the Android application "Physics Toolbox Sensor Suite (Free verison)" on a Motorola Droid Maxx 2 smartphone. These datasets were exported to column-separated value format for analysis. The cell phone was slowly rotated during data collection at the workstation as an attempt to compensate for any directionality in the sound source or receiving instrument. The other two collections were made while holding the smartphone and walking slowing on a course (intended to be random) through the datacenter floor.
+
+## Load the data
+
+```{r}
+setwd('./') # modify as necessary
+seated_data = read.csv("spl_at-workstation.csv") # Seated at my workstation
+tape_area = data=read.csv("spl_tape-area.csv") # Tape library area
+dc_data = read.csv("spl_dc.csv") # Main datacenter floor
+```
+
+## Analysis
+
+```{r}
+seated_n = round(nrow(seated_data), digits=2)
+seated_m = round(mean(seated_data$gain), digits=2)
+seated_sd = round(sd(seated_data$gain), digits=2)
+tapes_n = round(nrow(tape_area), digits=2)
+tapes_m = round(mean(tape_area$gain), digits=2)
+tapes_sd = round(sd(tape_area$gain), digits=2)
+dc_n = round(nrow(dc_data), digits=2)
+dc_m = round(mean(dc_data$gain), digits=2)
+dc_sd = round(sd(dc_data$gain), digits=2)
+```
+
+## Results
+
+| Location | Number of samples | Mean SPL | SD |
+|:---------|-------------------:|---------:|--:|
+| Seated at workstation | `r seated_n` | **`r seated_m`** | `r seated_sd` |
+| Tape operations area | `r tapes_n` | **`r tapes_m`** | `r tapes_sd` |
+| Main datacenter | `r dc_n` | **`r dc_m`** | `r dc_sd` |
+
+## Discussion
+
+Most of the tape operators and Hands & Eyes personnel work 8-hour shifts. OSHA places the SPL limit for 8-hour continuious exposure to 90 dB. The Hands & Eyes personnel are exposed to bouts of higher levels than this when working on the datacenter floor, but much of their time is spent at the tape operator's section of the tape area, and so do not usually experience prolonged periods of exposure to greater than 90 dB. Some of the tape operators work 12-hour shifts, for which OSHA reccomnedations are not readily availble. The Centers for Disease Control's National Institute for Occupational Safety and Health (NIOSH) recommends no greater than 85 dB continuous exposure for 8-hour shifts.
+
+NIOSH gives 83 dB as the maximum continuous exposure during a 12-hour shift. [3] 
+
+## Conclusions and Limitations
+
+Both seated at the working area and in the general tape operations room, SPL levels as recorded were under the limits set by NIOSH, and by OSHA standards, for workers who spend all their time in that area for an 8-hour shift. For 12-hour shift workers, the same is true to within 1 dB.
+
+Continuous SPL levels in the main datacenter floor are too high for unprotected long-term exposure. The NIOSH limit for 94 dB is 1 hour, and even assuming a full 3 dB of inaccuracy in the measurment, at 91 dB, NIOSH still recommends no more than 2 hours of continuous unprotected exposure. It therefore seems reasonable to conclude that workers entering the main datacenter floor should wear ear protection if they expect to be on the floor for more than a few minutes, and might as well get in the habit of always having ear protection on hand when entering the main datacenter floor.
+
+### Limitations
+
+Only approximately a single minute of data were collected for each location, and using a device which is not primarily intended for SPL readings. The device was not calibrated in advance (the Physics Toolbox Sensor Suite PRO verison allows calibration, but not the free version), and works on the assumption that both the the hardware and softwaree are standard. SPL levels in the datacenters are not homogeneous and may have been biased by the walking route taken when collecting the data (for the floor areas) or the manner in which the device was held when collecting for the workstation data.
+
+Additionally, OSHA and other standards assume A-weighting for decebel reading. I do not know whether this is used in the Physics Tookkit application.
+
+## References
+
+[1] OSHA Document, section 1910.95(b)(2), TABLE G-16 - PERMISSIBLE NOISE EXPOSURES (1) https://www.osha.gov/pls/oshaweb/owadisp.show_document?p_table=STANDARDS&p_id=9735
+
+[2] CDC NIOSH Document, "Noise and Hearing Loss Prevention" https://www.cdc.gov/niosh/topics/noise/default.html
+
+[3] NIOSH Document, "Occupational Noise Exposure: Revised Criteria, 1998" Table 1.1 https://www.cdc.gov/niosh/docs/98-126/pdfs/98-126.pdf

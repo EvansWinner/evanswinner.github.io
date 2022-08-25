@@ -1,0 +1,240 @@
+# Number Chunking with Chunky Numbers
+
+## Quasi-philosophical introduction
+
+Another note under the general heading of pen-and-paper-based data
+collection, this one about writing down collections of many long
+numbers, or other strings of characters, all with the same format —
+that is, all of the same length (credit card numbers or license plate
+codes, for example):
+
+Many mentions are to be found online about the practice of so-called
+“chunking” of long numbers by various methods. The practice in the US
+(and perhaps elsewhere) is to insert a comma after every three digits
+in long numbers, counting from the right, modulus some exceptions. But
+this practice is in contradiction with that in parts of Europe, in
+which the use of comma and point are reversed from that of the
+US. Note, too, the example given above of credit card numbers. Most
+(at least in the US) are 16 digits long, and these are universally
+grouped with spaces into 4 groups of 4. According to Wikipedia[1] the
+Chinese (at least in some contexts) tend to chunk numbers into groups
+of 4 digits, rather than the 3 used in the US.
+
+According to the same source, the SI/ISO 31-0 standard suggests the
+use of a typographic “thin space” between every third digit starting
+with the right-most (that is, chunking in decimal powers of 3) in
+typeset material. The thin space is clean, and it is easy to add a
+little extra space when writing by hand, and it has been my own
+experience that chunking long numbers (by hyphens, as in telephone
+numbers, or spaces, as with credit card numbers, or commas, as is the
+US custom for numerical values) does not just help in reading — that
+is, it is not merely a typographic issue. Chunking not only makes it
+easier to read long numbers at a glance, but by doing so, makes it
+easier to grasp them mentally and transpose them to another medium
+accurately — that is, to write them down accurately. It also makes it
+easier, even if hand-written, to read them and validate them against
+another source. This stems from a fundamental fact about our brains:
+there is a low limit to how many un-integrated and random concrete
+objects we can deal with at a single encompassing glance. The number
+for the upper limit is given variously, but it is usually not assumed
+to be more than 7.
+
+For chunking, we can say that 2 is low enough to be of limited value —
+that is, chunking 12 items into 6 groups of 2 leaves us still with an
+unmanageable number of small groups. On the other end, 7 and even 6
+seem to me to naturally split themselves up into sub-groups of 4 and 3
+or 3 and 3 respectively. Therefore it appears that the ideal length of
+groups for number chunking is probably between 3 and 5
+inclusive. Which one? Well as a standard practice, it may be that the
+number that is an even factor in the largest number of cases is best,
+which would be 3 — and that is the practice in much of the world. This
+is a good general solution for cases in which we do not know in
+advance how many digits we are dealing with but the number is
+relatively small.
+
+On the other hand, for cases in which the number of digits is very
+large, one sees groups of five common — transcriptions from radio
+numbers stations, old computer listings; and hexadecimal dumps are
+often grouped in 4.
+
+But for long strings the length of which is known and consistent, what
+might be the best length for chunks?
+
+First, for very long strings, we can see that 3, 4 or 5 won't work
+well. The largest number representable with this scheme would be 5 ×
+5, or 25 digits long — that is, it would consist of five groups of
+five.
+
+But here is why the term “chunking” is slightly inappropriate. A
+better term would be “integration,” because that is how human minds
+deal with excessive concrete data: by a process of integration. And
+integration is by its nature a hierarchical process; that is, we can
+make chunks of chunks — a process which we can in principle carry out
+indefinitely.
+
+## Some numerical analysis
+
+Let's define a perfectly chunky number as one which has only 3, 4, and
+5 as factors (and 2, of course, but that means that there must be an
+even number of 2s as factors). Leaving aside the trivially chunky
+numbers less than 9, let's print out all the perfectly chunky numbers
+up to 128. That number is chosen more or less arbitrarily, but with
+the idea that if you need to write down numbers by hand that are
+greater than 128 digits long, you have much bigger problems than
+deciding how to chunk them.
+
+{{{
+script=$(cat <<'EOF'
+{
+    count = 0;
+    for (i=1; i<=NF; i++) {
+        if ($i == "2") count++;
+    }
+    if (count % 2 == 0) {
+        $1=$1"\t"; print $0;
+
+    }
+}
+EOF
+)
+echo
+echo "**Perfectly Chunky Numbers 9 ≤ N ≤ 128:**"
+echo
+echo -e '\tN:\tFactors' | spaces
+echo -e '\t======\t=========================================' | spaces
+for i in `seq 9 128`;
+do
+    factor $i;
+done | \
+grep ':\( [235]\)\+$' | \
+awk "$script" > perfectly-chunky.dat
+cat perfectly-chunky.dat | awk -v OFS="\t" '{print " ", $1, $2, $3, $4, $5, $6, $7}' | spaces
+echo
+echo "There are `wc -l perfectly-chunky.dat | grep -o '[0-9]\+'` perfectly chunky numbers in this range."
+}}}
+
+From this we can see that in order to chunk, say, 60, we need only
+divide the digits into 4 groups of 3 groups of 5 (or, better, 3 groups
+of 5 groups of 4, four being, in my opinion, a better number for the
+lowest-level groups).
+
+Let's now define a chunky number — merely chunky, not perfectly chunky
+— recursively, as either a perfectly chunky number, or a number which
+is the sum or 2 perfectly chunky numbers. We limit ourselves to 2
+addends because once the number of addends is greater than that,
+remembering the sequence of different groups of chunks becomes
+overwhelming.
+
+{{{
+script=$(cat <<'EOF'
+         BEGIN { c=0 }
+         {
+             c++;
+             a[c]=$1
+         }
+         END {
+             for (n in a) {
+                 for (i in a) {
+                     if (a[i]+a[n] <= 128) {
+                         print a[i]+a[n];
+                     }
+                 }
+             }
+             for (n in a) print a[n];#don't forget the perfect ones
+         }
+EOF
+)
+echo
+echo "**Chunky Numbers 9 ≤ N ≤ 128:**"
+echo
+grep -o '^[0-9]\+' perfectly-chunky.dat | \
+    awk "$script" | sort -g | uniq > chunky.dat
+cat chunky.dat | tr "\n" "\t" | fold -s -w 70 | spaces
+echo -e "\n"
+echo "There are `wc -l chunky.dat | grep -o '[0-9]\+'` chunky numbers in this range."
+}}}
+
+So that is a solved problem for those numbers. But then, since we
+checked 128 - 9 = 119 numbers, there must be some creamy
+numbers. Let's find them:
+
+{{{
+echo
+echo "**Creamy Numbers 9 ≤ N ≤ 128:**"
+echo
+comm -23 <(seq 9 128 | sort) <(sort chunky.dat) | sort -g > creamy.dat
+cat creamy.dat | tr "\n" "\t" | fold -s -w 70 | spaces
+echo -e "\n"
+echo "So, there are `wc -l creamy.dat | grep -o '[0-9]\+'` creamy numbers in this range."
+}}}
+
+# Conclusions
+
+That’s a lot of special cases which we must decide how to handle — in
+fact, with almost a third of numbers in the range being creamy, the
+special cases aren’t really so special. So the conclusions are: To
+chunk a string (of digits or other characters) N digits long:
+
+1. where N is a perfectly chunky number: chunk according to the
+factors of N, trying to leave the best number (4 or 5) for the lowest
+level of the hierarchy. For example, to chunk 16, use 4 groups of 4.
+To chunk 48, use 3 groups of 4 groups of 4, or 4 groups of 3 groups
+of 4 (but not 4 groups of 4 groups of 3).
+
+2. where N is chunky, but not perfectly chunky, divide the number of
+digits into 2 groups that add together to make N, such that each group
+is perfectly chunky; then proceed to concatenate each group done as a
+perfectly chunky number; for example, to chunk a number 18 digits
+long, divide into 2 units, each of length 9, and chunk each of those
+as two chunks of 3, yielding chunks 3, 3, 3, and 3 long. (Note that
+all numbers which are a perfectly chunky number are themselves
+chunky). Another example: to chunk a 21-digit number, divide into two
+groups, one 12-digits, the other 9. Chunk each according to the rule
+for perfectly chunky numbers, thus: 3 groups of 4, then 3 of 3.
+
+3. For creamy numbers, then, we must make up special case-rules. The
+following table gives possibilities for the first 9 of them. The basic
+principle is to make the lowest-level groups between 3 and 5, and
+secondarily (that is, of lower priority) to try to avoid single odd
+groups with sizes that are unique to themselves (though that cannot be
+avoided in some cases):
+
+~~~~~
+    N     Method
+    ========================================
+    10    2 groups of 5
+    11    2 groups of 4 plus 1 group of 3
+    13    2 groups of 4 plus 1 group of 5
+    14    2 groups of 4 plus 2 groups of 3
+    17    2 groups of 4 plus 3 groups of 3
+    19    2 groups of 5 plus 3 groups of 3
+    22    3 groups of 4 plus 2 groups of 5
+    23    3 groups of 5 and 2 groups of 4
+    26    4 groups of 5 plus 2 groups of 3
+~~~~~
+
+But really, if you find yourself worrying about this stuff, you should
+probably find yourself a new job — one where nobody expects you to
+keep track of data without a computer. Yeah. Painful experience.
+
+
+# Colophon
+
+This document was created with GNU Emacs (under GNU Linux) and used
+Kallychore[2] and Pandoc for post-processing.  Programs used in the
+creation of this document:
+
+{{{
+echo
+whatver SYSTEM awk bash cat comm emacs factor fold grep kallychore pandoc sed seq sort tr uniq wc whatver | spaces
+}}}
+
+Footnotes:
+
+[1] https://en.wikipedia.org/wiki/Decimal_separator#Digit_grouping
+
+[2] Kallychore: https://github.com/EvansWinner/kallychore
+
+------
+
+Evans Winner is professional IT Minion in Golden, Colorado.
