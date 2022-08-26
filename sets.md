@@ -19,12 +19,12 @@ used for post-processing the file,
 
 
 The plain text source for this file is at
-[http://thorne.space/sets.kc](http://thorne.space/sets.kc). If
+[http://evanswinner.github.io/sets.kc](http://evanswinner.github.io/sets.kc). If
 you would like to play with the `bash` functions defined
 here, you can install Kallychore and then download the
 source with:
  
-    $ curl thorne.space/sets.kc > sets.kc
+    $ curl evanswinner.github.io/sets.kc > sets.kc
 
 Then source the file with
 
@@ -971,7 +971,7 @@ certainly got a tear or two. Have a better one.
 # Colophon
 
 The plain text source for this file is at
-[http://thorne.space/sets.kc](http://thorne.space/sets.kc).
+[http://evanswinner.github.io/sets.kc](http://evanswinner.github.io/sets.kc).
 
 This file was created with GNU Emacs and post-processed with
 [Kallychore](https://github.com/EvansWinner/kallychore) and
@@ -988,7 +988,7 @@ whatver SYSTEM bash bc cmp comm emacs fmt fold grep \
 ###############################
 ```
 ~~~~~
-This file generated on Fri Aug 26 07:03:04 MDT 2022 on compensation.
+This file generated on Fri Aug 26 08:55:33 MDT 2022 on compensation.
 
 The Makefile command line was:
 kallychore -m sets.kc | \
@@ -1035,4 +1035,4 @@ Evans Winner is a Professional IT Minion in Golden, Colorado, and
 intends to keep on writing things like this until he manages to get a
 decent job. ([LinkedIn](https://www.linkedin.com/in/evanswinner/),
 [email](mailto:evans.winner@gmail.com),
-[webpage](http://thorne.space/portfolio.html))
+[webpage](http://evanswinner.github.io/portfolio.html))

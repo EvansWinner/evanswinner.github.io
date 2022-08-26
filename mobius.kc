@@ -219,7 +219,7 @@ No idea. Apparently, it‘s a mystery.
 Colophon
 ========
 The plain-text source for this file is at:
-http://thorne.space/mobius.kc
+http:///evanswinner.github.io/mobius.kc
 
 {{{
 echo "This file generated on `date` on `hostname`." ; echo
@@ -251,4 +251,4 @@ until he manages to get a decent job.
 
 LinkedIn: https://www.linkedin.com/in/evanswinner/
 Email: evans.winner@gmail.com
-Webpage: http://thorne.space/portfolio.html
+Webpage: http://evanswinner.github.io/portfolio.html
