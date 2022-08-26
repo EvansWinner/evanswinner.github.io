@@ -15,7 +15,7 @@ ifeq ($(OS),darwin)
   CP := "/opt/local/libexec/gnubin/cp""
 endif
 
-all : portfolio writing index resume status-log sets kNN dc_spl
+all : portfolio writing index resume status-log sets kNN dc_spl mobius
 
 portfolio : portfolio.html
 portfolio.html : portfolio.md portfolio.css
