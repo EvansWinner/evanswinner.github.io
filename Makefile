@@ -36,7 +36,6 @@ index.html : index.md portfolio.css
 status-log : status-log.html
 status-log.html : status-log.csv status-log.Rmd
 	${rscript} -e "rmarkdown::render('status-log.Rmd')"
-	mv status-log.html build
 
 sets : sets.html
 sets.html : sets.kc
@@ -61,7 +60,6 @@ mobius.txt: mobius.kc
 dc_spl : dc_spl.html
 dc_spl.html: dc_spl.Rmd spl_tape-area.csv spl_at-workstation.csv spl_dc.csv
 	$(rscript) -e "rmarkdown::render('dc_spl.Rmd')"
-	mv dc_spl.html build
 
 clean :
 	rm -rf A B C E mobius.txt kNN.md sets.md *.html 
