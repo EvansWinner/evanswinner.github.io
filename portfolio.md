@@ -132,7 +132,7 @@ Propeller's **Forth** dialect. (2014)
    inclusiveness. (Blogspot, Orig. Date ca. 2011)
 
 
-## School work
+## School work and misc. exercises
 
 <img src="bmi.png" style="max-width:50%;float:right;">[Exploring the
 BRFSS Data](intro_data_prob_project.html) — Final project from a
@@ -141,4 +141,6 @@ determined that 1) having kids makes you lose sleep, 2) Mondays don't
 really suck, and 3) Colorado really is the healthiest state. Well,
 more or less. **Rmarkdown** (Local, 2016)
 
-
+[Math and Coding Exercises](http://github.com/evanswinner/math-and-coding-exercises) —
+Lots of little exercises in APL, Python, Fortran, C, Haskell, Forth, and Lisp
+from Project Euler, Rosetta Code, Project Lovelace, various books, etc.

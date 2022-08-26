@@ -988,7 +988,7 @@ whatver SYSTEM bash bc cmp comm emacs fmt fold grep \
 ###############################
 ```
 ~~~~~
-This file generated on Fri Aug 26 08:55:33 MDT 2022 on compensation.
+This file generated on Fri Aug 26 09:49:01 MDT 2022 on compensation.
 
 The Makefile command line was:
 kallychore -m sets.kc | \

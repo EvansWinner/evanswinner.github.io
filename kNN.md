@@ -107,11 +107,11 @@ head -5 $data
 ###############################
 ```
 ~~~~~
-5.1 3.5 1.4 0.2 Iris-setosa
-4.9 3.0 1.4 0.2 Iris-setosa
-4.7 3.2 1.3 0.2 Iris-setosa
-4.6 3.1 1.5 0.2 Iris-setosa
-5.0 3.6 1.4 0.2 Iris-setosa
+5.1,3.5,1.4,0.2,Iris-setosa
+4.9,3.0,1.4,0.2,Iris-setosa
+4.7,3.2,1.3,0.2,Iris-setosa
+4.6,3.1,1.5,0.2,Iris-setosa
+5.0,3.6,1.4,0.2,Iris-setosa
 ~~~~~
 
 Ok. Good, so then we have to clean the data a little to get it into a
