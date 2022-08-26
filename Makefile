@@ -62,5 +62,5 @@ dc_spl.html: dc_spl.Rmd spl_tape-area.csv spl_at-workstation.csv spl_dc.csv
 	$(rscript) -e "rmarkdown::render('dc_spl.Rmd')"
 
 clean :
-	rm -rf A B C E mobius.txt kNN.md sets.md *.html 
+	rm -rf A B C E mobius.txt kNN.md sets.md resume.html index.html dc_spl.html kNN.html kNN.md sets.html portfolio.html writing.html iris* tmp*
 
