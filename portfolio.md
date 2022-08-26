@@ -97,7 +97,7 @@ two spaces between sentences? (Blotspot, orig. 2013)
 
 ## Tools
 
-<img src="piltdown.jpg" style="max-width=50%;float:left">[Piltdown](https://github.com/EvansWinner/piltdown)
+<img src="piltdown.jpg" style="max-width:50%;float:left">[Piltdown](https://github.com/EvansWinner/piltdown)
    - Python Unicode-based data visualization library for Twitter posts. (Github, 2021) 
 
 <img src="kallychore.png"
