@@ -1,5 +1,8 @@
-Resume Skills Rating Explanation
-================================
+---
+title: Resume Skills Rating Explanation
+---
+
+# Resume Skills Rating Explanation
 
 This is based on the rankings given on [resume.com](https://www.resume.com/career-advice/resumes/www-resume-com-resumes-skill-levels-for-resume/)
 

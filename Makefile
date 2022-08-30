@@ -15,7 +15,7 @@ ifeq ($(OS),darwin)
   CP := "/opt/local/libexec/gnubin/cp""
 endif
 
-all : portfolio writing index resume status-log sets kNN dc_spl mobius
+all : portfolio writing index resume status-log sets kNN dc_spl mobius skills
 
 portfolio : portfolio.html
 portfolio.html : portfolio.md portfolio.css
@@ -24,6 +24,10 @@ portfolio.html : portfolio.md portfolio.css
 writing : writing.html
 writing.html : writing.md portfolio.css
 	pandoc --from markdown+pipe_tables -t html5 -s --toc --include-in-header=portfolio.css -o writing.html writing.md
+
+skills : skills.html
+skills.html : skills.md portfolio.css
+	pandoc --from markdown -t html5 -s --include-in-header=portfolio.css -o skills.html skills.md
 
 resume : resume.html
 resume.html : portfolio.md portfolio.css
