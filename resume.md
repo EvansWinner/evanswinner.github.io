@@ -6,7 +6,7 @@ title: Resume of Evans Winner
 Golden Colorado, 80401-3705 |
 [evans.winner@gmail.com](mailto:evans.winner@gmail.com) |
 [Linkedin](http://linkedin.com/n/evanswinner) |
-[Portfolio](http://ehw.me/portfolio.html) |
+[Portfolio](http://evanswinner.github.io/portfolio.html) |
 [Github](https://github.com/evanswinner) |
 [vCard](http://ehw.me/vcard.vcd) </details>
 
@@ -26,7 +26,7 @@ business analysis.
 ## Experience
 
 ### Recent Employment History
-#### [Goodwill of Colorado (previously Goodwill Industries of Denver)](http://www.goodwilldenver.org) | Westminster, Colorado
+#### [Goodwill of Colorado (previously Goodwill Industries of Denver)](http://www.goodwillcolorado.org) | Westminster, Colorado
 
 <details><summary>2020.01 — Pres.: **IT Specialist**</summary>
 
