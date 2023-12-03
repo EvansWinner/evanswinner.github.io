@@ -65,34 +65,35 @@ we we used to say on Web 1.0, "Under construction."
 
 <pre>
 
- <b>2010-08-10                                          Tweet</b>
-.---------------------------------------------------------.
-  [<a href="Ihttps://x.com/thorne/status/20522017408?s=2">WWW: Twitter</a>]
-  If the only tool you have is a computer, you tend to
-  see every problem as computable.  
-'---------------------------------------------------------'
+ <b>2010-08-10                                           Tweet</b>
+.----------------------------------------------------------.
+ [<a href="Ihttps://x.com/thorne/status/20522017408?s=2">WWW: Twitter</a>]
+  If the only tool you have is a computer, you tend to see
+  every problem as computable.  
+'----------------------------------------------------------'
 
- <b>2010-05-28                                          Tweet</b>
-.---------------------------------------------------------.
-  [<a href="https://x.com/thorne/status/14888533862?s=20">WWW: Twitter</a>]
+ <b>2010-05-28                                           Tweet</b>
+.----------------------------------------------------------.
+ [<a href="https://x.com/thorne/status/14888533862?s=20">WWW: Twitter</a>]
   When a man needs a hairbrush, he's got bigger problems
   than needing a hairbrush.
-'---------------------------------------------------------'
+'----------------------------------------------------------'
 
- <b>2009-02-07                                          Tweet</b>
-.---------------------------------------------------------.
-  [<a href="https://x.com/thorne/status/1187534264?s=20">WWW: Twitter</a>]
+ <b>2009-02-07                                           Tweet</b>
+.----------------------------------------------------------.
+ [<a href="https://x.com/thorne/status/1187534264?s=20">WWW: Twitter</a>]
   There are two kinds of sysadmins: those who are over-
   worked, and those who hang out on alt.sysadmin.recovery
   pretending they are overworked.
-'---------------------------------------------------------'
+'----------------------------------------------------------'
 
- <b>2007-03-16:                                 Code: Twit.el</b>
+ <b>2007-03-16:                                           Code</b>
 .----------------------------------------------------------.
  [<a href="https://www.emacswiki.org/emacs/TwIt">WWW: EmacsWiki</a>]
- What was, I think, the second Twitter client for Emacs. I
- only wrote the first versions (under the nom de code
- Theron Tlax).
+  <b>Twit.el</b>
+  What was, I think, the second Twitter client for Emacs.
+  I only wrote the first versions (under the nom de code
+  "Theron Tlax").
 '----------------------------------------------------------'
 
 </pre>
