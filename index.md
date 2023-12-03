@@ -7,7 +7,11 @@ date: 2023-12-02
 
 <img src="me.jpg" style="max-width:50%;float:left;">
 
-I am Evans Hawthorne Winner, 51-year-old IT lowly worker living in Evergreen, Colorado.
+I am Evans Hawthorne Winner, 51-year-old,
+lowly IT worker living in Evergreen, Colorado.
+(Drop me a line if you know where I can get analytical work --
+data, operations, process, whatever.
+I am evans dot winner at Google's famous email domain.)
 
 I used to be a casual rock climber in Boulder,
 later a casual scuba diver in Seattle;
@@ -15,12 +19,12 @@ I studied music composition fairly seriously at university in Boulder for severa
 later studied literature and philosophy in New Mexico where,
 after twenty-something odd years of courses at many schools,
 I finally graduated *summa* -- because they only counted their own courses in the GPA.
-Ha! Take that, high-school guidance councelors!
+Ha! Take that, high-school guidance councilors!
 
 I have the somewhat ambitiously named "[portfolio](./portfolio.html)"
 of miscellaneous nerdy things I've done;
 a boring [resume](./resume.html),
-the obligatory [Github](https://github.com/evanswinner) page,
+the obligatory [GitHub](https://github.com/evanswinner) page,
 a [LinkedIn](https://www.linkedin.com/in/evanswinner/),
 and heck, even a [vCard](./vcard.vcf).
 Additionally, I've links to some [writing](./writing.html)
@@ -36,7 +40,7 @@ He is nine years old and likes paleontology and Minecraft.
 **Blog**
 
 Here follows, in something like chronological order,
-some of the miscelaneous wreckage
+some of the miscellaneous wreckage
 I have strewn across the Internet over the years.
 I link to the content instead of include it here inline
 except where it is only a few lines long
@@ -87,7 +91,7 @@ we we used to say on Web 1.0, "Under construction."
 .----------------------------------------------------------.
  [<a href="https://www.emacswiki.org/emacs/TwIt">WWW: EmacsWiki</a>]
  What was, I think, the second Twitter client for Emacs. I
- only wrote the first verions (under the nom de code
+ only wrote the first versions (under the nom de code
  Theron Tlax).
 '----------------------------------------------------------'
 
