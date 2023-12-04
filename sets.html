@@ -7,6 +7,146 @@
   <meta name="author" content="Evans H. Winner" />
   <title>Set Operations with Bash</title>
   <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     span.underline{text-decoration: underline;}
@@ -16,6 +156,7 @@
     pre > code.sourceCode { white-space: pre; position: relative; }
     pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
     div.sourceCode { margin: 1em 0; }
     pre.sourceCode { margin: 0; }
@@ -74,10 +215,8 @@
     code span.va { color: #000000; } /* Variable */
     code span.vs { color: #4e9a06; } /* VerbatimString */
     code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
   <style type="text/css">
   body {
     -webkit-text-size-adjust: 100%;
@@ -746,30 +885,48 @@
 <p class="author">Evans H. Winner</p>
 <p class="date">Thursday, April 12, 2018</p>
 </header>
-<p>This is a demonstration of the use of the <code>bash</code> shell to perform line-wise set operations on files — that is, set union, intersection, <em>et cetera</em>.</p>
-<p>I am sufficiently certain that there are other examples of the same sort of thing out there, many probably better, that I haven‘t even bothered to try Googling for it. I mainly present this as A) an example of a few of the nicer features of <code>bash</code>, and B) as a little demonstration of the program I used for post-processing the file, <a href="https://github.com/EvansWinner/kallychore">Kallychore</a>.</p>
-<p>The plain text source for this file is at <a href="http://evanswinner.github.io/sets.kc">http://evanswinner.github.io/sets.kc</a>. If you would like to play with the <code>bash</code> functions defined here, you can install Kallychore and then download the source with:</p>
+<p>This is a demonstration of the use of the <code>bash</code> shell to
+perform line-wise set operations on files — that is, set union,
+intersection, <em>et cetera</em>.</p>
+<p>I am sufficiently certain that there are other examples of the same
+sort of thing out there, many probably better, that I haven‘t even
+bothered to try Googling for it. I mainly present this as A) an example
+of a few of the nicer features of <code>bash</code>, and B) as a little
+demonstration of the program I used for post-processing the file, <a
+href="https://github.com/EvansWinner/kallychore">Kallychore</a>.</p>
+<p>The plain text source for this file is at <a
+href="http://evanswinner.github.io/sets.kc">http://evanswinner.github.io/sets.kc</a>.
+If you would like to play with the <code>bash</code> functions defined
+here, you can install Kallychore and then download the source with:</p>
 <pre><code>$ curl evanswinner.github.io/sets.kc &gt; sets.kc</code></pre>
 <p>Then source the file with</p>
 <pre><code>$ source &lt;(kallychore sets.kc)</code></pre>
 <p>Then the functions will be defined in your current session.</p>
-<p>So, before we begin, let‘s generate four files with test data, a.txt, b.txt, c.txt, and d.txt. We will also create an empty file, E, to be an empty set.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="va">IFS=</span><span class="st">$&#39;</span><span class="dt">\n</span><span class="st">&#39;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="kw">for</span> <span class="ex">i</span> in 2 1 3 1 4<span class="kw">;</span> <span class="kw">do</span> <span class="bu">echo</span> <span class="va">$i</span> <span class="op">&gt;&gt;</span> a.txt<span class="kw">;</span> <span class="kw">done</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="kw">for</span> <span class="ex">i</span> in 3 4 5 6<span class="kw">;</span> <span class="kw">do</span> <span class="bu">echo</span> <span class="va">$i</span> <span class="op">&gt;&gt;</span> b.txt<span class="kw">;</span> <span class="kw">done</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a><span class="kw">for</span> <span class="ex">i</span> in 4 5 4 5<span class="kw">;</span> <span class="kw">do</span> <span class="bu">echo</span> <span class="va">$i</span> <span class="op">&gt;&gt;</span> c.txt<span class="kw">;</span> <span class="kw">done</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a><span class="kw">for</span> <span class="ex">i</span> in 1 3 3 3 3 3 3 5 7 9<span class="kw">;</span> <span class="kw">do</span> <span class="bu">echo</span> <span class="va">$i</span> <span class="op">&gt;&gt;</span> d.txt<span class="kw">;</span> <span class="kw">done</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a><span class="fu">touch</span> E</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>So, before we begin, let‘s generate four files with test data, a.txt,
+b.txt, c.txt, and d.txt. We will also create an empty file, E, to be an
+empty set.</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="va">IFS</span><span class="op">=</span><span class="st">$&#39;</span><span class="dt">\n</span><span class="st">&#39;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> 2 1 3 1 4<span class="kw">;</span> <span class="cf">do</span> <span class="bu">echo</span> <span class="va">$i</span> <span class="op">&gt;&gt;</span> a.txt<span class="kw">;</span> <span class="cf">done</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> 3 4 5 6<span class="kw">;</span> <span class="cf">do</span> <span class="bu">echo</span> <span class="va">$i</span> <span class="op">&gt;&gt;</span> b.txt<span class="kw">;</span> <span class="cf">done</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> 4 5 4 5<span class="kw">;</span> <span class="cf">do</span> <span class="bu">echo</span> <span class="va">$i</span> <span class="op">&gt;&gt;</span> c.txt<span class="kw">;</span> <span class="cf">done</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> 1 3 3 3 3 3 3 5 7 9<span class="kw">;</span> <span class="cf">do</span> <span class="bu">echo</span> <span class="va">$i</span> <span class="op">&gt;&gt;</span> d.txt<span class="kw">;</span> <span class="cf">done</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> E</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
-<p>Let’s display the data once, just so you see that it’s really there. As long as we’re doing that, we might as well format it nicely in little tables with headers. We will use a semi-colon to put two commands on a single line, which is often a bad idea, but which seems best here, as it keeps related things together and makes it clear what is being done.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a><span class="bu">echo</span> -e <span class="st">&quot;\nFile a.txt\n==========&quot;</span> <span class="kw">;</span> <span class="fu">cat</span> a.txt</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a><span class="bu">echo</span> -e <span class="st">&quot;\nFile b.txt\n==========&quot;</span> <span class="kw">;</span> <span class="fu">cat</span> b.txt</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a><span class="bu">echo</span> -e <span class="st">&quot;\nFile c.txt\n==========&quot;</span> <span class="kw">;</span> <span class="fu">cat</span> c.txt</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a><span class="bu">echo</span> -e <span class="st">&quot;\nFile d.txt\n==========&quot;</span> <span class="kw">;</span> <span class="fu">cat</span> d.txt</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Let’s display the data once, just so you see that it’s really there.
+As long as we’re doing that, we might as well format it nicely in little
+tables with headers. We will use a semi-colon to put two commands on a
+single line, which is often a bad idea, but which seems best here, as it
+keeps related things together and makes it clear what is being done.</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span> <span class="st">&quot;\nFile a.txt\n==========&quot;</span> <span class="kw">;</span> <span class="fu">cat</span> a.txt</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span> <span class="st">&quot;\nFile b.txt\n==========&quot;</span> <span class="kw">;</span> <span class="fu">cat</span> b.txt</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span> <span class="st">&quot;\nFile c.txt\n==========&quot;</span> <span class="kw">;</span> <span class="fu">cat</span> c.txt</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span> <span class="st">&quot;\nFile d.txt\n==========&quot;</span> <span class="kw">;</span> <span class="fu">cat</span> d.txt</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>
 File a.txt
 ==========
@@ -805,20 +962,40 @@ File d.txt
 5
 7
 9</code></pre>
-<p>First, our concept of a set here is a file, and our concept of a set member is a line in a file. This means that we cannot have any sort of notion of sets containing other sets, only a single level of set containing things.</p>
-<p>Also, a set, properly speaking, does not have duplicate members, so the first thing we will need to do is to make our “random” data into an actual set, by removing any duplicates. This is easy to do. We just sort the data using <code>sort</code> and then pipe that to <code>uniq</code>. <code>uniq</code> will remove all duplicate lines that are next to each other. Before that can work, though, the duplicates have to <em>be</em> next to each other. That’s why we sort the lines first. The resulting data are now sorted. The members of a set are not, <em>qua</em> set members, ordered; but it won’t hurt anything to leave them sorted in lexicographical order.</p>
+<p>First, our concept of a set here is a file, and our concept of a set
+member is a line in a file. This means that we cannot have any sort of
+notion of sets containing other sets, only a single level of set
+containing things.</p>
+<p>Also, a set, properly speaking, does not have duplicate members, so
+the first thing we will need to do is to make our “random” data into an
+actual set, by removing any duplicates. This is easy to do. We just sort
+the data using <code>sort</code> and then pipe that to
+<code>uniq</code>. <code>uniq</code> will remove all duplicate lines
+that are next to each other. Before that can work, though, the
+duplicates have to <em>be</em> next to each other. That’s why we sort
+the lines first. The resulting data are now sorted. The members of a set
+are not, <em>qua</em> set members, ordered; but it won’t hurt anything
+to leave them sorted in lexicographical order.</p>
 <p>So, to do this to file a.txt, it would look like this:</p>
 <pre><code>$ sort a.txt | uniq</code></pre>
-<p>But let‘s wrap that logic into a function — in proper Unix style, we‘ll give it the brief and cryptic name, <code>mkset</code>. And while we‘re at it, why not just glom together the lines from as many files as we want all at once. We‘ll use the variable $@ to mean “all the files we specify.”</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a><span class="fu">mkset ()</span> <span class="kw">{</span> <span class="fu">sort</span> <span class="va">$@</span> <span class="kw">|</span> <span class="fu">uniq</span><span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>But let‘s wrap that logic into a function — in proper Unix style,
+we‘ll give it the brief and cryptic name, <code>mkset</code>. And while
+we‘re at it, why not just glom together the lines from as many files as
+we want all at once. We‘ll use the variable $@ to mean “all the files we
+specify.”</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkset ()</span> <span class="kw">{</span> <span class="fu">sort</span> <span class="va">$@</span> <span class="kw">|</span> <span class="fu">uniq</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
-<p>Let‘s try it out, and while we‘re at it, we‘ll format that output too. We don‘t need to do all of them for you to get the idea, I trust.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a><span class="bu">echo</span> -e <span class="st">&quot;Set C\n=====&quot;</span> <span class="kw">;</span> <span class="ex">mkset</span> c.txt</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a><span class="bu">echo</span> -e <span class="st">&quot;\nSet D\n=====&quot;</span> <span class="kw">;</span> <span class="ex">mkset</span> d.txt</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Let‘s try it out, and while we‘re at it, we‘ll format that output
+too. We don‘t need to do all of them for you to get the idea, I
+trust.</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span> <span class="st">&quot;Set C\n=====&quot;</span> <span class="kw">;</span> <span class="ex">mkset</span> c.txt</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span> <span class="st">&quot;\nSet D\n=====&quot;</span> <span class="kw">;</span> <span class="ex">mkset</span> d.txt</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>Set C
 =====
 4
@@ -831,21 +1008,37 @@ Set D
 5
 7
 9</code></pre>
-<p>Ok, last thing. Many of the functions we define below are going to want to have a file as input, and using process substitution using <code>mkset</code> doesn’t always work easily. So, while I generally detest generating temporary files, we’re going to generate set versions of all our test files and call them A, B, C, and D. E, the empty set, we already created.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true"></a><span class="ex">mkset</span> a.txt <span class="op">&gt;</span> A <span class="kw">;</span> <span class="ex">mkset</span> b.txt <span class="op">&gt;</span> B</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true"></a><span class="ex">mkset</span> c.txt <span class="op">&gt;</span> C <span class="kw">;</span> <span class="ex">mkset</span> d.txt <span class="op">&gt;</span> D</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Ok, last thing. Many of the functions we define below are going to
+want to have a file as input, and using process substitution using
+<code>mkset</code> doesn’t always work easily. So, while I generally
+detest generating temporary files, we’re going to generate set versions
+of all our test files and call them A, B, C, and D. E, the empty set, we
+already created.</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">mkset</span> a.txt <span class="op">&gt;</span> A <span class="kw">;</span> <span class="ex">mkset</span> b.txt <span class="op">&gt;</span> B</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ex">mkset</span> c.txt <span class="op">&gt;</span> C <span class="kw">;</span> <span class="ex">mkset</span> d.txt <span class="op">&gt;</span> D</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
-<p>Ok, so now we have a function that will make a set out of the lines in any text file. The astute reader may have noticed something here. Since we are able to make a set out of any number of files specified on the command line, we’ve basically created our first set operation for free — set Union. But to keep things nice, we’ll make a new function with the name <code>∪</code> by simply defining it as <code>mkset</code>. Note that that is a Unicode Union character, not a letter “U.” You can have Unicode function names in <code>bash</code>. Cool, eh?</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true"></a>∪ <span class="kw">()</span> <span class="kw">{</span> <span class="ex">mkset</span> <span class="va">$@</span><span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Ok, so now we have a function that will make a set out of the lines
+in any text file. The astute reader may have noticed something here.
+Since we are able to make a set out of any number of files specified on
+the command line, we’ve basically created our first set operation for
+free — set Union. But to keep things nice, we’ll make a new function
+with the name <code>∪</code> by simply defining it as
+<code>mkset</code>. Note that that is a Unicode Union character, not a
+letter “U.” You can have Unicode function names in <code>bash</code>.
+Cool, eh?</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">∪ ()</span> <span class="kw">{</span> <span class="ex">mkset</span> <span class="va">$@</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
 <p>Now we can take the union, <em>A ∪ B</em> :</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true"></a>∪ <span class="ex">A</span> B </span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">∪</span> A B </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>1
 2
 3
@@ -853,9 +1046,10 @@ Set D
 5
 6</code></pre>
 <p>And in fact, we can take the union, <em>A ∪ B ∪ C ∪ D</em> :</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true"></a>∪ <span class="ex">A</span> B C D </span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="ex">∪</span> A B C D </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>1
 2
 3
@@ -864,164 +1058,234 @@ Set D
 6
 7
 9</code></pre>
-<p>Now, from a practical point of view, we probably want to have a function that we can give a file, and have the function tell us whether that file is a set or not. We can use the <code>cmp</code> command for that. Let’s give it two bits of data: the file we want to check, and a version of that same file that we’ve fed to <code>mkset</code>. If the two are the same, then we know we’ve got a set. Here we can use a nice feature of the shell, called process substitution (see <a href="http://tldp.org/LDP/abs/html/process-sub.html">here</a> for more information). In the arguments where file names would normally go in a call to <code>cmp</code> we instead send the result of sorting the file for the first argument, and calling <code>mkset</code> for the second argument.</p>
-<p>The <code>cmp</code> command compares a file byte by byte. If we use the <code>-s</code> flag, it will not print any output, but will only send an error code to <code>/dev/stderr</code> depending on whether the files are identical or not. If the data are identical, then the file is a set; if not, then not.</p>
-<p>We could name our function <code>isset</code>, but the Unix hacker in me can’t stand the duplication of the letter “s” — so let’s call it <code>iset</code>.</p>
-<p>Note that an empty file should read as a set — an empty set, but still a set as we are using the concept here. We’re not going to handle the case where the file doesn’t exist. That is the user’s problem.</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true"></a><span class="fu">iset ()</span> <span class="kw">{</span> <span class="fu">cmp</span> -s <span class="op">&lt;(</span><span class="fu">sort</span> <span class="va">$1</span><span class="op">)</span> <span class="op">&lt;(</span><span class="ex">mkset</span> <span class="va">$1</span><span class="op">)</span><span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Now, from a practical point of view, we probably want to have a
+function that we can give a file, and have the function tell us whether
+that file is a set or not. We can use the <code>cmp</code> command for
+that. Let’s give it two bits of data: the file we want to check, and a
+version of that same file that we’ve fed to <code>mkset</code>. If the
+two are the same, then we know we’ve got a set. Here we can use a nice
+feature of the shell, called process substitution (see <a
+href="http://tldp.org/LDP/abs/html/process-sub.html">here</a> for more
+information). In the arguments where file names would normally go in a
+call to <code>cmp</code> we instead send the result of sorting the file
+for the first argument, and calling <code>mkset</code> for the second
+argument.</p>
+<p>The <code>cmp</code> command compares a file byte by byte. If we use
+the <code>-s</code> flag, it will not print any output, but will only
+send an error code to <code>/dev/stderr</code> depending on whether the
+files are identical or not. If the data are identical, then the file is
+a set; if not, then not.</p>
+<p>We could name our function <code>isset</code>, but the Unix hacker in
+me can’t stand the duplication of the letter “s” — so let’s call it
+<code>iset</code>.</p>
+<p>Note that an empty file should read as a set — an empty set, but
+still a set as we are using the concept here. We’re not going to handle
+the case where the file doesn’t exist. That is the user’s problem.</p>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">iset ()</span> <span class="kw">{</span> <span class="fu">cmp</span> <span class="at">-s</span> <span class="op">&lt;(</span><span class="fu">sort</span> <span class="va">$1</span><span class="op">)</span> <span class="op">&lt;(</span><span class="ex">mkset</span> <span class="va">$1</span><span class="op">)</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
-<p>Recall that file a.txt contains 5 objects — “2”, “1”, “3”, “1”, and “4” — but that only 4 of them are unique, so file a.txt is not a set. File B, on the other hand, is a set. Let’s test our function <code>iset</code>.</p>
+<p>Recall that file a.txt contains 5 objects — “2”, “1”, “3”, “1”, and
+“4” — but that only 4 of them are unique, so file a.txt is not a set.
+File B, on the other hand, is a set. Let’s test our function
+<code>iset</code>.</p>
 <p>Ok, let’s try it:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true"></a><span class="ex">iset</span> a.txt <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true"></a><span class="ex">iset</span> B <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="ex">iset</span> a.txt <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="ex">iset</span> B <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>F
 T</code></pre>
 <p>What about an empty set?</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true"></a><span class="ex">iset</span> E <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="ex">iset</span> E <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>T</code></pre>
 <p>And should a non-existent file send an error?</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true"></a><span class="ex">iset</span> F <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="ex">iset</span> F <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>T</code></pre>
-<p>Evidently not. Well, I did say providing a legitimate file name was the user‘s problem.</p>
-<p>Anyway, great. But can we feed the result of making a set into <code>iset</code> and get <em>T</em>?</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true"></a><span class="ex">iset</span> <span class="op">&lt;(</span><span class="ex">mkset</span> A<span class="op">)</span></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true"></a><span class="ex">mkset</span> A <span class="kw">|</span> <span class="ex">iset</span> </span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Evidently not. Well, I did say providing a legitimate file name was
+the user‘s problem.</p>
+<p>Anyway, great. But can we feed the result of making a set into
+<code>iset</code> and get <em>T</em>?</p>
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="ex">iset</span> <span class="op">&lt;(</span><span class="ex">mkset</span> A<span class="op">)</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="ex">mkset</span> A <span class="kw">|</span> <span class="ex">iset</span> </span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
 <p>Nothing. No. It‘s a problem I haven‘t solved.</p>
-<p>But as long as we‘re thinking about it, we might as well define a function that will tell us whether something is an empty set:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true"></a>∅ <span class="kw">()</span> <span class="kw">{</span> <span class="kw">if</span><span class="bu"> [</span> <span class="ot">-f</span> <span class="va">$1</span> <span class="ot">-a</span> <span class="ot">!</span> <span class="ot">-s</span> <span class="va">$1</span><span class="bu"> ]</span>; <span class="kw">then</span> <span class="fu">true</span><span class="kw">;</span> <span class="kw">else</span> <span class="fu">false</span><span class="kw">;</span> <span class="kw">fi</span>; <span class="kw">}</span></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>But as long as we‘re thinking about it, we might as well define a
+function that will tell us whether something is an empty set:</p>
+<div class="sourceCode" id="cb30"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">∅ ()</span> <span class="kw">{</span> <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-f</span> <span class="va">$1</span> -a <span class="er">!</span> <span class="ex">-s</span> <span class="va">$1</span> ]<span class="kw">;</span> <span class="cf">then</span> <span class="fu">true</span><span class="kw">;</span> <span class="cf">else</span> <span class="fu">false</span><span class="kw">;</span> <span class="cf">fi</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
 <p>Let’s test:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true"></a>∅ <span class="ex">A</span> <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true"></a><span class="co"># ==&gt; F — because this is a non-empty set</span></span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true"></a></span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true"></a>∅ <span class="ex">E</span> <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F</span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true"></a><span class="co"># ==&gt; T — because the file exists, but is empty</span></span>
-<span id="cb32-7"><a href="#cb32-7" aria-hidden="true"></a></span>
-<span id="cb32-8"><a href="#cb32-8" aria-hidden="true"></a>∅ <span class="ex">F</span> <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F</span>
-<span id="cb32-9"><a href="#cb32-9" aria-hidden="true"></a><span class="co"># ==&gt; F — because this file does not exist</span></span>
-<span id="cb32-10"><a href="#cb32-10" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="ex">∅</span> A <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ==&gt; F — because this is a non-empty set</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="ex">∅</span> E <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="co"># ==&gt; T — because the file exists, but is empty</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="ex">∅</span> F <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="co"># ==&gt; F — because this file does not exist</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>F
 T
 F</code></pre>
-<p>We probably want to know the cardinality of our sets. That is trivially done with the <code>wc</code> command, but <code>wc</code> unhelpfully does not have an option to shut up its extra information it gives you, so we will have to filter it with <code>cut</code> to cut the second column:</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true"></a><span class="fu">crd ()</span> <span class="kw">{</span> <span class="fu">wc</span> -l <span class="va">$1</span> <span class="kw">|</span> <span class="fu">cut</span> -d <span class="st">&quot; &quot;</span> -f 1<span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>We probably want to know the cardinality of our sets. That is
+trivially done with the <code>wc</code> command, but <code>wc</code>
+unhelpfully does not have an option to shut up its extra information it
+gives you, so we will have to filter it with <code>cut</code> to cut the
+second column:</p>
+<div class="sourceCode" id="cb34"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">crd ()</span> <span class="kw">{</span> <span class="fu">wc</span> <span class="at">-l</span> <span class="va">$1</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span> <span class="st">&quot; &quot;</span> <span class="at">-f</span> 1<span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
 <p>The cardinality of C, then, is:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true"></a><span class="ex">crd</span> C</span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="ex">crd</span> C</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>2</code></pre>
-<p>Wait, we had better check that the cardinality of the empty set is <em>0</em>:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true"></a><span class="ex">crd</span> E </span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Wait, we had better check that the cardinality of the empty set is
+<em>0</em>:</p>
+<div class="sourceCode" id="cb38"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="ex">crd</span> E </span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>0</code></pre>
-<p>Okay, good. So, now we need a set intersection function. This is simple if you know about the Unix <code>comm</code> command. It is a little like <code>diff</code>, but simpler. It will print out three columns, one with lines unique to the first file you specify; the second with lines unique to the second file you specify, and the third with lines common to both. You can choose to suppress any of those columns, so let’s suppress the first two and leave only the third. The lines common to both files amount to the intersection of the two sets.</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true"></a>∩ <span class="kw">()</span> <span class="kw">{</span> <span class="fu">comm</span> -12 <span class="op">&lt;(</span><span class="ex">mkset</span> <span class="va">$1</span><span class="op">)</span> <span class="op">&lt;(</span><span class="ex">mkset</span> <span class="va">$2</span><span class="op">)</span><span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Okay, good. So, now we need a set intersection function. This is
+simple if you know about the Unix <code>comm</code> command. It is a
+little like <code>diff</code>, but simpler. It will print out three
+columns, one with lines unique to the first file you specify; the second
+with lines unique to the second file you specify, and the third with
+lines common to both. You can choose to suppress any of those columns,
+so let’s suppress the first two and leave only the third. The lines
+common to both files amount to the intersection of the two sets.</p>
+<div class="sourceCode" id="cb40"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">∩ ()</span> <span class="kw">{</span> <span class="fu">comm</span> <span class="at">-12</span> <span class="op">&lt;(</span><span class="ex">mkset</span> <span class="va">$1</span><span class="op">)</span> <span class="op">&lt;(</span><span class="ex">mkset</span> <span class="va">$2</span><span class="op">)</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
 <p>To test it, let’s try <em>A ∩ B</em> :</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true"></a>∩ <span class="ex">A</span> B </span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="ex">∩</span> A B </span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>3
 4</code></pre>
-<p>Relative complement, or set difference, between A and B, that is <em>B</em> ∖ <em>A</em>, which gives that which is unique to <em>B</em>, is done the same way, only we suppress different columns in <code>comm</code>’s output. For the sake of consistency here we will use the Unicode SET MINUS character. This is not a backslash. It would be a bit dangerous to use normally, but in this case, I‘ll let it slide:</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true"></a>∖ <span class="kw">()</span> <span class="kw">{</span> <span class="fu">comm</span> -13 <span class="va">$2</span> <span class="va">$1</span><span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Relative complement, or set difference, between A and B, that is
+<em>B</em> ∖ <em>A</em>, which gives that which is unique to <em>B</em>,
+is done the same way, only we suppress different columns in
+<code>comm</code>’s output. For the sake of consistency here we will use
+the Unicode SET MINUS character. This is not a backslash. It would be a
+bit dangerous to use normally, but in this case, I‘ll let it slide:</p>
+<div class="sourceCode" id="cb44"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">∖ ()</span> <span class="kw">{</span> <span class="fu">comm</span> <span class="at">-13</span> <span class="va">$2</span> <span class="va">$1</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
 <p>Testing <em>A</em> ∖ <em>B</em>:</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true"></a>∖ <span class="ex">A</span> B </span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="ex">∖</span> A B </span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>1
 2</code></pre>
 <p>And <em>B</em> ∖ <em>A</em>:</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true"></a>∖ <span class="ex">B</span> A </span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="ex">∖</span> B A </span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>5
 6</code></pre>
-<p>Now, we might like to know whether a line is a member of a set. We can use <code>grep</code> in almost the same way that we used <code>cmp</code> (although for some reason the flag to keep <code>grep</code> quiet is <code>-q</code> (presumably for “quiet”) instead of <code>-s</code> (presumably for “silent”)). We grep for the line. If it’s in the file, then great, it is a set member. We don’t even have to use <code>mkset</code> on the argument, because if it’s in the original file, it’s in the set.</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true"></a>∈ <span class="kw">()</span> <span class="kw">{</span> <span class="fu">grep</span> -q <span class="st">&quot;^</span><span class="va">$1</span><span class="st">$&quot;</span> <span class="va">$2</span> <span class="kw">&amp;&amp;</span> <span class="fu">true</span> <span class="kw">||</span> <span class="fu">false</span><span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb50-3"><a href="#cb50-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Now, we might like to know whether a line is a member of a set. We
+can use <code>grep</code> in almost the same way that we used
+<code>cmp</code> (although for some reason the flag to keep
+<code>grep</code> quiet is <code>-q</code> (presumably for “quiet”)
+instead of <code>-s</code> (presumably for “silent”)). We grep for the
+line. If it’s in the file, then great, it is a set member. We don’t even
+have to use <code>mkset</code> on the argument, because if it’s in the
+original file, it’s in the set.</p>
+<div class="sourceCode" id="cb50"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">∈ ()</span> <span class="kw">{</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;^</span><span class="va">$1</span><span class="st">$&quot;</span> <span class="va">$2</span> <span class="kw">&amp;&amp;</span> <span class="fu">true</span> <span class="kw">||</span> <span class="fu">false</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
 <p>Again, to test it, let’s see if <em>2 ∈ A</em></p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true"></a>∈ <span class="ex">2</span> A <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F</span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="ex">∈</span> 2 A <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>T</code></pre>
 <p>Yep. How about if <em>3 ∈ C</em>:</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true"></a>∈ <span class="ex">3</span> C <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F </span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="ex">∈</span> 3 C <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F </span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>F</code></pre>
 <p>Nope. As expected.</p>
-<p>So the obious next thing to do is check to see if one set is a subset of another. Let‘s get tedious about it…</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true"></a><span class="co"># Subset</span></span>
-<span id="cb56-3"><a href="#cb56-3" aria-hidden="true"></a>⊆ <span class="kw">()</span> <span class="kw">{</span></span>
-<span id="cb56-4"><a href="#cb56-4" aria-hidden="true"></a>  <span class="va">ret=</span>T</span>
-<span id="cb56-5"><a href="#cb56-5" aria-hidden="true"></a>  <span class="kw">while</span> <span class="bu">read</span> <span class="va">e</span></span>
-<span id="cb56-6"><a href="#cb56-6" aria-hidden="true"></a>  <span class="kw">do</span></span>
-<span id="cb56-7"><a href="#cb56-7" aria-hidden="true"></a>    <span class="kw">if</span><span class="bu"> [</span> <span class="ot">!</span> <span class="va">$(</span><span class="fu">grep</span> <span class="st">&quot;</span><span class="va">$e</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="va">$2</span><span class="st">&quot;</span><span class="va">)</span><span class="bu"> ]</span></span>
-<span id="cb56-8"><a href="#cb56-8" aria-hidden="true"></a>    <span class="kw">then</span></span>
-<span id="cb56-9"><a href="#cb56-9" aria-hidden="true"></a>      <span class="va">ret=</span>F</span>
-<span id="cb56-10"><a href="#cb56-10" aria-hidden="true"></a>    <span class="kw">fi</span></span>
-<span id="cb56-11"><a href="#cb56-11" aria-hidden="true"></a>  <span class="kw">done</span> <span class="op">&lt;</span> <span class="va">$1</span></span>
-<span id="cb56-12"><a href="#cb56-12" aria-hidden="true"></a>  <span class="kw">if</span><span class="bu"> [</span> <span class="st">&quot;</span><span class="va">$ret</span><span class="st">&quot;</span> <span class="ot">==</span> <span class="st">&quot;T&quot;</span><span class="bu"> ]</span>; <span class="kw">then</span> <span class="fu">true</span><span class="kw">;</span> <span class="kw">else</span> <span class="fu">false</span><span class="kw">;</span> <span class="kw">fi</span></span>
-<span id="cb56-13"><a href="#cb56-13" aria-hidden="true"></a><span class="kw">}</span></span>
-<span id="cb56-14"><a href="#cb56-14" aria-hidden="true"></a></span>
-<span id="cb56-15"><a href="#cb56-15" aria-hidden="true"></a><span class="co"># Proper superset</span></span>
-<span id="cb56-16"><a href="#cb56-16" aria-hidden="true"></a>⊇ <span class="kw">()</span> <span class="kw">{</span> ⊆ <span class="va">$2</span> <span class="va">$1</span>; <span class="kw">}</span></span>
-<span id="cb56-17"><a href="#cb56-17" aria-hidden="true"></a></span>
-<span id="cb56-18"><a href="#cb56-18" aria-hidden="true"></a><span class="co"># Set equality</span></span>
-<span id="cb56-19"><a href="#cb56-19" aria-hidden="true"></a><span class="fu">seteq ()</span> <span class="kw">{</span> ⊆ <span class="va">$1</span> <span class="va">$2</span> <span class="kw">&amp;&amp;</span> ⊆ <span class="va">$2</span> <span class="va">$1</span> <span class="kw">&amp;&amp;</span> <span class="fu">true</span> <span class="kw">||</span> <span class="fu">false</span><span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb56-20"><a href="#cb56-20" aria-hidden="true"></a></span>
-<span id="cb56-21"><a href="#cb56-21" aria-hidden="true"></a><span class="co"># Proper subset</span></span>
-<span id="cb56-22"><a href="#cb56-22" aria-hidden="true"></a>⊂ <span class="kw">()</span> <span class="kw">{</span> ⊆ <span class="va">$1</span> <span class="va">$2</span> <span class="kw">&amp;&amp;</span> ! <span class="ex">seteq</span> <span class="va">$1</span> <span class="va">$2</span> <span class="kw">&amp;&amp;</span> <span class="fu">true</span> <span class="kw">||</span> <span class="fu">false</span><span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb56-23"><a href="#cb56-23" aria-hidden="true"></a></span>
-<span id="cb56-24"><a href="#cb56-24" aria-hidden="true"></a><span class="co"># Superset</span></span>
-<span id="cb56-25"><a href="#cb56-25" aria-hidden="true"></a>⊃ <span class="kw">()</span> <span class="kw">{</span> ⊂ <span class="va">$2</span> <span class="va">$1</span>; <span class="kw">}</span></span>
-<span id="cb56-26"><a href="#cb56-26" aria-hidden="true"></a></span>
-<span id="cb56-27"><a href="#cb56-27" aria-hidden="true"></a><span class="co"># Not a superset and not a subset. I mean, let&#39;s be REALLY</span></span>
-<span id="cb56-28"><a href="#cb56-28" aria-hidden="true"></a><span class="co"># tedious here...</span></span>
-<span id="cb56-29"><a href="#cb56-29" aria-hidden="true"></a>⊅ <span class="kw">()</span> <span class="kw">{</span> ⊃ <span class="va">$1</span> <span class="va">$2</span> <span class="kw">&amp;&amp;</span> <span class="fu">false</span> <span class="kw">||</span> <span class="fu">true</span><span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb56-30"><a href="#cb56-30" aria-hidden="true"></a>⊄ <span class="kw">()</span> <span class="kw">{</span> ⊂ <span class="va">$1</span> <span class="va">$2</span> <span class="kw">&amp;&amp;</span> <span class="fu">false</span> <span class="kw">||</span> <span class="fu">true</span><span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb56-31"><a href="#cb56-31" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>So the obious next thing to do is check to see if one set is a subset
+of another. Let‘s get tedious about it…</p>
+<div class="sourceCode" id="cb56"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Subset</span></span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="fu">⊆ ()</span> <span class="kw">{</span></span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">ret</span><span class="op">=</span>T</span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> <span class="bu">read</span> <span class="va">e</span></span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">do</span></span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">[</span> <span class="ot">!</span> <span class="va">$(</span><span class="fu">grep</span> <span class="st">&quot;</span><span class="va">$e</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="va">$2</span><span class="st">&quot;</span><span class="va">)</span> <span class="bu">]</span></span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">then</span></span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a>      <span class="va">ret</span><span class="op">=</span>F</span>
+<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">fi</span></span>
+<span id="cb56-11"><a href="#cb56-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">done</span> <span class="op">&lt;</span> <span class="va">$1</span></span>
+<span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">[</span> <span class="st">&quot;</span><span class="va">$ret</span><span class="st">&quot;</span> <span class="ot">==</span> <span class="st">&quot;T&quot;</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span> <span class="fu">true</span><span class="kw">;</span> <span class="cf">else</span> <span class="fu">false</span><span class="kw">;</span> <span class="cf">fi</span></span>
+<span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb56-14"><a href="#cb56-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-15"><a href="#cb56-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Proper superset</span></span>
+<span id="cb56-16"><a href="#cb56-16" aria-hidden="true" tabindex="-1"></a><span class="fu">⊇ ()</span> <span class="kw">{</span> <span class="ex">⊆</span> <span class="va">$2</span> <span class="va">$1</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb56-17"><a href="#cb56-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-18"><a href="#cb56-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Set equality</span></span>
+<span id="cb56-19"><a href="#cb56-19" aria-hidden="true" tabindex="-1"></a><span class="fu">seteq ()</span> <span class="kw">{</span> <span class="ex">⊆</span> <span class="va">$1</span> <span class="va">$2</span> <span class="kw">&amp;&amp;</span> <span class="ex">⊆</span> <span class="va">$2</span> <span class="va">$1</span> <span class="kw">&amp;&amp;</span> <span class="fu">true</span> <span class="kw">||</span> <span class="fu">false</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb56-20"><a href="#cb56-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-21"><a href="#cb56-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Proper subset</span></span>
+<span id="cb56-22"><a href="#cb56-22" aria-hidden="true" tabindex="-1"></a><span class="fu">⊂ ()</span> <span class="kw">{</span> <span class="ex">⊆</span> <span class="va">$1</span> <span class="va">$2</span> <span class="kw">&amp;&amp;</span> <span class="ot">! </span><span class="ex">seteq</span> <span class="va">$1</span> <span class="va">$2</span> <span class="kw">&amp;&amp;</span> <span class="fu">true</span> <span class="kw">||</span> <span class="fu">false</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb56-23"><a href="#cb56-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-24"><a href="#cb56-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Superset</span></span>
+<span id="cb56-25"><a href="#cb56-25" aria-hidden="true" tabindex="-1"></a><span class="fu">⊃ ()</span> <span class="kw">{</span> <span class="ex">⊂</span> <span class="va">$2</span> <span class="va">$1</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb56-26"><a href="#cb56-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-27"><a href="#cb56-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Not a superset and not a subset. I mean, let&#39;s be REALLY</span></span>
+<span id="cb56-28"><a href="#cb56-28" aria-hidden="true" tabindex="-1"></a><span class="co"># tedious here...</span></span>
+<span id="cb56-29"><a href="#cb56-29" aria-hidden="true" tabindex="-1"></a><span class="fu">⊅ ()</span> <span class="kw">{</span> <span class="ex">⊃</span> <span class="va">$1</span> <span class="va">$2</span> <span class="kw">&amp;&amp;</span> <span class="fu">false</span> <span class="kw">||</span> <span class="fu">true</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb56-30"><a href="#cb56-30" aria-hidden="true" tabindex="-1"></a><span class="fu">⊄ ()</span> <span class="kw">{</span> <span class="ex">⊂</span> <span class="va">$1</span> <span class="va">$2</span> <span class="kw">&amp;&amp;</span> <span class="fu">false</span> <span class="kw">||</span> <span class="fu">true</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb56-31"><a href="#cb56-31" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
 <p>Let‘s test it out with some semi-random tests:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true"></a>⊆ <span class="ex">A</span> B <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F     # ==<span class="op">&gt;</span> F</span>
-<span id="cb58-3"><a href="#cb58-3" aria-hidden="true"></a><span class="ex">seteq</span> A A <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F <span class="co"># ==&gt; T (a set should = itself)</span></span>
-<span id="cb58-4"><a href="#cb58-4" aria-hidden="true"></a><span class="ex">seteq</span> A B <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F <span class="co"># ==&gt; F</span></span>
-<span id="cb58-5"><a href="#cb58-5" aria-hidden="true"></a>⊆ <span class="ex">C</span> B <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F     # ==<span class="op">&gt;</span> T</span>
-<span id="cb58-6"><a href="#cb58-6" aria-hidden="true"></a>⊂ <span class="ex">C</span> B <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F     # Also ==<span class="op">&gt;</span> T</span>
-<span id="cb58-7"><a href="#cb58-7" aria-hidden="true"></a>⊂ <span class="ex">B</span> C <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F     # ==<span class="op">&gt;</span> F</span>
-<span id="cb58-8"><a href="#cb58-8" aria-hidden="true"></a>⊃ <span class="ex">A</span> A <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F     # ==<span class="op">&gt;</span> F</span>
-<span id="cb58-9"><a href="#cb58-9" aria-hidden="true"></a>⊇ <span class="ex">A</span> B <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F     # ==<span class="op">&gt;</span> F</span>
-<span id="cb58-10"><a href="#cb58-10" aria-hidden="true"></a>⊅ <span class="ex">A</span> A <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F     # ==<span class="op">&gt;</span> T</span>
-<span id="cb58-11"><a href="#cb58-11" aria-hidden="true"></a>⊄ <span class="ex">C</span> B <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F     # ==<span class="op">&gt;</span> T</span>
-<span id="cb58-12"><a href="#cb58-12" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="ex">⊆</span> A B <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F     <span class="co"># ==&gt; F</span></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="ex">seteq</span> A A <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F <span class="co"># ==&gt; T (a set should = itself)</span></span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a><span class="ex">seteq</span> A B <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F <span class="co"># ==&gt; F</span></span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a><span class="ex">⊆</span> C B <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F     <span class="co"># ==&gt; T</span></span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a><span class="ex">⊂</span> C B <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F     <span class="co"># Also ==&gt; T</span></span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a><span class="ex">⊂</span> B C <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F     <span class="co"># ==&gt; F</span></span>
+<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a><span class="ex">⊃</span> A A <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F     <span class="co"># ==&gt; F</span></span>
+<span id="cb58-9"><a href="#cb58-9" aria-hidden="true" tabindex="-1"></a><span class="ex">⊇</span> A B <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F     <span class="co"># ==&gt; F</span></span>
+<span id="cb58-10"><a href="#cb58-10" aria-hidden="true" tabindex="-1"></a><span class="ex">⊅</span> A A <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F     <span class="co"># ==&gt; T</span></span>
+<span id="cb58-11"><a href="#cb58-11" aria-hidden="true" tabindex="-1"></a><span class="ex">⊄</span> C B <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> T <span class="kw">||</span> <span class="bu">echo</span> F     <span class="co"># ==&gt; T</span></span>
+<span id="cb58-12"><a href="#cb58-12" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>F
 T
 F
@@ -1032,38 +1296,43 @@ F
 F
 T
 T</code></pre>
-<p>Ok, play time is over. Let’s see if we can generate a cross product (more properly, I guess, a “cartesian product”) of two sets now. We will have to resort to loops. I hate <a href="http://www.nsl.com/">stinking loops</a>, but what can you do? It‘s <code>bash</code>.</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb60-2"><a href="#cb60-2" aria-hidden="true"></a><span class="co">## $1 will be set 1</span></span>
-<span id="cb60-3"><a href="#cb60-3" aria-hidden="true"></a><span class="co">## $2 will be set 2</span></span>
-<span id="cb60-4"><a href="#cb60-4" aria-hidden="true"></a><span class="co">## Optional arugment $3 is a delimiter for the output (like</span></span>
-<span id="cb60-5"><a href="#cb60-5" aria-hidden="true"></a><span class="co">## an opening bracket)</span></span>
-<span id="cb60-6"><a href="#cb60-6" aria-hidden="true"></a><span class="co">## Optional argument $4 will be a separator between elements</span></span>
-<span id="cb60-7"><a href="#cb60-7" aria-hidden="true"></a><span class="co">## of the pairs)</span></span>
-<span id="cb60-8"><a href="#cb60-8" aria-hidden="true"></a><span class="co">## Optional argument $5 will be an ending delimiter (like a</span></span>
-<span id="cb60-9"><a href="#cb60-9" aria-hidden="true"></a><span class="co">## closing bracket)</span></span>
-<span id="cb60-10"><a href="#cb60-10" aria-hidden="true"></a><span class="co">## Optional arguments $6 and $7 will be printed once first</span></span>
-<span id="cb60-11"><a href="#cb60-11" aria-hidden="true"></a><span class="co">## (for a bracket if you want) and then last.</span></span>
-<span id="cb60-12"><a href="#cb60-12" aria-hidden="true"></a>× <span class="kw">()</span> <span class="kw">{</span></span>
-<span id="cb60-13"><a href="#cb60-13" aria-hidden="true"></a>  <span class="bu">echo</span> -n <span class="va">$6</span></span>
-<span id="cb60-14"><a href="#cb60-14" aria-hidden="true"></a>  <span class="kw">while</span> <span class="bu">read</span> <span class="va">i</span></span>
-<span id="cb60-15"><a href="#cb60-15" aria-hidden="true"></a>  <span class="kw">do</span></span>
-<span id="cb60-16"><a href="#cb60-16" aria-hidden="true"></a>    <span class="kw">while</span> <span class="bu">read</span> <span class="va">j</span></span>
-<span id="cb60-17"><a href="#cb60-17" aria-hidden="true"></a>    <span class="kw">do</span></span>
-<span id="cb60-18"><a href="#cb60-18" aria-hidden="true"></a>      <span class="kw">if</span><span class="bu"> [</span> <span class="st">&quot;</span><span class="va">$i</span><span class="st">&quot;</span> <span class="ot">!=</span> <span class="st">&quot;&quot;</span><span class="bu"> ]</span> <span class="kw">&amp;&amp;</span><span class="bu"> [</span> <span class="st">&quot;</span><span class="va">$j</span><span class="st">&quot;</span> <span class="ot">!=</span> <span class="st">&quot;&quot;</span><span class="bu"> ]</span></span>
-<span id="cb60-19"><a href="#cb60-19" aria-hidden="true"></a>      <span class="kw">then</span></span>
-<span id="cb60-20"><a href="#cb60-20" aria-hidden="true"></a>        <span class="bu">echo</span> <span class="va">$3$i$4$j$5</span><span class="kw">;</span></span>
-<span id="cb60-21"><a href="#cb60-21" aria-hidden="true"></a>      <span class="kw">fi</span></span>
-<span id="cb60-22"><a href="#cb60-22" aria-hidden="true"></a>    <span class="kw">done</span> <span class="op">&lt;</span> <span class="va">$2</span></span>
-<span id="cb60-23"><a href="#cb60-23" aria-hidden="true"></a>  <span class="kw">done</span> <span class="op">&lt;</span> <span class="va">$1</span></span>
-<span id="cb60-24"><a href="#cb60-24" aria-hidden="true"></a>  <span class="kw">if</span>  [ <span class="st">&quot;</span><span class="va">$7</span><span class="st">&quot;</span> != <span class="st">&quot;&quot;</span> ]; <span class="kw">then</span> <span class="bu">echo</span> <span class="va">$7</span><span class="kw">;</span> <span class="kw">fi</span>;</span>
-<span id="cb60-25"><a href="#cb60-25" aria-hidden="true"></a><span class="kw">}</span></span>
-<span id="cb60-26"><a href="#cb60-26" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Ok, play time is over. Let’s see if we can generate a cross product
+(more properly, I guess, a “cartesian product”) of two sets now. We will
+have to resort to loops. I hate <a href="http://www.nsl.com/">stinking
+loops</a>, but what can you do? It‘s <code>bash</code>.</p>
+<div class="sourceCode" id="cb60"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="co">## $1 will be set 1</span></span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="co">## $2 will be set 2</span></span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a><span class="co">## Optional arugment $3 is a delimiter for the output (like</span></span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a><span class="co">## an opening bracket)</span></span>
+<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a><span class="co">## Optional argument $4 will be a separator between elements</span></span>
+<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a><span class="co">## of the pairs)</span></span>
+<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a><span class="co">## Optional argument $5 will be an ending delimiter (like a</span></span>
+<span id="cb60-9"><a href="#cb60-9" aria-hidden="true" tabindex="-1"></a><span class="co">## closing bracket)</span></span>
+<span id="cb60-10"><a href="#cb60-10" aria-hidden="true" tabindex="-1"></a><span class="co">## Optional arguments $6 and $7 will be printed once first</span></span>
+<span id="cb60-11"><a href="#cb60-11" aria-hidden="true" tabindex="-1"></a><span class="co">## (for a bracket if you want) and then last.</span></span>
+<span id="cb60-12"><a href="#cb60-12" aria-hidden="true" tabindex="-1"></a><span class="fu">× ()</span> <span class="kw">{</span></span>
+<span id="cb60-13"><a href="#cb60-13" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="at">-n</span> <span class="va">$6</span></span>
+<span id="cb60-14"><a href="#cb60-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> <span class="bu">read</span> <span class="va">i</span></span>
+<span id="cb60-15"><a href="#cb60-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">do</span></span>
+<span id="cb60-16"><a href="#cb60-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="bu">read</span> <span class="va">j</span></span>
+<span id="cb60-17"><a href="#cb60-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">do</span></span>
+<span id="cb60-18"><a href="#cb60-18" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> <span class="bu">[</span> <span class="st">&quot;</span><span class="va">$i</span><span class="st">&quot;</span> <span class="ot">!=</span> <span class="st">&quot;&quot;</span> <span class="bu">]</span> <span class="kw">&amp;&amp;</span> <span class="bu">[</span> <span class="st">&quot;</span><span class="va">$j</span><span class="st">&quot;</span> <span class="ot">!=</span> <span class="st">&quot;&quot;</span> <span class="bu">]</span></span>
+<span id="cb60-19"><a href="#cb60-19" aria-hidden="true" tabindex="-1"></a>      <span class="cf">then</span></span>
+<span id="cb60-20"><a href="#cb60-20" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="va">$3$i$4$j$5</span><span class="kw">;</span></span>
+<span id="cb60-21"><a href="#cb60-21" aria-hidden="true" tabindex="-1"></a>      <span class="cf">fi</span></span>
+<span id="cb60-22"><a href="#cb60-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">done</span> <span class="op">&lt;</span> <span class="va">$2</span></span>
+<span id="cb60-23"><a href="#cb60-23" aria-hidden="true" tabindex="-1"></a>  <span class="cf">done</span> <span class="op">&lt;</span> <span class="va">$1</span></span>
+<span id="cb60-24"><a href="#cb60-24" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>  <span class="bu">[</span> <span class="st">&quot;</span><span class="va">$7</span><span class="st">&quot;</span> <span class="ot">!=</span> <span class="st">&quot;&quot;</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span> <span class="bu">echo</span> <span class="va">$7</span><span class="kw">;</span> <span class="cf">fi</span><span class="kw">;</span></span>
+<span id="cb60-25"><a href="#cb60-25" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb60-26"><a href="#cb60-26" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
 <p>Let’s try it out with <em>A × B</em> :</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb62-2"><a href="#cb62-2" aria-hidden="true"></a>× <span class="ex">A</span> B</span>
-<span id="cb62-3"><a href="#cb62-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="ex">×</span> A B</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>13
 14
 15
@@ -1080,23 +1349,34 @@ T</code></pre>
 44
 45
 46</code></pre>
-<p>There is no space between the elements. Let’s do it again, but add the formatting. We’ll also pipe it to <code>fmt</code> so that we don’t have to have each set take up a whole line.</p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb64-2"><a href="#cb64-2" aria-hidden="true"></a>× <span class="ex">A</span> B <span class="st">&quot;(&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;)&quot;</span> <span class="st">&quot;{&quot;</span> <span class="st">&quot;}&quot;</span> <span class="kw">|</span> <span class="fu">fmt</span> -w 60 </span>
-<span id="cb64-3"><a href="#cb64-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>There is no space between the elements. Let’s do it again, but add
+the formatting. We’ll also pipe it to <code>fmt</code> so that we don’t
+have to have each set take up a whole line.</p>
+<div class="sourceCode" id="cb64"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="ex">×</span> A B <span class="st">&quot;(&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;)&quot;</span> <span class="st">&quot;{&quot;</span> <span class="st">&quot;}&quot;</span> <span class="kw">|</span> <span class="fu">fmt</span> <span class="at">-w</span> 60 </span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>{(1,3) (1,4) (1,5) (1,6) (2,3) (2,4) (2,5) (2,6) (3,3)
 (3,4) (3,5) (3,6) (4,3) (4,4) (4,5) (4,6) }</code></pre>
-<p>Strictly, we should have commas between each pair in the set, but that would make it harder to nest calls to the × function. By nesting, we can get the cross product of more than just two sets. In fact, let’s check to see if it works with all four sets — and heck, let’s throw in E, the empty set, too, to make sure it works:</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb66-2"><a href="#cb66-2" aria-hidden="true"></a>× <span class="op">&lt;(</span>× <span class="op">&lt;(</span>× <span class="op">&lt;(</span>× <span class="ex">A</span> B <span class="st">&quot;&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;&quot;</span><span class="op">)</span> <span class="ex">C</span> <span class="st">&quot;&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;&quot;</span><span class="op">)</span> <span class="ex">D</span> <span class="st">&quot;&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;&quot;</span><span class="op">)</span> <span class="kw">\</span></span>
-<span id="cb66-3"><a href="#cb66-3" aria-hidden="true"></a>   <span class="ex">E</span> <span class="st">&quot;(&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;)&quot;</span> <span class="st">&quot;{&quot;</span> <span class="st">&quot;}&quot;</span></span>
-<span id="cb66-4"><a href="#cb66-4" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Strictly, we should have commas between each pair in the set, but
+that would make it harder to nest calls to the × function. By nesting,
+we can get the cross product of more than just two sets. In fact, let’s
+check to see if it works with all four sets — and heck, let’s throw in
+E, the empty set, too, to make sure it works:</p>
+<div class="sourceCode" id="cb66"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a><span class="ex">×</span> <span class="op">&lt;(</span><span class="ex">×</span> <span class="op">&lt;(</span><span class="ex">×</span> <span class="op">&lt;(</span><span class="ex">×</span> A B <span class="st">&quot;&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;&quot;</span><span class="op">)</span> C <span class="st">&quot;&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;&quot;</span><span class="op">)</span> D <span class="st">&quot;&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;&quot;</span><span class="op">)</span> <span class="dt">\</span></span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>   E <span class="st">&quot;(&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;)&quot;</span> <span class="st">&quot;{&quot;</span> <span class="st">&quot;}&quot;</span></span>
+<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>{}</code></pre>
-<p>Whoops! Well, it <em>does</em> work, because the cross product of any set with the empty set <em>is</em> the empty set. So let’s just try <em>A</em>, <em>B</em>, <em>C</em>, and <em>D</em>:</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb68-2"><a href="#cb68-2" aria-hidden="true"></a>× <span class="op">&lt;(</span>× <span class="op">&lt;(</span>× <span class="ex">A</span> B <span class="st">&quot;&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;&quot;</span><span class="op">)</span> <span class="ex">C</span> <span class="st">&quot;&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;&quot;</span><span class="op">)</span> <span class="ex">D</span> <span class="st">&quot;(&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;)&quot;</span> <span class="st">&quot;{&quot;</span> <span class="st">&quot;}&quot;</span> <span class="kw">\</span></span>
-<span id="cb68-3"><a href="#cb68-3" aria-hidden="true"></a>   <span class="kw">|</span> <span class="fu">fmt</span> -w 60 </span>
-<span id="cb68-4"><a href="#cb68-4" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Whoops! Well, it <em>does</em> work, because the cross product of any
+set with the empty set <em>is</em> the empty set. So let’s just try
+<em>A</em>, <em>B</em>, <em>C</em>, and <em>D</em>:</p>
+<div class="sourceCode" id="cb68"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="ex">×</span> <span class="op">&lt;(</span><span class="ex">×</span> <span class="op">&lt;(</span><span class="ex">×</span> A B <span class="st">&quot;&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;&quot;</span><span class="op">)</span> C <span class="st">&quot;&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;&quot;</span><span class="op">)</span> D <span class="st">&quot;(&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;)&quot;</span> <span class="st">&quot;{&quot;</span> <span class="st">&quot;}&quot;</span> <span class="dt">\</span></span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">|</span> <span class="fu">fmt</span> <span class="at">-w</span> 60 </span>
+<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>{(1,3,4,1) (1,3,4,3) (1,3,4,5) (1,3,4,7) (1,3,4,9)
 (1,3,5,1) (1,3,5,3) (1,3,5,5) (1,3,5,7) (1,3,5,9) (1,4,4,1)
 (1,4,4,3) (1,4,4,5) (1,4,4,7) (1,4,4,9) (1,4,5,1) (1,4,5,3)
@@ -1125,98 +1405,151 @@ T</code></pre>
 (4,5,5,9) (4,6,4,1) (4,6,4,3) (4,6,4,5) (4,6,4,7) (4,6,4,9)
 (4,6,5,1) (4,6,5,3) (4,6,5,5) (4,6,5,7) (4,6,5,9) }</code></pre>
 <p>Is that the right size? Let’s check the cardinality:</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb70-2"><a href="#cb70-2" aria-hidden="true"></a>× <span class="op">&lt;(</span>× <span class="op">&lt;(</span>× <span class="ex">A</span> B <span class="st">&quot;&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;&quot;</span><span class="op">)</span> <span class="ex">C</span> <span class="st">&quot;&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;&quot;</span><span class="op">)</span> <span class="ex">D</span> <span class="st">&quot;(&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;)&quot;</span> <span class="kw">|</span> <span class="ex">crd</span> </span>
-<span id="cb70-3"><a href="#cb70-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="ex">×</span> <span class="op">&lt;(</span><span class="ex">×</span> <span class="op">&lt;(</span><span class="ex">×</span> A B <span class="st">&quot;&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;&quot;</span><span class="op">)</span> C <span class="st">&quot;&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;&quot;</span><span class="op">)</span> D <span class="st">&quot;(&quot;</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;)&quot;</span> <span class="kw">|</span> <span class="ex">crd</span> </span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>160</code></pre>
-<p>Well, what <em>should</em> the cardinality be? It should be <em>|A| × |B| × |C| × |D|</em>. Let‘s find that value using process substitution, and a little script for <code>bc</code>, the Unix bench calculator:</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true"></a><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">crd</span> A<span class="va">)</span><span class="st"> * </span><span class="va">$(</span><span class="ex">crd</span> B<span class="va">)</span><span class="st"> * </span><span class="va">$(</span><span class="ex">crd</span> C<span class="va">)</span><span class="st"> * </span><span class="va">$(</span><span class="ex">crd</span> D<span class="va">)</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">bc</span> </span>
-<span id="cb72-3"><a href="#cb72-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Well, what <em>should</em> the cardinality be? It should be <em>|A| ×
+|B| × |C| × |D|</em>. Let‘s find that value using process substitution,
+and a little script for <code>bc</code>, the Unix bench calculator:</p>
+<div class="sourceCode" id="cb72"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">crd</span> A<span class="va">)</span><span class="st"> * </span><span class="va">$(</span><span class="ex">crd</span> B<span class="va">)</span><span class="st"> * </span><span class="va">$(</span><span class="ex">crd</span> C<span class="va">)</span><span class="st"> * </span><span class="va">$(</span><span class="ex">crd</span> D<span class="va">)</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">bc</span> </span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>160</code></pre>
 <p>Yay!</p>
-<p>Ok, well, anything else to do? I suppose we should see if we can make a function to generate the power set of a given set.</p>
+<p>Ok, well, anything else to do? I suppose we should see if we can make
+a function to generate the power set of a given set.</p>
 <p>Lol. Just kidding.</p>
-<p>No, not kidding. Like the Man said, “If it‘s worth doing, it‘s worth being completely ridiculous about it.”</p>
-<p>The basic strategy is this. For a set <em>S</em> of cardinality <em>n</em>, there will be <em>2ⁿ</em> subsets within the powerset. So if we generate a list of binary integers from <em>0</em> to <em>2ⁿ - 1</em> we can treat the <em>i</em>th digit of the <em>j</em>th binary number as indicating whether the <em>i</em>th element of S is going to be present in the <em>j</em>th element of the power set. Whew. That’s confusing. Wait, is it even right? Let’s begin again. Basically, we generate the list of <em>2ⁿ</em> binary numbers, then use each as a bitmask on the original set. Where there’s a <em>1</em>, we include that element from the original set S in the new subset, and where there is a <em>0</em>, we don’t. So, the first bitmask will be all zeros. So that will result in the empty set (which is always one of the elements of a power set). The <em>2ⁿ</em>th bitmask will be all ones. That means for that one we will include <em>all</em> of the elements of the original set, which is also always one element of a power set.</p>
-<p>So, let’s start. Here’s a function to get a binary representation of a given integer:</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb74-2"><a href="#cb74-2" aria-hidden="true"></a><span class="fu">dec_to_bin ()</span> <span class="kw">{</span> <span class="bu">echo</span> <span class="st">&quot;obase=2; </span><span class="va">$1</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">bc</span><span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb74-3"><a href="#cb74-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>No, not kidding. Like the Man said, “If it‘s worth doing, it‘s worth
+being completely ridiculous about it.”</p>
+<p>The basic strategy is this. For a set <em>S</em> of cardinality
+<em>n</em>, there will be <em>2ⁿ</em> subsets within the powerset. So if
+we generate a list of binary integers from <em>0</em> to <em>2ⁿ - 1</em>
+we can treat the <em>i</em>th digit of the <em>j</em>th binary number as
+indicating whether the <em>i</em>th element of S is going to be present
+in the <em>j</em>th element of the power set. Whew. That’s confusing.
+Wait, is it even right? Let’s begin again. Basically, we generate the
+list of <em>2ⁿ</em> binary numbers, then use each as a bitmask on the
+original set. Where there’s a <em>1</em>, we include that element from
+the original set S in the new subset, and where there is a <em>0</em>,
+we don’t. So, the first bitmask will be all zeros. So that will result
+in the empty set (which is always one of the elements of a power set).
+The <em>2ⁿ</em>th bitmask will be all ones. That means for that one we
+will include <em>all</em> of the elements of the original set, which is
+also always one element of a power set.</p>
+<p>So, let’s start. Here’s a function to get a binary representation of
+a given integer:</p>
+<div class="sourceCode" id="cb74"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dec_to_bin ()</span> <span class="kw">{</span> <span class="bu">echo</span> <span class="st">&quot;obase=2; </span><span class="va">$1</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">bc</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
-<p>Next we’ll need a function to zero-pad a number to a given length. We will use <code>echo</code>’s more powerfull big brother, <code>printf</code>, which lets us do string formatting.</p>
-<div class="sourceCode" id="cb76"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb76-2"><a href="#cb76-2" aria-hidden="true"></a><span class="fu">zero_pad ()</span> <span class="kw">{</span> <span class="bu">printf</span> <span class="st">&quot;%0</span><span class="va">${2}</span><span class="st">d\n&quot;</span> <span class="va">$1</span><span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb76-3"><a href="#cb76-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Next we’ll need a function to zero-pad a number to a given length. We
+will use <code>echo</code>’s more powerfull big brother,
+<code>printf</code>, which lets us do string formatting.</p>
+<div class="sourceCode" id="cb76"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="fu">zero_pad ()</span> <span class="kw">{</span> <span class="bu">printf</span> <span class="st">&quot;%0</span><span class="va">${2}</span><span class="st">d\n&quot;</span> <span class="va">$1</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
-<p>Now, let’s combine the previous two and get a binary mask ish thingie (ultimately) the length of the cardinality of the set. $1 (the first parameter) will be <em>n</em> — that is, the number to pad, and $2 will be the length to pad out to.</p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb78-2"><a href="#cb78-2" aria-hidden="true"></a><span class="fu">make_mask ()</span> <span class="kw">{</span> <span class="ex">zero_pad</span> <span class="va">$(</span><span class="ex">dec_to_bin</span> <span class="va">$1)</span> <span class="va">$2</span><span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb78-3"><a href="#cb78-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Now, let’s combine the previous two and get a binary mask ish thingie
+(ultimately) the length of the cardinality of the set. $1 (the first
+parameter) will be <em>n</em> — that is, the number to pad, and $2 will
+be the length to pad out to.</p>
+<div class="sourceCode" id="cb78"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make_mask ()</span> <span class="kw">{</span> <span class="ex">zero_pad</span> <span class="va">$(</span><span class="ex">dec_to_bin</span> <span class="va">$1)</span> <span class="va">$2</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
-<p>Again, there are <em>2ⁿ</em> elements in a power set, but we will be counting from zero, so let’s have a little function to calculate <em>2ⁿ - 1</em> for us:</p>
-<div class="sourceCode" id="cb80"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb80-2"><a href="#cb80-2" aria-hidden="true"></a><span class="fu">two_to_the_n_minus_1 ()</span> <span class="kw">{</span> <span class="bu">echo</span> <span class="st">&quot;2 ^ </span><span class="va">$1</span><span class="st"> - 1&quot;</span> <span class="kw">|</span> <span class="fu">bc</span><span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb80-3"><a href="#cb80-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Again, there are <em>2ⁿ</em> elements in a power set, but we will be
+counting from zero, so let’s have a little function to calculate <em>2ⁿ
+- 1</em> for us:</p>
+<div class="sourceCode" id="cb80"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="fu">two_to_the_n_minus_1 ()</span> <span class="kw">{</span> <span class="bu">echo</span> <span class="st">&quot;2 ^ </span><span class="va">$1</span><span class="st"> - 1&quot;</span> <span class="kw">|</span> <span class="fu">bc</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
-<p>Ok, now we need to be able to generate a list of those masks — a list of strings representing binary numbers, one for each possible subset of the set with cardinality <em>n</em>. I tend to love little temporary variables as much as I like explicit loops, but it seems like a good idea here:</p>
-<div class="sourceCode" id="cb82"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb82-2"><a href="#cb82-2" aria-hidden="true"></a><span class="fu">make_masks ()</span> <span class="kw">{</span></span>
-<span id="cb82-3"><a href="#cb82-3" aria-hidden="true"></a>  <span class="bu">local</span> <span class="va">n=$(</span><span class="ex">two_to_the_n_minus_1</span> <span class="va">$1)</span></span>
-<span id="cb82-4"><a href="#cb82-4" aria-hidden="true"></a>  <span class="kw">for</span> <span class="ex">i</span> in <span class="va">$(</span><span class="fu">seq</span> 0 <span class="va">$n)</span></span>
-<span id="cb82-5"><a href="#cb82-5" aria-hidden="true"></a>  <span class="kw">do</span></span>
-<span id="cb82-6"><a href="#cb82-6" aria-hidden="true"></a>    <span class="ex">make_mask</span> <span class="va">$i</span> <span class="va">$1</span></span>
-<span id="cb82-7"><a href="#cb82-7" aria-hidden="true"></a>  <span class="kw">done</span></span>
-<span id="cb82-8"><a href="#cb82-8" aria-hidden="true"></a><span class="kw">}</span></span>
-<span id="cb82-9"><a href="#cb82-9" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Ok, now we need to be able to generate a list of those masks — a list
+of strings representing binary numbers, one for each possible subset of
+the set with cardinality <em>n</em>. I tend to love little temporary
+variables as much as I like explicit loops, but it seems like a good
+idea here:</p>
+<div class="sourceCode" id="cb82"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make_masks ()</span> <span class="kw">{</span></span>
+<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">local</span> <span class="va">n</span><span class="op">=</span><span class="va">$(</span><span class="ex">two_to_the_n_minus_1</span> <span class="va">$1)</span></span>
+<span id="cb82-4"><a href="#cb82-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="va">$(</span><span class="fu">seq</span> 0 <span class="va">$n)</span></span>
+<span id="cb82-5"><a href="#cb82-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">do</span></span>
+<span id="cb82-6"><a href="#cb82-6" aria-hidden="true" tabindex="-1"></a>    <span class="ex">make_mask</span> <span class="va">$i</span> <span class="va">$1</span></span>
+<span id="cb82-7"><a href="#cb82-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">done</span></span>
+<span id="cb82-8"><a href="#cb82-8" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb82-9"><a href="#cb82-9" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
-<p>We need to be able to get the <em>n</em>th line of the input which, in the case of sets, is the <em>n</em>th element. Whatever. You know what I mean. Really. n=$2 The name of the set (the file) will be $1 and which element (<em>n</em>) will be $1.</p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb84-2"><a href="#cb84-2" aria-hidden="true"></a><span class="fu">nth_element ()</span> <span class="kw">{</span> <span class="fu">head</span> -<span class="va">$2</span> <span class="va">$1</span> <span class="kw">|</span> <span class="fu">tail</span> -1<span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb84-3"><a href="#cb84-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>We need to be able to get the <em>n</em>th line of the input which,
+in the case of sets, is the <em>n</em>th element. Whatever. You know
+what I mean. Really. n=$2 The name of the set (the file) will be $1 and
+which element (<em>n</em>) will be $1.</p>
+<div class="sourceCode" id="cb84"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nth_element ()</span> <span class="kw">{</span> <span class="fu">head</span> <span class="at">-</span><span class="va">$2</span> <span class="va">$1</span> <span class="kw">|</span> <span class="fu">tail</span> <span class="at">-1</span><span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
-<p>We need to be able to get the nth character from one of our bit masks, to find out whether the coresponding element goes into our set. <em>n</em> will be parameter $2 and the mask we are looking in will be $1. We can use <code>bash</code>’s <code>expr</code> command with its <code>substr</code> sub-command to do this. Look it up if you don’t believe me.</p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb86-2"><a href="#cb86-2" aria-hidden="true"></a><span class="fu">nth_character ()</span> <span class="kw">{</span> <span class="fu">expr</span> substr <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="va">$2</span><span class="st">&quot;</span> 1<span class="kw">;</span> <span class="kw">}</span></span>
-<span id="cb86-3"><a href="#cb86-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>We need to be able to get the nth character from one of our bit
+masks, to find out whether the coresponding element goes into our set.
+<em>n</em> will be parameter $2 and the mask we are looking in will be
+$1. We can use <code>bash</code>’s <code>expr</code> command with its
+<code>substr</code> sub-command to do this. Look it up if you don’t
+believe me.</p>
+<div class="sourceCode" id="cb86"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nth_character ()</span> <span class="kw">{</span> <span class="fu">expr</span> substr <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="va">$2</span><span class="st">&quot;</span> 1<span class="kw">;</span> <span class="kw">}</span></span>
+<span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
-<p>Okay, this is where the magic happens. There is some cruft in there to nicely format it with curly braces and commas.</p>
+<p>Okay, this is where the magic happens. There is some cruft in there
+to nicely format it with curly braces and commas.</p>
 <p>$2 is the set, and $1 is the bitmask.</p>
-<div class="sourceCode" id="cb88"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb88-2"><a href="#cb88-2" aria-hidden="true"></a><span class="fu">make_subset ()</span> <span class="kw">{</span></span>
-<span id="cb88-3"><a href="#cb88-3" aria-hidden="true"></a>    <span class="va">startflag=</span>0 # <span class="ex">For</span> comma separator. We don<span class="st">&#39;t want one</span></span>
-<span id="cb88-4"><a href="#cb88-4" aria-hidden="true"></a><span class="st">                # before the first element</span></span>
-<span id="cb88-5"><a href="#cb88-5" aria-hidden="true"></a><span class="st">    echo -n &quot;{&quot;</span></span>
-<span id="cb88-6"><a href="#cb88-6" aria-hidden="true"></a><span class="st">    cardinality=$(crd $2)</span></span>
-<span id="cb88-7"><a href="#cb88-7" aria-hidden="true"></a><span class="st">    for i in $(seq 1 $cardinality)</span></span>
-<span id="cb88-8"><a href="#cb88-8" aria-hidden="true"></a><span class="st">    do</span></span>
-<span id="cb88-9"><a href="#cb88-9" aria-hidden="true"></a><span class="st">        if (( $(nth_character &quot;$1&quot; &quot;$i&quot;) == &quot;1&quot; ))</span></span>
-<span id="cb88-10"><a href="#cb88-10" aria-hidden="true"></a><span class="st">        then</span></span>
-<span id="cb88-11"><a href="#cb88-11" aria-hidden="true"></a><span class="st">            if (( &quot;$startflag&quot; == &quot;1&quot; )) &amp;&amp; (( &quot;$i&quot; &lt;= &quot;$cardinality&quot; ))</span></span>
-<span id="cb88-12"><a href="#cb88-12" aria-hidden="true"></a><span class="st">            then</span></span>
-<span id="cb88-13"><a href="#cb88-13" aria-hidden="true"></a><span class="st">                echo -n &quot;,&quot;</span></span>
-<span id="cb88-14"><a href="#cb88-14" aria-hidden="true"></a><span class="st">            fi</span></span>
-<span id="cb88-15"><a href="#cb88-15" aria-hidden="true"></a><span class="st">            echo -n $(nth_element $2 &quot;$i&quot;); startflag=1;</span></span>
-<span id="cb88-16"><a href="#cb88-16" aria-hidden="true"></a><span class="st">        fi</span></span>
-<span id="cb88-17"><a href="#cb88-17" aria-hidden="true"></a><span class="st">    done</span></span>
-<span id="cb88-18"><a href="#cb88-18" aria-hidden="true"></a><span class="st">    echo &quot;}&quot;</span></span>
-<span id="cb88-19"><a href="#cb88-19" aria-hidden="true"></a><span class="st">}</span></span>
-<span id="cb88-20"><a href="#cb88-20" aria-hidden="true"></a><span class="st">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make_subset ()</span> <span class="kw">{</span></span>
+<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a>    <span class="va">startflag</span><span class="op">=</span>0 <span class="co"># For comma separator. We don&#39;t want one</span></span>
+<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a>                <span class="co"># before the first element</span></span>
+<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="at">-n</span> <span class="st">&quot;{&quot;</span></span>
+<span id="cb88-6"><a href="#cb88-6" aria-hidden="true" tabindex="-1"></a>    <span class="va">cardinality</span><span class="op">=</span><span class="va">$(</span><span class="ex">crd</span> <span class="va">$2)</span></span>
+<span id="cb88-7"><a href="#cb88-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="va">$(</span><span class="fu">seq</span> 1 <span class="va">$cardinality)</span></span>
+<span id="cb88-8"><a href="#cb88-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">do</span></span>
+<span id="cb88-9"><a href="#cb88-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">((</span> <span class="va">$(</span><span class="ex">nth_character</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="va">$i</span><span class="st">&quot;</span><span class="va">)</span> <span class="op">==</span> <span class="st">&quot;1&quot;</span> <span class="kw">))</span></span>
+<span id="cb88-10"><a href="#cb88-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">then</span></span>
+<span id="cb88-11"><a href="#cb88-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="kw">((</span> <span class="st">&quot;</span><span class="va">$startflag</span><span class="st">&quot;</span> == <span class="st">&quot;1&quot;</span> <span class="kw">))</span> <span class="kw">&amp;&amp;</span> <span class="kw">((</span> <span class="st">&quot;</span><span class="va">$i</span><span class="st">&quot;</span> <span class="op">&lt;</span>= <span class="st">&quot;</span><span class="va">$cardinality</span><span class="st">&quot;</span> <span class="kw">))</span></span>
+<span id="cb88-12"><a href="#cb88-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">then</span></span>
+<span id="cb88-13"><a href="#cb88-13" aria-hidden="true" tabindex="-1"></a>                <span class="bu">echo</span> <span class="at">-n</span> <span class="st">&quot;,&quot;</span></span>
+<span id="cb88-14"><a href="#cb88-14" aria-hidden="true" tabindex="-1"></a>            <span class="cf">fi</span></span>
+<span id="cb88-15"><a href="#cb88-15" aria-hidden="true" tabindex="-1"></a>            <span class="bu">echo</span> <span class="at">-n</span> <span class="va">$(</span><span class="ex">nth_element</span> <span class="va">$2</span> <span class="st">&quot;</span><span class="va">$i</span><span class="st">&quot;</span><span class="va">)</span><span class="kw">;</span> <span class="va">startflag</span><span class="op">=</span>1<span class="kw">;</span></span>
+<span id="cb88-16"><a href="#cb88-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">fi</span></span>
+<span id="cb88-17"><a href="#cb88-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">done</span></span>
+<span id="cb88-18"><a href="#cb88-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;}&quot;</span></span>
+<span id="cb88-19"><a href="#cb88-19" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb88-20"><a href="#cb88-20" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
-<p>Finally, we can write our <code>power_set</code> function, which just takes the set, generates the list of bitmasks, and then loops over the bitmasks against the set.</p>
-<div class="sourceCode" id="cb90"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb90-2"><a href="#cb90-2" aria-hidden="true"></a><span class="fu">power_set ()</span> <span class="kw">{</span></span>
-<span id="cb90-3"><a href="#cb90-3" aria-hidden="true"></a>  <span class="kw">for</span> <span class="ex">mask</span> in <span class="va">$(</span><span class="ex">make_masks</span> <span class="va">$(</span><span class="ex">crd</span> <span class="va">$1))</span></span>
-<span id="cb90-4"><a href="#cb90-4" aria-hidden="true"></a>  <span class="kw">do</span></span>
-<span id="cb90-5"><a href="#cb90-5" aria-hidden="true"></a>    <span class="ex">make_subset</span> <span class="va">$mask</span> <span class="va">$1</span></span>
-<span id="cb90-6"><a href="#cb90-6" aria-hidden="true"></a>  <span class="kw">done</span></span>
-<span id="cb90-7"><a href="#cb90-7" aria-hidden="true"></a><span class="kw">}</span></span>
-<span id="cb90-8"><a href="#cb90-8" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Finally, we can write our <code>power_set</code> function, which just
+takes the set, generates the list of bitmasks, and then loops over the
+bitmasks against the set.</p>
+<div class="sourceCode" id="cb90"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a><span class="fu">power_set ()</span> <span class="kw">{</span></span>
+<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> mask <span class="kw">in</span> <span class="va">$(</span><span class="ex">make_masks</span> <span class="va">$(</span><span class="ex">crd</span> <span class="va">$1))</span></span>
+<span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">do</span></span>
+<span id="cb90-5"><a href="#cb90-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">make_subset</span> <span class="va">$mask</span> <span class="va">$1</span></span>
+<span id="cb90-6"><a href="#cb90-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">done</span></span>
+<span id="cb90-7"><a href="#cb90-7" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb90-8"><a href="#cb90-8" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
 <p>Ok, so let’s try it:</p>
-<div class="sourceCode" id="cb92"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb92-2"><a href="#cb92-2" aria-hidden="true"></a><span class="ex">power_set</span> A</span>
-<span id="cb92-3"><a href="#cb92-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="ex">power_set</span> A</span>
+<span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>{}
 {4}
 {3}
@@ -1233,31 +1566,45 @@ T</code></pre>
 {1,2,4}
 {1,2,3}
 {1,2,3,4}</code></pre>
-<p>Cool. So, obviously the number of lines output by this process (not to mention the time it takes to run) will scale at the rate of <em>O(2ⁿ)</em>, where n is the cardinality of the input set. Let’s run it again with the union of all our sets, but instead of actually displaying the output, let’s just check that the cardinality of the output is <em>2ⁿ</em>:</p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb94-2"><a href="#cb94-2" aria-hidden="true"></a>∪ <span class="ex">A</span> B C D E <span class="op">&gt;</span> F</span>
-<span id="cb94-3"><a href="#cb94-3" aria-hidden="true"></a><span class="ex">crd</span> <span class="op">&lt;(</span><span class="ex">power_set</span> F<span class="op">)</span></span>
-<span id="cb94-4"><a href="#cb94-4" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p>Cool. So, obviously the number of lines output by this process (not
+to mention the time it takes to run) will scale at the rate of
+<em>O(2ⁿ)</em>, where n is the cardinality of the input set. Let’s run
+it again with the union of all our sets, but instead of actually
+displaying the output, let’s just check that the cardinality of the
+output is <em>2ⁿ</em>:</p>
+<div class="sourceCode" id="cb94"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a><span class="ex">∪</span> A B C D E <span class="op">&gt;</span> F</span>
+<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a><span class="ex">crd</span> <span class="op">&lt;(</span><span class="ex">power_set</span> F<span class="op">)</span></span>
+<span id="cb94-4"><a href="#cb94-4" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>256</code></pre>
-<p><em>F</em> (the union of <em>A</em>, <em>B</em>, <em>C</em>, <em>D</em> and <em>E</em>) has the following cardinality:</p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb96-2"><a href="#cb96-2" aria-hidden="true"></a><span class="ex">crd</span> F</span>
-<span id="cb96-3"><a href="#cb96-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<p><em>F</em> (the union of <em>A</em>, <em>B</em>, <em>C</em>,
+<em>D</em> and <em>E</em>) has the following cardinality:</p>
+<div class="sourceCode" id="cb96"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a><span class="ex">crd</span> F</span>
+<span id="cb96-3"><a href="#cb96-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code>8</code></pre>
-<p>So the cardinality of the power set should be <em>2ⁿ = 2⁸ = 256</em>. So. There you go.</p>
-<p>Well, I hope you’ve gotten a laugh out of all this. I certainly got a tear or two. Have a better one.</p>
+<p>So the cardinality of the power set should be <em>2ⁿ = 2⁸ = 256</em>.
+So. There you go.</p>
+<p>Well, I hope you’ve gotten a laugh out of all this. I certainly got a
+tear or two. Have a better one.</p>
 <h1 id="colophon">Colophon</h1>
-<p>The plain text source for this file is at <a href="http://evanswinner.github.io/sets.kc">http://evanswinner.github.io/sets.kc</a>.</p>
-<p>This file was created with GNU Emacs and post-processed with <a href="https://github.com/EvansWinner/kallychore">Kallychore</a> and Pandoc.</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb98-2"><a href="#cb98-2" aria-hidden="true"></a><span class="bu">echo</span> <span class="st">&quot;This file generated on </span><span class="kw">`</span><span class="fu">date</span><span class="kw">`</span><span class="st"> on </span><span class="kw">`</span><span class="fu">hostname</span><span class="kw">`</span><span class="st">.&quot;</span> <span class="kw">;</span> <span class="bu">echo</span></span>
-<span id="cb98-3"><a href="#cb98-3" aria-hidden="true"></a><span class="ex">make_recipe</span> sets.html <span class="kw">;</span> <span class="bu">echo</span></span>
-<span id="cb98-4"><a href="#cb98-4" aria-hidden="true"></a><span class="bu">echo</span> <span class="st">&quot;Versions of programs used:&quot;</span></span>
-<span id="cb98-5"><a href="#cb98-5" aria-hidden="true"></a><span class="ex">whatver</span> SYSTEM bash bc cmp comm emacs fmt fold grep <span class="kw">\</span></span>
-<span id="cb98-6"><a href="#cb98-6" aria-hidden="true"></a>        <span class="ex">kallychore</span> make pandoc sort touch uniq wc whatver <span class="kw">\</span></span>
-<span id="cb98-7"><a href="#cb98-7" aria-hidden="true"></a>    <span class="kw">|</span> <span class="ex">fold</span> -w60</span>
-<span id="cb98-8"><a href="#cb98-8" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
-<pre><code>This file generated on Fri Aug 26 09:49:01 MDT 2022 on compensation.
+<p>The plain text source for this file is at <a
+href="http://evanswinner.github.io/sets.kc">http://evanswinner.github.io/sets.kc</a>.</p>
+<p>This file was created with GNU Emacs and post-processed with <a
+href="https://github.com/EvansWinner/kallychore">Kallychore</a> and
+Pandoc.</p>
+<div class="sourceCode" id="cb98"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb98-2"><a href="#cb98-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;This file generated on </span><span class="kw">`</span><span class="fu">date</span><span class="kw">`</span><span class="st"> on </span><span class="kw">`</span><span class="fu">hostname</span><span class="kw">`</span><span class="st">.&quot;</span> <span class="kw">;</span> <span class="bu">echo</span></span>
+<span id="cb98-3"><a href="#cb98-3" aria-hidden="true" tabindex="-1"></a><span class="ex">make_recipe</span> sets.html <span class="kw">;</span> <span class="bu">echo</span></span>
+<span id="cb98-4"><a href="#cb98-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Versions of programs used:&quot;</span></span>
+<span id="cb98-5"><a href="#cb98-5" aria-hidden="true" tabindex="-1"></a><span class="ex">whatver</span> SYSTEM bash bc cmp comm emacs fmt fold grep <span class="dt">\</span></span>
+<span id="cb98-6"><a href="#cb98-6" aria-hidden="true" tabindex="-1"></a>        kallychore make pandoc sort touch uniq wc whatver <span class="dt">\</span></span>
+<span id="cb98-7"><a href="#cb98-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">|</span> <span class="fu">fold</span> <span class="at">-w60</span></span>
+<span id="cb98-8"><a href="#cb98-8" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
+<pre><code>This file generated on Sun Dec  3 10:38:49 PM MST 2023 on lenny.
 
 The Makefile command line was:
 kallychore -m sets.kc | \
@@ -1267,31 +1614,38 @@ kallychore -m sets.kc | \
             --include-in-header=portfolio.css -o sets.html sets.md
 
 Versions of programs used:
-Linux 5.15.0-41-generic #44-Ubuntu SMP Wed Jun 22 14:20:53 U
-TC 2022 x86_64 x86_64 x86_64 GNU/Linux
-GNU bash, version 5.1.16(1)-release (x86_64-pc-linux-gnu)
+Linux 6.1.63-08792-g546d41f074ce #1 SMP PREEMPT Mon Nov 27 1
+9:02:37 PST 2023 aarch64 unknown unknown GNU/Linux
+GNU bash, version 5.2.15(1)-release (aarch64-unknown-linux-g
+nu)
 bc 1.07.1
 cmp (GNU diffutils) 3.8
-comm (GNU coreutils) 8.32
-GNU Emacs 29.0.50
-fmt (GNU coreutils) 8.32
-fold (GNU coreutils) 8.32
-grep (GNU grep) 3.7
+comm (GNU coreutils) 9.1
+GNU Emacs 28.2
+fmt (GNU coreutils) 9.1
+fold (GNU coreutils) 9.1
+grep (GNU grep) 3.8
 kallychore version (git revision) 31
 GNU Make 4.3
-pandoc 2.9.2.1
-sort (GNU coreutils) 8.32
-touch (GNU coreutils) 8.32
-uniq (GNU coreutils) 8.32
-wc (GNU coreutils) 8.32
+pandoc 2.17.1.1
+sort (GNU coreutils) 9.1
+touch (GNU coreutils) 9.1
+uniq (GNU coreutils) 9.1
+wc (GNU coreutils) 9.1
 whatver version (git revision) 19</code></pre>
 <p>Don’t let’s forget to clean up after ourselves.</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true"></a><span class="co">#### Code Cell Start ##########</span></span>
-<span id="cb100-2"><a href="#cb100-2" aria-hidden="true"></a><span class="fu">rm</span> -f a.txt b.txt c.txt d.txt A B C D E</span>
-<span id="cb100-3"><a href="#cb100-3" aria-hidden="true"></a><span class="co">###############################</span></span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="co">#### Code Cell Start ##########</span></span>
+<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-f</span> a.txt b.txt c.txt d.txt A B C D E</span>
+<span id="cb100-3"><a href="#cb100-3" aria-hidden="true" tabindex="-1"></a><span class="co">###############################</span></span></code></pre></div>
 <pre><code></code></pre>
 <hr />
 <p>© 2018 Evans H Winner.</p>
-<p>Evans Winner is a Professional IT Minion in Golden, Colorado, and intends to keep on writing things like this until he manages to get a decent job. (<a href="https://www.linkedin.com/in/evanswinner/">LinkedIn</a>, <a href="mailto:evans.winner@gmail.com">email</a>, <a href="http://evanswinner.github.io/portfolio.html">webpage</a>)</p>
+<p>Evans Winner is a Professional IT Minion in Golden, Colorado, and
+intends to keep on writing things like this until he manages to get a
+decent job. (<a
+href="https://www.linkedin.com/in/evanswinner/">LinkedIn</a>, <a
+href="mailto:evans.winner@gmail.com">email</a>, <a
+href="http://evanswinner.github.io/portfolio.html">webpage</a>)</p>
 </body>
 </html>

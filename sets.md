@@ -988,7 +988,7 @@ whatver SYSTEM bash bc cmp comm emacs fmt fold grep \
 ###############################
 ```
 ~~~~~
-This file generated on Fri Aug 26 09:49:01 MDT 2022 on compensation.
+This file generated on Sun Dec  3 10:38:49 PM MST 2023 on lenny.
 
 The Makefile command line was:
 kallychore -m sets.kc | \
@@ -998,23 +998,24 @@ kallychore -m sets.kc | \
             --include-in-header=portfolio.css -o sets.html sets.md
 
 Versions of programs used:
-Linux 5.15.0-41-generic #44-Ubuntu SMP Wed Jun 22 14:20:53 U
-TC 2022 x86_64 x86_64 x86_64 GNU/Linux
-GNU bash, version 5.1.16(1)-release (x86_64-pc-linux-gnu)
+Linux 6.1.63-08792-g546d41f074ce #1 SMP PREEMPT Mon Nov 27 1
+9:02:37 PST 2023 aarch64 unknown unknown GNU/Linux
+GNU bash, version 5.2.15(1)-release (aarch64-unknown-linux-g
+nu)
 bc 1.07.1
 cmp (GNU diffutils) 3.8
-comm (GNU coreutils) 8.32
-GNU Emacs 29.0.50
-fmt (GNU coreutils) 8.32
-fold (GNU coreutils) 8.32
-grep (GNU grep) 3.7
+comm (GNU coreutils) 9.1
+GNU Emacs 28.2
+fmt (GNU coreutils) 9.1
+fold (GNU coreutils) 9.1
+grep (GNU grep) 3.8
 kallychore version (git revision) 31
 GNU Make 4.3
-pandoc 2.9.2.1
-sort (GNU coreutils) 8.32
-touch (GNU coreutils) 8.32
-uniq (GNU coreutils) 8.32
-wc (GNU coreutils) 8.32
+pandoc 2.17.1.1
+sort (GNU coreutils) 9.1
+touch (GNU coreutils) 9.1
+uniq (GNU coreutils) 9.1
+wc (GNU coreutils) 9.1
 whatver version (git revision) 19
 ~~~~~
 
