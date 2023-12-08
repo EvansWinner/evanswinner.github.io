@@ -82,9 +82,10 @@ as we used to say on Web 1.0, "Under construction."
 <pre>
 
 
- <b>2018-11-18: Facebook Post
- [INLINE BELOW]</b> [<a href="https://www.facebook.com/bellsound/posts/pfbid0fF79vqKRJx6yT3MbVJBFpnomp1UdzzBSXSqicwqR8XFEZvVFE5QpaztQtjukN45gl">ORIGINAL</a>]
+ <b>2018-11-18: Facebook Post</b>
+ [<a href="https://www.facebook.com/bellsound/posts/pfbid0fF79vqKRJx6yT3MbVJBFpnomp1UdzzBSXSqicwqR8XFEZvVFE5QpaztQtjukN45gl">ORIGINAL</a>]
 .---------------------------------------
+  [FULL TEXT]
   "Dishes are tools. If they can't
   suffer being roughly thrown into a
   sink with other dishes, washed in a
@@ -95,30 +96,34 @@ as we used to say on Web 1.0, "Under construction."
  <b>2017-02-01: Facebook Meme</b>
  [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">LINK</a>]
 .---------------------------------------
-  Image. From when D. Trump was elected.
-  C.f. "#NotMyPresident." Includes ob-
-  ligatory typo.]
+  [IMAGE] 
+  From when D. Trump was elected. C.f. 
+  "#NotMyPresident." Includes obligatory
+  typo.
 '---------------------------------------
  
- <b>2010-08-10: Tweet
- [INLINE BELOW]</b> [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]
+ <b>2010-08-10: Tweet</b>
+ [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]
 .---------------------------------------
+  [FULL TEXT]
   "If the only tool you have is a com-
   puter, you tend to see every prob-
   lem as computable."
 '---------------------------------------
 
- <b>2010-05-28: Tweet
- [INLINE BELOW]</b> [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]</b>
+ <b>2010-05-28: Tweet</b>
+ [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
 .---------------------------------------
+  [FULL TEXT]
   "When a man needs a hairbrush, he's
   got bigger problems than needing a
   hairbrush."
 '---------------------------------------
 
- <b>2009-02-07: Tweet
- [INLINE BELOW]</b> [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
+ <b>2009-02-07: Tweet</b>
+ [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
 .---------------------------------------
+  [FULL TEXT]
   "There are two kinds of sysadmins:
   those who are overworked, and those
   who hang out on alt.sysadmin.recovery
