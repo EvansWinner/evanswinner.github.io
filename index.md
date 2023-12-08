@@ -85,7 +85,7 @@ as we used to say on Web 1.0, "Under construction."
 
  <b>2018-11-18                Facebook Post</b>
 .---------------------------------------
- INLINE BELOW [<a href="https://www.facebook.com/bellsound/posts/pfbid0fF79vqKRJx6yT3MbVJBFpnomp1UdzzBSXSqicwqR8XFEZvVFE5QpaztQtjukN45gl">ORIGINAL</a>]
+  [INLINE BELOW] [<a href="https://www.facebook.com/bellsound/posts/pfbid0fF79vqKRJx6yT3MbVJBFpnomp1UdzzBSXSqicwqR8XFEZvVFE5QpaztQtjukN45gl">ORIGINAL</a>]
   "Dishes are tools. If they can't
   suffer being roughly thrown into a sink
   with other dishes, washed in a dish-
@@ -95,15 +95,15 @@ as we used to say on Web 1.0, "Under construction."
 
  <b>2017-02-01               Facebook Meme</b>
 .---------------------------------------
- [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">ORIGINAL</a>]
- [Image. From when D. Trump was elect-
+  [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">ORIGINAL</a>] 
+  [Image. From when D. Trump was elect-
   ed. C.f. "#NotMyPresident." Includes
   obligatory typo.]
 '---------------------------------------
  
  <b>2010-08-10                        Tweet</b>
 .---------------------------------------
- INLINE BELOW [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]
+  [INLINE BELOW] [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]
   "If the only tool you have is a com-
   puter, you tend to see every prob-
   lem as computable."
@@ -111,7 +111,7 @@ as we used to say on Web 1.0, "Under construction."
 
  <b>2010-05-28                        Tweet</b>
 .---------------------------------------
- INLINE BELOW [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
+  [INLINE BELOW] [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
   "When a man needs a hairbrush, he's
   got bigger problems than needing a hair-
   brush."
@@ -119,7 +119,7 @@ as we used to say on Web 1.0, "Under construction."
 
  <b>2009-02-07                        Tweet</b>
 .---------------------------------------
- INLINE BELOW [<a href="https://x.com/thorne/status/1187534264?s=20">ORIGINAL</a>]
+  [INLINE BELOW] [<a href="https://x.com/thorne/status/1187534264?s=20">ORIGINAL</a>]
   "There are two kinds of sysadmins:
   those who are overworked, and those
   who hang out on alt.sysadmin.recovery
