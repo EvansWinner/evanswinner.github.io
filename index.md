@@ -58,20 +58,19 @@ my less old but still fairly old evanswinner.com page;
 my [account](https://twitter.com/thorne) on "X" (née Twitter);
 my [other](https://twitter.com/evans_h_winner) account on Twitter;
 my personal [Facebook](https://www.facebook.com/bellsound) posts;
-my old Posterous blog;
-my old Wordpress blog;
-my old Usenet posts;
-my old Blogger blog;
-some other stuff I'm forgetting.
+my old Posterous blog,
+Usenet posts; [Reddit](https://www.reddit.com/user/ttlaxia) junk,
+Blogger [blog](https://www.blogger.com/blog/posts/1786428717452726002?bpli=1&pli=1) blog,
+[LiveJournal](https://house-of-thorne.livejournal.com/) blog,
+and other stuff that I'm forgetting.
 
 It's mostly some nerdy tech stuff
 from a curmudgeonly perspective,
 and essays on philosophy and the arts
 from a frankly Randian perspective.
 
-I don't normally condone the use of the words
-"tweet" or especially "meme."
-But I am too lazy to here do otherwise.
+I don't normally condone the use of the word "meme,"
+but I am too lazy to here do otherwise.
 I am just starting this, so it is,
 as we used to say on Web 1.0, "Under construction."
 
