@@ -92,12 +92,12 @@ as we used to say on Web 1.0, "Under construction."
   then -- THEY'RE CRAP!"
 '---------------------------------------
 
- <b>2017-02-01: Facebook Meme</b>
-  [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">ORIGINAL</a>]
+ <b>2017-02-01: Facebook Meme
+ [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">LINK</a>]</pre>b>
 .---------------------------------------
-  Image. From when D. Trump was elect-
-  ed. C.f. "#NotMyPresident." Includes
-  obligatory typo.]
+  Image. From when D. Trump was elected.
+  C.f. "#NotMyPresident." Includes ob-
+  ligatory typo.]
 '---------------------------------------
  
  <b>2010-08-10: Tweet</b>
