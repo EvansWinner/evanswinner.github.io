@@ -83,7 +83,7 @@ as we used to say on Web 1.0, "Under construction."
 
 
  <b>2018-11-18: Facebook Post
- [INLINE BELOW] [<a href="https://www.facebook.com/bellsound/posts/pfbid0fF79vqKRJx6yT3MbVJBFpnomp1UdzzBSXSqicwqR8XFEZvVFE5QpaztQtjukN45gl">ORIGINAL</a>]</b>
+ [INLINE BELOW]</b> [<a href="https://www.facebook.com/bellsound/posts/pfbid0fF79vqKRJx6yT3MbVJBFpnomp1UdzzBSXSqicwqR8XFEZvVFE5QpaztQtjukN45gl">ORIGINAL</a>]
 .---------------------------------------
   "Dishes are tools. If they can't
   suffer being roughly thrown into a
@@ -92,8 +92,8 @@ as we used to say on Web 1.0, "Under construction."
   then -- they're crap!"
 '---------------------------------------
 
- <b>2017-02-01: Facebook Meme
- [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">LINK</a>]</b>
+ <b>2017-02-01: Facebook Meme</b>
+ [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">LINK</a>]
 .---------------------------------------
   Image. From when D. Trump was elected.
   C.f. "#NotMyPresident." Includes ob-
@@ -101,7 +101,7 @@ as we used to say on Web 1.0, "Under construction."
 '---------------------------------------
  
  <b>2010-08-10: Tweet
- [INLINE BELOW] [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]</b>
+ [INLINE BELOW]</b> [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]
 .---------------------------------------
   "If the only tool you have is a com-
   puter, you tend to see every prob-
@@ -109,15 +109,15 @@ as we used to say on Web 1.0, "Under construction."
 '---------------------------------------
 
  <b>2010-05-28: Tweet
- [INLINE BELOW] [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]</b>
+ [INLINE BELOW]</b> [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]</b>
 .---------------------------------------
   "When a man needs a hairbrush, he's
-  got bigger problems than needing a hair-
-  brush."
+  got bigger problems than needing a
+  hairbrush."
 '---------------------------------------
 
  <b>2009-02-07: Tweet
- [INLINE BELOW] [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]</b>
+ [INLINE BELOW]</b> [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
 .---------------------------------------
   "There are two kinds of sysadmins:
   those who are overworked, and those
@@ -125,8 +125,8 @@ as we used to say on Web 1.0, "Under construction."
   pretending they are overworked."
 '---------------------------------------
 
- <b>2007-03-16: Code (EnacsWiki)
- [<a href="https://www.emacswiki.org/emacs/TwIt">LINK</a>]</b>
+ <b>2007-03-16: Code (EnacsWiki)</b>
+ [<a href="https://www.emacswiki.org/emacs/TwIt">LINK</a>]
 .---------------------------------------
   <b>Twit.el</b>
   What was, I think, the second Twitter
