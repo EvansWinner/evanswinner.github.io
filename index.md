@@ -70,8 +70,6 @@ from a curmudgeonly perspective,
 and essays on philosophy and the arts
 from a frankly Randian perspective.
 
-I don't normally condone the use of the word "meme,"
-but I am too lazy to here do otherwise.
 I am just starting this, so it is,
 as we used to say on Web 1.0, "Under construction."
 
@@ -92,7 +90,7 @@ as we used to say on Web 1.0, "Under construction."
   wave, then -- they're crap!"
 '------------------------------------
 
- <b>2017-02-01             Facebook Meme</b>
+ <b>2017-02-01           Facebook "Meme"</b>
                                [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">LINK</a>]
 .------------------------------------
                               [IMAGE] 
