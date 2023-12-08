@@ -84,7 +84,7 @@ as we used to say on Web 1.0, "Under construction."
  <b>2018-11-18                Facebook Post</b>
                               [<a href="https://www.facebook.com/bellsound/posts/pfbid0fF79vqKRJx6yT3MbVJBFpnomp1UdzzBSXSqicwqR8XFEZvVFE5QpaztQtjukN45gl">ORIGINAL</a>]
 .---------------------------------------
-  [FULL TEXT]
+                             [FULL TEXT]
   "Dishes are tools. If they can't
   suffer being roughly thrown into a
   sink with other dishes, washed in a
