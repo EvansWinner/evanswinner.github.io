@@ -93,13 +93,13 @@ as we used to say on Web 1.0, "Under construction."
 '------------------------------------
 
  <b>2018-03-13                   Article</b>
-                               [<a href="https://thornepublic.blogspot.com/2018/03/one-space-or-two.html
+                           [<a href="https://thornepublic.blogspot.com/2018/03/one-space-or-two.html
 ">ORIGINAL</a>]
 .------------------------------------
                      <b>One Space or Two</b>
-  On the user of one or two spaces
-  between sentences. Serious ana-
-  lytical overkill.
+  On the use of one or two spaces be-
+  tween sentences. Serious analytical
+  overkill.
 '------------------------------------
 
  <b>2017-02-01           Facebook "Meme"</b>
