@@ -86,23 +86,23 @@ as we used to say on Web 1.0, "Under construction."
  [INLINE BELOW] [<a href="https://www.facebook.com/bellsound/posts/pfbid0fF79vqKRJx6yT3MbVJBFpnomp1UdzzBSXSqicwqR8XFEZvVFE5QpaztQtjukN45gl">ORIGINAL</a>]
 .---------------------------------------
   "Dishes are tools. If they can't
-  suffer being roughly thrown into a sink
-  with other dishes, washed in a dish-
-  washer, or heated in a microwave,
+  suffer being roughly thrown into a
+  sink with other dishes, washed in a
+  dishwasher, or heated in a microwave,
   then -- THEY'RE CRAP!"
 '---------------------------------------
 
- <b>2017-02-01                Facebook Meme</b>
+ <b>2017-02-01: Facebook Meme</b>
+  [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">ORIGINAL</a>]
 .---------------------------------------
-  [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">ORIGINAL</a>] 
-  [Image. From when D. Trump was elect-
+  Image. From when D. Trump was elect-
   ed. C.f. "#NotMyPresident." Includes
   obligatory typo.]
 '---------------------------------------
  
- <b>2010-08-10                        Tweet</b>
+ <b>2010-08-10: Tweet</b>
+ [INLINE BELOW] [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]
 .---------------------------------------
-  [INLINE BELOW] [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]
   "If the only tool you have is a com-
   puter, you tend to see every prob-
   lem as computable."
