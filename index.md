@@ -55,6 +55,7 @@ so I edit freely where I want to.
 Most (but not all) comes from:
 My old evanswinner.com homepage, now defunct;
 my less old but still fairly old evanswinner.com page;
+timbral.net;
 my [account](https://twitter.com/thorne) on "X" (née Twitter);
 my [other](https://twitter.com/evans_h_winner) account on Twitter;
 my personal [Facebook](https://www.facebook.com/bellsound) posts;
