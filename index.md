@@ -7,7 +7,7 @@ date: 2023-12-02
 
 <img src="me.jpg" style="max-width:50%;float:left;">
 
-[⇒ Skip Intro ⇐](#The Stuff)
+[⇒ Skip Intro ⇐](#The-Stuff)
 
 I am Evans Hawthorne Winner, 51-year-old,
 lowly IT worker living in Evergreen, Colorado.
