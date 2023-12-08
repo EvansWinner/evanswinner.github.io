@@ -132,7 +132,7 @@ as we used to say on Web 1.0, "Under construction."
  <b>2007-03-16             Code (EnacsWiki)</b>
                                   [<a href="https://www.emacswiki.org/emacs/TwIt">LINK</a>]
 .---------------------------------------
-                                 "<b><u>Twit.el</u></b>"
+                               "<b><u>Twit.el</u></b>"
   What was, I think, the second Twitter
   client for Emacs. I only wrote the
   first versions (under the nom de code
