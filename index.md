@@ -57,7 +57,7 @@ My old evanswinner.com homepage, now defunct;
 my less old but still fairly old evanswinner.com page;
 my [account](https://twitter.com/thorne) on "X" (née Twitter);
 my [other](https://twitter.com/evans_h_winner) account on Twitter;
-my personal [Facebook])https://www.facebook.com/bellsound) posts;
+my personal [Facebook](https://www.facebook.com/bellsound) posts;
 my old Posterous blog;
 my old Wordpress blog;
 my old Usenet posts;
