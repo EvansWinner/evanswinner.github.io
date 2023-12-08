@@ -67,7 +67,10 @@ from a curmudgeonly perspective,
 and essays on philosophy and the arts
 from a frankly Randian perspective.
 
-I am JUST starting this, so it is,
+I don't normally condone the use of the words
+"tweet" or especially "meme."
+But I am too lazy to here to otherwise.
+I am just starting this, so it is,
 we we used to say on Web 1.0, "Under construction."
 
 
@@ -88,9 +91,9 @@ we we used to say on Web 1.0, "Under construction."
   THEY'RE CRAP! 
 '---------------------------------------
 
- <b>2017-02-01              Facebook "meme"</b>
+ <b>2017-02-01                        Meme</b>
 .---------------------------------------
- [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">IMAGE</a> (WWW)]
+ [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">FACEBOOK</a>]
  [Image. From when D. Trump was elect-
   ed. C.f. "#NotMyPresident." Includes
   obligatory typo.]
