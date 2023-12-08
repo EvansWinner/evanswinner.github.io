@@ -81,7 +81,7 @@ as we used to say on Web 1.0, "Under construction."
 
 <pre>
 
- <b>2018-11-18:               Facebook Post</b>
+ <b>2018-11-18                Facebook Post</b>
  [<a href="https://www.facebook.com/bellsound/posts/pfbid0fF79vqKRJx6yT3MbVJBFpnomp1UdzzBSXSqicwqR8XFEZvVFE5QpaztQtjukN45gl">ORIGINAL</a>]
 .---------------------------------------
   [FULL TEXT]
@@ -92,7 +92,7 @@ as we used to say on Web 1.0, "Under construction."
   then -- they're crap!"
 '---------------------------------------
 
- <b>2017-02-01:               Facebook Meme</b>
+ <b>2017-02-01                Facebook Meme</b>
  [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">LINK</a>]
 .---------------------------------------
   [IMAGE] 
@@ -101,7 +101,7 @@ as we used to say on Web 1.0, "Under construction."
   typo.
 '---------------------------------------
  
- <b>2010-08-10:                     Twitter</b>
+ <b>2010-08-10                      Twitter</b>
  [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]
 .---------------------------------------
   [FULL TEXT]
@@ -110,7 +110,7 @@ as we used to say on Web 1.0, "Under construction."
   lem as computable."
 '---------------------------------------
 
- <b>2010-05-28:                     Twitter</b>
+ <b>2010-05-28                      Twitter</b>
  [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
 .---------------------------------------
   [FULL TEXT]
@@ -119,7 +119,7 @@ as we used to say on Web 1.0, "Under construction."
   hairbrush."
 '---------------------------------------
 
- <b>2009-02-07:                     Twitter</b>
+ <b>2009-02-07                      Twitter</b>
  [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
 .---------------------------------------
   [FULL TEXT]
@@ -129,7 +129,7 @@ as we used to say on Web 1.0, "Under construction."
   pretending they are overworked."
 '---------------------------------------
 
- <b>2007-03-16:            Code (EnacsWiki)</b>
+ <b>2007-03-16             Code (EnacsWiki)</b>
  [<a href="https://www.emacswiki.org/emacs/TwIt">LINK</a>]
 .---------------------------------------
  "<b><u>Twit.el</u></b>"
