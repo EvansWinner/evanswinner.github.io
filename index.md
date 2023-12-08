@@ -120,7 +120,7 @@ as we used to say on Web 1.0, "Under construction."
 '---------------------------------------
 
  <b>2009-02-07                      Twitter</b>
-                               [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
+                              [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
 .---------------------------------------
   [FULL TEXT]
   "There are two kinds of sysadmins:
@@ -130,7 +130,7 @@ as we used to say on Web 1.0, "Under construction."
 '---------------------------------------
 
  <b>2007-03-16             Code (EnacsWiki)</b>
-                                   [<a href="https://www.emacswiki.org/emacs/TwIt">LINK</a>]
+                                  [<a href="https://www.emacswiki.org/emacs/TwIt">LINK</a>]
 .---------------------------------------
  "<b><u>Twit.el</u></b>"
   What was, I think, the second Twitter
