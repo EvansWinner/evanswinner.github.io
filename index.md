@@ -60,9 +60,9 @@ my [other](https://twitter.com/evans_h_winner) account on Twitter;
 my personal [Facebook](https://www.facebook.com/bellsound) posts;
 my old Posterous blog,
 Usenet posts; [Reddit](https://www.reddit.com/user/ttlaxia) junk,
-Blogger [blog](https://www.blogger.com/blog/posts/1786428717452726002?bpli=1&pli=1) blog,
-[LiveJournal](https://house-of-thorne.livejournal.com/) blog,
-and other stuff that I'm forgetting.
+abortive [Blogger](https://www.blogger.com/blog/posts/1786428717452726002?bpli=1&pli=1) and
+[LiveJournal](https://house-of-thorne.livejournal.com/) blogs --
+and other stuff that I'm probably forgetting.
 
 It's mostly some nerdy tech stuff
 from a curmudgeonly perspective,
