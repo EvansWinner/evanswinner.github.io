@@ -81,63 +81,64 @@ as we used to say on Web 1.0, "Under construction."
 
 <pre>
 
- <b>2018-11-18                Facebook Post</b>
+ <b>2018-11-18             Facebook Post</b>
                               [<a href="https://www.facebook.com/bellsound/posts/pfbid0fF79vqKRJx6yT3MbVJBFpnomp1UdzzBSXSqicwqR8XFEZvVFE5QpaztQtjukN45gl">ORIGINAL</a>]
-.---------------------------------------
-                             [FULL TEXT]
+.------------------------------------
+                          [FULL TEXT]
   "Dishes are tools. If they can't
   suffer being roughly thrown into a
-  sink with other dishes, washed in a
-  dishwasher, or heated in a microwave,
-  then -- they're crap!"
-'---------------------------------------
+  sink with other dishes, washed in
+  a dishwasher, or heated in a micro-
+  wave, then -- they're crap!"
+'------------------------------------
 
- <b>2017-02-01                Facebook Meme</b>
-                                  [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">LINK</a>]
-.---------------------------------------
-                                 [IMAGE] 
-  From when D. Trump was elected. C.f. 
-  "#NotMyPresident." Includes obligatory
-  typo.
-'---------------------------------------
+ <b>2017-02-01             Facebook Meme</b>
+                               [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">LINK</a>]
+.------------------------------------
+                              [IMAGE] 
+  From when D. Trump was elected.
+  C.f. "#NotMyPresident." Includes
+  obligatory typo.
+'------------------------------------
  
- <b>2010-08-10                      Twitter</b>
-                              [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]
-.---------------------------------------
-                             [FULL TEXT]
-  "If the only tool you have is a com-
-  puter, you tend to see every prob-
-  lem as computable."
-'---------------------------------------
+ <b>2010-08-10                   Twitter</b>
+                           [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]
+.------------------------------------
+                          [FULL TEXT]
+  "If the only tool you have is a
+  computer, you tend to see every
+  problem as computable."
+'------------------------------------
 
- <b>2010-05-28                      Twitter</b>
-                              [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
-.---------------------------------------
-                             [FULL TEXT]
-  "When a man needs a hairbrush, he's
-  got bigger problems than needing a
-  hairbrush."
-'---------------------------------------
+ <b>2010-05-28                   Twitter</b>
+                           [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
+.------------------------------------
+                          [FULL TEXT]
+  "When a man needs a hairbrush,
+  he's got bigger problems than need-
+  ing a hairbrush."
+'------------------------------------
 
- <b>2009-02-07                      Twitter</b>
-                              [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
-.---------------------------------------
-                             [FULL TEXT]
+ <b>2009-02-07                   Twitter</b>
+                           [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
+.------------------------------------
+                          [FULL TEXT]
   "There are two kinds of sysadmins:
-  those who are overworked, and those
-  who hang out on alt.sysadmin.recovery
-  pretending they are overworked."
-'---------------------------------------
+  those who are overworked, and
+  those who hang out on
+  alt.sysadmin.recovery pretending
+  they are overworked."
+'------------------------------------
 
- <b>2007-03-16             Code (EnacsWiki)</b>
-                                  [<a href="https://www.emacswiki.org/emacs/TwIt">LINK</a>]
-.---------------------------------------
-                               "<b><u>Twit.el</u></b>"
-  What was, I think, the second Twitter
-  client for Emacs. I only wrote the
-  first versions (under the nom de code
-  "Theron Tlax").
-'---------------------------------------
+ <b>2007-03-16          Code (EnacsWiki)</b>
+                               [<a href="https://www.emacswiki.org/emacs/TwIt">LINK</a>]
+.------------------------------------
+                            "<b><u>Twit.el</u></b>"
+  What was, I think, the second Twit-
+  ter client for Emacs. I only wrote
+  the first versions (under the nom
+  de code "Theron Tlax").
+'------------------------------------
 
 </pre>
 
