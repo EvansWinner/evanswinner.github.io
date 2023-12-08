@@ -92,6 +92,16 @@ as we used to say on Web 1.0, "Under construction."
   wave, then -- they're crap!"
 '------------------------------------
 
+ <b>2018-03-13                   Article</b>
+                               [<a href="https://thornepublic.blogspot.com/2018/03/one-space-or-two.html
+">ORIGINAL</a>]
+.------------------------------------
+                     <b>One Space or Two</b>
+  On the user of one or two spaces
+  between sentences. Serious ana-
+  lytical overkill.
+'------------------------------------
+
  <b>2017-02-01           Facebook "Meme"</b>
                                [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">LINK</a>]
 .------------------------------------
