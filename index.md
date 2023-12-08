@@ -102,7 +102,7 @@ as we used to say on Web 1.0, "Under construction."
   typo.
 '---------------------------------------
  
- <b>2010-08-10: Tweet</b>
+ <b>2010-08-10: Twitter</b>
  [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]
 .---------------------------------------
   [FULL TEXT]
@@ -111,7 +111,7 @@ as we used to say on Web 1.0, "Under construction."
   lem as computable."
 '---------------------------------------
 
- <b>2010-05-28: Tweet</b>
+ <b>2010-05-28: Twitter</b>
  [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
 .---------------------------------------
   [FULL TEXT]
@@ -120,7 +120,7 @@ as we used to say on Web 1.0, "Under construction."
   hairbrush."
 '---------------------------------------
 
- <b>2009-02-07: Tweet</b>
+ <b>2009-02-07: Twitter</b>
  [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
 .---------------------------------------
   [FULL TEXT]
