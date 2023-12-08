@@ -69,9 +69,9 @@ from a frankly Randian perspective.
 
 I don't normally condone the use of the words
 "tweet" or especially "meme."
-But I am too lazy to here to otherwise.
+But I am too lazy to here do otherwise.
 I am just starting this, so it is,
-we we used to say on Web 1.0, "Under construction."
+as we used to say on Web 1.0, "Under construction."
 
 
 
