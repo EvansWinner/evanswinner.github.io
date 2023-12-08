@@ -7,6 +7,8 @@ date: 2023-12-02
 
 <img src="me.jpg" style="max-width:50%;float:left;">
 
+[⇒ Skip Intro ⇐](#The Stuff)
+
 I am Evans Hawthorne Winner, 51-year-old,
 lowly IT worker living in Evergreen, Colorado.
 (Drop me a line if you know where I can get analytical work --
@@ -37,7 +39,7 @@ turned data curator and R hacker.
 My son, Taavi, is also way more interesting than me.
 He is nine years old and likes paleontology and Minecraft.
 
-**Web Log**
+## Web Log
 
 Here follows a 'blog in the old sense of the term:
 in something like chronological order,
@@ -53,7 +55,7 @@ Also, this is not a historical record,
 so I edit freely where I want to.
 
 Most (but not all) comes from:
-My old evanswinner.com homepage, now defunct;
+my old evanswinner.com homepage, now defunct;
 my less old but still fairly old evanswinner.com page;
 timbral.net;
 my [account](https://twitter.com/thorne) on "X" (née Twitter);
@@ -65,7 +67,8 @@ abortive [Blogger](https://www.blogger.com/blog/posts/1786428717452726002?bpli=1
 [LiveJournal](https://house-of-thorne.livejournal.com/) blogs --
 and other stuff that I'm probably forgetting.
 
-It's mostly some nerdy tech stuff
+Besides the one-liners,
+it's mostly some nerdy tech stuff
 from a curmudgeonly perspective,
 and essays on philosophy and the arts
 from a frankly Randian perspective.
@@ -74,8 +77,7 @@ I am just starting this, so it is,
 as we used to say on Web 1.0, "Under construction."
 
 
-
-
+## The Stuff
 
 <pre>
 
