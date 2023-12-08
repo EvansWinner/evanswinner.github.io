@@ -82,14 +82,14 @@ as we used to say on Web 1.0, "Under construction."
 <pre>
 
 
- <b>2018-11-18: Facebook Post</b>
- [INLINE BELOW] [<a href="https://www.facebook.com/bellsound/posts/pfbid0fF79vqKRJx6yT3MbVJBFpnomp1UdzzBSXSqicwqR8XFEZvVFE5QpaztQtjukN45gl">ORIGINAL</a>]
+ <b>2018-11-18: Facebook Post
+ [INLINE BELOW] [<a href="https://www.facebook.com/bellsound/posts/pfbid0fF79vqKRJx6yT3MbVJBFpnomp1UdzzBSXSqicwqR8XFEZvVFE5QpaztQtjukN45gl">ORIGINAL</a>]</b>
 .---------------------------------------
   "Dishes are tools. If they can't
   suffer being roughly thrown into a
   sink with other dishes, washed in a
   dishwasher, or heated in a microwave,
-  then -- THEY'RE CRAP!"
+  then -- they're crap!"
 '---------------------------------------
 
  <b>2017-02-01: Facebook Meme
@@ -100,39 +100,39 @@ as we used to say on Web 1.0, "Under construction."
   ligatory typo.]
 '---------------------------------------
  
- <b>2010-08-10: Tweet</b>
- [INLINE BELOW] [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]
+ <b>2010-08-10: Tweet
+ [INLINE BELOW] [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]</b>
 .---------------------------------------
   "If the only tool you have is a com-
   puter, you tend to see every prob-
   lem as computable."
 '---------------------------------------
 
- <b>2010-05-28                        Tweet</b>
+ <b>2010-05-28: Tweet
+ [INLINE BELOW] [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]</b>
 .---------------------------------------
-  [INLINE BELOW] [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
   "When a man needs a hairbrush, he's
   got bigger problems than needing a hair-
   brush."
 '---------------------------------------
 
- <b>2009-02-07                        Tweet</b>
+ <b>2009-02-07: Tweet
+ [INLINE BELOW] [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]</b>
 .---------------------------------------
-  [INLINE BELOW] [<a href="https://x.com/thorne/status/1187534264?s=20">ORIGINAL</a>]
   "There are two kinds of sysadmins:
   those who are overworked, and those
   who hang out on alt.sysadmin.recovery
   pretending they are overworked."
 '---------------------------------------
 
- <b>2007-03-16:                        Code</b>
+ <b>2007-03-16: Code (EnacsWiki)
+ [<a href="https://www.emacswiki.org/emacs/TwIt">LINK</a>]</b>
 .---------------------------------------
- [<a href="https://www.emacswiki.org/emacs/TwIt">EMACSWIKI</a>]
   <b>Twit.el</b>
-  [What was, I think, the second Twitter
+  What was, I think, the second Twitter
   client for Emacs. I only wrote the
   first versions (under the nom de code
-  "Theron Tlax").]
+  "Theron Tlax").
 '---------------------------------------
 
 </pre>
