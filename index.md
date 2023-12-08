@@ -127,7 +127,7 @@ as we used to say on Web 1.0, "Under construction."
 
  <b>2007-03-16:                        Code</b>
 .---------------------------------------
- [<a href="https://www.emacswiki.org/emacs/TwIt">EmacsWiki</a>]
+ [<a href="https://www.emacswiki.org/emacs/TwIt">EMACSWIKI</a>]
   <b>Twit.el</b>
   [What was, I think, the second Twitter
   client for Emacs. I only wrote the
