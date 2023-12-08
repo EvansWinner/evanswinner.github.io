@@ -37,14 +37,16 @@ turned data curator and R hacker.
 My son, Taavi, is also way more interesting than me.
 He is nine years old and likes paleontology and Minecraft.
 
-**Blog**
+**Web Log**
 
-Here follows, in something like chronological order,
+Here follows a 'blog in the old sense of the term:
+in something like chronological order,
 some of the miscellaneous wreckage
 I have strewn across the Internet over the years.
 I link to the content instead of include it here inline
 except where it is only a few lines long
-as in the case of a few short poems, aphorisms, and one-liners.
+as in the case of some short poems, aphorisms,
+and especially one-liners.
 Links are HTTP(S) to HTML pages unless obviously otherwise.
 The quality ranges from bad to not so bad. Sue me.
 Also, this is not a historical record,
@@ -55,7 +57,7 @@ My old evanswinner.com homepage, now defunct;
 my less old but still fairly old evanswinner.com page;
 my [account](https://twitter.com/thorne) on "X" (née Twitter);
 my [other](https://twitter.com/evans_h_winner) account on Twitter;
-my personal Facebook posts;
+my personal [Facebook])https://www.facebook.com/bellsound) posts;
 my old Posterous blog;
 my old Wordpress blog;
 my old Usenet posts;
@@ -83,7 +85,7 @@ as we used to say on Web 1.0, "Under construction."
 
  <b>2018-11-18                     Facebook</b>
 .---------------------------------------
- [<a href="https://www.facebook.com/bellsound/posts/pfbid0fF79vqKRJx6yT3MbVJBFpnomp1UdzzBSXSqicwqR8XFEZvVFE5QpaztQtjukN45gl">ORIGINAL</a>]
+ [<a href="https://www.facebook.com/bellsound/posts/pfbid0fF79vqKRJx6yT3MbVJBFpnomp1UdzzBSXSqicwqR8XFEZvVFE5QpaztQtjukN45gl">ORIGINAL</a>] [INLINE BELOW]
   Dishes are tools. If they can't suffer
   being roughly thrown into a sink with
   other dishes, washed in a dishwasher,
@@ -101,7 +103,7 @@ as we used to say on Web 1.0, "Under construction."
  
  <b>2010-08-10                        Tweet</b>
 .---------------------------------------
- [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]
+ [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>] [INLINE BELOW]
   If the only tool you have is a com-
   puter, you tend to see every prob-
   lem as computable.  
