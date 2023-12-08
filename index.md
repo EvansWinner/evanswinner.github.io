@@ -90,7 +90,7 @@ we we used to say on Web 1.0, "Under construction."
 
  <b>2010-08-10                        Tweet</b>
 .---------------------------------------
- [<a href="Ihttps://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]
+ [<a href="https://x.com/thorne/status/20522017408?s=2">ORIGINAL</a>]
   If the only tool you have is a com-
   puter, you tend to see every prob-
   lem as computable.  
