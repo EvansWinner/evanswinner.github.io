@@ -9,11 +9,12 @@ date: 2023-12-02
 
 [⇒ Skip Intro ⇐](#the-stuff)
 
-I am Evans Hawthorne Winner, 51-year-old,
+I am Evans Hawthorne Winner, a 51-year-old
+(born 1972),
 lowly IT worker living in Evergreen, Colorado.
-(Drop me a line if you know where I can get analytical work --
+<b>(Drop me a line if you know where I can get analytical work --
 data, operations, process, whatever.
-I am evans dot winner at Google's famous email domain.)
+I am evans dot winner at Google's famous email domain.)</b>
 
 I used to be a casual rock climber in Boulder,
 later a casual scuba diver in Seattle;
@@ -22,6 +23,8 @@ later studied literature and philosophy in New Mexico where,
 after twenty-something odd years of courses at many schools,
 I finally graduated *summa* -- because they only counted their own courses in the GPA.
 Ha! Take that, high-school guidance councilors!
+(That's a pathetic humble-brag, I know,
+but please give me this. It's all I've got.)
 
 I have the somewhat ambitiously named "[portfolio](./portfolio.html)"
 of miscellaneous nerdy things I've done;
