@@ -124,9 +124,9 @@ as we used to say on Web 1.0, "Under construction."
                            [<a href="https://x.com/thorne/status/14888533862?s=20">ORIGINAL</a>]
 .------------------------------------
                           [FULL TEXT]
-  "When a man needs a hairbrush,
-  he's got bigger problems than need-
-  ing a hairbrush."
+  "When a man needs a hairbrush, he's
+  got bigger problems than needing a
+  hairbrush."
 '------------------------------------
 
  <b>2009-02-07                   Twitter</b>
