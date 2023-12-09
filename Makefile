@@ -15,7 +15,7 @@ ifeq ($(OS),darwin)
   CP := "/opt/local/libexec/gnubin/cp""
 endif
 
-all : portfolio writing index resume status-log sets kNN dc_spl mobius skills
+all : portfolio writing index resume status-log sets kNN dc_spl mobius skills oneSpaceOrTwo
 
 portfolio : portfolio.html
 portfolio.html : portfolio.md portfolio.css
@@ -64,6 +64,16 @@ mobius.txt: mobius.kc
 dc_spl : dc_spl.html
 dc_spl.html: dc_spl.Rmd spl_tape-area.csv spl_at-workstation.csv spl_dc.csv
 	$(rscript) -e "rmarkdown::render('dc_spl.Rmd')"
+
+oneSpaceOrTwo : oneSpaceOrTwo.html oneSpaceOrTwo.txt
+oneSpaceOrTwo.txt : oneSpaceOrTwo.md
+	./md2txt oneSpaceOrTwo.md > oneSpaceOrTwo.txt
+oneSpaceOrTwo.html : oneSpaceOrTwo.md
+	pandoc -fmarkdown -thtml5 --include-in-header=portfolio.css -o oneSpaceOrTwo.html oneSpaceOrTwo.md
+
+
+
+
 
 clean :
 	rm -rf A B C E mobius.txt kNN.md sets.md resume.html index.html dc_spl.html kNN.html kNN.md sets.html portfolio.html writing.html iris* tmp*
