@@ -54,12 +54,17 @@ as in the case of some short poems, aphorisms,
 and especially one-liners.
 Links are HTTP(S) to HTML pages unless obviously otherwise.
 The quality ranges from bad to not so bad. Sue me.
-Also, this is not a historical record,
+This is not a historical record,
 so I edit freely where I want to.
+Also, the dates are sometimes estimated,
+and in the cases of some very old things,
+the dates reflect when the thing was created,
+not the first time (later) that
+it was posted on the Internet.
 
 Most (but not all) comes from:
 my old evanswinner.com homepage, now defunct;
-my less old but still fairly old evanswinner.com page;
+my less old but still fairly old evanswinner.com 2.0 page;
 timbral.net;
 my [account](https://twitter.com/thorne) on "X" (née Twitter);
 my [other](https://twitter.com/evans_h_winner) account on Twitter;
@@ -132,6 +137,16 @@ as we used to say on Web 1.0, "Under construction."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2018-03-23: Article (LinkedIn)</b>
+ [<a href="https://www.linkedin.com/pulse/using-split-screen-mode-android-nougat-easier-data-entry-evans-winner">LINK</a>]
+
+  <b style="color:red">USING SPLIT-SCREEN MODE IN ANDROID
+  NUGAT FOR EASIER DATA ENTRY</b>
+
+  A blurb about how to do that.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2017-02-01: Facebook "Meme" image</b>
  [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">LINK</a>]
 
@@ -140,6 +155,19 @@ as we used to say on Web 1.0, "Under construction."
   obligatory typo.
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
  
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2016-06-13: Article (LinkedIn)</b>
+ [<a href="https://www.linkedin.com/pulse/why-your-systems-people-need-sandbox-evans-winner">LINK</a>]
+
+  <b style="color:red">WHY YOUR SYSTEMS PEOPLE
+  NEED A SANDBOX</b>
+
+  If you want people to learn, you
+  have to give them a low-stakes en-
+  vironment in which to make mis-
+  takes.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2013-09-22: Article
              (orig. Timbral.net)</b>
@@ -219,7 +247,7 @@ as we used to say on Web 1.0, "Under construction."
  [<a href="https://x.com/thorne/status/14888533862?s=20">ORIG</a>] [FULL TEXT BELOW]
 
   "When a man needs a hairbrush,
-  he's got bigger problems than]
+  he's got bigger problems than
   needing a hairbrush."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
@@ -242,7 +270,8 @@ as we used to say on Web 1.0, "Under construction."
 
   Emacs library to find repeat
   words in a text that repetitively
-  repeat too much.
+  repeat too much. (Under my old
+  nom de code "Theron Tlax.")
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -268,6 +297,59 @@ as we used to say on Web 1.0, "Under construction."
   aka IBM i) Control Language files.
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2006-01-30: Article (LiveJournal)</b>
+ [<a href="https://house-of-thorne.livejournal.com/1381.html">ORIG</a>] [<a href="toypiano.html">LOCAL</a>] [<a href="toypiano.txt">TEXT</a>]
+
+  <b style="color:red">MUSIC FOR TOY PIANO</b>
+
+  Review of Margeret Leng Tan's toy
+  piano recital in Seattle.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2006-01-22: Article (LiveJournal)</b>
+ [<a href="https://house-of-thorne.livejournal.com/1028.html">ORIG</a>] [<a href="feltsman.html">LOCAL</a>] [<a href="feltsman.txt">TEXT</a>]
+
+  <b style="color:red">FELTSMAN PRAISED
+  DESPITE IRRITABLE REVIEWER</b>
+
+  Review of Vladimir Feltsman at the
+  Amadeus! Mozart Festival in
+  Seattle.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2005-12-28: Article (LiveJournal)</b>
+ [<a href="https://house-of-thorne.livejournal.com/951.html">ORIG</a>] [<a href="steal.html">LOCAL</a>] [<a href="steal.txt">TEXT</a>]
+
+  <b style="color:red">STEAL THIS CD</b>
+
+  Brief thoughts after a CD of music
+  by Morton Feldmen was evidently
+  stolen from a Barnes & Noble.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2004-12-09: Article (LiveJournal)</b>
+ [<a href="https://house-of-thorne.livejournal.com/381.html">ORIG</a>] [<a href="garfield.html">LOCAL</a>] [<a href="garfield.txt">TEXT</a>]
+
+  <b style="color:red">BAD KITTY-CAT!
+  GARFIELD: THE MOVIE [spoilers]</b>
+
+  A movie review.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2004-06-07: Article (LiveJournal)</b>
+ [<a href="https://house-of-thorne.livejournal.com/515.html">ORIG</a>] [<a href="twoconductors.html">LOCAL</a>] [<a href="twoconductors.txt">TEXT</a>]
+
+  <b style="color:red">A TALE OF TWO CONDUCTORS</b>
+
+  Written for a conuducting class.
+  Comparison between two styles
+  of conducting.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 </pre>
 
 

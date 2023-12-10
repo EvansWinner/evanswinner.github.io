@@ -77,7 +77,35 @@ todostack.txt : todostack.md
 todostack.html : todostack.md
 	pandoc -fmarkdown -thtml5 --include-in-header=portfolio.css -o todostack.html todostack.md
 
+toypiano : toypiano.html toypiano.txt
+toypiano.txt : toypiano.md
+	./md2txt toypiano.md > toypiano.txt
+toypiano.html : toypiano.md
+	pandoc -fmarkdown -thtml5 --include-in-header=portfolio.css -o toypiano.html toypiano.md
 
+feltsman : feltsman.html feltsman.txt
+feltsman.txt : feltsman.md
+	./md2txt feltsman.md > feltsman.txt
+feltsman.html : feltsman.md
+	pandoc -fmarkdown -thtml5 --include-in-header=portfolio.css -o feltsman.html feltsman.md
+
+steal : steal.html steal.txt
+steal.txt : steal.md
+	./md2txt steal.md > steal.txt
+steal.html : steal.md
+	pandoc -fmarkdown -thtml5 --include-in-header=portfolio.css -o steal.html steal.md
+
+garfield : garfield.html garfield.txt
+garfield.txt : garfield.md
+	./md2txt garfield.md > garfield.txt
+garfield.html : garfield.md
+	pandoc -fmarkdown -thtml5 --include-in-header=portfolio.css -o garfield.html garfield.md
+
+twoconductors : twoconductors.html twoconductors.txt
+twoconductors.txt : twoconductors.md
+	./md2txt twoconductors.md > twoconductors.txt
+twoconductors.html : twoconductors.md
+	pandoc -fmarkdown -thtml5 --include-in-header=portfolio.css -o twoconductors.html twoconductors.md
 
 
 clean :

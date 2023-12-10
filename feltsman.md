@@ -1,0 +1,107 @@
+# FELTSMAN PRAISED DESPITE IRRITABLE REVIEWER
+
+It's interesting to observe how delicate a thing is a
+chamber music concert. The smallest annoyances can mushroom
+and ruin a whole show. Vladimir Feltsman appeared at
+Nordstrom Recital hall in Seattle today as part of the
+Amadeus! Mozart Festival, playing the 10th piano sonata (C
+major, K. 330) and, along with string players from the
+Seattle Symphony, the G minor piano quartet (K. 487). After
+the intermission we heard Shostakovich's warhorse E minor
+piano trio.
+
+A small thing--a tiny thing: before the start of the show,
+would-be audience members piled in front of the waiting
+doors (the lady at the ticket booth had told us the doors
+were already open, but it turned out untrue). By the time
+the doors opened two lines had formed for the door near us.
+We stood in one, and both lines wove through the doorway
+without problems. But when I and my friend arrived at the
+door, a sour-looking usher by the name of Iva stopped us and
+told us in no uncertain terms that 'the line is over there,'
+pointing to the end of the other line. A bit taken aback by
+this (she had let everyone before us through) we got out of
+line and found the end of the other line. Looking back we
+saw Iva immediately ushering the next people who had been
+behind us through just like the people before us.
+
+Silly to become upset. No doubt a mere mistake on her part.
+Childish, certainly, for me to be still irritated when
+sitting down in the auditorium. She probably just volunteers
+there, after all. But still I think perhaps this colored my
+take on the music to follow. How can one help it? These
+things are important, they are a part of the audience's
+experience and should be controlled, as with any other
+element of the performance.
+
+After we sat down, the same usher arrived and snapped at a
+poor innocent young man that he must remove his coat from
+the seat next to him so others could sit there. The coat was
+in fact there to save the space for his friend. Perhaps the
+request was not an unreasonable one, but the delivery was
+quite poor and unnecessarily autocratic.
+
+But on to music. Feltsman led with the Sonata. This is a
+lovely bit of Mozart fluff and his rendering was
+unimpeachable, particularly the first movement, with all its
+liquid runs and noodling. It was, to use Mozart's own
+metaphor, as smooth as oil. The Steinway grand is a
+thunderous instrument, difficult to control in Mozart--it
+can sometimes sound a bit like a Siberian tiger in ballet
+shoes--and the second movement, with its repeated notes in
+the bass, occasionally suffered slightly, but on the whole
+it went off beautifully; not too slow, but singing and
+graceful. The third is one of those playfully Mozartian
+things that can really make an audience sit up and take
+notice.
+
+It almost even made me sit up and take notice. Almost.
+Unfortunately it was my fate to sit right next to a woman
+who literally snored through the entire performance. Her
+eyes were open, but she was snoring. Really. Snoring. Well,
+where does heavy wheezing leave off and light snoring begin?
+In any case, it was terribly distracting. Why can't there be
+some kind of test for basic control of bodily functions for
+people before they are allowed entry to gigs like this? The
+man behind me, too, kept hacking up something awful in his
+throat, gurgling and grunting.
+
+Between the wheezing woman, the rude usher and the
+emphysemic man I was really not able to judge the second
+number--the piano quartet. It was more Mozart, that was
+certain. Feltsman did nothing worthy of criticism, Mozart
+did nothing worthy of applause. The string
+players--including Amos Yang on cello, Maria Larinoff on
+fiddle and Mara Gearman playing with a lovely, almost
+cello-like tone on the viola--were clear and professional.
+But to use Virgil Thompson's phrase, I was much too aware of
+the passage of time. Why do they put on these Mozart
+festivals, anyway? I can't understand why his music is
+played as more than an occasional novelty in this age. But
+that is another story.
+
+And, as it turned out, all was not lost. During the
+intermission we moved to new seats, far from the wheezing
+woman. The first three movements of the Shostakovich second
+piano trio were a total success--Yang's work on the cello
+particularly so. The Shostakovich is one of the true
+masterpieces of the middle 20th century and its reputation
+is well-deserved--and despite some out-of-focus rhythms and
+perhaps a slightly dramatically flat reading in the fourth
+movement, the piece was one of the most positive musical
+experiences this reviewer has had in many months.
+
+To-do list for those who put on such programs:
+
+First, I know there is little to be done about the snoring
+woman, but we do pay a fair amount of money to be there, so
+try to encourage a professional demeanor in staff. Small
+things can have a big effect. Second, even if you think
+Mozart is the greatest composer who ever lived, remember
+that he is not the only composer who ever lived. And third,
+please, please bring people like Feltsman and works like the
+Shostakovich back just as often as you like.
+
+     Evans Winner
+     Seattle, Washington
+     January, 2006
