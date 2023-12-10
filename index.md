@@ -96,6 +96,42 @@ as we used to say on Web 1.0, "Under construction."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2018-04-04: Article (LinkedIn)</b>
+ [<a href="https://www.linkedin.com/pulse/demanding-satisfaction-emacs-lisp-evans-winner">LINK</a>]
+
+  <b style="color:red">Demanding Satisfaction
+  in Emacs Lisp</b>
+
+  A blurb and code for a drop-in
+  replacement for Emacs' `require`
+  funtion that requires a library,
+  or failing that, installs the
+  package and then requires it.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2018-03-31: Article (LinkedIn)</b>
+ [<a href="https://www.linkedin.com/pulse/group-long-hand-written-numbers-smaller-sub-units-better-evans-winner">LINK</a>]
+
+  <b style="color:red">Number Chunking
+  with Chunky Numbers</b>
+
+  A slightly bizarre medition on the 
+  orthography of "number chunking."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2018-03-23: Article (LinkedIn)</b>
+ [<a href="https://www.linkedin.com/pulse/tally-systems-hand-collection-count-data-evans-winner">LINK</a>]
+
+  <b style="color:red">Tally Systems for Hand
+  Collection of Count Data</b>
+
+  A novel system of making tally
+  counts.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2017-02-01: Facebook "Meme" image</b>
  [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">LINK</a>]
 
@@ -148,11 +184,11 @@ as we used to say on Web 1.0, "Under construction."
  <b>2007-06-01: Code (EmacsWiki)</b>
  [<a href="https://www.emacswiki.org/emacs/rep-words.el">LINK</a>]
 
- <b style="color:red">rep-words.el</b>
+  <b style="color:red">rep-words.el</b>
 
- Emacs library to find repeat words
- in a text that repetitively repeat
- too much.
+  Emacs library to find repeat
+  words in a text that repetitively
+  repeat too much.
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
