@@ -1,0 +1,292 @@
+[Originally published on ttlaxia.net, 2013-09-22 Sun]
+
+Just for a laugh, imagine that you are Papa Gump and you
+have the following problem: you’ve got a child on the way
+and you need to come up with a name.  You’ve got a list of
+about twenty names you and Mama Gump like, and you really
+think you want the first name to be Forrest. Now, being from
+the South, naturally, you want at least three or four middle
+names, and you’re pretty dead set on one or two of them, but
+not sure of the order that will sound best, or what other
+names to use to fill out those four middle names.
+
+How to make a list of all the possibilities?
+
+Now, I am not a mathematician, and someone might want to
+check my math, but in general, the number of permutations of
+a set of n items will be n!. For twenty names, that will be
+over 2.4 × 1018 permutations. Let’s say you want three
+middle names: that’s four given names (the middle name plus
+the first name).  According to Wolfram MathWorld1, the
+number of k-length subsets of a set of cardinality n is
+n!/(n − k)!. With n = 20 and k = 4 that still gives 116, 280
+possible names for the little tyke, which as you might
+imagine, is more than Mama and Papa Gump want to check.
+
+Looking at several implementations of permutation generators
+written in Common Lisp I quickly found that most are too
+slow to solve this problem well. But the Alexandria library
+has map-permutations, which does not return a list of
+permutations (which would be a prohibitively large list).
+Instead, it simply applies a function to each permutation as
+it is generated and then moves on to the next.
+
+So first we will load Alexandria. I will do it using
+Quicklisp, naturally, since it is, as the name implies,
+quick:
+
+(ql:quickload "alexandria")
+
+Next, let’s define some variables with nil values as
+default. Most benighted people only cough up a paltry two
+names to give their kids, so we’ll make that the default,
+though it’s a case that doesn’t really require this program:
+
+(defvar *number-of-given-names* 2)
+
+We don’t need to operate on the last name, but we’ll need to
+print it with the output---after all, you have to consider
+the whole name when checking the rhythm and the way it rolls
+off the tongue:
+
+(defvar *last-name* 'nil)
+
+Here will be the list of names. Just defining it here.
+
+(defvar *names-list* nil)
+
+Any names that we are sure we want included, but not sure where.
+
+(defvar *required-names-list* nil)
+
+Maybe you’ve already decided on a first name:
+
+(defvar *required-first-name* nil)
+
+Ok, so now, let’s write the main function using
+map-permutations from Alexandria. map-permutations takes a
+function to apply to each permutation, and a list to
+permute.
+
+(defun permute-names (n list)
+  (alexandria:map-permutations
+   #'permute-names-function
+   list :length n))
+
+Naturally, we need to write the function
+permute-names-function. What we want to do is just print the
+permutation if it qualifies--that is, if it has the required
+first name and has any other required names; and then we
+want to tack the last name to the end:
+
+[Edit: Why did I put add-last-name both inside and outside
+print-if? I have no idea. I think I had it wrong the first
+time, it didn’t do anything, and when I corrected it, I
+forgot to remove the old one. Should I remove the incorrect
+one? Of course.]
+
+(defun permute-names-function (p)
+  (add-last-name (print-if #'filter-permutation-predicate 
+               (add-last-name p *last-name*))))
+
+So let’s write this predicate. It is really just a shell for
+the two other predicates. If both return t then this will
+return t.
+
+I wrote it to either take arguments or to use the global
+values. Here we will be using the global values:
+
+(defun filter-permutation-predicate
+ (p &optional required-names-list
+          required-first-name)
+  (if (and (permutation-has-required-names-p 
+        p
+        (or *required-names-list* required-names-list))
+       (permutation-has-required-first-name-p
+        p (or *required-first-name* required-first-name)))
+      p
+      nil))
+
+So, let’s write our two predicates. One returns t if the
+permutation begins with our required first name. If we hand
+it nil as an argument, then it will always return t. This
+way we don’t have to have a required first name. There might
+be a more elegant way to do that, but there it is anyway:
+
+(defun permutation-has-required-first-name-p (p &optional name)
+  (if name
+      (equal name (car p))
+      t))
+
+Then the other predicate, which returns t if the permutation
+contains any of the required names somewhere in them:
+
+(defun permutation-has-required-names-p 
+    (p &optional required-names-list)
+  (if (null required-names-list) t 
+      (if (member (car required-names-list) p)
+      (permutation-has-required-names-p 
+       p (cdr required-names-list))
+      nil)))
+
+So now we’re done except for the function that adds the last
+name to the output:
+
+(defun add-last-name (p &optional last-name)
+  (if last-name 
+      (append p (list last-name))
+      p))
+
+Oh, almost forgot---we need a function that prints it:
+
+(defun print-if (predicate &rest x)
+  (if (apply predicate x)
+      (print x)))
+
+Now, let’s try it.
+
+First, let’s set our variables:
+
+CL-USER> (setq *last-name* 'gump)
+GUMP
+
+CL-USER> (setq *number-of-given-names* 4)
+4
+
+CL-USER> (setq *names-list* '(joe bob bill forrest gus
+                 bubba bub doug ray hunter 
+                 pootie billy cooter chuck wilbur
+                 cletus amos jethro buddy vernon))
+(JOE BOB BILL FORREST GUS BUBBA BUB DOUG RAY HUNTER POOTIE BILLY COOTER CHUCK
+ WILBUR CLETUS AMOS JETHRO BUDDY VERNON)
+
+CL-USER> (length *names-list*)
+20
+
+CL-USER> (setq *required-names-list* '(cooter cletus))
+(COOTER CLETUS)
+
+CL-USER> (setq *required-first-name* 'forrest)
+FORREST
+
+Now let’s run it.
+
+CL-USER> (permute-names *number-of-given-names* *names-list*)
+
+
+((FORREST JOE COOTER CLETUS GUMP)) 
+((FORREST COOTER JOE CLETUS GUMP)) 
+((FORREST CLETUS COOTER JOE GUMP)) 
+((FORREST COOTER CLETUS JOE GUMP)) 
+((FORREST CLETUS JOE COOTER GUMP)) 
+((FORREST JOE CLETUS COOTER GUMP)) 
+((FORREST BOB COOTER CLETUS GUMP)) 
+((FORREST COOTER BOB CLETUS GUMP)) 
+((FORREST CLETUS COOTER BOB GUMP)) 
+((FORREST COOTER CLETUS BOB GUMP)) 
+((FORREST CLETUS BOB COOTER GUMP)) 
+((FORREST BOB CLETUS COOTER GUMP)) 
+((FORREST BILL COOTER CLETUS GUMP)) 
+((FORREST COOTER BILL CLETUS GUMP)) 
+((FORREST CLETUS COOTER BILL GUMP)) 
+((FORREST COOTER CLETUS BILL GUMP)) 
+((FORREST CLETUS BILL COOTER GUMP)) 
+((FORREST BILL CLETUS COOTER GUMP)) 
+((FORREST GUS COOTER CLETUS GUMP)) 
+((FORREST COOTER GUS CLETUS GUMP)) 
+((FORREST CLETUS COOTER GUS GUMP)) 
+((FORREST COOTER CLETUS GUS GUMP)) 
+((FORREST CLETUS GUS COOTER GUMP)) 
+((FORREST GUS CLETUS COOTER GUMP)) 
+((FORREST BUBBA COOTER CLETUS GUMP)) 
+((FORREST COOTER BUBBA CLETUS GUMP)) 
+((FORREST CLETUS COOTER BUBBA GUMP)) 
+((FORREST COOTER CLETUS BUBBA GUMP)) 
+((FORREST CLETUS BUBBA COOTER GUMP)) 
+((FORREST BUBBA CLETUS COOTER GUMP)) 
+((FORREST BUB COOTER CLETUS GUMP)) 
+((FORREST COOTER BUB CLETUS GUMP)) 
+((FORREST CLETUS COOTER BUB GUMP)) 
+((FORREST COOTER CLETUS BUB GUMP)) 
+((FORREST CLETUS BUB COOTER GUMP)) 
+((FORREST BUB CLETUS COOTER GUMP)) 
+((FORREST DOUG COOTER CLETUS GUMP)) 
+((FORREST COOTER DOUG CLETUS GUMP)) 
+((FORREST CLETUS COOTER DOUG GUMP)) 
+((FORREST COOTER CLETUS DOUG GUMP)) 
+((FORREST CLETUS DOUG COOTER GUMP)) 
+((FORREST DOUG CLETUS COOTER GUMP)) 
+((FORREST RAY COOTER CLETUS GUMP)) 
+((FORREST COOTER RAY CLETUS GUMP)) 
+((FORREST CLETUS COOTER RAY GUMP)) 
+((FORREST COOTER CLETUS RAY GUMP)) 
+((FORREST CLETUS RAY COOTER GUMP)) 
+((FORREST RAY CLETUS COOTER GUMP)) 
+((FORREST HUNTER COOTER CLETUS GUMP)) 
+((FORREST COOTER HUNTER CLETUS GUMP)) 
+((FORREST CLETUS COOTER HUNTER GUMP)) 
+((FORREST COOTER CLETUS HUNTER GUMP)) 
+((FORREST CLETUS HUNTER COOTER GUMP)) 
+((FORREST HUNTER CLETUS COOTER GUMP)) 
+((FORREST POOTIE COOTER CLETUS GUMP)) 
+((FORREST COOTER POOTIE CLETUS GUMP)) 
+((FORREST CLETUS COOTER POOTIE GUMP)) 
+((FORREST COOTER CLETUS POOTIE GUMP)) 
+((FORREST CLETUS POOTIE COOTER GUMP)) 
+((FORREST POOTIE CLETUS COOTER GUMP)) 
+((FORREST BILLY COOTER CLETUS GUMP)) 
+((FORREST COOTER BILLY CLETUS GUMP)) 
+((FORREST CLETUS COOTER BILLY GUMP)) 
+((FORREST COOTER CLETUS BILLY GUMP)) 
+((FORREST CLETUS BILLY COOTER GUMP)) 
+((FORREST BILLY CLETUS COOTER GUMP)) 
+((FORREST COOTER CHUCK CLETUS GUMP)) 
+((FORREST CHUCK COOTER CLETUS GUMP)) 
+((FORREST CLETUS CHUCK COOTER GUMP)) 
+((FORREST CHUCK CLETUS COOTER GUMP)) 
+((FORREST CLETUS COOTER CHUCK GUMP)) 
+((FORREST COOTER CLETUS CHUCK GUMP)) 
+((FORREST COOTER WILBUR CLETUS GUMP)) 
+((FORREST WILBUR COOTER CLETUS GUMP)) 
+((FORREST CLETUS WILBUR COOTER GUMP)) 
+((FORREST WILBUR CLETUS COOTER GUMP)) 
+((FORREST CLETUS COOTER WILBUR GUMP)) 
+((FORREST COOTER CLETUS WILBUR GUMP)) 
+((FORREST COOTER CLETUS AMOS GUMP)) 
+((FORREST CLETUS COOTER AMOS GUMP)) 
+((FORREST AMOS CLETUS COOTER GUMP)) 
+((FORREST CLETUS AMOS COOTER GUMP)) 
+((FORREST AMOS COOTER CLETUS GUMP)) 
+((FORREST COOTER AMOS CLETUS GUMP)) 
+((FORREST COOTER CLETUS JETHRO GUMP)) 
+((FORREST CLETUS COOTER JETHRO GUMP)) 
+((FORREST JETHRO CLETUS COOTER GUMP)) 
+((FORREST CLETUS JETHRO COOTER GUMP)) 
+((FORREST JETHRO COOTER CLETUS GUMP)) 
+((FORREST COOTER JETHRO CLETUS GUMP)) 
+((FORREST COOTER CLETUS BUDDY GUMP)) 
+((FORREST CLETUS COOTER BUDDY GUMP)) 
+((FORREST BUDDY CLETUS COOTER GUMP)) 
+((FORREST CLETUS BUDDY COOTER GUMP)) 
+((FORREST BUDDY COOTER CLETUS GUMP)) 
+((FORREST COOTER BUDDY CLETUS GUMP)) 
+((FORREST COOTER CLETUS VERNON GUMP)) 
+((FORREST CLETUS COOTER VERNON GUMP)) 
+((FORREST VERNON CLETUS COOTER GUMP)) 
+((FORREST CLETUS VERNON COOTER GUMP)) 
+((FORREST VERNON COOTER CLETUS GUMP)) 
+((FORREST COOTER VERNON CLETUS GUMP)) (JOE BOB BILL FORREST GUS BUBBA BUB DOUG RAY HUNTER POOTIE BILLY COOTER CHUCK
+ WILBUR CLETUS AMOS JETHRO BUDDY VERNON)
+
+CL-USER> 
+
+(The list in the last line of the output is the return value
+of the function.)
+
+So, now Papa Gump only has about a hundred possibilities to
+consider. And congratulations! Good luck with your new baby!
+
+By the way, how did Papa Gump know it was going to be a boy?
+
+Footnotes:
+http://mathworld.wolfram.com/Permutation.html

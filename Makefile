@@ -71,6 +71,11 @@ oneSpaceOrTwo.txt : oneSpaceOrTwo.md
 oneSpaceOrTwo.html : oneSpaceOrTwo.md
 	pandoc -fmarkdown -thtml5 --include-in-header=portfolio.css -o oneSpaceOrTwo.html oneSpaceOrTwo.md
 
+todostack : todostack.html todostack.txt
+todostack.txt : todostack.md
+	./md2txt todostack.md > todostack.txt
+todostack.html : todostack.md
+	pandoc -fmarkdown -thtml5 --include-in-header=portfolio.css -o todostack.html todostack.md
 
 
 

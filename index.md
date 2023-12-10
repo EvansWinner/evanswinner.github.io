@@ -99,8 +99,8 @@ as we used to say on Web 1.0, "Under construction."
  <b>2018-04-04: Article (LinkedIn)</b>
  [<a href="https://www.linkedin.com/pulse/demanding-satisfaction-emacs-lisp-evans-winner">LINK</a>]
 
-  <b style="color:red">Demanding Satisfaction
-  in Emacs Lisp</b>
+  <b style="color:red">DEMANDING SATISFACTION
+  IN EMACS LISP</b>
 
   A blurb and code for a drop-in
   replacement for Emacs' `require`
@@ -113,8 +113,8 @@ as we used to say on Web 1.0, "Under construction."
  <b>2018-03-31: Article (LinkedIn)</b>
  [<a href="https://www.linkedin.com/pulse/group-long-hand-written-numbers-smaller-sub-units-better-evans-winner">LINK</a>]
 
-  <b style="color:red">Number Chunking
-  with Chunky Numbers</b>
+  <b style="color:red">NUMBER CHUNKING
+  WITH CHUNKY NUMBERS</b>
 
   A slightly bizarre medition on the 
   orthography of "number chunking."
@@ -124,8 +124,8 @@ as we used to say on Web 1.0, "Under construction."
  <b>2018-03-23: Article (LinkedIn)</b>
  [<a href="https://www.linkedin.com/pulse/tally-systems-hand-collection-count-data-evans-winner">LINK</a>]
 
-  <b style="color:red">Tally Systems for Hand
-  Collection of Count Data</b>
+  <b style="color:red">TALLY SYSTEMS FOR HAND
+  COLLECTION OF COUNT DATA</b>
 
   A novel system of making tally
   counts.
@@ -141,6 +141,18 @@ as we used to say on Web 1.0, "Under construction."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
  
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2013-09-22: Article
+             (orig. Timbral.net)</b>
+ [<a href="https://thornepublic.blogspot.com/2018/03/helping-papa-gump-find-name-for-his-son.html">LINK</a>] [<a href="gump.txt">TEXT</a>]
+ 
+  <b style="color:red">HELPING PAPA GUMP FIND A
+  NAME FOR HIS SON WITH COMMON LISP</b>
+ 
+  Using the Alexandria permutations
+  function for a silly purpose. 
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2012-09-28: Article (orig. Blogger)</b>
  [<a href="https://thornepublic.blogspot.com/2018/03/one-space-or-two.html">ORIG</a>] [<a href="oneSpaceOrTwo.html">LOCAL</a>] [<a href="oneSpaceOrTwo.txt">TEXT</a>]
 
@@ -149,6 +161,48 @@ as we used to say on Web 1.0, "Under construction."
   On the use of one or two spaces
   between sentences. Serious ana-
   lytical overkill.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2012-09-25: Article (Blogger)</b>
+ [<a href="https://thornepublic.blogspot.com/2018/03/cartouche-links-with-css.html">LINK</a>]
+
+  <b style="color:red">CARTOUCHE LINKS WITH CSS</b>
+
+  Make html links that are like old
+  Egyptian cartouches. Why not?
+  Probably requires a Blogger
+  account to read now, unfor-
+  tunately.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2011-05-20: Article
+             (orig. Timbral.net)</b>
+ [<a href="https://thornepublic.blogspot.com/2018/03/load-directory-of-emacs-lisp-files.html">LINK</a> [<a href="loaddir.txt">TEXT</a>]
+
+  <b style="color:red">LOAD A DIRECTORY
+  OF EMACS LISP FILES</b>
+
+  Load a whole directory of Emacs
+  Lisp files. Sort of like the title
+  says.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2011-05-14: Article / Code
+             (Blogger / Github)</b>
+ Article: [<a href="https://thornepublic.blogspot.com/2018/03/todostack.html">ORIG</a>] [<a href="todostack.html">LOCAL</a>] [<a href="todostack.txt">TEXT</a>]
+ Code:    [<a href="https://github.com/EvansWinner/todostack.el">LINK</a>]
+
+  <b style="color:red">TODOSTACK.EL</b>
+
+  An Emacs to-do list as a stack for
+  when you get interrupted con-
+  stantly. The idea was stolen from
+  someone else, and has since been
+  re-stolen countless times. I act-
+  ually used it at work for a while.
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -165,7 +219,7 @@ as we used to say on Web 1.0, "Under construction."
  [<a href="https://x.com/thorne/status/14888533862?s=20">ORIG</a>] [FULL TEXT BELOW]
 
   "When a man needs a hairbrush,
-  he's got bigger problems than
+  he's got bigger problems than]
   needing a hairbrush."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
@@ -184,7 +238,7 @@ as we used to say on Web 1.0, "Under construction."
  <b>2007-06-01: Code (EmacsWiki)</b>
  [<a href="https://www.emacswiki.org/emacs/rep-words.el">LINK</a>]
 
-  <b style="color:red">rep-words.el</b>
+  <b style="color:red">REP-WORDS.EL</b>
 
   Emacs library to find repeat
   words in a text that repetitively
@@ -195,7 +249,7 @@ as we used to say on Web 1.0, "Under construction."
  <b>2007-03-16i Code (EmacsWiki)</b>
  [<a href="https://www.emacswiki.org/emacs/TwIt">LINK</a>]
 
-  <b style="color:red">Twit.el</b>
+  <b style="color:red">TWIT.EL</b>
 
   What was, I think, the second
   Twitter client for Emacs. I only
@@ -207,7 +261,7 @@ as we used to say on Web 1.0, "Under construction."
  <b>2007-01-19: Code
  [<a href="https://lists.gnu.org/archive/html/gnu-emacs-sources/2007-01/msg00024.html">LINK</a>]      (gnu.emacs.sources)</b>
 
-  <b style="color:red">ctrl-lang.el</b>
+  <b style="color:red">CTRL-LANG.EL</b>
 
   Font lock and doc lookup Emacs
   mode for AS/400 (aka. iSeries,
