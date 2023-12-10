@@ -96,7 +96,7 @@ as we used to say on Web 1.0, "Under construction."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
- <b>2018(?): Article (orig. Blogger)</b>
+ <b>2012-09-28: Article (orig. Blogger)</b>
  [<a href="https://thornepublic.blogspot.com/2018/03/one-space-or-two.html">ORIG</a>] [<a href="oneSpaceOrTwo.html">LOCAL</a>] [<a href="oneSpaceOrTwo.txt">TEXT</a>]
 
   <b style="color: red">ONE SPACE OR TWO</b>
