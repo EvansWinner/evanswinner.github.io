@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>oneSpaceOrTwo</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style type="text/css">
+  body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    color: #333;
+    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    width: 728px;
+    max-width: 99%;
+    box-sizing: border-box;
+    padding: 30px 30px 8rem 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body a {
+    background-color: transparent;
+  }
+
+  body a:active,
+  body a:hover {
+    outline: 0;
+  }
+
+  body strong {
+    font-weight: bold;
+  }
+
+  body h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+
+  body hr {
+    box-sizing: content-box;
+    height: 0;
+  }
+
+  body pre {
+    overflow: auto;
+  }
+
+  body code,
+  body kbd,
+  body pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+  }
+
+  body input {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+  }
+
+  body div {
+      clear:both;
+  }
+
+  body html input[disabled] {
+    cursor: default;
+  }
+
+  body input {
+    line-height: normal;
+  }
+
+  body input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  body table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  body td,
+  body th {
+    padding: 0;
+  }
+
+  body * {
+    box-sizing: border-box;
+  }
+
+  body input {
+    font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+
+  body a {
+    color: #4078c0;
+    /* text-decoration: none; */
+  }
+
+  body a:hover,
+  body a:active {
+    text-decoration: underline;
+  }
+
+  body hr {
+    height: 0;
+    margin: 15px 0;
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  body hr:before {
+    display: table;
+    content: "";
+  }
+
+  body hr:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 1.1;
+  }
+
+  body h1 {
+    font-size: 30px;
+  }
+
+  body h2 {
+    font-size: 21px;
+  }
+
+  body h3 {
+    font-size: 16px;
+  }
+
+  body h4 {
+    font-size: 14px;
+  }
+
+  body h5 {
+    font-size: 12px;
+  }
+
+  body h6 {
+    font-size: 11px;
+  }
+
+  body blockquote {
+    margin: 0;
+  }
+
+  body ul,
+  body ol {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  body ol ol,
+  body ul ol {
+    list-style-type: lower-roman;
+  }
+
+  body ul ul ol,
+  body ul ol ol,
+  body ol ul ol,
+  body ol ol ol {
+    list-style-type: lower-alpha;
+  }
+
+  body dd {
+    margin-left: 0;
+  }
+
+  body code {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 12px;
+  }
+
+  body pre {
+    margin-top: 0;
+    margin-bottom: 0;
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  }
+
+  body .select::-ms-expand {
+    opacity: 0;
+  }
+
+  body .octicon {
+    font: normal normal normal 16px/1 octicons-link;
+    display: inline-block;
+    text-decoration: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  body .octicon-link:before {
+    content: '\f05c';
+  }
+
+  body:before {
+    display: table;
+    content: "";
+  }
+
+  body:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+
+  body>*:first-child {
+    margin-top: 0 !important;
+  }
+
+  body>*:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  body a:not([href]) {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  body .anchor {
+    display: inline-block;
+    padding-right: 2px;
+    margin-left: -18px;
+  }
+
+  body .anchor:focus {
+    outline: none;
+  }
+
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6 {
+    margin-top: 1em;
+    margin-bottom: 16px;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  body h1 .octicon-link,
+  body h2 .octicon-link,
+  body h3 .octicon-link,
+  body h4 .octicon-link,
+  body h5 .octicon-link,
+  body h6 .octicon-link {
+    color: #000;
+    vertical-align: middle;
+    visibility: hidden;
+  }
+
+  body h1:hover .anchor,
+  body h2:hover .anchor,
+  body h3:hover .anchor,
+  body h4:hover .anchor,
+  body h5:hover .anchor,
+  body h6:hover .anchor {
+    text-decoration: none;
+  }
+
+  body h1:hover .anchor .octicon-link,
+  body h2:hover .anchor .octicon-link,
+  body h3:hover .anchor .octicon-link,
+  body h4:hover .anchor .octicon-link,
+  body h5:hover .anchor .octicon-link,
+  body h6:hover .anchor .octicon-link {
+    visibility: visible;
+  }
+
+  body h1 {
+    padding-bottom: 0.3em;
+    font-size: 1.75em;
+    line-height: 1.2;
+  }
+
+  body h1 .anchor {
+    line-height: 1;
+  }
+
+  body h2 {
+    padding-bottom: 0.3em;
+    font-size: 1.5em;
+    line-height: 1.225;
+  }
+
+  body h2 .anchor {
+    line-height: 1;
+  }
+
+  body h3 {
+    font-size: 1.25em;
+    line-height: 1.43;
+  }
+
+  body h3 .anchor {
+    line-height: 1.2;
+  }
+
+  body h4 {
+    font-size: 1em;
+  }
+
+  body h4 .anchor {
+    line-height: 1.2;
+  }
+
+  body h5 {
+    font-size: 1em;
+  }
+
+  body h5 .anchor {
+    line-height: 1.1;
+  }
+
+  body h6 {
+    font-size: 1em;
+    color: #777;
+  }
+
+  body h6 .anchor {
+    line-height: 1.1;
+  }
+
+  body p,
+  body blockquote,
+  body ul,
+  body ol,
+  body dl,
+  body table,
+  body pre {
+    margin-top: 0;
+    margin-bottom: 16px;
+    clear:both;
+  }
+
+  body hr {
+    height: 4px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+  }
+
+  body ul,
+  body ol {
+    padding-left: 2em;
+  }
+
+  body ul ul,
+  body ul ol,
+  body ol ol,
+  body ol ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  body li>p {
+    margin-top: 16px;
+  }
+
+  body dl {
+    padding: 0;
+  }
+
+  body dl dt {
+    padding: 0;
+    margin-top: 16px;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  body dl dd {
+    padding: 0 16px;
+    margin-bottom: 16px;
+  }
+
+  body blockquote {
+    padding: 0 15px;
+    color: #777;
+    border-left: 4px solid #ddd;
+  }
+
+  body blockquote>:first-child {
+    margin-top: 0;
+  }
+
+  body blockquote>:last-child {
+    margin-bottom: 0;
+  }
+
+  body table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all;
+  }
+
+  body table th {
+    font-weight: bold;
+  }
+
+  body table th,
+  body table td {
+    padding: 6px 13px;
+    /* border: 1px solid #ddd; */
+  }
+
+  body table tr {
+    /* background-color: #fff; */
+    /* border-top: 1px solid #ccc; */
+  }
+
+  body table tr:nth-child(2n) {
+    /* background-color: #f8f8f8; */
+  }
+
+  body img {
+    max-width: 100%;
+    box-sizing: content-box;
+    background-color: #fff;
+    padding:10px;
+    clear:both;
+  }
+
+  body code {
+    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(0,0,0,0.04);
+    border-radius: 3px;
+  }
+
+  body code:before,
+  body code:after {
+    letter-spacing: -0.2em;
+    content: "\00a0";
+  }
+
+  body pre>code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+  }
+
+  body .highlight {
+    margin-bottom: 16px;
+  }
+
+  body .highlight pre,
+  body pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+  }
+
+  body .highlight pre {
+    margin-bottom: 0;
+    word-break: normal;
+  }
+
+  body pre {
+    word-wrap: normal;
+  }
+
+  body pre code {
+    display: inline;
+    max-width: initial;
+    padding: 0;
+    margin: 0;
+    overflow: initial;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+  }
+
+  body pre code:before,
+  body pre code:after {
+    content: normal;
+  }
+
+  body kbd {
+    display: inline-block;
+    padding: 3px 5px;
+    font-size: 11px;
+    line-height: 10px;
+    color: #555;
+    vertical-align: middle;
+    background-color: #fcfcfc;
+    border: solid 1px #ccc;
+    border-bottom-color: #bbb;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #bbb;
+  }
+
+  body .pl-c {
+    color: #969896;
+  }
+
+  body .pl-c1,
+  body .pl-s .pl-v {
+    color: #0086b3;
+  }
+
+  body .pl-e,
+  body .pl-en {
+    color: #795da3;
+  }
+
+  body .pl-s .pl-s1,
+  body .pl-smi {
+    color: #333;
+  }
+
+  body .pl-ent {
+    color: #63a35c;
+  }
+
+  body .pl-k {
+    color: #a71d5d;
+  }
+
+  body .pl-pds,
+  body .pl-s,
+  body .pl-s .pl-pse .pl-s1,
+  body .pl-sr,
+  body .pl-sr .pl-cce,
+  body .pl-sr .pl-sra,
+  body .pl-sr .pl-sre {
+    color: #183691;
+  }
+
+  body .pl-v {
+    color: #ed6a43;
+  }
+
+  body .pl-id {
+    color: #b52a1d;
+  }
+
+  body .pl-ii {
+    background-color: #b52a1d;
+    color: #f8f8f8;
+  }
+
+  body .pl-sr .pl-cce {
+    color: #63a35c;
+    font-weight: bold;
+  }
+
+  body .pl-ml {
+    color: #693a17;
+  }
+
+  body .pl-mh,
+  body .pl-mh .pl-en,
+  body .pl-ms {
+    color: #1d3e81;
+    font-weight: bold;
+  }
+
+  body .pl-mq {
+    color: #008080;
+  }
+
+  body .pl-mi {
+    color: #333;
+    font-style: italic;
+  }
+
+  body .pl-mb {
+    color: #333;
+    font-weight: bold;
+  }
+
+  body .pl-md {
+    background-color: #ffecec;
+    color: #bd2c00;
+  }
+
+  body .pl-mi1 {
+    background-color: #eaffea;
+    color: #55a532;
+  }
+
+  body .pl-mdr {
+    color: #795da3;
+    font-weight: bold;
+  }
+
+  body .pl-mo {
+    color: #1d3e81;
+  }
+
+  body kbd {
+    display: inline-block;
+    padding: 3px 5px;
+    font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    line-height: 10px;
+    color: #555;
+    vertical-align: middle;
+    background-color: #fcfcfc;
+    border: solid 1px #ccc;
+    border-bottom-color: #bbb;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #bbb;
+  }
+
+  body .task-list-item {
+    list-style-type: none;
+  }
+
+  body .task-list-item+.task-list-item {
+    margin-top: 3px;
+  }
+
+  body .task-list-item input {
+    margin: 0 0.35em 0.25em -1.6em;
+    vertical-align: middle;
+  }
+
+  body :checked+.radio-label {
+    z-index: 1;
+    position: relative;
+    border-color: #4078c0;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="one-space-or-two">One Space or Two</h1>
+<p>[Originally posted on ttlaxia.net [2012-09-28 Fri]</p>
+<p>There seems to be an eternal debate among writers (and those who hate
+them) about the relative merits of inserting one space or two between
+sentences. (See, Mark Barrett’s blog post for an interesting and
+unusually even-keeled example.) The question itself is misleading in
+every sense, but to the extent that it is a meaningful one, the answer
+will come by asking what, exactly, is at stake in the issue. There are
+several possibilities, including the sanity of publishing editors, the
+tired fingers of authors, the beauty of documents, or the ease with
+which we use those documents. The future of Western Civilization may not
+be at stake in the sense that if we today omit to insert an extra space
+after our full stops, we shall surely be shoveling babies into ovens
+tomorrow; but somebody thinks something is at stake—else why all the
+vitriol?</p>
+<p>In the realm of computer programs, the desiderata for an editor of
+text are, as the programmers would put it, orthogonal to those for a
+typesetter of text. Attempts at integrating the two functions into a
+single, graphical program have produced mongrels like Microsoft Word,
+and OpenOffice Writer, which perform neither function well. For example,
+one may examine texts rendered by such programs side-by-side, justified
+and not, and conclude, as Barrett does, that justification produces
+undesirable spacing byproducts, particularly when sentence ends are
+double-spaced; but the comparison tells us only that the typesetting
+engines used are unable to intelligently hyphenate. Hyphenation is not
+merely a minor side issue, but is critical to any proper attempt at
+justified typesetting, and for precisely this reason. One may indeed
+suggest the use of such word-processing programs for the quick and easy
+production of party flyers, but for serious writing, there is no
+substitute for a real, professional-grade text editor; and as for
+typesetting the resulting text, that is not the job of the writer, qua
+writer, but of a typesetter. The two functions may reside in one and the
+same person, just as they may reside in one and the same computer
+program (usually with the same quality of result) but they remain
+nevertheless distinct functions of the process of bringing text to
+readers.</p>
+<p>Furthermore, space is not a discrete, but a continuous quantity, as
+the mathematicians would put it. A paper-and-ink document does not
+contain one, or two, spaces after a sentence, but rather it contains
+some single quantity of space, large or small, however produced. The
+notion of reducing this measure to the simple level of one discrete lump
+or two stems, as has been pointed out many times, from the Age of
+Mechanization; but if the secretarial poolies of old found themselves
+resorting to the expedient of adding an extra space after a sentence, it
+is premature to leave the issue at that, with a dismissive wave of the
+hand. An extra keystroke after every sentence is, if nothing else,
+inefficient; and if there is anything which a professional typist
+abhors, it is waste. We must ask therefore why the habit was formed and
+reinforced despite the added effort; and the answer is of course that in
+its crude way, the insertion of an extra space character simulated the
+extra space which the typists were used to seeing in actual typeset
+material.</p>
+<p>About such material one gathers several things: first, that in the
+modern world, the habit of adding a little extra space after a
+sentence-end has waned. Perhaps, as the Marxists will no-doubt conclude,
+it is because it costs less to mass-produce material which packs more
+into a smaller space—whitespace costs money; perhaps it is because an
+algorithm which can intelligently account for all the interbalanced and
+sometimes conflicting factors involved in real typesetting is devilishly
+difficult to write, and therefore expensive to produce and complex and
+difficult to learn to use—and if there is one thing few but engineers
+seem to want, it is to learn to use TeX; or perhaps, as the
+deteriorationists will inevitably conclude, it is simply because modern
+man lacks the sophistication of taste of which his noble ancestor was
+possessed. Second, in older typeset material, it seems that the habit of
+adding extra space tends to be something of an English (and therefore
+American) trait. The Latinate (and therefore Continental) habit is to
+space between sentences as between words. The American typists imitated
+the typesetters of their country by adding an extra space; the French
+did not; and now we have the phrase “French spacing” to denote the
+omission of that second space. The argument that double-spacing is only
+an accident of the history of the mechanical typewriter itself brushes
+aside the long history of typesetting with extra space between sentences
+which the English-speaking typists sought to imitate.</p>
+<p>It is important to realize, however, that the addition of that extra
+spacing character is, just as I’ve said, an imitation. It is a visual
+imitation of what is itself, at least in part, a mark with semantic
+meaning. If we choose to mark the end of a sentence with the same sort
+of space that we use to mark the space between words (a space which
+itself is conventional, as a glance at old Latin texts will show) that
+later space is nevertheless semantically distinct from the former,
+because the structure which it distinguishes is distinct. There is no
+merit in the argument that a space is a space is a space. Because a
+sentence is not a word, a sentence space is not a word space; even when
+the current fashion of typesetting makes them visually
+indistinguishable, they remain semantically distinct. Just as an
+indentation in printed material (or some less felicitous means in
+HTML-typeset material) is used to differentiate one paragraph from the
+next, we use certain marks to set off one sentence from the next. They
+include capitalizing the first letter of the new sentence, using a mark
+of punctuation like the period, and, in some circumstances, we add a
+little extra space between the sentences.</p>
+<p>This much, in itself, seems an argument in favor of the
+double-spacing habit. (As an aside, my own text editor of choice, GNU
+Emacs, makes use of this fact by defining a large number of functions
+whose purpose is to operate on individual sentences as a whole. The
+ability, with a single keystroke, to move the cursor one sentence at a
+time, to mark off individual sentences, no matter how long, or how many
+lines they may occupy, is a useful and valuable one; and it is only
+possible when those sentences are distinguished distinctively; therefore
+Emacs treats two spaces following a sentence-ending punctuation mark as
+the delimiter of a sentence. Such functions could not work without such
+a unique combination to distinguish a sentence.) But of course, it is
+not really clarity in the semantic sense which the proponents of
+double-spacing seek, but rather clarity in the visual sense—the sense of
+ease and comfort of reading. Indeed, one requires no spaces whatever
+between sentences to make them semantically clear—that function is amply
+fulfilled by the mark of punctuation and the following capital, mediated
+by a little intelligent sensitivity to context on the part of the
+reader. (One cites Wikipedia advisedly, but according to that source,
+studies regarding the effect of end-of-sentence spacing on text
+comprehension have been inconclusive.)</p>
+<p>Some typesetters might claim that extra spacing makes unsightly gaps
+in a text, and, if a page is looked at as a dead blob of color on paper,
+rather than as a sequence of living ideas expressed in text, then they
+are quite right; but it remains debatable whether such gaps or rivers
+through the text distract, as some might claim. One might argue, after
+all, that yes, there is no evidence that extra space between sentences
+makes text easier to read; but to argue that there is, in principle, no
+value in using some whitespace to make reading easier and more pleasant
+commits one to the same position with regard to paragraph breaks—a
+frightful thought. You may like some extra space between sentences in
+typeset material, as I do, because those gaps make landmarks which
+render it easier to sense where one is in a block of otherwise
+unyielding text. Quite arguably, the visual homogeneity which is held up
+as an ideal by some typesetters is actually a hindrance to pleasant
+reading. There is no really good facility in HTML and CSS which allows
+double-spaced sentence ends; and there is no point in tilting at the
+windmill of the medium in which one works. Editors, intelligent,
+enlightened, or otherwise, may demand work done in one way or the
+other—another fight not worth the ink. A text editing program may seem
+to urge one way or the other; thus. Furthermore, if text is fed into a
+typesetting engine, it will collapse multiple spaces into one—one which
+may or may not, depending on the intelligence of the program, and the
+taste of its operator, be larger than an inter-word space; therefore,
+other things being equal, for text intended to be typeset in any sense
+at all, it matters not one bit how many spaces one uses between
+sentences. As for informal communications, such as emails, the answer is
+that it does not matter precisely because the medium is informal; and as
+for the use of monospaced typefaces, it is true that the double space
+can appear excessive in that case, but the very use of a monospace
+typeface indicates that we are not discussing serious typeset material —
+one uses such fonts now only for writing computer code and for certain
+fanciful sorts of decoration—not for running text.</p>
+<p>So, should you use two spaces or one? If you are not actually
+typesetting text, it does not matter, but it doesn’t hurt, unless you
+have reason to suspect that it will prejudice your editor against you.
+Might it bother your editor? Evidently, it is possible. It seems that
+people with an irrational prejudice against double-spacing are more
+common and more vitriolic than those with a prejudice for. If you are
+typesetting your text, even for the Web, then once again, it doesn’t
+matter, as the typesetting engine will collapse the extra space into
+one. If someone complains that the typeset results contain those extra
+spaces, then they are almost certainly trying to use a child’s toy—a
+word processing program—to do an adult’s job. And if your text editor
+functions more usefully if you do double-space, then it won’t hurt to do
+so. I myself find that even in a monospace typeface on my text editor’s
+screen, my own writing is easier for me to read with double spaces, so I
+use them even for my own manuscripts. And for an email? Again, it does
+not matter. So, if you already have the habit, there is little reason to
+reform; and if you don’t, there is no more reason to change.</p>
+<p>The real question, then, has nothing to do with the typing habits of
+all those poor, harassed writers, whose job is naught but to produce
+meaningful text, but with the work of typesetters, whose job is to
+render that text—not beautiful, but ergonomic. It is reduced to the
+question of whether serious, typeset running text (not merely authors’
+manuscripts) should be set with—no, not “two spaces,” but with a little
+more space kerned in between sentences. One may point to history and
+find that it’s been done both ways for a long time. One may point to
+science and find little to prove one way or the other.</p>
+<p>But does this mean that the issue is entirely subjective? Perhaps
+not. The desire to eradicate the visual distinction between words and
+phrases on the one hand, and sentences, on the other, implies a desire,
+or a least a willingness (even if born only of insensitivity) to
+eradicate the semantic distinction. If the implication of the “a space
+is a space” argument is that words and clauses and phrases are no
+different from sentences; then what may be at stake, albeit in a very
+small way, is the appreciation our culture has for the importance—the
+vital importance—of the concept of the sentence itself, as properly not
+more and no less than the complete expression of a complete thought. I
+admit that the connection is slight and tenuous; nevertheless one might
+indeed see the tendency to lose the graphical distinction between a
+sentence-end and a phrase-end as symptomatic of a general insensitivity
+to the distinction between the two kinds of structure, as another effect
+of the same cause which is behind the general atomization which seems to
+have taken hold of modern writing. The atomization of sentences implies
+the atomization of thought. What once might have been written as a
+single flowing sentence consisting of clear premises followed by a
+conclusion is now replaced with the machine-gun stutter of seemingly
+unrelated assertions. No, we will not all die tomorrow if we allow
+ourselves to habitually begin our sentences with the word but; but that
+we live in a culture which has lost the sense of why such a thing might
+be infelicitous in many contexts is indication that the sense of a
+sentence has been largely lost. Perhaps then that, if not proves, at any
+rate may explain some prejudice against the single-spacing habit, even
+where we might all admit that it is, after all, not really an important
+issue in itself.</p>
+<pre><code> E. Hawthorne Winner
+ Albuquerque, New Mexico
+ August, 2012</code></pre>
+</body>
+</html>

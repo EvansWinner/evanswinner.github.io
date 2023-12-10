@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+(echo ".pl 10000i"; \
+    pandoc --column=50 -fmarkdown -tms $1; \
+) |\
+  sed 's/\.PP./\.LP/g' |\
+  grep -v '^.SH' |\
+  sed 's/.PP/.LP/g' |\
+  nroff -ms -e -Tutf8 |\
+  cat -s

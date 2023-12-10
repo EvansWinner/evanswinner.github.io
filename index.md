@@ -96,10 +96,10 @@ as we used to say on Web 1.0, "Under construction."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
- <b>2018(?): Article (orig. Blooger)</b>
+ <b>2018(?): Article (orig. Blogger)</b>
  [<a href="https://thornepublic.blogspot.com/2018/03/one-space-or-two.html">ORIG</a>] [<a href="oneSpaceOrTwo.html">LOCAL</a>] [<a href="oneSpaceOrTwo.txt">TEXT</a>]
 
-        <b>"ONE SPACE OR TWO"</b>
+  <b style="color: red">ONE SPACE OR TWO</b>
   
   On the use of one or two spaces
   between sentences. Serious ana-
@@ -148,7 +148,7 @@ as we used to say on Web 1.0, "Under construction."
  <b>2007-03-16i Code (EmacsWiki)</b>
  [<a href="https://www.emacswiki.org/emacs/TwIt">LINK</a>]
 
-           "<b>Twit.el</b>"
+  <b style="color:red">Twit.el</b>
 
   What was, I think, the second
   Twitter client for Emacs. I only
