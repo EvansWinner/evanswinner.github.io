@@ -90,6 +90,98 @@ as we used to say on Web 1.0, "Under construction."
 
 <pre>
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2023-02-09: Twitter</b>
+ [<a href="https://x.com/thorne/status/1623795999100510210?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "It may be that the main job of'
+  the 21st century is to learn to
+  understand the 20th."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2023-01-13: Twitter</b>
+ [<a href="https://x.com/thorne/status/1613945358953992192?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "A new informal fallacy seen
+  particularly on Twitter:
+  Argumentum ex multis sectatoribus
+  -- argument from number of
+  followers."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2023-01-13: Twitter</b>
+ [<a href="https://x.com/thorne/status/1597301395031400449?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "If your side of the issue is
+  having to constantly invent new
+  words and slogans for what amount
+  to the same ideas, then your side
+  almost certainly doesn't have
+  reality on its side. Bad ideas
+  flourish though the constant re-
+  juvenation of the fuzzy language
+  that carries them."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2022-11-08: Twitter</b>
+ [<a href="https://x.com/thorne/status/1590169105717657602?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "Voting is win-win. If the person
+  you voted for wins, then "yay! --
+  we won!"; and if they lose, then
+  you don't have to feel partly
+  responsible for all the idiotic
+  shit they were going to do when
+  in office."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2022-07-29: Twitter</b>
+ [<a href="https://x.com/thorne/status/1553124743678533633?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "I find it difficult to respect
+  anybody who ever uses the 'hist-
+  orical present' tense."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2021-08-23: Twitter</b>
+ [<a href="https://x.com/thorne/status/1429995929789108232?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "I find it difficult to take
+  seriously anyone who ever uses the
+  word 'societal.'"
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2021-08-13: Twitter</b>
+ [<a href="https://x.com/thorne/status/1429995929789108232?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "The Afghan debacle: from which I
+  conclude that G. Bush either never
+  played Risk or never saw Princess
+  Bride. But why is everyone else
+  acting so surprised?"
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2020-06-01: Twitter</b>
+ [<a href="https://x.com/thorne/status/1267556905024552960?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "A civilization that had worked
+  for generations against individual
+  rights, attempts to solve every
+  problem caused by collectivism
+  with--more collectivism, can't
+  expect a police force that res-
+  pects individual rights. In the
+  long run a civilization gets the
+  police force it deserves."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2018-11-18: Facebook post</b>
  [<a href="https://www.facebook.com/bellsound/posts/pfbid0fF79vqKRJx6yT3MbVJBFpnomp1UdzzBSXSqicwqR8XFEZvVFE5QpaztQtjukN45gl">ORIG</a>] [FULL TEXT BELOW] 
 
@@ -147,6 +239,17 @@ as we used to say on Web 1.0, "Under construction."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2017-09-05: Twitter</b>
+ [<a href="https://x.com/thorne/status/905100332056719360?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "Fifty bucks says if North Korea
+  launches a nuke at the West Coast
+  it will explode on the pad, fail
+  to detonate or fall into the
+  ocean."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2017-02-01: Facebook "Meme" image</b>
  [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">LINK</a>]
 
@@ -155,6 +258,17 @@ as we used to say on Web 1.0, "Under construction."
   obligatory typo.
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
  
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2016-12-16: Twitter</b>
+ [<a href="https://x.com/thorne/status/809769088817963008?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "The Statistician's Fallacy: '50%
+  of humans have a penis; your mom
+  is human; therefore there is a 50%
+  chance that your mom has a
+  penis.'"
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2016-06-13: Article (LinkedIn)</b>
  [<a href="https://www.linkedin.com/pulse/why-your-systems-people-need-sandbox-evans-winner">LINK</a>]
