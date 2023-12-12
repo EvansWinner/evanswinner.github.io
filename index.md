@@ -193,6 +193,21 @@ as we used to say on Web 1.0, "Under construction."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2018-08-19: Twitter</b>
+ [<a href="https://x.com/thorne/status/1031368311869603840?s=20">LINK</a>] [FULL TEXT BELOW]
+
+ "
+  -- Me: Alexa, have you ever taken
+         the Turning Test?
+  -- Alexa: I don't need to pass
+            that. I'm not pretending
+            to be human.
+
+  Can't argue with that.
+  "
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2018-04-04: Article (LinkedIn)</b>
  [<a href="https://www.linkedin.com/pulse/demanding-satisfaction-emacs-lisp-evans-winner">LINK</a>]
 
@@ -280,6 +295,17 @@ as we used to say on Web 1.0, "Under construction."
   have to give them a low-stakes en-
   vironment in which to make mis-
   takes.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2015-08-19: Twitter</b>
+ [<a href="https://x.com/thorne/status/634070694813372416?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "When they write the art history
+  of the early 21st century, it will
+  be the computer-animated films of
+  Pixar and Dreamworks that are re-
+  membered.
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
