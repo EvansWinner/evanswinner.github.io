@@ -90,6 +90,17 @@ as we used to say on Web 1.0, "Under construction."
 
 <pre>
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2023-09-07: Twitter</b>
+ [<a href="https://x.com/evans_h_winner/status/1699909149478597047?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "The word "statistics," in its use
+  naming a science, is no more a
+  plural merely because it ends in
+  's' than is the word 'mathe-
+  matics.'"
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2023-02-09: Twitter</b>
  [<a href="https://x.com/thorne/status/1623795999100510210?s=20">LINK</a>] [FULL TEXT BELOW]
 
@@ -138,6 +149,30 @@ as we used to say on Web 1.0, "Under construction."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2022-10-26: Twitter</b>
+ [<a href="https://x.com/evans_h_winner/status/1585324607283658752?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "Whenever I finally really figure
+  out exactly how and why I have
+  screwed something up terribly in
+  life I find that if I scan my past
+  hard enough I will find that at
+  least someone, somewhere, at some
+  point in time, gave me the advice
+  I needed -- and I didn't listen."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2022-08-19: Twitter</b>
+ [<a href="https://x.com/evans_h_winner/status/1560705151177875456?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "Twitter only provides a heart for
+  reacting to a tweet. They need to
+  provide more variety. An eye-roll,
+  at the very least."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2022-07-29: Twitter</b>
  [<a href="https://x.com/thorne/status/1553124743678533633?s=20">LINK</a>] [FULL TEXT BELOW]
 
@@ -167,6 +202,31 @@ as we used to say on Web 1.0, "Under construction."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2021-05-07: Twitter</b>
+ [<a href="https://x.com/evans_h_winner/status/1390783640364191744?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "Collaboration doesn't come from
+  herding people into  cubicle farms
+  or making them use Slack. It comes
+  from an attitude of helpfulness
+  and from shared goals. If you have
+  that, you don’t need Slack. If you
+  don’t, that’s the reason people
+  think your IT department is a cost
+  center."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2020-07-17: Twitter</b>
+ [<a href="https://x.com/evans_h_winner/status/1284297130690019329?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "I asked the expert system if a
+  dog possesses the Buddha-nature.
+
+  It said "Null pointer exception."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2020-06-01: Twitter</b>
  [<a href="https://x.com/thorne/status/1267556905024552960?s=20">LINK</a>] [FULL TEXT BELOW]
 
@@ -179,6 +239,29 @@ as we used to say on Web 1.0, "Under construction."
   pects individual rights. In the
   long run a civilization gets the
   police force it deserves."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2019-08-06: Twitter</b>
+ [<a href="https://x.com/evans_h_winner/status/1158859744565579776?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "You might be able to get away
+  with one of the following --
+
+    1. Hire idiots to work the front
+       line at your company
+    2. Promote from within
+
+  -- but not both.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2018-11-24: Twitter</b>
+ [<a href="https://x.com/evans_h_winner/status/1066496993877417990?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "Good enough always is. 
+
+  By definition."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -205,6 +288,16 @@ as we used to say on Web 1.0, "Under construction."
 
   Can't argue with that.
   "
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2018-04-17: Twitter</b>
+ [<a href="https://x.com/evans_h_winner/status/986290591876001793?s=20">LINK</a>] [FULL TEXT BELOW]
+
+  "Working is a virtue; working hard
+  is a virtue; working stupidly and
+  inefficiently so you can say you
+  worked hard -- is a vice."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
