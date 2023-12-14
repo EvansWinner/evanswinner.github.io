@@ -107,6 +107,18 @@ twoconductors.txt : twoconductors.md
 twoconductors.html : twoconductors.md
 	pandoc -fmarkdown -thtml5 --include-in-header=portfolio.css -o twoconductors.html twoconductors.md
 
+ouray : ouray.html ouray.txt
+ouray.txt : ouray.md
+	pandoc -fmarkdown -tplain -o ouray.txt ouray.md
+ouray.html : ouray.md
+	pandoc -fmarkdown -thtml5 --include-in-header=portfolio.css -o ouray.html ouray.md
+
+hpo : hpo.html hpo.txt
+hpo.txt : hpo.md
+	./md2txt hpo.md > hpo.txt
+hpo.html : hpo.md
+	pandoc -fmarkdown -thtml5 --include-in-header=portfolio.css -o hpo.html hpo.md
+
 
 clean :
 	rm -rf A B C E mobius.txt kNN.md sets.md resume.html index.html dc_spl.html kNN.html kNN.md sets.html portfolio.html writing.html iris* tmp*
