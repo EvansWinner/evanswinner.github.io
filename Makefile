@@ -119,6 +119,12 @@ hpo.txt : hpo.md
 hpo.html : hpo.md
 	pandoc -fmarkdown -thtml5 --include-in-header=portfolio.css -o hpo.html hpo.md
 
+snorkel : snorkel.html snorkel.txt
+snorkel.txt : snorkel.md
+	./md2txt snorkel.md > snorkel.txt
+snorkel.html : snorkel.md
+	pandoc -fmarkdown -thtml5 --include-in-header=portfolio.css -o snorkel.html snorkel.md
+
 
 clean :
 	rm -rf A B C E mobius.txt kNN.md sets.md resume.html index.html dc_spl.html kNN.html kNN.md sets.html portfolio.html writing.html iris* tmp*

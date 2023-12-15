@@ -331,7 +331,7 @@ as we used to say on Web 1.0, "Under construction."
 
   A blurb and code for a drop-in
   replacement for Emacs' `require`
-  funtion that requires a library,
+  function that requires a library,
   or failing that, installs the
   package and then requires it.
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
@@ -343,8 +343,9 @@ as we used to say on Web 1.0, "Under construction."
   <b style="color:red">NUMBER CHUNKING
   WITH CHUNKY NUMBERS</b>
 
-  A slightly bizarre medition on the 
-  orthography of "number chunking."
+  A slightly bizarre meditation on
+  the orthography of "number
+  chunking."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -645,9 +646,19 @@ as we used to say on Web 1.0, "Under construction."
 
   <b style="color:red">A TALE OF TWO CONDUCTORS</b>
 
-  Written for a conuducting class.
+  Written for a conducting class.
   Comparison between two styles
   of conducting.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2003-06-08: Comment (Usenet)
+                   (rec.scuba)</b>
+ [<a href="snorkel.html">LOCAL</a>] [<a href="snorkel.txt">TEXT</a>]
+
+  A comment about snorkels. I don't
+  link here to the original because
+  it is riddled with embarrassing
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
