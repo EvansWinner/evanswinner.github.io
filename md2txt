@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 (echo ".pl 10000i"; \
- echo ".ll 50"; \
+ echo ".ll 40"; \
     pandoc -fmarkdown -tms $1; \
 ) |\
   sed 's/\.LP/\.sp/g' |\
