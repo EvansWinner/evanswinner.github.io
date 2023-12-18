@@ -4,7 +4,7 @@
  echo ".ll 50"; \
     pandoc -fmarkdown -tms $1; \
 ) |\
-  sed 's/\.PP./\.sp/g' |\
+  sed 's/\.LP/\.sp/g' |\
   grep -v '^.SH' |\
   sed 's/.PP/.sp/g' |\
   nroff -e -Tutf8 |\

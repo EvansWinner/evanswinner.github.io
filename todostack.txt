@@ -1,5 +1,7 @@
-TODOSTACK.EL  [Originally  published  on evanswin‐
-ner.com, 2011‐05‐14 Sat]
+TODOSTACK.EL
+
+[Originally    published    on    evanswinner.com,
+2011‐05‐14 Sat]
 
 Of all forms of time‐wasting, writing time‐manage‐
 ment software is most sublime.
