@@ -8,4 +8,5 @@
   grep -v '^.SH' |\
   sed 's/.PP/.sp/g' |\
   nroff -e -Tutf8 |\
+  sed 's/‐/-/g' |\
   cat -s
