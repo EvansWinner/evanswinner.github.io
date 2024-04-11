@@ -2,7 +2,7 @@
 title: Thorne's Old-Fashioned Homepage
 subtitle: (just like your mom used to make)
 author: Evans Winner
-date: 2023-12-02
+date: 2024-04-10
 ---
 
 <img src="me.jpg" style="max-width:50%;float:left;">
@@ -104,7 +104,7 @@ as we used to say on Web 1.0, "Under construction."
  <b>2023-02-09: Twitter</b>
  [<a href="https://x.com/thorne/status/1623795999100510210?s=20">LINK</a>] [FULL TEXT BELOW]
 
-  "It may be that the main job of'
+  "It may be that the main job of
   the 21st century is to learn to
   understand the 20th."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
@@ -285,7 +285,7 @@ as we used to say on Web 1.0, "Under construction."
  [<a href="https://www.facebook.com/bellsound/posts/pfbid02jgUNXp93orXjJ1avWG5fLJtkVZpBNaWMXa44Cgr7Yzs7BnvYNXPi4SHdUprku2hPl">ORIG</a>] [FULL TEXT BELOW] 
 
    "My son just announced that he is
-    lasagna intolerant."
+    lasagna-intolerant."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -313,7 +313,7 @@ as we used to say on Web 1.0, "Under construction."
  [<a href="https://x.com/evans_h_winner/status/1390783640364191744?s=20">LINK</a>] [FULL TEXT BELOW]
 
   "Collaboration doesn't come from
-  herding people into  cubicle farms
+  herding people into cubicle farms
   or making them use Slack. It comes
   from an attitude of helpfulness
   and from shared goals. If you have
@@ -353,9 +353,10 @@ as we used to say on Web 1.0, "Under construction."
 
   <b style="color:red">pwgen.py</b>
 
-  Everyone has to write a little
-  program to generate quasi-random
-  passwords.
+  I suppose that everyone has to
+  write a little program to generate
+  quasi-random passwords at some
+  point in life.
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -387,7 +388,7 @@ as we used to say on Web 1.0, "Under construction."
   "I asked the expert system if a
   dog possesses the Buddha-nature.
 
-  It said "Null pointer exception."
+  It said 'Null pointer exception.'"
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -416,7 +417,7 @@ as we used to say on Web 1.0, "Under construction."
        line at your company
     2. Promote from within
 
-  -- but not both.
+  -- but not both."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -425,7 +426,7 @@ as we used to say on Web 1.0, "Under construction."
 
   <b style="color:red">auction.py</b>
 
-  Little auction simpulator in Simpy
+  Little auction simulator in Simpy
   for eBay auctions. I don't really
   remember what I was trying to
   figure out, but there it is.
@@ -530,7 +531,7 @@ as we used to say on Web 1.0, "Under construction."
   "Fifty bucks says if North Korea
   launches a nuke at the West Coast
   it will explode on the pad, fail
-  to detonate or fall into the
+  to detonate, or fall into the
   ocean."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
@@ -611,7 +612,7 @@ as we used to say on Web 1.0, "Under construction."
 
   <b style="color:red">refresh-notes.ahk</b>
 
-  Automaticall refresh shared
+  Automatically refresh shared
   inboxen in Lotus Notes using Auto
   Hot Key.
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
@@ -622,7 +623,7 @@ as we used to say on Web 1.0, "Under construction."
 
   <b style="color:red">banish.ahk</b>
 
-  Banish the mouse pointer the
+  Banish the mouse pointer to the
   corner of the screen. Inspired by
   the function of the same name from
   stumpwm. One line of Autohotkey.
@@ -632,8 +633,8 @@ as we used to say on Web 1.0, "Under construction."
  <b>2016-06-13: Article (LinkedIn)</b>
  [<a href="https://www.linkedin.com/pulse/why-your-systems-people-need-sandbox-evans-winner">LINK</a>]
 
-  <b style="color:red">WHY YOUR SYSTEMS PEOPLE
-  NEED A SANDBOX</b>
+  <b style="color:red">WHY YOUR SYSTEMS
+  PEOPLE NEED A SANDBOX</b>
 
   If you want people to learn, you
   have to give them a low-stakes en-
@@ -649,7 +650,7 @@ as we used to say on Web 1.0, "Under construction."
   of the early 21st century, it will
   be the computer-animated films of
   Pixar and Dreamworks that are re-
-  membered.
+  membered."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -697,8 +698,8 @@ as we used to say on Web 1.0, "Under construction."
   OF EMACS LISP FILES</b>
 
   Load a whole directory of Emacs
-  Lisp files. Sort of like the title
-  says.
+  Lisp files all at once -- sort of
+  like the title says.
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
