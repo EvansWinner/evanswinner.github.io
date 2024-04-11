@@ -5,9 +5,9 @@ program of the music of Cornish favorite son, John Cage, and
 others, in PONCHO Concert Hall last night. The extraordinary
 Margret Leng Tan was the lone performer of the evening. Tan
 is an accomplished (the program notes bill her as the
-`foremost') interpreter of Cage's early prepared piano music
+'foremost') interpreter of Cage's early prepared piano music
 and now specializes in the small but interesting repertoire
-for toy piano; Cage's `Suite for Toy Piano' was the main
+for toy piano; Cage's 'Suite for Toy Piano' was the main
 musical prize of the evening.
 
 The performance began with a very short film called WORXOK
@@ -19,7 +19,7 @@ women grooming themselves. The effect was somewhat
 mystifying, though the music was pleasant.
 
 After the film, Tan took the stage, clad in an aqua,
-Chinese-cut blouse, and played Cage's 1940 `Bacchanale' for
+Chinese-cut blouse, and played Cage's 1940 'Bacchanale' for
 prepared piano--famed as the first such work, and first
 performed right there in PONCHO Hall as accompaniment to a
 Syvilla Fort dance number. Tan, here on spiritual home turf,
@@ -32,9 +32,9 @@ effect is successful in general, though the preparation of
 the piano necessarily reduces, quite substantially, the
 dynamic range of the instrument, and thus makes more
 difficult the task of producing a convincing climax--a
-noticeable failure in the `Bacchanale' through no fault of
+noticeable failure in the 'Bacchanale' through no fault of
 its interpreter. Yet compared to Cage's later, far more
-`avant' works, it is the early prepared piano pieces that
+'avant' works, it is the early prepared piano pieces that
 are aging best, and for which he will likely be remembered
 longest.
 
@@ -70,20 +70,20 @@ harpsichord, and one thinks that the solution of the
 Renaissance composers--counterpoint, rather than harmonic
 interest and density--might serve the instrument better.
 
-Next was `Chooks' from `Old McDonald's Yellow Submarine' by
+Next was 'Chooks' from 'Old McDonald's Yellow Submarine' by
 Erik Griswold. The short, fun piece uses fast, open chords
 on the toy piano alternating with quick hits to the
 woodblocks; simple and crowd-pleasing. Next a tarantella:
-`Mirabella' by Stephen Montague. Again, the work is too
+'Mirabella' by Stephen Montague. Again, the work is too
 densely chordal to sound on the noisy instrument. The
 harmonies are Italio-Spanish modal standard. The piece is
 essentially a showpiece and as such has some nice moments,
 the final bars particularly.
 
-Last we hear Twinning's 1995 `Satie Blues' for piano and toy
+Last we hear Twinning's 1995 'Satie Blues' for piano and toy
 piano, played by one performer, one hand on each instrument.
 The work is a melancholy meditation with toy piano generally
-taking the lead, and `adult' piano (as Ms. Tan calls it) in
+taking the lead, and 'adult' piano (as Ms. Tan calls it) in
 accompaniment. Mr. Twinning seems to be a composer somewhat
 in the modern Hollywood mold. Mild triadic modal harmonies
 succeed one another under pleasantly evocative tunes. Less
@@ -94,7 +94,7 @@ conventionally pleasing work of the evening, though a bit of
 a downer to end on.
 
 After Tan's show we watched Evans Chan's documentary,
-`Sorceress of the New Piano: The Artistry of Margaret Leng
+'Sorceress of the New Piano: The Artistry of Margaret Leng
 Tan'--an occasionally interesting two-hour commercial for
 the performer. But if that's what it takes to bring such
 artists here from New York to play such interesting
