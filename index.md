@@ -113,11 +113,10 @@ as we used to say on Web 1.0, "Under construction."
  <b>2023-01-13: Twitter</b>
  [<a href="https://x.com/thorne/status/1613945358953992192?s=20">LINK</a>] [FULL TEXT BELOW]
 
-  "A new informal fallacy seen
-  particularly on Twitter:
-  Argumentum ex multis sectatoribus
-  -- argument from number of
-  followers."
+  "A new informal fallacy seen part-
+   icularly on Twitter: Argumentum
+   ex multis sectatoribus -- argu-
+   ment from number of followers."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -133,6 +132,15 @@ as we used to say on Web 1.0, "Under construction."
   flourish though the constant re-
   juvenation of the fuzzy language
   that carries them."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2022-11-24: Facebook post</b>
+ [<a href="https://www.facebook.com/bellsound/posts/pfbid0HQStQ3MPgihwFnw61M3nKbchcVj1z1EWnUzrk7M9c5fzhCb1VfjarP3UunzpYvtQl">ORIG</a>] [FULL TEXT BELOW] 
+
+  "Ah, Thanksgiving. That time when 
+   families come together and take
+   Covid tests."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -182,6 +190,105 @@ as we used to say on Web 1.0, "Under construction."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2022-06-24: Facebook post</b>
+ [<a href="https://www.facebook.com/bellsound/posts/pfbid02eKmdtTZLSMi1FUJfafvwnX2EnP6q6xRbCLfXi6XCqK6LayhRkDmfeP5ShK6xWkr8l">ORIG</a>] [FULL TEXT BELOW] 
+
+  "Except for the coughing, COVID
+   has been the best vacation I've
+   had in 15 years."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2022-06-17: Facebook post</b>
+ [<a href="https://www.facebook.com/bellsound/posts/pfbid0xGSA6uKvJUaYbL5ZJ6nsbiLbW6rJSF6A4BqZFFL9kLMgHeWuJrc6LVM27b6EFSjrl">ORIG</a>] [FULL TEXT BELOW] 
+
+  "50 is the new 49."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2022-05-21: Facebook post</b>
+ [<a href="https://www.facebook.com/bellsound/posts/pfbid0JSJ2B6wtRw93ysrrUeiw122TsSRnTZq9wWN8o5Armrzyc8w1sQwmcXUsNrJFQB49l">ORIG</a>] [FULL TEXT BELOW] 
+
+  "I think we all owe Johnny Depp
+   and Amber Heard our sincere
+   thanks for distracting us from
+   having to keep watching the
+   drama with Will Smith slapping
+   Chris Rock; and I think we owe
+   Chris and Will our thanks for
+   keeping us from having to keep
+   thinking about people dying in
+   Ukraine; and we really should
+   thank Vlad for helping to dis-
+   tract us from that global pan-
+   demic. Oh, and thanks, China,
+   for taking our minds off Afri-
+   can civil wars, Chinese intern-
+   ment camps, oppression in Russia,
+   Islamic totalitarianism and the
+   apotheosis of over a century and
+   a half of creeping government
+   overreach and the steady loss of
+   respect for reason and individual
+   rights in the US."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2022-05-12: Facebook post</b>
+ [<a href="https://www.facebook.com/bellsound/posts/pfbid0HXywp2RqjyetitYUmqg7WeiFeKCnnwnoM5nwUA32kqGcudnzug5DtEyACMxQfD5Gl">ORIG</a>] [FULL TEXT BELOW] 
+
+  "I met the Buddha on the road
+   today.
+
+   My lawyer has advised me not to
+   say anything more."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2022-05-11: Facebook post</b>
+ [<a href="https://www.facebook.com/bellsound/posts/pfbid0Bw5jy66Kqi6UQpmjDzeVYtJxx8uJiZzCviFwPHJGR1yKqRcoyGHAaiGy7ATRhngpl">ORIG</a>] [FULL TEXT BELOW] 
+
+  "For financial reasons, the mon-
+   astery was opened to visitors for
+   a week during May. A monk was
+   approached by a young tourist
+   who mockingly called out, 'Hey
+   Buddha-dude! What is the sound of
+   one hand clapping?'
+
+   The monk swiftly extended his
+   hand and slapped him across the
+   face with a loud thwack -- where-
+   upon the tourist was enlight-
+   ened."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2022-05-11: Facebook post</b>
+ [<a href="https://www.facebook.com/bellsound/posts/pfbid02A3YVYbCDFn8Jy1LcY5Zs3gk6vddNcQTMog8tmsj7quVBbc75Wg6NsCQ1dfh9kxysl">ORIG</a>] [FULL TEXT BELOW] 
+
+  "The Tao that can be sensed is not
+   the senseless Tao."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2022-03-24: Facebook post</b>
+ [<a href="https://www.facebook.com/bellsound/posts/pfbid0czERZnbWj89etpNMPUjyg9SsgwYs7AiuaDNnWvkkpLk1T5u9sTDQmf6rpbp4qpSml">ORIG</a>] [FULL TEXT BELOW] 
+
+  "It's 7pm and Kim accuses me of
+   day-drinking. Just another reason
+   to hate daylight saving time."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2022-03-11: Facebook post</b>
+ [<a href="https://www.facebook.com/bellsound/posts/pfbid02jgUNXp93orXjJ1avWG5fLJtkVZpBNaWMXa44Cgr7Yzs7BnvYNXPi4SHdUprku2hPl">ORIG</a>] [FULL TEXT BELOW] 
+
+   "My son just announced that he is
+    lasagna intolerant."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2021-08-23: Twitter</b>
  [<a href="https://x.com/thorne/status/1429995929789108232?s=20">LINK</a>] [FULL TEXT BELOW]
 
@@ -217,7 +324,7 @@ as we used to say on Web 1.0, "Under construction."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
- <b>2021: Code (Github (Gist))</b>
+ <b>2021-03-13: Code (Github (Gist))</b>
  [<a href="https://gist.github.com/EvansWinner/50ed838229285bc4a5053c085329a3a2">LINK</a>]
 
   <b style="color:red">fake_acpi.ps1</b>
@@ -228,14 +335,49 @@ as we used to say on Web 1.0, "Under construction."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
- <b>2021: Code (Github (Gist))</b>
+ <b>2021-03-12: Code (Github (Gist))</b>
  [<a href="https://gist.github.com/EvansWinner/917d413bacc67714dab4e6227792ed20">LINK</a>
 
   <b style="color:red">banish.cs</b>
 
   Tiny c# program to banish the
   mouse. Inspired by the function in
-  stumpwm.
+  stumpwm. Replaced the one from 
+  2016 when I couldn't use Autohot-
+  key at work anymore.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2021-02-17: Code (Github (Gist))</b>
+ [<a href="https://gist.github.com/EvansWinner/a81415dd6295b14347a85752b4ef85f1">LINK</a>
+
+  <b style="color:red">pwgen.py</b>
+
+  Everyone has to write a little
+  program to generate quasi-random
+  passwords.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2021-02-09: Code (Github (Gist))</b>
+ [<a href="https://gist.github.com/EvansWinner/f578b0069546e5979b1ce47cf6d16f1d">LINK</a>
+
+  <b style="color:red">floating_message.py</b>
+
+  Written in about five minutes to
+  amuse my seven-year-old son.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2021-01-19: Code (Github (Gist))</b>
+ [<a href="https://gist.github.com/EvansWinner/b1a2e6edd1ec862c8b5f45946a01962b">LINK</a>
+
+  <b style="color:red">wsrch.bat</b>
+
+  Google search from the command
+  line on Windows. Doesn't like non-
+  alphanumeric characters, but still
+  basically works.
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -275,6 +417,18 @@ as we used to say on Web 1.0, "Under construction."
     2. Promote from within
 
   -- but not both.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2019-07-12: Code (Github (Gist))</b>
+ [<a href="https://gist.github.com/EvansWinner/064932a724caa2c816a768792a6903da">LINK</a>
+
+  <b style="color:red">auction.py</b>
+
+  Little auction simpulator in Simpy
+  for eBay auctions. I don't really
+  remember what I was trying to
+  figure out, but there it is.
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -415,12 +569,20 @@ as we used to say on Web 1.0, "Under construction."
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2017-02-02: Facebook "Meme" image</b>
+ [<a href="https://www.facebook.com/bellsound/posts/pfbid02Zf9XJFKowK7kL5BBiNhAtw4phyunVg8HPZhwTaXdqX9wYnKARMbp4aisyTrSsjTgl">LINK</a>]
+
+  From when D. Trump was elected.
+  C.f. "#NotMyPresident."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2017-02-01: Facebook "Meme" image</b>
  [<a href="https://www.facebook.com/bellsound/posts/pfbid02f3rebW3NRAKYU9EXun5JrqkZFEg3tiAQA1f3gpCp6zzx5dW6XfTzH8XNJZS7i2Enl">LINK</a>]
 
-  From when D. Trump was elected.
-  C.f. "#NotMyPresident." Includes
-  obligatory typo.
+  Another from when D. Trump was
+  elected. C.f. "#NotMyPresident."
+  Includes obligatory typo.
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
  
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -432,6 +594,38 @@ as we used to say on Web 1.0, "Under construction."
   is human; therefore there is a 50%
   chance that your mom has a
   penis.'"
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2016-12-12: Facebook post</b>
+ [<a href="https://www.facebook.com/evanswinner/posts/pfbid0JuNu7N7zfWpdjgxdbNhM2bJdx6YPFZiHntAYCRopKavrUHjqeyUqVF3LNfyL7FWml">LINK</a>]
+
+  "Of all forms of time-wasting,
+   writing time management software
+   is most sublime."
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2016-10-11: Code (Github (Gist))</b>
+ [<a href="https://gist.github.com/EvansWinner/51fc9f76f910be918f02753aedc3dc23">LINK</a>
+
+  <b style="color:red">refresh-notes.ahk</b>
+
+  Automaticall refresh shared
+  inboxen in Lotus Notes using Auto
+  Hot Key.
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ <b>2016-10-11: Code (Github (Gist))</b>
+ [<a href="https://gist.github.com/EvansWinner/81b707f7da60cffab40877ca8f33a438">LINK</a>
+
+  <b style="color:red">banish.ahk</b>
+
+  Banish the mouse pointer the
+  corner of the screen. Inspired by
+  the function of the same name from
+  stumpwm. One line of Autohotkey.
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -659,6 +853,7 @@ as we used to say on Web 1.0, "Under construction."
   A comment about snorkels. I don't
   link here to the original because
   it is riddled with embarrassing
+  spelling and other gaffs.
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓

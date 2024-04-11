@@ -249,12 +249,16 @@
 
   body a {
     color: #4078c0;
-    /* text-decoration: none; */
+    text-decoration: none;
   }
 
   body a:hover,
   body a:active {
     text-decoration: underline;
+  }
+  body a:visited {
+    color: #441A8B;
+    text-decoration: none;
   }
 
   body hr {
@@ -815,6 +819,9 @@
     border-color: #4078c0;
   }
   </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
@@ -823,19 +830,21 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#nerdy">Nerdy</a>
+<li><a href="#nerdy" id="toc-nerdy">Nerdy</a>
 <ul>
-<li><a href="#tech">Tech</a>
+<li><a href="#tech" id="toc-tech">Tech</a>
 <ul>
-<li><a href="#emacs-and-lisp">Emacs and Lisp</a></li>
+<li><a href="#emacs-and-lisp" id="toc-emacs-and-lisp">Emacs and
+Lisp</a></li>
 </ul></li>
-<li><a href="#philosophy">Philosophy</a>
+<li><a href="#philosophy" id="toc-philosophy">Philosophy</a>
 <ul>
-<li><a href="#politics">Politics</a></li>
+<li><a href="#politics" id="toc-politics">Politics</a></li>
 </ul></li>
-<li><a href="#outdoors">Outdoors</a></li>
-<li><a href="#miscellaneous">Miscellaneous</a></li>
-<li><a href="#poetry">Poetry</a></li>
+<li><a href="#outdoors" id="toc-outdoors">Outdoors</a></li>
+<li><a href="#miscellaneous"
+id="toc-miscellaneous">Miscellaneous</a></li>
+<li><a href="#poetry" id="toc-poetry">Poetry</a></li>
 </ul></li>
 </ul>
 </nav>
