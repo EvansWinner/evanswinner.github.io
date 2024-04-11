@@ -8,12 +8,153 @@
   <meta name="dcterms.date" content="2023-12-02" />
   <title>Thorne’s Old-Fashioned Homepage</title>
   <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     span.underline{text-decoration: underline;}
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <style type="text/css">
   body {
@@ -679,6 +820,9 @@
     border-color: #4078c0;
   }
   </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
@@ -689,15 +833,59 @@
 </header>
 <p><img src="me.jpg" style="max-width:50%;float:left;"></p>
 <p><a href="#the-stuff">⇒ Skip Intro ⇐</a></p>
-<p>I am Evans Hawthorne Winner, a 51-year-old (born 1972), lowly IT worker living in Evergreen, Colorado. <b>(Drop me a line if you know where I can get analytical work – data, operations, process, whatever. I am evans dot winner at Google’s famous email domain.)</b></p>
-<p>I used to be a casual rock climber in Boulder, later a casual scuba diver in Seattle; I studied music composition fairly seriously at university in Boulder for several years; later studied literature and philosophy in New Mexico where, after twenty-something odd years of courses at many schools, I finally graduated <em>summa</em> – because they only counted their own courses in the GPA. Ha! Take that, high-school guidance councilors! (That’s a pathetic humble-brag, I know, but please give me this. It’s all I’ve got.)</p>
-<p>I have the somewhat ambitiously named “<a href="./portfolio.html">portfolio</a>” of miscellaneous nerdy things I’ve done; a boring <a href="./resume.html">resume</a>, the obligatory <a href="https://github.com/evanswinner">GitHub</a> page, a <a href="https://www.linkedin.com/in/evanswinner/">LinkedIn</a>, and heck, even a <a href="./vcard.vcf">vCard</a>. Additionally, I’ve links to some <a href="./writing.html">writing</a> (and maybe soon other things) that I did before I became a family guy with a mortgage and all that.</p>
-<p>My wife, <a href="https://scholar.google.com/citations?user=wuyqb2sAAAAJ&amp;hl=en&amp;oi=ao">Kim</a>, is way more interesting than me. She is a computational biologist turned data curator and R hacker. My son, Taavi, is also way more interesting than me. He is nine years old and likes paleontology and Minecraft.</p>
+<p>I am Evans Hawthorne Winner, a 51-year-old (born 1972), lowly IT
+worker living in Evergreen, Colorado. <b>(Drop me a line if you know
+where I can get analytical work – data, operations, process, whatever. I
+am evans dot winner at Google’s famous email domain.)</b></p>
+<p>I used to be a casual rock climber in Boulder, later a casual scuba
+diver in Seattle; I studied music composition fairly seriously at
+university in Boulder for several years; later studied literature and
+philosophy in New Mexico where, after twenty-something odd years of
+courses at many schools, I finally graduated <em>summa</em> – because
+they only counted their own courses in the GPA. Ha! Take that,
+high-school guidance councilors! (That’s a pathetic humble-brag, I know,
+but please give me this. It’s all I’ve got.)</p>
+<p>I have the somewhat ambitiously named “<a
+href="./portfolio.html">portfolio</a>” of miscellaneous nerdy things
+I’ve done; a boring <a href="./resume.html">resume</a>, the obligatory
+<a href="https://github.com/evanswinner">GitHub</a> page, a <a
+href="https://www.linkedin.com/in/evanswinner/">LinkedIn</a>, and heck,
+even a <a href="./vcard.vcf">vCard</a>. Additionally, I’ve links to some
+<a href="./writing.html">writing</a> (and maybe soon other things) that
+I did before I became a family guy with a mortgage and all that.</p>
+<p>My wife, <a
+href="https://scholar.google.com/citations?user=wuyqb2sAAAAJ&amp;hl=en&amp;oi=ao">Kim</a>,
+is way more interesting than me. She is a computational biologist turned
+data curator and R hacker. My son, Taavi, is also way more interesting
+than me. He is nine years old and likes paleontology and Minecraft.</p>
 <h2 id="web-log">Web Log</h2>
-<p>Here follows a ’blog in the old sense of the term: in something like chronological order, some of the miscellaneous wreckage I have strewn across the Internet over the years. I link to the content instead of include it here inline except where it is only a few lines long as in the case of some short poems, aphorisms, and especially one-liners. Links are HTTP(S) to HTML pages unless obviously otherwise. The quality ranges from bad to not so bad. Sue me. This is not a historical record, so I edit freely where I want to. Also, the dates are sometimes estimated, and in the cases of some very old things, the dates reflect when the thing was created, not the first time (later) that it was posted on the Internet.</p>
-<p>Most (but not all) comes from: my old evanswinner.com homepage, now defunct; my less old but still fairly old evanswinner.com 2.0 page; timbral.net; my <a href="https://twitter.com/thorne">account</a> on “X” (née Twitter); my <a href="https://twitter.com/evans_h_winner">other</a> account on Twitter; my personal <a href="https://www.facebook.com/bellsound">Facebook</a> posts; my old Posterous blog, Usenet posts; <a href="https://www.reddit.com/user/ttlaxia">Reddit</a> junk, abortive Blogger blog (which now requires a login just to read, so nuts to that) blog, <a href="https://house-of-thorne.livejournal.com/">LiveJournal</a> blog – and other stuff that I’m probably forgetting.</p>
-<p>Besides the one-liners, it’s mostly some nerdy tech stuff from a curmudgeonly perspective, and essays on philosophy and the arts from a frankly Randian perspective.</p>
-<p>I am just starting this, so it is, as we used to say on Web 1.0, “Under construction.”</p>
+<p>Here follows a ’blog in the old sense of the term: in something like
+chronological order, some of the miscellaneous wreckage I have strewn
+across the Internet over the years. I link to the content instead of
+include it here inline except where it is only a few lines long as in
+the case of some short poems, aphorisms, and especially one-liners.
+Links are HTTP(S) to HTML pages unless obviously otherwise. The quality
+ranges from bad to not so bad. Sue me. This is not a historical record,
+so I edit freely where I want to. Also, the dates are sometimes
+estimated, and in the cases of some very old things, the dates reflect
+when the thing was created, not the first time (later) that it was
+posted on the Internet.</p>
+<p>Most (but not all) comes from: my old evanswinner.com homepage, now
+defunct; my less old but still fairly old evanswinner.com 2.0 page;
+timbral.net; my <a href="https://twitter.com/thorne">account</a> on “X”
+(née Twitter); my <a href="https://twitter.com/evans_h_winner">other</a>
+account on Twitter; my personal <a
+href="https://www.facebook.com/bellsound">Facebook</a> posts; my old
+Posterous blog, Usenet posts; <a
+href="https://www.reddit.com/user/ttlaxia">Reddit</a> junk, abortive
+Blogger blog (which now requires a login just to read, so nuts to that)
+blog, <a href="https://house-of-thorne.livejournal.com/">LiveJournal</a>
+blog – and other stuff that I’m probably forgetting.</p>
+<p>Besides the one-liners, it’s mostly some nerdy tech stuff from a
+curmudgeonly perspective, and essays on philosophy and the arts from a
+frankly Randian perspective.</p>
+<p>I am just starting this, so it is, as we used to say on Web 1.0,
+“Under construction.”</p>
 <h2 id="the-stuff">The Stuff</h2>
 <pre>
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -947,7 +1135,7 @@
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2021-03-12: Code (Github (Gist))</b>
- [<a href="https://gist.github.com/EvansWinner/917d413bacc67714dab4e6227792ed20">LINK</a>
+ [<a href="https://gist.github.com/EvansWinner/917d413bacc67714dab4e6227792ed20">LINK</a>]
 
   <b style="color:red">banish.cs</b>
 
@@ -960,7 +1148,7 @@
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2021-02-17: Code (Github (Gist))</b>
- [<a href="https://gist.github.com/EvansWinner/a81415dd6295b14347a85752b4ef85f1">LINK</a>
+ [<a href="https://gist.github.com/EvansWinner/a81415dd6295b14347a85752b4ef85f1">LINK</a>]
 
   <b style="color:red">pwgen.py</b>
 
@@ -971,7 +1159,7 @@
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2021-02-09: Code (Github (Gist))</b>
- [<a href="https://gist.github.com/EvansWinner/f578b0069546e5979b1ce47cf6d16f1d">LINK</a>
+ [<a href="https://gist.github.com/EvansWinner/f578b0069546e5979b1ce47cf6d16f1d">LINK</a>]
 
   <b style="color:red">floating_message.py</b>
 
@@ -981,7 +1169,7 @@
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2021-01-19: Code (Github (Gist))</b>
- [<a href="https://gist.github.com/EvansWinner/b1a2e6edd1ec862c8b5f45946a01962b">LINK</a>
+ [<a href="https://gist.github.com/EvansWinner/b1a2e6edd1ec862c8b5f45946a01962b">LINK</a>]
 
   <b style="color:red">wsrch.bat</b>
 
@@ -1032,7 +1220,7 @@
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2019-07-12: Code (Github (Gist))</b>
- [<a href="https://gist.github.com/EvansWinner/064932a724caa2c816a768792a6903da">LINK</a>
+ [<a href="https://gist.github.com/EvansWinner/064932a724caa2c816a768792a6903da">LINK</a>]
 
   <b style="color:red">auction.py</b>
 
@@ -1218,7 +1406,7 @@
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2016-10-11: Code (Github (Gist))</b>
- [<a href="https://gist.github.com/EvansWinner/51fc9f76f910be918f02753aedc3dc23">LINK</a>
+ [<a href="https://gist.github.com/EvansWinner/51fc9f76f910be918f02753aedc3dc23">LINK</a>]
 
   <b style="color:red">refresh-notes.ahk</b>
 
@@ -1229,7 +1417,7 @@
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2016-10-11: Code (Github (Gist))</b>
- [<a href="https://gist.github.com/EvansWinner/81b707f7da60cffab40877ca8f33a438">LINK</a>
+ [<a href="https://gist.github.com/EvansWinner/81b707f7da60cffab40877ca8f33a438">LINK</a>]
 
   <b style="color:red">banish.ahk</b>
 

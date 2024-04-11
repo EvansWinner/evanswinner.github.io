@@ -336,7 +336,7 @@ as we used to say on Web 1.0, "Under construction."
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2021-03-12: Code (Github (Gist))</b>
- [<a href="https://gist.github.com/EvansWinner/917d413bacc67714dab4e6227792ed20">LINK</a>
+ [<a href="https://gist.github.com/EvansWinner/917d413bacc67714dab4e6227792ed20">LINK</a>]
 
   <b style="color:red">banish.cs</b>
 
@@ -349,7 +349,7 @@ as we used to say on Web 1.0, "Under construction."
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2021-02-17: Code (Github (Gist))</b>
- [<a href="https://gist.github.com/EvansWinner/a81415dd6295b14347a85752b4ef85f1">LINK</a>
+ [<a href="https://gist.github.com/EvansWinner/a81415dd6295b14347a85752b4ef85f1">LINK</a>]
 
   <b style="color:red">pwgen.py</b>
 
@@ -360,7 +360,7 @@ as we used to say on Web 1.0, "Under construction."
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2021-02-09: Code (Github (Gist))</b>
- [<a href="https://gist.github.com/EvansWinner/f578b0069546e5979b1ce47cf6d16f1d">LINK</a>
+ [<a href="https://gist.github.com/EvansWinner/f578b0069546e5979b1ce47cf6d16f1d">LINK</a>]
 
   <b style="color:red">floating_message.py</b>
 
@@ -370,7 +370,7 @@ as we used to say on Web 1.0, "Under construction."
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2021-01-19: Code (Github (Gist))</b>
- [<a href="https://gist.github.com/EvansWinner/b1a2e6edd1ec862c8b5f45946a01962b">LINK</a>
+ [<a href="https://gist.github.com/EvansWinner/b1a2e6edd1ec862c8b5f45946a01962b">LINK</a>]
 
   <b style="color:red">wsrch.bat</b>
 
@@ -421,7 +421,7 @@ as we used to say on Web 1.0, "Under construction."
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2019-07-12: Code (Github (Gist))</b>
- [<a href="https://gist.github.com/EvansWinner/064932a724caa2c816a768792a6903da">LINK</a>
+ [<a href="https://gist.github.com/EvansWinner/064932a724caa2c816a768792a6903da">LINK</a>]
 
   <b style="color:red">auction.py</b>
 
@@ -607,7 +607,7 @@ as we used to say on Web 1.0, "Under construction."
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2016-10-11: Code (Github (Gist))</b>
- [<a href="https://gist.github.com/EvansWinner/51fc9f76f910be918f02753aedc3dc23">LINK</a>
+ [<a href="https://gist.github.com/EvansWinner/51fc9f76f910be918f02753aedc3dc23">LINK</a>]
 
   <b style="color:red">refresh-notes.ahk</b>
 
@@ -618,7 +618,7 @@ as we used to say on Web 1.0, "Under construction."
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  <b>2016-10-11: Code (Github (Gist))</b>
- [<a href="https://gist.github.com/EvansWinner/81b707f7da60cffab40877ca8f33a438">LINK</a>
+ [<a href="https://gist.github.com/EvansWinner/81b707f7da60cffab40877ca8f33a438">LINK</a>]
 
   <b style="color:red">banish.ahk</b>
 
