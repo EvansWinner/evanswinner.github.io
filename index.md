@@ -40,7 +40,7 @@ My wife, [Kim](https://scholar.google.com/citations?user=wuyqb2sAAAAJ&hl=en&oi=a
 is way more interesting than me. She is a computational biologist
 turned data curator and R hacker.
 My son, Taavi, is also way more interesting than me.
-He is nine years old and likes paleontology and Minecraft.
+He is ten years old and likes paleontology and Minecraft.
 
 ## Web Log
 
