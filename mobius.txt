@@ -355,7 +355,7 @@ http:///evanswinner.github.io/mobius.kc
 :  whatver SYSTEM awk emacs factor \
 :          gnuplot kallychore seq whatver | fold -w60
 `------------------------------
-This file generated on Tue Jun 10 11:59:49 AM MDT 2025 on googoo.
+This file generated on Tue Jun 10 01:32:40 PM MDT 2025 on googoo.
 
 The Makefile command line was:
 kallychore mobius.kc | bash > mobius.txt

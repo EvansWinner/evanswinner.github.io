@@ -28,7 +28,13 @@ business analysis.
 ### Recent Employment History
 #### [Goodwill of Colorado (previously Goodwill Industries of Denver)](http://www.goodwillcolorado.org) | Westminster, Colorado
 
-<details><summary>2020.01 — Pres.: **IT Specialist**</summary>
+<details><summary>2024.07 — Pres.: **Lead Service Desk Technician**</summary>
+
+Technical lead for the Northern Colorado IT service desk.
+
+</datails>
+
+<details><summary>2020.01 — 2024.07: **IT Specialist**</summary>
 
 The company name changed after being taken over by another Goodwill from
 southern Colorado, but the work remained much the same, though officially
