@@ -32,7 +32,7 @@ business analysis.
 
 Technical lead for the Northern Colorado IT service desk.
 
-</datails>
+</details>
 
 <details><summary>2020.01 — 2024.07: **IT Specialist**</summary>
 
