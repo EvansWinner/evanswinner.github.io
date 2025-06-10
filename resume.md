@@ -12,13 +12,13 @@ Golden Colorado, 80401-3705 |
 
 #### I like to make things better...
 
-I have about twenty years of varied IT experience, but it was my time
+I have about twenty-five years of varied IT experience, but it was my time
 in a leadership position that taught me that what I really crave is
 the opportunity to analyze systems and processes and make them more
 productive, more efficient, easier, and more fun; and I deeply believe
 in the power of experimentation to facilitate that process. I am
 therefore looking to make a transition to an analytical role,
-especially something in process improvement, operations analysis or
+especially something in process improvement, operations/systems/data analysis or
 business analysis.
 
 **Click the triangles for more details...**
