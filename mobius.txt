@@ -1,0 +1,393 @@
+Playing with The Möbius Function in bash
+========================================
+     Evans H. Winner, April, 2018
+
+
+Introduction
+============
+
+Let's implement the famous Möbius function, μ(n), defined on
+the natural numbers, in bash — really in awk, mainly.
+
+μ(n) is defined[1] as 1 if n=1; as 0 if n has a factor which
+is itself a perfect square; and otherwise it is defined as
+(-1)ⁱ, where i is the number of factors in n's prime
+factorization. Let's see if we can write a function that
+will return just μ(n).
+
+
+I. The Möbius Function
+======================
+
+Before we try, let's note that the case of n=1 is
+trivial. Then, the case of (-1)ⁱ is easy too, and quick to
+calculate, by the observation that (-1)ⁱ is -1 for any odd
+i, and 1 for any even i. This leaves only determining
+whether there are any perfect squares that factor into n as
+a challenge. Note here that this is the same thing as
+determining whether there are any numbers in n's prime
+factorization that appear more than once. If so, then μ(n) =
+0.
+
+.--- Code cell start ----------
+:  μ () {
+:    factor $1 | \
+:    awk '{
+:           f = NF - 1;
+:  
+:           if (f == 0) { print 1; exit } # n=1
+:  
+:           for (i = 2; i <= NF; i++) {
+:             facts[$i] += 1;
+:           }
+:  	 
+:  	 for (i in facts) {     # If n is NOT
+:  	   if (facts[i] >= 2) { # squarefree, then
+:  	     print 0; exit;     # μ(n) = 0.
+:  	   }
+:  	 }
+:  
+:           if (f % 2 == 0) {
+:             print 1
+:           } else {
+:             print -1
+:           }
+:           delete facts
+:        }'
+:  }
+`------------------------------
+
+Let's test it on some numbers.
+
+μ(1) equals 1 by definition:
+
+.--- Code cell start ----------
+:  μ 1
+`------------------------------
+1
+
+10 has two prime factors, an even number, so μ(10) = 1:
+
+.--- Code cell start ----------
+:  μ 10
+`------------------------------
+1
+
+11 has an odd number of prime factors (1), so μ(11) = -1:
+
+.--- Code cell start ----------
+:  μ 11
+`------------------------------
+-1
+
+Now, 8 has three prime factors — an odd number of
+factors. But given the definition of the function, if n has
+a perfect square as a factor) then μ(n) = 0, so μ(8) = 0
+(because 8 has 4 as a factor, which is 2²).
+
+.--- Code cell start ----------
+:  μ 8
+`------------------------------
+0
+
+Similarly, even though 9 has an even number of prime factors
+(3 and 3) it too has a square as a factor (itself: 9), so
+also μ(9) = 0.
+
+.--- Code cell start ----------
+:  μ 9
+`------------------------------
+0
+
+Let’s calculate μ(n) for all 1 <= n <= 10, and have a look
+at the result:
+
+.--- Code cell start ----------
+:  for i in {1..10}; do μ $i; done | fmt -60
+`------------------------------
+1 -1 -1 0 -1 1 -1 0 0 1
+
+It works. Let‘s plot the first 50 values:
+
+.--- Code cell start ----------
+:  for i in {1..50}; do μ $i; done  | \
+:      gnuplot -e "set terminal dumb;
+:                  set title 'Möbius Function n = 1 to 50'; \
+:                  plot '-' with lines title 'μ(n)'"
+`------------------------------
+                                                                               
+                                                                               
+                          Möbius Function n = 1 to 50                         
+    1 +--------------------------------------------------------------------+   
+      |      *    * +   ** +      **     *     +  *  *+  **  +      *      |   
+      |      *    *     **        **     *        *  *   **  μ(n) ******* |   
+      |      *    *     * *      * *    **        *  *   * *        *      |   
+  0.5 |-+    *    *     * *      * *    **        *  *   * *        *    +-|   
+      |      *   * *    * *      * *    * *      *    *  * *       **      |   
+      |      *   * *    * *      * *    * *      *    *  * *       **      |   
+      |      *   * *    *  *    *  *   *  *      *    *  *  *      **      |   
+      |      *   * *    *  *    *  *   *  *      *    *  *  *      **      |   
+    0 |*+ *  ** ** * *  *  * *  *   * **  **     *    *  *  *    *** * ****|   
+      |*  * * * *  * * *   * *  *   * *    *     *    * *   *    *   * *   |   
+      |*  * * * *  * * *   * *  *   * *    *     *    * *   *    *   * *   |   
+      |*  *** **   * ***   * ** *   **      *   *      **   *    *   **    |   
+ -0.5 |*+ *** **   * ***   * ** *   **      *   *      **   *    *   **  +-|   
+      |* * ** **    * **    * **    **      *   *      **    *  *    **    |   
+      |* * ** **    * **    * **    **      *   *      **    *  *    **    |   
+      |* *  * *     *  *    *  *    *        * *        *    *  *    *     |   
+      |* *  *+*     *  *   +*  *  + *    +   * *      + *    *  *   +*     |   
+   -1 +--------------------------------------------------------------------+   
+      0      5      10     15     20     25    30     35     40     45     50  
+                                                                               
+
+
+II. Digression: The Mertens Function
+====================================
+
+According to MathWorld, the Mertens Function[2], M(n), is
+the sum of the results of the Möbius function, from μ(1) to
+μ(n), that is,
+        
+                            n
+                    M(n) ≡  𝚺  μ(k)                       (1)
+                           k=1
+
+Let's make that function too —
+
+.--- Code cell start ----------
+:  M () {
+:    for i in $(seq 1 $1); do μ $i; done | \
+:    awk '{M = M + $0} END{print M}'
+:  }
+`------------------------------
+
+— and check the first 10 of them:
+
+.--- Code cell start ----------
+:    for n in {1..10}; do M $n; done | fmt -60
+`------------------------------
+1 0 -1 -1 -2 -1 -2 -2 -2 -1
+
+That, too, works. We can plot the first 50 values for that too.
+
+.--- Code cell start ----------
+:  for i in {1..50}; do M $i; done | \
+:     gnuplot -e "set terminal dumb; \
+:            set title 'Mertens Function n = 1 to 50'; \
+:            plot '-' with lines title 'M(n)"
+`------------------------------
+                                                                               
+                                                                               
+                         Mertens Function n = 1 to 50                          
+  1 +----------------------------------------------------------------------+   
+    |      +      +      +      +       +      +      +      +      +      |   
+    |*                                                        M(n) ******* |   
+    |*                                                                     |   
+  0 |*+                                                   **             +-|   
+    | *                                                   * *              |   
+    | *                                                  *  *              |   
+ -1 |-+**  *     *      **        *     ***         ***  *   *           +-|   
+    |    * **    *      * *       *     *  *        * *  *   *             |   
+    |    * **   * *    *  *      * *   *   *        *  **     *            |   
+    |     *  *  * *    *   *     * *   *    *      *   **     *            |   
+ -2 |-+   *  ***  *** *    **   *  ****     *      *   *      *     *    +-|   
+    |               * *      *  *           *     *            *   **      |   
+    |                *       * *             *    *            *   * *     |   
+ -3 |-+              *        **             *   *              ***  ******|   
+    |                                         *  *                         |   
+    |                                         *  *                         |   
+    |      +      +      +      +       +      **     +      +      +      |   
+ -4 +----------------------------------------------------------------------+   
+    0      5      10     15     20      25     30     35     40     45     50  
+                                                                               
+
+
+III. Proportions of Möbius function outputs
+===========================================
+
+According to a source[3] I ran into, the probablility that
+μ(n) = 1 approaches 3/π². Specifically,
+
+   P(μ(n) = -1) = 3/π² = P(μ(n) = 1) = 3/π² ≅ 0.3039636   (2)
+
+and therefore,
+
+          P(μ(n) = 0) = 1 - 2(3/π²) ≅ 0.3920729.          (3)
+
+Let‘s see if we can visualize that. We will write a little
+Awk script to generate the proportions of 1, -1, and 0 in
+the results of the function as n increases, then we will
+plot each one. It would be nice to plot them all together,
+and highlight lines for 3/π² and for 1-2(3/π²), but in ASCII
+mode it makes the plots too busy and confused. So we will
+plot them separately; and instead of plotting it directly,
+we will plot the absolute value of the difference between
+the relevant proportion and constant. We will then expect to
+see a single generally decreasing curve in each plot. Also,
+again because of the limitations of ASCII mode plotting,
+we‘ll just plot up to n=25.
+
+.--- Code cell start ----------
+:  script=$(cat <<'EOF'
+:  # Awk doesn‘t natively have an absolute value
+:  # function. We‘ll have to roll our own. Or better
+:  # yet, just Google for it. We also have to define
+:  # pi ourselves.
+:  function abs(x){return ((x < 0.0) ? -x : x)}
+:  BEGIN {pi = atan2(0, -1)}
+:  {
+:    n+=1;
+:    if ($1 == 1) one+=1;
+:    else if ($1 == -1) neg_one+=1;
+:    else zero+=1;
+:    o=abs((3/pi^2)-(one/n))
+:    ne=abs((3/pi^2)-(neg_one/n))
+:    z=abs((1-6/pi^2)-(zero/n))
+:    print o, ne, z;
+:  }
+:  EOF
+:  )
+:  for i in {1..25}; do μ $i; done > mobius.dat;
+:  awk "$script" mobius.dat > props.dat
+:  gnuplot -e "set terminal dumb; \
+:    set title \
+:    'Mobius function proportion of 1s converging on 3/π²'; \
+:    set yrange [0:1]; \
+:    plot 'props.dat' using 0:1 with lines title 'Proportion of 1';
+:    set title 'Mobius function proportion of -1s converging on 3/π²'; \
+:    plot 'props.dat' using 0:2 with line title 'Proportion of -1';
+:    set title 'Mobius function proportion of 0s converging on 1-6/π²'; \
+:    plot 'props.dat' using 0:3 with line title 'Proportion of 0';"
+:  rm props.dat mobius.dat # Don‘t let‘s forget to clean up...
+`------------------------------
+                                                                               
+                                                                               
+              Mobius function proportion of 1s converging on 3/π²            
+    1 +--------------------------------------------------------------------+   
+      |             +             +            +             +             |   
+      |                                            Proportion of 1 ******* |   
+      |                                                                    |   
+  0.8 |-+                                                                +-|   
+      |                                                                    |   
+      |                                                                    |   
+  0.6 |*+                                                                +-|   
+      |*                                                                   |   
+      |*                                                                   |   
+      | *                                                                  |   
+  0.4 |-*                                                                +-|   
+      | *                                                                  |   
+      |  *                                                                 |   
+  0.2 |-+*                                                               +-|   
+      |   *                                                                |   
+      |    *    ***                                                        |   
+      |     ****   ***  ******   ********   ** +       ***** +             |   
+    0 +--------------------------------------------------------------------+   
+      0             5             10           15            20            25  
+                                                                               
+                                                                               
+                                                                               
+             Mobius function proportion of -1s converging on 3/π²            
+    1 +--------------------------------------------------------------------+   
+      |             +             +            +             +             |   
+      |                                           Proportion of -1 ******* |   
+      |                                                                    |   
+  0.8 |-+                                                                +-|   
+      |                                                                    |   
+      |                                                                    |   
+  0.6 |-+                                                                +-|   
+      |                                                                    |   
+      |                                                                    |   
+      |                                                                    |   
+  0.4 |-+   *                                                            +-|   
+      |    * *                                                             |   
+      |*  *  *  ***   **                                                   |   
+  0.2 |-**    **   ***  ***                                              +-|   
+      |                    ***   **   ***                                  |   
+      |                       ***  ***   *****   ***********      **       |   
+      |             +             +           ***           ******  *****  |   
+    0 +--------------------------------------------------------------------+   
+      0             5             10           15            20            25  
+                                                                               
+                                                                               
+                                                                               
+             Mobius function proportion of 0s converging on 1-6/π²           
+    1 +--------------------------------------------------------------------+   
+      |             +             +            +             +             |   
+      |                                            Proportion of 0 ******* |   
+      |                                                                    |   
+  0.8 |-+                                                                +-|   
+      |                                                                    |   
+      |                                                                    |   
+  0.6 |-+                                                                +-|   
+      |                                                                    |   
+      |                                                                    |   
+      |                                                                    |   
+  0.4 |******                                                            +-|   
+      |      *                                                             |   
+      |      *                                                             |   
+  0.2 |-+     *    *****                                                 +-|   
+      |       *****     **                                                 |   
+      |                   **  *****   ********   ***              **       |   
+      |             +       **    +***        ***   **************  *****  |   
+    0 +--------------------------------------------------------------------+   
+      0             5             10           15            20            25  
+                                                                               
+
+Not exactly proof, but it does seem to give some qualitative
+support to the idea that our original implementation of the
+Mobius function was correct.
+
+But what does it all mean? Why does the Möbius function
+proportions converge on these values?
+
+No idea. Apparently, it‘s a mystery.
+
+
+Colophon
+========
+The plain-text source for this file is at:
+http:///evanswinner.github.io/mobius.kc
+
+.--- Code cell start ----------
+:  echo "This file generated on `date` on `hostname`." ; echo
+:  make_recipe mobius.txt ; echo
+:  echo "Versions of programs used:"
+:  whatver SYSTEM awk emacs factor \
+:          gnuplot kallychore seq whatver | fold -w60
+`------------------------------
+This file generated on Mon Jun  9 22:10:28 MDT 2025 on windfall.
+
+The Makefile command line was:
+kallychore mobius.kc | bash > mobius.txt
+
+Versions of programs used:
+awk version 20200816
+GNU Emacs 30.1
+factor (GNU coreutils) 9.5
+gnuplot 6.0 patchlevel 2
+kallychore version (git revision) 31
+whatver version (git revision) 19
+
+
+Footnotes
+=========
+
+[1] Wolfram MathWorld, "Möbius Function."
+http://mathworld.wolfram.com/MoebiusFunction.html
+
+[2] Wolfram MathWorld, "Mertens Function."
+http://mathworld.wolfram.com/MertensFunction.html
+
+[3] The Math Book, Clifford A Pickover, p.226.
+
+
+------
+© 2018 Evans H Winner.
+
+Evans Winner is a Professional IT Minion in Golden,
+Colorado, and intends to keep on writing things like this
+until he manages to get a decent job.
+
+LinkedIn: https://www.linkedin.com/in/evanswinner/
+Email: evans.winner@gmail.com
+Webpage: http://evanswinner.github.io/portfolio.html
