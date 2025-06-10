@@ -355,17 +355,21 @@ http:///evanswinner.github.io/mobius.kc
 :  whatver SYSTEM awk emacs factor \
 :          gnuplot kallychore seq whatver | fold -w60
 `------------------------------
-This file generated on Mon Jun  9 22:10:28 MDT 2025 on windfall.
+This file generated on Tue Jun 10 11:59:49 AM MDT 2025 on googoo.
 
 The Makefile command line was:
 kallychore mobius.kc | bash > mobius.txt
 
 Versions of programs used:
-awk version 20200816
+Linux 6.14.0-15-generic #15-Ubuntu SMP PREEMPT_DYNAMIC Sun A
+pr  6 15:05:05 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+GNU Awk 5.2.1, API 3.2, PMA Avon 8-g1, (GNU MPFR 4.2.2, GNU 
+MP 6.3.0)
 GNU Emacs 30.1
 factor (GNU coreutils) 9.5
 gnuplot 6.0 patchlevel 2
 kallychore version (git revision) 31
+seq (GNU coreutils) 9.5
 whatver version (git revision) 19
 
 

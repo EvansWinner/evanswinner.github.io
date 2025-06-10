@@ -52,6 +52,9 @@ numbers when writing them down. Inspired by a true story (LinkedIn,
 [Set Operations with Bash](sets.html) — A
 demonstration tutorial thingie. (Local, 2018.4)
 
+[A K-nearest neighbor classifier in Bash](kNN.html) — A ridiculous thing, but fun. (Local, 2019.7)
+
+
 ## Documentation and How-to
 
 <img src="tally.png" style="max-width:35%;float:right;">[Tally Systems

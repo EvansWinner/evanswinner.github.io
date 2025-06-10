@@ -107,6 +107,11 @@ head -5 $data
 ###############################
 ```
 ~~~~~
+5.1,3.5,1.4,0.2,Iris-setosa
+4.9,3.0,1.4,0.2,Iris-setosa
+4.7,3.2,1.3,0.2,Iris-setosa
+4.6,3.1,1.5,0.2,Iris-setosa
+5.0,3.6,1.4,0.2,Iris-setosa
 ~~~~~
 
 Ok. Good, so then we have to clean the data a little to get it into a
@@ -242,6 +247,11 @@ head -5 $data_normalized
 ```
 ~~~~~
 Normalized:
+0.2222 0.6250 0.0677 0.0416 Iris-setosa
+0.1666 0.4166 0.0677 0.0416 Iris-setosa
+0.1111 0.5000 0.0508 0.0416 Iris-setosa
+0.0833 0.4583 0.0847 0.0416 Iris-setosa
+0.1944 0.6666 0.0677 0.0416 Iris-setosa
 ~~~~~
 
 Next, let’s “rotate” the data, to put the category of iris in each
@@ -277,6 +287,11 @@ head -5 $data_normalized
 ```
 ~~~~~
 Rotated:
+Iris-setosa 0.2222 0.6250 0.0677 0.0416
+Iris-setosa 0.1666 0.4166 0.0677 0.0416
+Iris-setosa 0.1111 0.5000 0.0508 0.0416
+Iris-setosa 0.0833 0.4583 0.0847 0.0416
+Iris-setosa 0.1944 0.6666 0.0677 0.0416
 ~~~~~
 
 Now, with the kNN procedure, you don’t exactly need a training set to
@@ -304,7 +319,7 @@ echo k=${k}, n=${number_of_observations}.
 ###############################
 ```
 ~~~~~
-k=5, n=0.
+k=5, n=150.
 ~~~~~
 
 Next, let’s write a function that will split our data into a “testing”
@@ -453,6 +468,66 @@ votes $training $vector_len $testing
 ###############################
 ```
 ~~~~~
+Instance 1
+5 Iris-setosa Iris-setosa
+Instance 2
+5 Iris-setosa Iris-setosa
+Instance 3
+5 Iris-setosa Iris-setosa
+Instance 4
+5 Iris-setosa Iris-setosa
+Instance 5
+5 Iris-setosa Iris-setosa
+Instance 6
+5 Iris-setosa Iris-setosa
+Instance 7
+5 Iris-setosa Iris-setosa
+Instance 8
+5 Iris-setosa Iris-setosa
+Instance 9
+5 Iris-setosa Iris-setosa
+Instance 10
+5 Iris-setosa Iris-setosa
+Instance 11
+4 Iris-versicolor Iris-versicolor
+Instance 12
+5 Iris-versicolor Iris-versicolor
+Instance 13
+5 Iris-versicolor Iris-versicolor
+Instance 14
+5 Iris-versicolor Iris-versicolor
+Instance 15
+5 Iris-versicolor Iris-versicolor
+Instance 16
+5 Iris-versicolor Iris-versicolor
+Instance 17
+5 Iris-versicolor Iris-versicolor
+Instance 18
+5 Iris-versicolor Iris-versicolor
+Instance 19
+5 Iris-versicolor Iris-versicolor
+Instance 20
+5 Iris-versicolor Iris-versicolor
+Instance 21
+5 Iris-virginica Iris-virginica
+Instance 22
+5 Iris-virginica Iris-virginica
+Instance 23
+5 Iris-virginica Iris-virginica
+Instance 24
+4 Iris-versicolor Iris-virginica
+Instance 25
+5 Iris-virginica Iris-virginica
+Instance 26
+3 Iris-virginica Iris-virginica
+Instance 27
+4 Iris-versicolor Iris-virginica
+Instance 28
+5 Iris-virginica Iris-virginica
+Instance 29
+5 Iris-virginica Iris-virginica
+Instance 30
+4 Iris-virginica Iris-virginica
 ~~~~~
 
 There you go....
