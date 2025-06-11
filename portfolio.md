@@ -57,6 +57,11 @@ demonstration tutorial thingie. (Local, 2018.4)
 
 ## Documentation and How-to
 
+[Awesome Line Editors](https://github.com/evanswinner/awesome-line-editors)
+— Information about old-fashioned "line editors" like the Unix ed(1) editor.
+A work in progress, and a bit tongue-in-cheek,
+but it actually represents a fair good bit of research. (Github, 2024).
+
 <img src="tally.png" style="max-width:35%;float:right;">[Tally Systems
 for Hand Collection of
 Data](https://www.linkedin.com/pulse/tally-systems-hand-collection-count-data-evans-winner/)
