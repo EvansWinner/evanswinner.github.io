@@ -1,92 +1,18 @@
 ---
-title: Thorne's Old-Fashioned Homepage
-subtitle: (just like your mom used to make)
+title: Evans Winner
 author: Evans Winner
-date: 2024-04-10
+date: 2024-06-24
 ---
 
 <img src="me.jpg" style="max-width:50%;float:left;">
 
-[⇒ Skip Intro ⇐](#the-stuff)
+[⇒ Skip Intro ⇐](#web-log)
 
-I am Evans Hawthorne Winner, a 51-year-old
-(born 1972),
-lowly IT worker living in Evergreen, Colorado.
-<b>(Drop me a line if you know where I can get analytical work --
-data, operations, process, whatever.
-I am evans dot winner at Google's famous email domain.)</b>
+I am Evans Hawthorne Winner, IT Analyst living in Evergreen, Colorado.
 
-I used to be a casual rock climber in Boulder,
-later a casual scuba diver in Seattle;
-I studied music composition fairly seriously at university in Boulder for several years;
-later studied literature and philosophy in New Mexico where,
-after twenty-something odd years of courses at many schools,
-I finally graduated *summa* -- because they only counted their own courses in the GPA.
-Ha! Take that, high-school guidance councilors!
-(That's a pathetic humble-brag, I know,
-but please give me this. It's all I've got.)
-
-I have the somewhat ambitiously named "[portfolio](./portfolio.html)"
-of miscellaneous nerdy things I've done;
-a boring [resume](./resume.html),
-the obligatory [GitHub](https://github.com/evanswinner) page,
-a [LinkedIn](https://www.linkedin.com/in/evanswinner/),
-and heck, even a [vCard](./vcard.vcf).
-Additionally, I've links to some [writing](./writing.html)
-(and maybe soon other things)
-that I did before I became a family guy with a mortgage and all that.
-
-My wife, [Kim](https://scholar.google.com/citations?user=wuyqb2sAAAAJ&hl=en&oi=ao),
-is way more interesting than me. She is a computational biologist
-turned data curator and R hacker.
-My son, Taavi, is also way more interesting than me.
-He is ten years old and likes paleontology and Minecraft.
+[Portfolio](./portfolio.html) | [Resume](./resume.html) | [GitHub](https://github.com/evanswinner) | [LinkedIn](https://www.linkedin.com/in/evanswinner/) | [vCard](./vcard.vcf)
 
 ## Web Log
-
-Here follows a 'blog in the old sense of the term:
-in something like chronological order,
-some of the miscellaneous wreckage
-I have strewn across the Internet over the years.
-I link to the content instead of include it here inline
-except where it is only a few lines long
-as in the case of some short poems, aphorisms,
-and especially one-liners.
-Links are HTTP(S) to HTML pages unless obviously otherwise.
-The quality ranges from bad to not so bad. Sue me.
-This is not a historical record,
-so I edit freely where I want to.
-Also, the dates are sometimes estimated,
-and in the cases of some very old things,
-the dates reflect when the thing was created,
-not the first time (later) that
-it was posted on the Internet.
-
-Most (but not all) comes from:
-my old evanswinner.com homepage, now defunct;
-my less old but still fairly old evanswinner.com 2.0 page;
-timbral.net;
-my [account](https://twitter.com/thorne) on "X" (née Twitter);
-my [other](https://twitter.com/evans_h_winner) account on Twitter;
-my personal [Facebook](https://www.facebook.com/bellsound) posts;
-my old Posterous blog,
-Usenet posts; [Reddit](https://www.reddit.com/user/ttlaxia) junk,
-abortive Blogger blog (which now requires a login just to read,
-so nuts to that) blog,
-[LiveJournal](https://house-of-thorne.livejournal.com/) blog --
-and other stuff that I'm probably forgetting.
-
-Besides the one-liners,
-it's mostly some nerdy tech stuff
-from a curmudgeonly perspective,
-and essays on philosophy and the arts
-from a frankly Randian perspective.
-
-I am just starting this, so it is,
-as we used to say on Web 1.0, "Under construction."
-
-
-## The Stuff
 
 <pre>
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
