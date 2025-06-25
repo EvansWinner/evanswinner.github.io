@@ -3,7 +3,7 @@ title: Evans Winner
 date: 2024-06-24
 ---
 
-<img src="me.jpg" style="max-width:50%;float:left;">
+<img align="center" src="me.jpg" style="max-width:50%;float:left;">
 
 [⇒ Skip Intro ⇐](#web-log)
 
