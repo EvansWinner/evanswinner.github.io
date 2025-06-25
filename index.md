@@ -1,6 +1,5 @@
 ---
 title: Evans Winner
-author: Evans Winner
 date: 2024-06-24
 ---
 
