@@ -1,6 +1,5 @@
 ---
-title: Examples of Things
-subtitle: kinda like a portfolio, but without the commitment
+title: Portfolio
 author: Evans Winner
 --- 
 <img src="me.jpg" style="width: 150px;"/><br>
