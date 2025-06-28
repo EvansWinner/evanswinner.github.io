@@ -7,6 +7,9 @@
   <title>Resume of Evans Winner</title>
   <style>
     html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
       color: #1a1a1a;
       background-color: #fdfdfd;
     }
@@ -25,16 +28,13 @@
     @media (max-width: 600px) {
       body {
         font-size: 0.9em;
-        padding: 12px;
+        padding: 1em;
       }
       h1 {
         font-size: 1.8em;
       }
     }
     @media print {
-      html {
-        background-color: white;
-      }
       body {
         background-color: transparent;
         color: black;
@@ -58,10 +58,6 @@
       color: #1a1a1a;
     }
     img {
-      max-width: 100%;
-    }
-    svg {
-      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -88,10 +84,9 @@
       color: #606060;
     }
     code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
       font-size: 85%;
       margin: 0;
-      hyphens: manual;
     }
     pre {
       margin: 1em 0;
@@ -153,18 +148,10 @@
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
+    ul.task-list{list-style: none;}
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <style type="text/css">
@@ -831,30 +818,30 @@
     border-color: #4078c0;
   }
   </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
 <h1 class="title">Resume of Evans Winner</h1>
 </header>
 <blockquote>
-Phone: (720) 666-8803 | Address: 16359 West Tenth Avenue, Unit R4 Golden
-Colorado, 80401-3705 | <a
-href="mailto:evans.winner@gmail.com">evans.winner@gmail.com</a> | <a
-href="http://linkedin.com/n/evanswinner">Linkedin</a> | <a
-href="http://evanswinner.github.io/portfolio.html">Portfolio</a> | <a
-href="https://github.com/evanswinner">Github</a> | <a
-href="http://ehw.me/vcard.vcd">vCard</a>
-</details>
+<p>Phone: (720) 666-8803 | Address: 16359 West Tenth Avenue, Unit R4
+Golden Colorado, 80401-3705 |</p>
 </blockquote>
-<h4 id="i-like-to-make-things-better">I like to make things better…</h4>
-<p>I have about twenty-five years of varied IT experience, but it was my
-time in a leadership position that taught me that what I really crave is
-the opportunity to analyze systems and processes and make them more
-productive, more efficient, easier, and more fun; and I deeply believe
-in the power of experimentation to facilitate that process. I am
-therefore looking to make a transition to an analytical role, especially
-something in process improvement, operations/systems/data analysis or
-business analysis.</p>
+<p><a href="mailto:evans.winner@gmail.com">evans.winner@gmail.com</a> |
+<a href="http://ehw.me/vcard.vcd">vCard</a> | <a
+href="http://evanswinner.github.io/portfolio.html">Portfolio</a> | <a
+href="http://linkedin.com/n/evanswinner">Linkedin</a> | <a
+href="https://github.com/evanswinner">Github</a> |</p>
+<h4 id="profile">Profile</h4>
+<p>I bring 25 years of diverse IT support and enterprise system (IBM i /
+midrange / mainframe-style) administration experience, with a strong
+focus in the non-profit and mission-driven sectors. I take an analytical
+and experimental approach to improving systems and processes—striving to
+make them more productive, effective, resilient, efficient, and pleasant
+for users and stakeholders alike.</p>
 <p><strong>Click the triangles for more details…</strong></p>
 <h2 id="experience">Experience</h2>
 <h3 id="recent-employment-history">Recent Employment History</h3>
@@ -863,39 +850,51 @@ id="goodwill-of-colorado-previously-goodwill-industries-of-denver-westminster-co
 href="http://www.goodwillcolorado.org">Goodwill of Colorado (previously
 Goodwill Industries of Denver)</a> | Westminster, Colorado</h4>
 <details>
-<summary>
+<summary id="sdlead">
 2024.07 — Pres.: <strong>Lead Service Desk Technician</strong>
 </summary>
-<p>Technical lead for the Northern Colorado IT service desk.</p>
+<ul>
+<li><span id="sdlead-deet">Lead for the Northern Colorado IT service
+desk</span></li>
+<li><span id="cleaning-and-reconciliation">Data cleaning and
+reconciliation in IT inventory database and Active Directory
+accounts.</span></li>
+<li><span id="employee-journey">Project (member): Employee journey
+cross-functional project streamlining HR/IT process interaction mainly
+for on/offboarding.</span></li>
+</ul>
 </details>
 <details>
-<summary>
+<summary id="specialist">
 2020.01 — 2024.07: <strong>IT Specialist</strong>
 </summary>
-<p>The company name changed after being taken over by another Goodwill
-from southern Colorado, but the work remained much the same, though
-officially I was promoted to tier 2 support. Projects I was involved in
-included a new POS rollout for all the stores.</p>
+<ul>
+<li>Tier 2 desktop support with Fresh Service ITSM</li>
+<li><span id="newpos">Project (member): New POS rollout: Imaging,
+configuration.</span></li>
+</ul>
 </details>
 <details>
-<summary>
-2019.03 — 2020.01: <strong>IT Helpdesk Technician</strong>
+<summary id="itanalyst">
+2019.03 — 2020.01: <strong>IT Analyst</strong>
 </summary>
-<p>Unfortunately, the executive team at Goodwill chose to dismantle the
-entire electronics recycling division (of which the refurbishment group
-were a part); but I was given the opportunity to transition to the IT
-department, doing Windows 7/10, MS Office, and NCR Counterpoint user
-support for our retail stores during a merger of the two Colorado
-Goodwill organizations (North and South, generally): Imaging PCs,
-troubleshooting, phone, in-person and Zendesk ticket-based support in an
-Office365, OneDrive, Active Directory environment. Projects include
-store manager PC refresh; store book scanning laptop initiative; IT
-inventory cleanup.</p>
+<ul>
+<li>Windows 7/10 and NCR Counterpoint user support for our retail stores
+during a merger of the two Colorado Goodwill organizations (North and
+South, generally)</li>
+<li>Imaging PCs, troubleshooting, phone, in-person and Zendesk
+ticket-based support in an Office365, OneDrive, Active Directory
+environment.</li>
+<li><span id="hdprojects">Projects (member): store manager PC refresh;
+store book scanning laptop initiative; IT inventory cleanup.</span></li>
+<li>Documented Veeam backup schedules and targets including a map using
+Graphviz</li>
+<li>FOG (Linux PXE boot server) admin</li>
+</ul>
 </details>
 <details>
-<summary>
-2018.09 — 2019.03: <strong>Lead Computer Refurbishment
-Technician</strong>
+<summar id="lead-refurb">2018.09 — 2019.03: <strong>Lead Computer
+Refurbishment Technician</strong>
 </summary>
 <p>Lead for staff of five comprising the whole of the electronics lab
 (refurbishment) at an <a
@@ -904,7 +903,7 @@ computer refurbishment and recycling operation run by Goodwill.</p>
 <ul>
 <li>Redesigned eBay listing process and associated templates.
 Approximately doubled listing speed.</li>
-<li>Designed QA process to randomly re-test 2-4% of retail items,
+<li>Designed QA process to randomly re-test 2—4% of retail items,
 created check sheet for defects found by eBay lister.</li>
 <li>Established a Trello-based “kanban” type system for tracking special
 order items</li>
@@ -915,82 +914,93 @@ doubled processing speed.</li>
 process many-fold.</li>
 <li>Redesigned Recycle Order processing procedure and caught up a
 two-month backlog.</li>
-<li>Moved from a personal workstation system to a hybrid personal /
-specialized station system to allow batch processing of material and to
-reduce setup time costs.</li>
+<li>Moved from a personal workstation system to a hybrid
+personal/specialized station system to allow batch processing of
+material and to reduce setup time costs.</li>
 <li>Outfitted every tech with personal printer, Gigabit switch, KVM
 switch, USB hub and UPS to allow greater efficiency and
 flexibility.</li>
 <li>Ran meetings; scheduled time off; various administrative duties;
 direct customer service; invoice creation; acted as technical lead for
 system testing and preparation; wrote/updated SOP and technical
-documents.
-</details></li>
+documents.</li>
 </ul>
+</details>
 <details>
-<summary>
+<summary id="refurb">
 2018.3 — 2018.09: <strong>Computer Refurbishment Technician</strong>
 </summary>
-Refurbishing computers for resale online by Goodwill. Running
-diagnostics, testing components and interfaces, replacing faulty parts,
-checking RAM, CPU etc.; testing and wiping hard drives; cleaning and
-preparing items for resale. Also harvesting working parts from
-non-working systems and listing systems on eBay for sale. Caught up a
-two-month backlog of eBay listing in first six weeks of employment.
+<ul>
+<li><p>Refurbishing computers for resale online by Goodwill</p></li>
+<li><p><span id="refurb-testing">Diagnostics, testing components and
+interfaces, testing and wiping hard drives.</span></p></li>
+<li><p>Replacing faulty parts, cleaning and preparing items for resale.
 Refurbished laptops (Eg. Macbook, Dell latitude (and other Dell) HP,
-Lenovo, Asus, etc.), All-in-ones (iMac), Cisco switches, desktops (Eg.
+Lenovo, Asus, etc.), all-in-ones (iMac), Cisco switches, desktops (Eg.
 Dell Optiplex, other Dell, HP, Lenovo), Dell servers (PowerEdge),
-monitors, keyboards and other misc. electronic items.
+monitors, keyboards and other misc. electronic items.</p></li>
+<li><p>Caught up a two-month backlog of eBay listing in first six weeks
+of employment</p></li>
+</ul>
 </details>
-<h4 id="pomeroy-now-getronics-boulder-colorado"><a
-href="https://www.getronics.com/pomeroy/">Pomeroy</a> (Now Getronics) |
-Boulder, Colorado</h4>
+<h4 id="pomeroy-boulder-colorado"><a
+href="https://www.pomeroy.com">Pomeroy</a> | Boulder, Colorado</h4>
 <details>
-<summary>
+<summary id="ibm">
 2016.08 — 2018.03: <strong>Computer Tape Operator / Hands &amp; Eyes
 Support</strong>
 </summary>
-After my wife graduated from graduate school we were able to move back
-home to Colorado and I took about 18 months off to be with my
+<p>After my wife graduated from graduate school we were able to move
+back home to Colorado and I took about 18 months off to be with my
 one-year-old son. When I returned to work, IBM Midrange systems jobs
 being scarcer, I decided I needed to re-invent myself and find my way
-into more mainstream work. I started this at the Boulder IBM campus’
-eight acres worth of raised-floor data center doing tier 1 H&amp;E work:
-server reboots, inventories, escorts, cable checks, diagnostics, etc.
+into more conventional IT work. I started this at the Boulder IBM
+campus’ eight acres worth of raised-floor data center doing tier 1
+H&amp;E work.</p>
+<ul>
+<li>Server reboots, inventories, escorts, cable checks, diagnostics,
+etc.</li>
+<li><span id="tally">Invented what I think is a new <a
+href="https://www.linkedin.com/pulse/tally-systems-hand-collection-count-data-evans-winner/">method
+of keeping tally data</a> with paper and pen</span></li>
+</ul>
 </details>
 <h4
 id="sandia-laboratory-federal-credit-union-albuquerque-new-mexico"><a
 href="https://www.slfcu.org/">Sandia Laboratory Federal Credit Union</a>
 | Albuquerque, New Mexico</h4>
 <details>
-<summary>
+<summary id="admin2">
 2014.02 — 2015.02: <strong>IS System Administrator II</strong>
 </summary>
-<p>Project lead for major production system upgrade 2014–Feb 2015.
-Simultaneous hardware and OS upgrade (to 7.1 on Power 6) on
-approximately $500k production IBM i system including research, testing
-(system, applications, job and process flow) and coordination between
-Dev, Ops and QA.</p>
+<p>Continuing previous role.</p>
+<ul>
+<li><span id="upgrade-project">Project (lead): Major production system
+upgrade 2014–Feb 2015. Simultaneous hardware and OS upgrade (to 7.1 on
+Power 6) on approximately $500k production IBM i system including
+research, testing (system, applications, job and process flow) and
+coordination between Dev, Ops and QA.</span></li>
+</ul>
 </details>
 <details>
-<summary>
-2008.08 — 2014.02: <strong>IS System Administrator I</strong>
+<summary id="admin">
+2008.08 — 2014.02: <strong>IS System Administrator</strong>
 </summary>
 <p>IBM i (aka. AS400 / iSeries) on Power Systems admin (3 physical
 systems).</p>
 <ul>
-<li>Responsible for job scheduling (~300 scheduled jobs); migrated old
-OS scheduled jobs to AJS and automated weekend batch processing.
-Developed a template for, wrote and maintained all documentation for
-scheduled jobs on internal DokuWiki wiki (300+ pages). Wrote <a
+<li><span id="ajs">Responsible for job scheduling (~300 scheduled jobs);
+migrated old OS scheduled jobs to AJS and automated weekend batch
+processing.</span></li>
+<li><span id="ajsdoc">Developed a template for, wrote and maintained all
+documentation for scheduled jobs on internal DokuWiki wiki (300+
+pages).</span></li>
+<li><span id="ajsim">Wrote <a
 href="https://github.com/EvansWinner/ajsim">simulator</a> in Common Lisp
-for testing schedules.</li>
-<li>Project lead for major hardware/OS upgrade (to 7.1 on Power 6) on
-IBM i including research, testing (system, applications, job and process
-flow) and coordination between Dev, Ops and QA.</li>
-<li>Config/monitoring Apache, BRMS backups, user profiles, etc. App
-admin for Zend Server, McAfee Antivirus for IBM i. Software package
-builds and installs.</li>
+for testing schedules.</span></li>
+<li><span id ="appadmin">Config/monitoring Apache, BRMS backups, user
+profiles, etc. App admin for Zend Server, McAfee Antivirus for IBM i.
+Software package builds and installs.</li>
 <li>Implemented database for tracking tape library (~400 tapes).</li>
 <li>System resource monitoring and reporting; documentation and
 responsible for operations checklist maintenance; wrote simple <a
@@ -998,45 +1008,93 @@ href="https://github.com/EvansWinner/build-checklists">build tool</a> in
 Windows batch for checklist maintenance.</li>
 </ul>
 </details>
-<h3 id="additional-experience">Additional Experience</h3>
+<h4 id="sur-la-table-seattle-washington"><a
+href="https://www.surlatable.com/">Sur La Table</a> | Seattle,
+Washington</h4>
 <details>
-<summary>
-Expand…
+<summary id="slt">
+2006.02 — 2007.07: <strong>Computer Operator I → Computer Operator
+II</strong>
 </summary>
-AS400 / iSeries and Windows Server operations (<a
-href="https://adp.com">Automatic Data Processing</a>, <em>Computer
-Operator</em>, 2000‒2005, Bothell, Washington, and <a
-href="https://surlatable.com">Sur La Table</a>, Seattle, Washington,
-<em>Computer Operator I</em> and <em>Computer Operator II</em>,
-2006-2007)); Windows and POS user support and Active Directory use (Sur
-La Table, 2006‒2007); customer service-intensive phone support for
-thinnet-based POS systems (closed 10 to 20 tickets per night) (<a
-href="https://partech.com">ParTech</a> (contracted from <a
-href="https://teksystems.com">Teksystems</a>), Boulder, Colorado,
-1999‒2000); additional customer service experience in retail (seasonal
-at the busiest Barnes &amp; Noble west of the Mississippi); desktop
-support, web design/maintenance and database maintenance for medical
-research labs (<a href="https://hsc.unm.edu/research/cidi/">Center for
-Infectious Disease and Immunity</a> and Tularemia Vaccine Development
-Contract, both at the University of New Mexico, School of Medicine, <a
-href="https://pathology.unm.edu">Department of Pathology</a>,
-2008‒2009); additional web design for small Internet start-up
-(<em>idealstudios.com</em>, now defunct, 1997‒2000); part time user
-support for Solaris and Mac in an academic setting (University of
-Colorado, <a href="https://www.colorado.edu/music/">Department of
-Music</a>, 1999); stay-at-home parent (2015‒2016); and misc. fast food
-and grocery store work in my teens and early twenties.
+<p>iSeries / Windows system operations.</p>
+<ul>
+<li><span id="sltreports">Report generation &amp;
+distribution</span></li>
+<li>Submitting/monitoring/manipulating processes, monitoring network
+&amp; print queues</li>
+<li>Limited-scope system administration services (saves, IPLs, user
+account setup, etc) on the AS400</li>
+<li><span id="sltdoc">Writing &amp; maintaining procedural
+documentation.</span></li>
+<li>Company-wide tier 1 support for Tradewind POS software, Palm-based
+handheld scanners, touch-screen kiosks, general Windows XP &amp; Mac
+OS/X desktop &amp; laptops, Island Pacific / CommercialWare software in
+System i, green screen / GUI clients, network password issues (using
+Active Directory client), Outlook, Excel, network &amp; VPN
+connectivity, Monarch &amp; other ticket printers, telephone &amp; VoIP
+systems. Used TrackIt call tracking software.</li>
+</ul>
 </details>
-<h3 id="volunteer-experience">Volunteer Experience</h3>
+<h4
+id="automatic-data-processing-redmond-washingto-bothell-washington"><a
+href="https://adp.com">Automatic Data Processing</a> | Redmond,
+Washingto → Bothell, Washington</h4>
 <details>
-<summary>
-Expand…
+<summary id="adp">
+2000.07 — 2005.11: <strong>Computer Operator</strong>
 </summary>
-<p>2012.10 – 2014.02: <a href="http://www.abqchorus.org/">Albuquerque
+<p>AS/400 / iServer midrange system operations for payroll
+processing.</p>
+<ul>
+<li>Nightly batch jobs for financial transactions, tape cartridge &amp;
+reel data backups and many miscellaneous processes.</li>
+<li>Oce 2040 / 750 printer maintenance</li>
+<li>Managed tape library &amp; printer output</li>
+<li>2001 perfect attendance award.</li>
+</ul>
+</details>
+<h4 id="partech-boulder-colorado"><a
+href="https://partech.com">ParTech</a> | Boulder, Colorado</h4>
+<details>
+<summary id="par">
+1999.06 — 2000.06: <strong>Associate Support Engineer</strong>
+</summary>
+<p>Customer service-intensive grave shift phone support for
+Thinnet-based POS systems.</p>
+<ul>
+<li>Fixing operational errors; diagnosing hardware issues with
+touch-screens, printers, LAN, drives, etc; setup of network routing
+&amp; other configuration issues &amp; software upgrades on ParTech’s
+POS software.</li>
+<li>Used Clarify support database client</li>
+</ul>
+</details>
+<h4 id="university-of-colorado-college-of-music-boulder-colorado"><a
+href="https://www.colorado.edu/music/">University of Colorado, College
+of Music</a> | Boulder, Colorado</h4>
+<details>
+<summary id="cumusic">
+1999.01 — 1999.06: <strong>Computer Lab Monitor</strong>
+</summary>
+<p>Monitored university computer music lab. [Temp employee, not
+work-study]</p>
+<ul>
+<li>Support for ‘pine’ email client in UNIX &amp; other Internet clients
+on Macintosh</li>
+<li>Fixing problems with cabling (mostly MIDI-related) &amp; support for
+MOTU Digital Performer.</li>
+</ul>
+</details>
+<h3 id="volunteer">Volunteer</h3>
+<details>
+<summary id="abqcivicchorus">
+Expand
+</summary>
+<p>2012.10 – 2014.02: <a href="https://abqcivicchorus.org/">Albuquerque
 Civic Chorus</a></p>
-Web design and maintenance. Fully redesigned, expanded and maintained
-the chorus web presence with regular updates per chorus leadership
-requests.
+<p>Fully redesigned, expanded and maintained the chorus web presence
+with regular updates per chorus leadership requests. (Note their page no
+longer uses my code.)</p>
 </details>
 <h2 id="education">Education</h2>
 <details>

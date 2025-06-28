@@ -2,24 +2,18 @@
 title: Resume of Evans Winner
 ---
 
-> Phone: (720) 666-8803 | Address: 16359 West Tenth Avenue, Unit R4
-Golden Colorado, 80401-3705 |
+> Phone: (720) 666-8803 | Address: 16359 West Tenth Avenue, Unit R4 Golden Colorado, 80401-3705 |
+
 [evans.winner@gmail.com](mailto:evans.winner@gmail.com) |
-[Linkedin](http://linkedin.com/n/evanswinner) |
+[vCard](http://ehw.me/vcard.vcd) |
 [Portfolio](http://evanswinner.github.io/portfolio.html) |
+[Linkedin](http://linkedin.com/n/evanswinner) |
 [Github](https://github.com/evanswinner) |
-[vCard](http://ehw.me/vcard.vcd) </details>
 
-#### I like to make things better...
 
-I have about twenty-five years of varied IT experience, but it was my time
-in a leadership position that taught me that what I really crave is
-the opportunity to analyze systems and processes and make them more
-productive, more efficient, easier, and more fun; and I deeply believe
-in the power of experimentation to facilitate that process. I am
-therefore looking to make a transition to an analytical role,
-especially something in process improvement, operations/systems/data analysis or
-business analysis.
+#### Profile
+
+I bring 25 years of diverse IT support and enterprise system (IBM i / midrange / mainframe-style) administration experience, with a strong focus in the non-profit and mission-driven sectors. I take an analytical and experimental approach to improving systems and processes—striving to make them more productive, effective, resilient, efficient, and pleasant for users and stakeholders alike.
 
 **Click the triangles for more details...**
 
@@ -28,156 +22,151 @@ business analysis.
 ### Recent Employment History
 #### [Goodwill of Colorado (previously Goodwill Industries of Denver)](http://www.goodwillcolorado.org) | Westminster, Colorado
 
-<details><summary>2024.07 — Pres.: **Lead Service Desk Technician**</summary>
+<details><summary id="sdlead">2024.07 — Pres.: **Lead Service Desk Technician**</summary>
 
-Technical lead for the Northern Colorado IT service desk.
+ - <span id="sdlead-deet">Lead for the Northern Colorado IT service desk</span>
+ - <span id="cleaning-and-reconciliation">Data cleaning and reconciliation in IT inventory database and Active Directory accounts.</span>
+ - <span id="employee-journey">Project (member): Employee journey cross-functional project streamlining HR/IT process interaction mainly for on/offboarding.</span>
+
+</details>
+
+<details><summary id="specialist">2020.01 — 2024.07: **IT Specialist**</summary>
+
+ - Tier 2 desktop support with Fresh Service ITSM
+ - <span id="newpos">Project (member): New POS rollout: Imaging, configuration.</span>
 
 </details>
 
-<details><summary>2020.01 — 2024.07: **IT Specialist**</summary>
+<details><summary id="itanalyst">2019.03 — 2020.01: **IT Analyst**</summary>
 
-The company name changed after being taken over by another Goodwill from
-southern Colorado, but the work remained much the same, though officially
-I was promoted to tier 2 support. Projects I was involved in included
-a new POS rollout for all the stores.
-
-</details>
-<details><summary>2019.03 — 2020.01: **IT Helpdesk Technician**</summary>
-
-Unfortunately, the executive team at Goodwill chose to dismantle the
-entire electronics recycling division (of which the refurbishment
-group were a part); but I was given the opportunity to transition to
-the IT department, doing Windows 7/10, MS Office, and NCR Counterpoint
-user support for our retail stores during a merger of the two Colorado
-Goodwill organizations (North and South, generally): Imaging PCs,
-troubleshooting, phone, in-person and Zendesk ticket-based support in
-an Office365, OneDrive, Active Directory environment. Projects include
-store manager PC refresh; store book scanning laptop initiative; IT
-inventory cleanup.
+ - Windows 7/10 and NCR Counterpoint user support for our retail stores during a merger of the two Colorado Goodwill organizations (North and South, generally)
+ - Imaging PCs, troubleshooting, phone, in-person and Zendesk ticket-based support in an Office365, OneDrive, Active Directory environment.
+ - <span id="hdprojects">Projects (member): store manager PC refresh; store book scanning laptop initiative; IT inventory cleanup.</span>
+ - Documented Veeam backup schedules and targets including a map using Graphviz
+ - FOG (Linux PXE boot server) admin
 
 </details>
 
 
-<details><summary>2018.09 — 2019.03: **Lead Computer Refurbishment Technician**</summary>
+<details><summar id="lead-refurb">2018.09 — 2019.03: **Lead Computer Refurbishment Technician**</summary>
 
-Lead for staff of five comprising the whole of the electronics lab
-(refurbishment) at an [R2](https://sustainableelectronics.org/r2-standard) certified computer refurbishment and
-recycling operation run by Goodwill.
+Lead for staff of five comprising the whole of the electronics lab (refurbishment) at an [R2](https://sustainableelectronics.org/r2-standard) certified computer refurbishment and recycling operation run by Goodwill.
 
-  * Redesigned eBay listing process and associated
-    templates. Approximately doubled listing speed.
-  * Designed QA process to randomly re-test 2-4% of retail items,
-    created check sheet for defects found by eBay lister.
-  * Established a Trello-based “kanban” type system for tracking
-    special order items
-  * Modified refurbishment priorities based on sales analyses.
-    Redesigned contract DirectTV HDD processing
-    procedure. Approximately doubled processing speed.
-  * Established batch process for HDD testing which improved speed of
-   process many-fold.
-  * Redesigned Recycle Order processing procedure and caught up a
-    two-month backlog.
-  * Moved from a personal workstation system to a hybrid personal
-    / specialized station system to allow batch processing of material
-    and to reduce setup time costs.
-  * Outfitted every tech with personal printer, Gigabit switch,
-    KVM switch, USB hub and UPS to allow greater efficiency and
-    flexibility.
-  * Ran meetings; scheduled time off; various administrative
-    duties; direct customer service; invoice creation; acted as
-    technical lead for system testing and preparation; wrote/updated
-    SOP and technical documents.
+ - Redesigned eBay listing process and associated templates. Approximately doubled listing speed.
+ - Designed QA process to randomly re-test 2—4% of retail items, created check sheet for defects found by eBay lister.
+ - Established a Trello-based “kanban” type system for tracking special order items
+ - Modified refurbishment priorities based on sales analyses. Redesigned contract DirectTV HDD processing procedure. Approximately doubled processing speed.
+ - Established batch process for HDD testing which improved speed of process many-fold.
+ - Redesigned Recycle Order processing procedure and caught up a two-month backlog.
+ - Moved from a personal workstation system to a hybrid personal/specialized station system to allow batch processing of material and to reduce setup time costs.
+ - Outfitted every tech with personal printer, Gigabit switch, KVM switch, USB hub and UPS to allow greater efficiency and flexibility.
+ - Ran meetings; scheduled time off; various administrative duties; direct customer service; invoice creation; acted as technical lead for system testing and preparation; wrote/updated SOP and technical documents.
+  
  </details>
 
-<details><summary>2018.3 — 2018.09: **Computer Refurbishment Technician**</summary>
+<details><summary id="refurb">2018.3 — 2018.09: **Computer Refurbishment Technician**</summary>
 
-Refurbishing computers for resale online by Goodwill. Running
-diagnostics, testing components and interfaces, replacing faulty
-parts, checking RAM, CPU etc.; testing and wiping hard drives;
-cleaning and preparing items for resale. Also harvesting working parts
-from non-working systems and listing systems on eBay for sale. Caught
-up a two-month backlog of eBay listing in first six weeks of
-employment. Refurbished laptops (Eg. Macbook, Dell latitude (and other
-Dell) HP, Lenovo, Asus, etc.), All-in-ones (iMac), Cisco switches,
-desktops (Eg. Dell Optiplex, other Dell, HP, Lenovo), Dell servers
-(PowerEdge), monitors, keyboards and other misc. electronic items.
+ - Refurbishing computers for resale online by Goodwill
+ - <span id="refurb-testing">Diagnostics, testing components and interfaces, testing and wiping hard drives.</span>
+ - Replacing faulty parts, cleaning and preparing items for resale. Refurbished laptops (Eg. Macbook, Dell latitude (and other Dell) HP, Lenovo, Asus, etc.), all-in-ones (iMac), Cisco switches, desktops (Eg. Dell Optiplex, other Dell, HP, Lenovo), Dell servers (PowerEdge), monitors, keyboards and other misc. electronic items.
+
+ - Caught up a two-month backlog of eBay listing in first six weeks of employment
+
 </details>
 
-#### [Pomeroy](https://www.getronics.com/pomeroy/) (Now Getronics) | Boulder, Colorado
+#### [Pomeroy](https://www.pomeroy.com) | Boulder, Colorado
 
-<details><summary>2016.08 — 2018.03: **Computer Tape Operator / Hands & Eyes Support**</summary>
+<details><summary id="ibm">2016.08 — 2018.03: **Computer Tape Operator / Hands & Eyes Support**</summary>
 
-After my wife graduated from graduate school we were able to move back
-home to Colorado and I took about 18 months off to be with my
-one-year-old son. When I returned to work, IBM Midrange systems jobs
-being scarcer, I decided I needed to re-invent myself and find my way
-into more mainstream work. I started this at the Boulder IBM campus'
-eight acres worth of raised-floor data center doing tier 1 H&E work:
-server reboots, inventories, escorts, cable checks, diagnostics, etc.
+After my wife graduated from graduate school we were able to move back home to Colorado and I took about 18 months off to be with my one-year-old son. When I returned to work, IBM Midrange systems jobs being scarcer, I decided I needed to re-invent myself and find my way into more conventional IT work. I started this at the Boulder IBM campus' eight acres worth of raised-floor data center doing tier 1 H&E work.
+
+ - Server reboots, inventories, escorts, cable checks, diagnostics, etc.
+ - <span id="tally">Invented what I think is a new [method of keeping tally data](https://www.linkedin.com/pulse/tally-systems-hand-collection-count-data-evans-winner/) with paper and pen</span>
+ 
 </details>
 
 #### [Sandia Laboratory Federal Credit Union](https://www.slfcu.org/) | Albuquerque, New Mexico
 
-<details><summary>2014.02 — 2015.02: **IS System Administrator II**</summary>
+<details><summary id="admin2">2014.02 — 2015.02: **IS System Administrator II**</summary>
 
-Project lead for major production system upgrade
-2014–Feb 2015. Simultaneous hardware and OS upgrade (to 7.1 on
-Power 6) on approximately $500k production IBM i system including
-research, testing (system, applications, job and process flow) and
-coordination between Dev, Ops and QA.
+Continuing previous role.
+
+- <span id="upgrade-project">Project (lead): Major production system upgrade 2014–Feb 2015. Simultaneous hardware and OS upgrade (to 7.1 on Power 6) on approximately $500k production IBM i system including research, testing (system, applications, job and process flow) and coordination between Dev, Ops and QA.</span>
 
 </details>
 
-
-<details><summary>2008.08 — 2014.02: **IS System Administrator I**</summary>
+<details><summary id="admin">2008.08 — 2014.02: **IS System Administrator**</summary>
 
 IBM i (aka. AS400 / iSeries) on Power Systems admin (3 physical systems).
 
- * Responsible for job scheduling (~300 scheduled jobs); migrated old OS scheduled jobs to AJS and automated weekend batch processing. Developed a template for, wrote and maintained all documentation for scheduled jobs on internal DokuWiki wiki (300+ pages). Wrote [simulator](https://github.com/EvansWinner/ajsim) in Common Lisp for testing schedules.
- * Project lead for major hardware/OS upgrade (to 7.1 on Power 6) on IBM i including research, testing (system, applications, job and process flow) and coordination between Dev, Ops and QA.
- * Config/monitoring Apache, BRMS backups, user profiles, etc. App admin for Zend Server, McAfee Antivirus for IBM i. Software package builds and installs.
- * Implemented database for tracking tape library (~400 tapes).
- * System resource monitoring and reporting; documentation and responsible for operations checklist maintenance; wrote simple [build tool](https://github.com/EvansWinner/build-checklists) in Windows batch for checklist maintenance.
+ - <span id="ajs">Responsible for job scheduling (~300 scheduled jobs); migrated old OS scheduled jobs to AJS and automated weekend batch processing.</span>
+ - <span id="ajsdoc">Developed a template for, wrote and maintained all documentation for scheduled jobs on internal DokuWiki wiki (300+ pages).</span>
+  - <span id="ajsim">Wrote [simulator](https://github.com/EvansWinner/ajsim) in Common Lisp for testing schedules.</span>
+ - <span id ="appadmin">Config/monitoring Apache, BRMS backups, user profiles, etc. App admin for Zend Server, McAfee Antivirus for IBM i. Software package builds and installs.
+ - Implemented database for tracking tape library (~400 tapes).
+ - System resource monitoring and reporting; documentation and responsible for operations checklist maintenance; wrote simple [build tool](https://github.com/EvansWinner/build-checklists) in Windows batch for checklist maintenance.
 </details>
 
-### Additional Experience
 
-<details><summary>Expand...</summary>
+#### [Sur La Table](https://www.surlatable.com/) | Seattle, Washington
 
-AS400 / iSeries and Windows Server operations ([Automatic Data
-Processing](https://adp.com), *Computer Operator*, 2000‒2005, Bothell,
-Washington, and [Sur La Table](https://surlatable.com), Seattle,
-Washington, *Computer Operator I* and *Computer Operator II*,
-2006-2007)); Windows and POS user support and Active Directory use
-(Sur La Table, 2006‒2007); customer service-intensive phone support
-for thinnet-based POS systems (closed 10 to 20 tickets per night)
-([ParTech](https://partech.com) (contracted from
-[Teksystems](https://teksystems.com)), Boulder, Colorado, 1999‒2000);
-additional customer service experience in retail (seasonal at the
-busiest Barnes & Noble west of the Mississippi); desktop support, web
-design/maintenance and database maintenance for medical research labs
-([Center for Infectious Disease and
-Immunity](https://hsc.unm.edu/research/cidi/) and Tularemia Vaccine
-Development Contract, both at the University of New Mexico, School of
-Medicine, [Department of Pathology](https://pathology.unm.edu),
-2008‒2009); additional web design for small Internet start-up
-(*idealstudios.com*, now defunct, 1997‒2000); part time user support
-for Solaris and Mac in an academic setting (University of Colorado,
-[Department of Music](https://www.colorado.edu/music/), 1999);
-stay-at-home parent (2015‒2016); and misc. fast food and grocery store
-work in my teens and early twenties.  </details>
+<details><summary id="slt">2006.02 — 2007.07: **Computer Operator I → Computer Operator II**</summary>
 
-### Volunteer Experience
+iSeries / Windows system operations.
 
-<details><summary>Expand...</summary>
+ - <span id="sltreports">Report generation & distribution</span>
+ - Submitting/monitoring/manipulating processes, monitoring network & print queues
+ - Limited-scope system administration services (saves, IPLs, user account setup, etc) on the AS400
+ - <span id="sltdoc">Writing & maintaining procedural documentation.</span>
+ - Company-wide tier 1 support for Tradewind POS software, Palm-based handheld scanners, touch-screen kiosks, general Windows XP & Mac OS/X desktop & laptops, Island Pacific / CommercialWare software in System i, green screen / GUI clients, network password issues (using Active Directory client), Outlook, Excel, network & VPN connectivity, Monarch & other ticket printers, telephone & VoIP systems. Used TrackIt call tracking software.
 
-2012.10 – 2014.02: [Albuquerque Civic Chorus](http://www.abqchorus.org/)
-
-Web design and maintenance. Fully redesigned, expanded and maintained
-the chorus web presence with regular updates per chorus leadership
-requests.
 </details>
 
+
+#### [Automatic Data Processing](https://adp.com) | Redmond, Washingto → Bothell, Washington
+
+<details><summary id="adp">2000.07 — 2005.11: **Computer Operator**</summary>
+
+AS/400 / iServer midrange system operations for payroll processing.
+
+ - Nightly batch jobs for financial transactions, tape cartridge & reel data backups and many miscellaneous processes.
+ - Oce 2040 / 750 printer maintenance
+ - Managed tape library & printer output
+ - 2001 perfect attendance award.
+
+</details>
+
+#### [ParTech](https://partech.com) | Boulder, Colorado
+
+<details><summary id="par">1999.06 — 2000.06: **Associate Support Engineer**</summary>
+
+Customer service-intensive grave shift phone support for Thinnet-based POS systems.
+
+ - Fixing operational errors; diagnosing hardware issues with touch-screens, printers, LAN, drives, etc; setup of network routing & other configuration issues & software upgrades on ParTech’s POS software.
+ - Used Clarify support database client
+
+</details>
+
+#### [University of Colorado, College of Music](https://www.colorado.edu/music/) | Boulder, Colorado
+
+<details><summary id="cumusic">1999.01 — 1999.06: **Computer Lab Monitor**</summary>
+
+Monitored university computer music lab. [Temp employee, not work-study]
+
+ - Support for ‘pine’ email client in UNIX & other Internet clients on Macintosh
+ - Fixing problems with cabling (mostly MIDI-related) & support for MOTU Digital Performer.
+
+</details>
+
+### Volunteer
+
+<details><summary id="abqcivicchorus">Expand</summary>
+
+2012.10 – 2014.02: [Albuquerque Civic Chorus](https://abqcivicchorus.org/)
+
+Fully redesigned, expanded and maintained the chorus web presence with regular updates per chorus leadership requests. (Note their page no longer uses my code.)
+
+</details>
 
 
 ## Education
