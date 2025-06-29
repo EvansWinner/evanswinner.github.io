@@ -1,5 +1,5 @@
 ---
-title: Resume of Evans Winner
+title: Resume of Evans Winner (detail)
 ---
 
 > Phone: (720) 666-8803 | Address: 16359 West Tenth Avenue, Unit R4 Golden Colorado, 80401-3705 |
@@ -14,8 +14,6 @@ title: Resume of Evans Winner
 #### Profile
 
 I bring 25 years of diverse IT support and enterprise system (IBM i / midrange / mainframe-style) administration experience, with a strong focus in the non-profit and mission-driven sectors. I take an analytical and experimental approach to improving systems and processes—striving to make them more productive, effective, resilient, efficient, and pleasant for users and stakeholders alike.
-
-**Click the triangles for more details...**
 
 ## Experience
 
