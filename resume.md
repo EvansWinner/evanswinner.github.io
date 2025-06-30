@@ -18,6 +18,7 @@ I bring 25 years of diverse IT support and enterprise system (IBM i / midrange /
 ## Experience
 
 ### Recent Employment History
+
 #### [Goodwill of Colorado (previously Goodwill Industries of Denver)](http://www.goodwillcolorado.org) | Westminster, Colorado
 
 <span id="sdlead">2024.07 — Pres.: **Lead Service Desk Technician**<span>
@@ -36,9 +37,10 @@ I bring 25 years of diverse IT support and enterprise system (IBM i / midrange /
 <span id="itanalyst">2019.03 — 2020.01: **IT Analyst**</span>
 
  - Windows 7/10 and NCR Counterpoint user support for our retail stores during a merger of the two Colorado Goodwill organizations (North and South, generally)
+ - <span id="cpreports">Reporting with Counterpoint and SQL (≈16% of tickets)</span>
  - Imaging PCs, troubleshooting, phone, in-person and Zendesk ticket-based support in an Office365, OneDrive, Active Directory environment.
  - <span id="hdprojects">Projects (member): store manager PC refresh; store book scanning laptop initiative; IT inventory cleanup.</span>
- - Documented Veeam backup schedules and targets including a map using Graphviz
+ - <span id="veeamdoc">Documented Veeam backup schedules and targets including a map using Graphviz</span>
  - FOG (Linux PXE boot server) admin
 
 
@@ -91,10 +93,11 @@ IBM i (aka. AS400 / iSeries) on Power Systems admin (3 physical systems).
 
  - <span id="ajs">Responsible for job scheduling (~300 scheduled jobs); migrated old OS scheduled jobs to AJS and automated weekend batch processing.</span>
  - <span id="ajsdoc">Developed a template for, wrote and maintained all documentation for scheduled jobs on internal DokuWiki wiki (300+ pages).</span>
-  - <span id="ajsim">Wrote [simulator](https://github.com/EvansWinner/ajsim) in Common Lisp for testing schedules.</span>
- - <span id ="appadmin">Config/monitoring Apache, BRMS backups, user profiles, etc. App admin for Zend Server, McAfee Antivirus for IBM i. Software package builds and installs.
- - Implemented database for tracking tape library (~400 tapes).
- - System resource monitoring and reporting; documentation and responsible for operations checklist maintenance; wrote simple [build tool](https://github.com/EvansWinner/build-checklists) in Windows batch for checklist maintenance.
+ - <span id="ajsim">Wrote [simulator](https://github.com/EvansWinner/ajsim) in Common Lisp for testing schedules.</span>
+ - <span id ="appadmin">Config/monitoring Apache, BRMS backups, user profiles, etc. App admin for Zend Server, McAfee Antivirus for IBM i. Software package builds and installs.</span>
+ - <span id="tapedb">Implemented Access database for tracking tape library (~400 tapes).</span>
+ - <span id="db2">System data gathering and edits to live database (Query/400 and SQL)</span>
+ - System resource monitoring and reporting; documentation and responsible for operations checklist maintenance; wrote simple [build tool](https://github.com/EvansWinner/build-checklists) in Windows batch for checklist maintenance.</span>
 
 
 #### [Sur La Table](https://www.surlatable.com/) | Seattle, Washington
