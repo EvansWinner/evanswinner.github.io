@@ -7,7 +7,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   word-wrap: break-word;
-  width: 728px;
+  width: 90%;
   max-width: 99%;
   box-sizing: border-box;
   padding: 30px 30px 8rem 30px;
@@ -661,4 +661,13 @@ body :checked+.radio-label {
   position: relative;
   border-color: #4078c0;
 }
+
+.box {
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
 </style>
+
+

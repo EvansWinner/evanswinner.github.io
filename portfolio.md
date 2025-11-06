@@ -1,12 +1,6 @@
 ---
-title: Portfolio
-author: Evans Winner
---- 
-<img align="center" src="me.jpg" style="width: 150px;"/><br>
-
-**(Also: [Resume](./resume.html) |
-[Github](https://github.com/evanswinner) | [vCard](./vcard.vcf) |
-[LinkedIn](https://www.linkedin.com/in/evanswinner/))**
+title: <img align="center" src="me.jpg" style="max-width:10%;float:left;">Portfolio of Evans Winner
+---
 
 
 ## Experiment & Analysis

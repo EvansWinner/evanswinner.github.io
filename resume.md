@@ -4,12 +4,6 @@ title: Resume of Evans Winner (detail)
 
 > Phone: (720) 666-8803 | Address: 16359 West Tenth Avenue, Unit R4 Golden Colorado, 80401-3705 |
 
-[evans.winner@gmail.com](mailto:evans.winner@gmail.com) |
-[vCard](http://ehw.me/vcard.vcd) |
-[Portfolio](http://evanswinner.github.io/portfolio.html) |
-[Linkedin](http://linkedin.com/n/evanswinner) |
-[Github](https://github.com/evanswinner) |
-
 
 #### Profile
 
@@ -265,38 +259,3 @@ Fully redesigned, expanded and maintained the chorus web presence with regular u
 
  - CompTIA: Linux+, A+, I-Net+ ([transcript](https://www.certmetrics.com/comptia/public/transcript.aspx?transcript=WJKECK5C12R12QBQ))
  - Brainbench: MS-DOS 6.0 (2001, expired)
-
-
-<pre id="spacerForDeepLinksNearTheBottomOfThePage">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
