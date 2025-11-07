@@ -832,6 +832,7 @@
       border: 1px solid black;
       padding: 10px;
       margin: 10px;
+      overflow: auto;
   }
   </style>
 
@@ -848,7 +849,7 @@ href="./vcard.vcf">vCard</a> | <a href="./colophon.html">Colophon</a> |
 <a href="mailto:evans.winner@gmail.com">Email</a>
 </center>
 <header id="title-block-header">
-<h1 class="title"><img align="center" src="me.jpg" style="max-width:10%;float:left;">Portfolio
+<h1 class="title"><img align="center" src="me.jpg" style="max-width:15%;float:left;">Portfolio
 of Evans Winner</h1>
 </header>
 <nav id="TOC" role="doc-toc">
@@ -869,103 +870,188 @@ exercises</a></li>
 </ul>
 </nav>
 <h2 id="experiment-analysis">Experiment &amp; Analysis</h2>
-<p><img src="ultradian.png" style="max-width:35%;float:right"><a
-href="status-log.html">Do “ultradian” rhythms mediate my productivity
-throughout the day?</a> — A quick analysis in
-<strong>Rmarkdown</strong>. (Local, 2018.1)</p>
-<p><a href="dc_spl.html">Sound-pressure level at a large datacenter</a>
-— One ought to wear earplugs in a noisy datacenter.
-<strong>Rmarkdown</strong> (Local, 2018.2)</p>
+<div class="box">
+<p><img src="ultradian.png"
+style="max-width:30%;float:left"><b><a href="status-log.html">Do
+“ultradian” rhythms mediate my productivity throughout the day?</a></b>
+(Local, 2018.1)<br /> An <strong>Rmarkdown</strong> notebook using a
+small, self-collected dataset.</p>
+“It appears that the results, though suggestive of a line with four
+peaks, could actually be fit with a line with only a single peak or with
+a single, monotonically decreasing curve, and still remain within the
+90% CI.”
+</div>
+<div class="box">
+<p><img src="spl.jpg"
+style="max-width:15%;float:left"><b><a href="dc_spl.html">Sound-pressure
+level at a large datacenter</a></b> (Local, 2018.2)<br /> Are sound
+levels dangerously high? An <strong>Rmarkdown</strong> notebook
+examining the question using self-collected readings.</p>
+<p>“Continuous SPL levels in the main datacenter floor are too high for
+unprotected long-term exposure. The NIOSH limit for 94 dB is 1 hour, and
+even assuming a full 3 dB of inaccuracy in the measurment, at 91 dB,
+NIOSH still recommends no more than 2 hours of continuous unprotected
+exposure. It therefore seems reasonable to conclude that workers
+entering the main datacenter floor should wear ear protection if they
+expect to be on the floor for more than a few minutes, and might as well
+get in the habit of always having ear protection on hand when entering
+the main datacenter floor.”</p>
+</div>
 <h2 id="tools">Tools</h2>
-<p><img src="piltdown.jpg" style="max-width:50%;float:left"><a
-href="https://github.com/EvansWinner/piltdown">Piltdown</a> - Python
-Unicode-based data visualization for Twitter posts. (Github, 2021)</p>
+<div class="box">
+<img src="piltdown.jpg"
+style="max-width:20%;float:left"><b><a
+href="https://github.com/EvansWinner/piltdown">Piltdown</a></b> (GitHub,
+2021)<br /> Always wanted to use Python to generate data visualizations
+for your Twitter posts using pure Unicode? No? Just me? Well, now you
+can anyway. Despite the very tongue-in-cheek README, this does provide
+Python functions to generate – <b>column sparklines</b>, <b>win/lose
+sparklines</b>, <b>comparison charts</b>, <b>horizontal bar charts</b>,
+<b>horizontal and vertical dot charts</b>, <b>waffle charts</b>,
+<b>scaled-up numbers</b>, <b>contingency and other simple tables</b>,
+and <b>tally charts</b>.
+</div>
+<div class="box">
 <p><img src="kallychore.png"
-   style="max-width:50%;float:right"><a
-href="https://github.com/EvansWinner/kallychore">Kallychore</a> —
-Plain-text code notebook processor for mixing text and bash code, a
-little like Rmarkdown mixes Markdown and R. <strong>Bash</strong> with
-embedded <strong>awk</strong>. (Github, 2018)</p>
-<p><a
-href="https://github.com/EvansWinner/todostack.el">Todostack.el</a> — A
-to-do list as a stack, written in <strong>Emacs Lisp</strong>. (Github,
-2011). Some <a
+style="max-width:40%;float:left"><b><a
+href="https://github.com/EvansWinner/kallychore">Kallychore</a></b>
+(GitHub, 2018)<br/> Kallychore is a plain-text code notebook processor
+for mixing text and bash code, a little like Rmarkdown mixes Markdown
+and R. <strong>Bash</strong> with embedded <strong>awk</strong>.</p>
+<p>Rmarkdown is to an interpreted language as Kallychore is to a
+compiled one. Kallychore makes a single pass over a plain-text (or
+Markdown) document and interprets the embedded code blocks and outputs a
+single file with text, code, and code output<br /></p>
+</div>
+<div class="box">
+<p><b> <img src="todostack.png" style="max-width:20%;float:left"><a
+href="https://github.com/EvansWinner/todostack.el">Todostack.el</a></b>
+(GitHub, 2011)<br /> A to-do list as a stack, written in <strong>Emacs
+Lisp</strong>n. Some <a
 href="http://thornepublic.blogspot.com/2018/03/todostack.html">description</a>
-on Blogspot.</p>
+on Blogspot. This is for people who have constant interruptions. When
+something interrupts you, push a couple of words about what you are
+doing onto the stack. Once you get back, pop the stack and see what you
+were doing.<br /></p>
+</div>
 <h2 id="simulation">Simulation</h2>
-<p>A <a href="https://github.com/EvansWinner/ajsim">simulator</a> from
-scratch in <strong>Common Lisp</strong> for some of IBM’s <a
+<div class="box">
+<b><a href="https://github.com/EvansWinner/ajsim">AJSIM</a></b> (GitHub,
+2013)<br /> AJSIM is a simulator written from scratch in <strong>Common
+Lisp</strong> for some of IBM’s <a
 href="https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzasn/rzasnajsmanage.htm">AJS
 job scheduler</a> that I actually used for validating schedules on
-production machines. (Github, 2013)</p>
-<p>A little eBay auction simulator, <a
-href="https://gist.github.com/EvansWinner/064932a724caa2c816a768792a6903da">auctions.py</a>
-using <strong>simpy</strong>.</p>
+production machines.<br />
+</div>
+<div class="box">
+<p><b><a
+href="https://gist.github.com/EvansWinner/064932a724caa2c816a768792a6903da">auctions.py</a></b>
+(GitHub Gist, ~2019)<br /> auctions.py is a little eBay auction
+simulator, using <strong>simpy</strong> in
+<strong>Python</strong>.<br /></p>
+</div>
 <h2 id="mathy-stuff">Mathy stuff</h2>
-<p><img src="mertens.png" style="max-width:50%;float:left;"><a
-href="mobius.txt">Playing with The Möbius Function in bash</a> — A
-visualization of the Möbius function and related things, using
+<div class="box">
+<p><img src="mertens.png"
+style="max-width:35%;float:left;"><b><a href="mobius.txt">Playing with
+The Möbius Function in bash</a></b> (Local, 2018.4)<br /></p>
+A visualization of the Möbius function and related things, using
 <strong>Bash</strong>, <strong>Gnuplot</strong>, and
-<strong>Awk</strong>. (Local, 2018.4)</p>
-<p><a
+<strong>Awk</strong> in plain text. This uses the code “notebook”
+program <strong>Kallychore</strong> (see above)<br />
+</div>
+<div class="box">
+<p><img src="chunky.png" style="max-width:25%;float:left"> <b><a
 href="https://www.linkedin.com/pulse/group-long-hand-written-numbers-smaller-sub-units-better-evans-winner/">Number
-Chunking with Chunky Numbers</a> — A slightly tongue-in-cheek analysis
-of how to chunk multi-digit numbers when writing them down. Inspired by
-a true story (LinkedIn, 2018.03)</p>
+Chunking with Chunky Numbers</a></b> (LinkedIn, 2018.03)<br /></p>
+A slightly tongue-in-cheek analysis of how to chunk multi-digit numbers
+when writing them down. Inspired by a true story.
+</div>
 <h2 id="demonstrations">Demonstrations</h2>
-<p><a href="sets.html">Set Operations with Bash</a> — A
-demonstration/tutorial. (Local, 2018.4)</p>
-<p><a href="kNN.html">A K-nearest neighbor classifier in “pure”
-Bash</a>. (Local, 2019.7)</p>
+<div class="box">
+<b><a href="sets.html">Set Operations with Bash</a></b> (Local,
+2018.4)<br> A demonstration/tutorial of defining standard set operations
+like union, intersection, and Cartesian product, and calculating power
+sets of files in pure <strong>bash</strong> with text lines considered
+as set elements. Written using <strong>Kallychore</strong> (see above).
+</div>
+<div class="box">
+<b><a href="kNN.html">A K-nearest neighbor classifier in “pure”
+Bash</a></b>. (Local, 2019.7)<br /> A demonstration of the power of
+<strong>bash</strong>, implementing a kNN classifier and running it on
+the famous Iris dataset. Written using <strong>Kallychore</strong> (see
+above).
+</div>
 <h2 id="documentation-and-how-to">Documentation and How-to</h2>
-<p><a href="https://github.com/evanswinner/awesome-line-editors">Awesome
-Line Editors</a> — Information about old-fashioned “line editors” like
-the Unix ed(1) editor. A work in progress. (Github, 2024).</p>
-<p><img src="tally.png" style="max-width:35%;float:right;"><a
+<div class="box">
+<b><a href="https://github.com/evanswinner/awesome-line-editors">Awesome
+Line Editors</a></b> (GitHub, 2024)<br /> A work-in-progress project to
+document old-fashioned “line editors” like the Unix
+<strong>ed(1)</strong> editor, covering editors like qed, Teco, Edlin,
+Ecce, Sued, and others.
+</div>
+<div class="box">
+<img src="tally.png" style="max-width:35%;float:left;"><b><a
 href="https://www.linkedin.com/pulse/tally-systems-hand-collection-count-data-evans-winner/">Tally
-Systems for Hand Collection of Data</a> — Wherein is suggested a novel
-(I assume) method of making hand tally marks for collection of count
-data. (LinkedIn, 2018.03.23)</p>
-<p><img src="android-split.jpg" style="max-width:20%;float:right"><a
+Systems for Hand Collection of Data</a></b> (LinkedIn, 2018.03.23)<br />
+What I believe to be a novel method of making hand tally marks for
+collection of count data.
+</div>
+<div class="box">
+<img src="android-split.jpg" style="max-width:20%;float:left"><b><a
 href="https://www.linkedin.com/pulse/using-split-screen-mode-android-nougat-easier-data-entry-evans-winner/">Using
-Split-Screen mode in Android Nougat for Quicker Data Entry</a> — A quick
-how-to. (LinkedIn, 2018.03.03)</p>
-<p><img src="css-cartouche.png" style="max-width:20%;float:right"><a
+Split-Screen mode in Android Nougat for Quicker Data Entry</a></b>
+(LinkedIn, 2018.03.03)<br /> A how-to on Android split-screen mode.
+</div>
+<div class="box">
+<img src="css-cartouche.png" style="max-width:20%;float:left"><b><a
 href="https://thornepublic.blogspot.com/2018/03/cartouche-links-with-css.html">Cartouche
-Links With CSS</a> — Make links with <strong>CSS</strong> that look a
-little like ancient Egyptian cartouches. (Blogspot, originally on
-evanswinner.com, 2012)</p>
-<p><a href="https://github.com/EvansWinner/seu-refcard">seu-refcard</a>
-— A cheatsheet (not written by me) re-coded in <strong>Emacs</strong>’
-<strong>org-mode</strong> format and converted to PDF for IBM’s
-<strong>SEU</strong> editor used on the <strong>IBM i</strong>. (Github,
-2014)</p>
+Links With CSS</a></b> (Blogspot, originally on evanswinner.com,
+2012)<br /> How to make links with <strong>CSS</strong> that look a
+little like ancient Egyptian cartouches.
+</div>
+<div class="box">
+<b><a href="https://github.com/EvansWinner/seu-refcard">SEU editor
+refcard</a></b> (GitHub, 2014)<br /> A cheatsheet (not written by me)
+re-coded in <strong>Emacs</strong>’ <strong>org-mode</strong> format and
+convertoed to PDF for IBM’s <strong>SEU</strong> editor used on the
+<strong>IBM i</strong>.
+</div>
 <h2 id="opinion">Opinion</h2>
-<p><img src="sandbox.jpg" style="max-width:35%;float:right"><a
+<div class="box">
+<img src="sandbox.jpg" style="max-width:35%;float:left"><b><a
 href="https://www.linkedin.com/pulse/why-your-systems-people-need-sandbox-evans-winner/">Why
-Your Systems People Need a Sandbox</a> — System administrators learn by
-doing. Give them a place to do it. Opinion piece. (LinkedIn,
-2016.06.14)</p>
-<p><a
+Your Systems People Need a Sandbox</a></b> (LinkedIn, 2016.06.14)<br />
+System administrators learn by doing. Give them a place to do it.
+Opinion piece.
+</div>
+<div class="box">
+<b><a
 href="http://thornepublic.blogspot.com/2018/03/one-space-or-two.html">One
-Space or Two</a> — In which is answered that age-old and ever-so crucial
-question: One or two spaces between sentences? (Blotspot, orig.
-2013)</p>
+Space or Two</a></b> (Blotspot, orig. 2013)<br /> In which is answered
+that age-old and ever-so crucial question: One or two spaces between
+sentences?
+</div>
 <h2 id="school-work-and-misc.-exercises">School work and misc.
 exercises</h2>
-<p><img src="bmi.png" style="max-width:50%;float:right;"><a
-href="intro_data_prob_project.html">Exploring the BRFSS Data</a> — Final
-project from a Coursera basic stats course on exploratory data analysis
-in which is determined that 1) having kids makes you lose sleep, 2)
-Mondays don’t really suck, and 3) Colorado really is the healthiest
-state. Well, more or less. <strong>Rmarkdown</strong> (Local, 2016)</p>
-<p><a
+<div class="box">
+<img src="bmi.png" style="max-width:35%;float:left;"><b><a
+href="intro_data_prob_project.html">Exploring the BRFSS Data</a></b>
+(Local, 2016)<br /> Final project in <strong>Rmarkdown</strong> from a
+Coursera basic stats course on exploratory data analysis in which is
+determined that 1) having kids makes you lose sleep, 2) Mondays aren’t
+really so bad, and 3) Colorado actually is the healthiest state. Well,
+more or less.
+</div>
+<div class="box">
+<b><a
 href="http://github.com/evanswinner/math-and-coding-exercises">Math and
-Coding Exercises</a> — Lots of little exercises in <strong>APL</strong>,
-<strong>Python</strong>, <strong>Fortran</strong>, <strong>C</strong>,
-<strong>Haskell</strong>, <strong>Forth</strong>, and
-<strong>Lisp</strong> from Project Euler, Rosetta Code, Project
-Lovelace, various books, etc.</p>
+Coding Exercises</a></b> (GitHub, various dates)<br /> Lots of little
+exercises in <strong>APL</strong>, <strong>Python</strong>,
+<strong>Fortran</strong>, <strong>C</strong>, <strong>Haskell</strong>,
+<strong>Forth</strong>, and <strong>Lisp</strong> from Project Euler,
+Rosetta Code, Project Lovelace, various books, etc.
+</div>
 <center>
 © 1991-2025 E. Hawthorne Winner
 </center>

@@ -15,7 +15,18 @@ ifeq ($(OS),darwin)
   CP := "/opt/local/libexec/gnubin/cp"
 endif
 
-all : header footer portfolio writing index resume colophon etceteras about status-log sets kNN dc_spl mobius skills oneSpaceOrTwo
+
+all:
+	# Don't do it. Use one of these instead:
+	#     'web' for the static pages
+	#     'analytics' for oddball stuff
+	#     'writing' for local writing stuff that's not in the blog
+
+web : header footer portfolio writing index resume colophon etceteras about skills
+
+analytics : status-log sets kNN dc_spl mobius todostack
+
+writing : oneSpaceOrTwo toypiano feltsman steal garfield twoconductors ouray hpo snorkel
 
 header : header.html
 header.html : header.md
@@ -46,7 +57,7 @@ skills.html : skills.md portfolio.css
 	pandoc --from markdown -t html5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o skills.html skills.md
 
 resume : resume.html header.html footer.html
-resume.html : portfolio.md portfolio.css
+resume.html : resume.md portfolio.css
 	pandoc --from markdown -t html5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o resume.html resume.md
 
 about : about.html header.html footer.html

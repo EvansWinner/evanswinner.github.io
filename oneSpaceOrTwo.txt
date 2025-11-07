@@ -12,14 +12,14 @@ interesting  and  unusually  even-keeled
 example.)  The question itself  is  mis-
 leading  in  every sense, but to the ex-
 tent that it is a  meaningful  one,  the
-answer  will come by asking what, exact-
-ly, is at stake in the issue.  There are
-several   possibilities,  including  the
-sanity of publishing editors, the  tired
-fingers  of authors, the beauty of docu-
-ments, or the ease  with  which  we  use
-those  documents.  The future of Western
-Civilization may not be at stake in  the
+answer  will  come  by  asking what, ex-
+actly, is at stake in the issue.   There
+are several possibilities, including the
+sanity  of publishing editors, the tired
+fingers of authors, the beauty of  docu-
+ments,  or  the  ease  with which we use
+those documents.  The future of  Western
+Civilization  may not be at stake in the
 sense that if we today omit to insert an
 extra space after  our  full  stops,  we
 shall  surely  be  shoveling babies into
@@ -36,27 +36,27 @@ into  a  single,  graphical program have
 produced mongrels like  Microsoft  Word,
 and  OpenOffice  Writer,  which  perform
 neither function well.  For example, one
-may  examine texts rendered by such pro-
-grams side-by-side, justified  and  not,
+may examine texts rendered by such  pro-
+grams  side-by-side,  justified and not,
 and conclude, as Barrett does, that jus-
 tification produces undesirable  spacing
 byproducts,  particularly  when sentence
 ends are double-spaced; but the compari-
-son  tells  us only that the typesetting
+son tells us only that  the  typesetting
 engines used are unable to intelligently
 hyphenate.   Hyphenation is not merely a
 minor side issue, but is critical to any
 proper attempt at justified typesetting,
 and for precisely this reason.  One  may
 indeed suggest the use of such word-pro-
-cessing programs for the quick and  easy
-production  of party flyers, but for se-
-rious writing, there  is  no  substitute
+cessing  programs for the quick and easy
+production of party flyers, but for  se-
+rious  writing,  there  is no substitute
 for a real, professional-grade text edi-
 tor; and as for typesetting the  result-
 ing  text,  that  is  not the job of the
 writer, qua writer, but of a typesetter.
-The  two functions may reside in one and
+The two functions may reside in one  and
 the same person, just as they may reside
 in  one  and  the  same computer program
 (usually with the same  quality  of  re-
@@ -64,14 +64,14 @@ sult)  but they remain nevertheless dis-
 tinct functions of the process of bring-
 ing text to readers.
 
-Furthermore,  space  is  not a discrete,
+Furthermore, space is  not  a  discrete,
 but a continuous quantity, as the mathe-
 maticians would put it.  A paper-and-ink
-document does not contain one,  or  two,
-spaces  after  a sentence, but rather it
-contains some single quantity of  space,
-large  or  small, however produced.  The
-notion of reducing this measure  to  the
+document  does  not contain one, or two,
+spaces after a sentence, but  rather  it
+contains  some single quantity of space,
+large or small, however  produced.   The
+notion  of  reducing this measure to the
 simple level of one discrete lump or two
 stems, as  has  been  pointed  out  many
 times,  from  the  Age of Mechanization;
@@ -80,23 +80,23 @@ found  themselves resorting to the expe-
 dient of adding an extra space  after  a
 sentence,  it  is premature to leave the
 issue at that, with a dismissive wave of
-the  hand.  An extra keystroke after ev-
-ery sentence is, if nothing else,  inef-
-ficient;  and if there is anything which
-a  professional  typist  abhors,  it  is
-waste.   We  must  ask therefore why the
+the  hand.   An  extra  keystroke  after
+every  sentence is, if nothing else, in-
+efficient;  and  if  there  is  anything
+which  a  professional typist abhors, it
+is waste.  We must ask therefore why the
 habit was formed and reinforced  despite
 the  added  effort; and the answer is of
 course that in its crude way, the inser-
-tion  of  an extra space character simu-
-lated the extra space which the  typists
-were  used  to  seeing in actual typeset
+tion of an extra space  character  simu-
+lated  the extra space which the typists
+were used to seeing  in  actual  typeset
 material.
 
-About such material one gathers  several
+About  such material one gathers several
 things: first, that in the modern world,
 the habit of adding a little extra space
-after  a  sentence-end  has waned.  Per-
+after a sentence-end  has  waned.   Per-
 haps, as the Marxists will no-doubt con-
 clude,  it  is  because it costs less to
 mass-produce material which  packs  more
@@ -109,23 +109,23 @@ typesetting is devilishly  difficult  to
 write,  and  therefore expensive to pro-
 duce and complex and difficult to  learn
 to use—and if there is one thing few but
-engineers seem to want, it is  to  learn
-to  use TeX; or perhaps, as the deterio-
-rationists will inevitably conclude,  it
-is  simply  because modern man lacks the
+engineers  seem  to want, it is to learn
+to use TeX; or perhaps, as the  deterio-
+rationists  will inevitably conclude, it
+is simply because modern man  lacks  the
 sophistication of taste of which his no-
 ble  ancestor was possessed.  Second, in
 older typeset material,  it  seems  that
 the habit of adding extra space tends to
-be something of an English  (and  there-
+be  something  of an English (and there-
 fore American) trait.  The Latinate (and
 therefore Continental) habit is to space
 between sentences as between words.  The
 American typists imitated  the  typeset-
 ters of their country by adding an extra
-space; the French did not;  and  now  we
-have  the phrase “French spacing” to de-
-note the omission of that second  space.
+space;  the  French  did not; and now we
+have the phrase “French spacing” to  de-
+note  the omission of that second space.
 The argument that double-spacing is only
 an accident of the history  of  the  me-
 chanical typewriter itself brushes aside
@@ -137,19 +137,19 @@ tate.
 It  is  important  to  realize, however,
 that the addition of that extra  spacing
 character is, just as I’ve said, an imi-
-tation.  It is  a  visual  imitation  of
+tation.   It  is  a  visual imitation of
 what is itself, at least in part, a mark
 with semantic meaning.  If we choose  to
 mark the end of a sentence with the same
-sort of space that we use  to  mark  the
-space  between  words (a space which it-
+sort  of  space  that we use to mark the
+space between words (a space  which  it-
 self is conventional, as a glance at old
 Latin  texts will show) that later space
 is  nevertheless  semantically  distinct
 from  the  former, because the structure
 which  it  distinguishes  is   distinct.
 There is no merit in the argument that a
-space is a space is a space.  Because  a
+space  is a space is a space.  Because a
 sentence is not a word, a sentence space
 is not a word space; even when the  cur-
 rent  fashion  of typesetting makes them
@@ -180,40 +180,40 @@ to  mark  off  individual  sentences, no
 matter how long, or how many lines  they
 may  occupy,  is  a  useful and valuable
 one; and it is only possible when  those
-sentences are distinguished distinctive-
-ly; therefore Emacs  treats  two  spaces
-following  a sentence-ending punctuation
-mark as the  delimiter  of  a  sentence.
-Such  functions  could  not work without
-such a unique combination to distinguish
-a  sentence.)   But of course, it is not
-really clarity  in  the  semantic  sense
-which  the  proponents of double-spacing
-seek, but rather clarity in  the  visual
-sense—the  sense  of ease and comfort of
-reading.  Indeed, one requires no spaces
-whatever  between sentences to make them
-semantically clear—that function is  am-
-ply fulfilled by the mark of punctuation
-and the following capital, mediated by a
-little  intelligent  sensitivity to con-
-text on the part of  the  reader.   (One
-cites Wikipedia advisedly, but according
-to that source,  studies  regarding  the
-effect  of  end-of-sentence  spacing  on
-text comprehension have  been  inconclu-
-sive.)
+sentences   are  distinguished  distinc-
+tively;  therefore  Emacs   treats   two
+spaces following a sentence-ending punc-
+tuation  mark as the delimiter of a sen-
+tence.  Such functions  could  not  work
+without  such  a  unique  combination to
+distinguish a sentence.)  But of course,
+it is not really clarity in the semantic
+sense which the  proponents  of  double-
+spacing  seek, but rather clarity in the
+visual sense—the sense of ease and  com-
+fort  of  reading.  Indeed, one requires
+no spaces whatever between sentences  to
+make  them semantically clear—that func-
+tion is amply fulfilled by the  mark  of
+punctuation  and  the following capital,
+mediated by a little intelligent  sensi-
+tivity  to  context  on  the part of the
+reader.  (One cites Wikipedia advisedly,
+but according to  that  source,  studies
+regarding  the effect of end-of-sentence
+spacing on text comprehension have  been
+inconclusive.)
 
 Some  typesetters might claim that extra
 spacing makes unsightly gaps in a  text,
 and,  if  a  page is looked at as a dead
 blob of color on paper, rather than as a
-sequence  of  living  ideas expressed in
-text, then they are quite right; but  it
-remains  debatable  whether such gaps or
-rivers through  the  text  distract,  as
-some  might claim.  One might argue, af-
-ter all, that yes, there is no  evidence
+sequence of living  ideas  expressed  in
+text,  then they are quite right; but it
+remains debatable whether such  gaps  or
+rivers  through  the  text  distract, as
+some might claim.  One might argue,  af-
+ter  all, that yes, there is no evidence
 that extra space between sentences makes
 text easier to read; but to  argue  that
 there  is, in principle, no value in us-
@@ -236,34 +236,34 @@ there  is  no  point  in  tilting at the
 windmill of  the  medium  in  which  one
 works.   Editors,  intelligent, enlight-
 ened, or otherwise, may demand work done
-in  one  way  or the other—another fight
-not worth the ink.  A text editing  pro-
-gram  may  seem  to  urge one way or the
-other; thus.  Furthermore,  if  text  is
-fed  into  a typesetting engine, it will
-collapse multiple  spaces  into  one—one
-which  may  or may not, depending on the
-intelligence of  the  program,  and  the
+in one way or  the  other—another  fight
+not  worth the ink.  A text editing pro-
+gram may seem to urge  one  way  or  the
+other;  thus.   Furthermore,  if text is
+fed into a typesetting engine,  it  will
+collapse  multiple  spaces  into one—one
+which may or may not, depending  on  the
+intelligence  of  the  program,  and the
 taste of its operator, be larger than an
 inter-word   space;   therefore,   other
 things being equal, for text intended to
-be typeset in any sense at all, it  mat-
-ters not one bit how many spaces one us-
-es between sentences.  As  for  informal
+be  typeset in any sense at all, it mat-
+ters not one bit  how  many  spaces  one
+uses between sentences.  As for informal
 communications,  such as emails, the an-
-swer is that it does not matter precise-
-ly  because  the medium is informal; and
-as for the use of monospaced  typefaces,
-it is true that the double space can ap-
-pear excessive in  that  case,  but  the
-very  use  of a monospace typeface indi-
-cates that we are not discussing serious
-typeset  material  — one uses such fonts
-now only for writing computer  code  and
-for  certain  fanciful  sorts of decora-
-tion—not for running text.
+swer is that it  does  not  matter  pre-
+cisely  because  the medium is informal;
+and as for the use of  monospaced  type-
+faces,  it is true that the double space
+can appear excessive in that  case,  but
+the very use of a monospace typeface in-
+dicates that we are not discussing seri-
+ous  typeset  material  —  one uses such
+fonts now only for writing computer code
+and for certain fanciful sorts of  deco-
+ration—not for running text.
 
-So, should you use two  spaces  or  one?
+So,  should  you  use two spaces or one?
 If  you  are  not  actually  typesetting
 text, it does not matter, but it doesn’t
 hurt,  unless you have reason to suspect
@@ -275,12 +275,12 @@ prejudice  against  double-spacing   are
 more  common  and  more  vitriolic  than
 those with a prejudice for.  If you  are
 typesetting your text, even for the Web,
-then once again, it doesn’t  matter,  as
+then  once  again, it doesn’t matter, as
 the typesetting engine will collapse the
 extra space into one.  If  someone  com-
 plains  that the typeset results contain
 those extra spaces, then they are almost
-certainly  trying to use a child’s toy—a
+certainly trying to use a child’s  toy—a
 word processing program—to do an adult’s
 job.   And if your text editor functions
 more usefully if  you  do  double-space,
@@ -295,21 +295,21 @@ have the habit, there is  little  reason
 to reform; and if you don’t, there is no
 more reason to change.
 
-The real question, then, has nothing  to
-do  with  the typing habits of all those
-poor, harassed  writers,  whose  job  is
-naught  but  to produce meaningful text,
-but with the work of typesetters,  whose
-job  is  to render that text—not beauti-
-ful, but ergonomic.  It  is  reduced  to
+The  real question, then, has nothing to
+do with the typing habits of  all  those
+poor,  harassed  writers,  whose  job is
+naught but to produce  meaningful  text,
+but  with the work of typesetters, whose
+job is to render that  text—not  beauti-
+ful,  but  ergonomic.   It is reduced to
 the question of whether serious, typeset
 running text (not merely authors’  manu-
 scripts) should be set with—no, not “two
-spaces,” but with a  little  more  space
-kerned  in  between  sentences.  One may
+spaces,”  but  with  a little more space
+kerned in between  sentences.   One  may
 point to history and find that it’s been
 done both ways for a long time.  One may
-point to  science  and  find  little  to
+point  to  science  and  find  little to
 prove one way or the other.
 
 But does this mean that the issue is en-
@@ -318,30 +318,30 @@ desire  to eradicate the visual distinc-
 tion between words and  phrases  on  the
 one  hand,  and sentences, on the other,
 implies a desire, or a least a  willing-
-ness  (even if born only of insensitivi-
-ty) to eradicate the  semantic  distinc-
+ness  (even  if born only of insensitiv-
+ity) to eradicate the semantic  distinc-
 tion.   If  the  implication  of  the “a
 space is a space” argument is that words
 and clauses and phrases are no different
 from sentences;  then  what  may  be  at
 stake,  albeit  in  a very small way, is
 the appreciation our culture has for the
-importance—the  vital  importance—of the
+importance—the vital  importance—of  the
 concept of the sentence itself, as prop-
 erly  not more and no less than the com-
 plete expression of a complete  thought.
 I  admit  that  the connection is slight
 and tenuous; nevertheless one might  in-
 deed see the tendency to lose the graph-
-ical distinction between a  sentence-end
-and  a  phrase-end  as  symptomatic of a
+ical  distinction between a sentence-end
+and a phrase-end  as  symptomatic  of  a
 general insensitivity to the distinction
 between  the  two kinds of structure, as
 another effect of the same  cause  which
 is  behind the general atomization which
 seems to have taken hold of modern writ-
-ing.   The  atomization of sentences im-
-plies the atomization of thought.   What
+ing.  The atomization of  sentences  im-
+plies  the atomization of thought.  What
 once might have been written as a single
 flowing  sentence  consisting  of  clear
 premises followed by a conclusion is now
@@ -352,8 +352,8 @@ ourselves  to  habitually begin our sen-
 tences with the word but;  but  that  we
 live  in  a  culture  which has lost the
 sense of why such a thing might be infe-
-licitous  in many contexts is indication
-that the sense of a  sentence  has  been
+licitous in many contexts is  indication
+that  the  sense  of a sentence has been
 largely lost.  Perhaps then that, if not
 proves, at any  rate  may  explain  some
 prejudice   against  the  single-spacing

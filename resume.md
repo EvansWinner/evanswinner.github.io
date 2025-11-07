@@ -2,32 +2,40 @@
 title: Resume of Evans Winner (detail)
 ---
 
-> Phone: (720) 666-8803 | Address: 16359 West Tenth Avenue, Unit R4 Golden Colorado, 80401-3705 |
+> Phone: (720) 666-8803 | Address: 30734 Pine Cone Lane, Evergreen Colorado, 80439 |
 
 
 #### Profile
 
-I bring 25 years of diverse IT support and enterprise system (IBM i / midrange / mainframe-style) administration experience, with a strong focus in the non-profit and mission-driven sectors. I take an analytical and experimental approach to improving systems and processes—striving to make them more productive, effective, resilient, efficient, and pleasant for users and stakeholders alike.
+<div class="box">
+I bring 25 years of diverse IT support and enterprise system (IBM i / midrange /
+mainframe-style) administration experience, with a strong focus in the
+non-profit and mission-driven sectors. I take an analytical and experimental
+approach to improving systems and processes — striving to make them more
+productive, effective, resilient, efficient, and more pleasant for users and
+stakeholders alike.</div>
+
 
 ## Experience
 
-### Recent Employment History
+### [Goodwill of Colorado](http://www.goodwillcolorado.org) (previously Goodwill Industries of Denver) | Westminster, Colorado
 
-#### [Goodwill of Colorado (previously Goodwill Industries of Denver)](http://www.goodwillcolorado.org) | Westminster, Colorado
-
-<span id="sdlead">2024.07 — Pres.: **Lead Service Desk Technician**<span>
+<div class="box">
+<span id="sdlead">2024.07 — Pres.: **Lead Service Desk Technician**</span>
 
  - <span id="sdlead-deet">Lead for the Northern Colorado IT service desk</span>
  - <span id="cleaning-and-reconciliation">Data cleaning and reconciliation in IT inventory database and Active Directory accounts.</span>
  - <span id="employee-journey">Project (member): Employee journey cross-functional project streamlining HR/IT process interaction mainly for on/offboarding.</span>
+ </div>
 
-
+<div class="box">
 <span id="specialist">2020.01 — 2024.07: **IT Specialist**</span>
 
  - Tier 2 desktop support with Fresh Service ITSM
  - <span id="newpos">Project (member): New POS rollout: Imaging, configuration.</span>
+</div>
 
-
+<div class="box">
 <span id="itanalyst">2019.03 — 2020.01: **IT Analyst**</span>
 
  - Windows 7/10 and NCR Counterpoint user support for our retail stores during a merger of the two Colorado Goodwill organizations (North and South, generally)
@@ -36,8 +44,9 @@ I bring 25 years of diverse IT support and enterprise system (IBM i / midrange /
  - <span id="hdprojects">Projects (member): store manager PC refresh; store book scanning laptop initiative; IT inventory cleanup.</span>
  - <span id="veeamdoc">Documented Veeam backup schedules and targets including a map using Graphviz</span>
  - FOG (Linux PXE boot server) admin
+</div>
 
-
+<div class="box">
 <span id="lead-refurb">2018.09 — 2019.03: **Lead Computer Refurbishment Technician**</span>
 
 Lead for staff of five comprising the whole of the electronics lab (refurbishment) at an [R2](https://sustainableelectronics.org/r2-standard) certified computer refurbishment and recycling operation run by Goodwill.
@@ -51,8 +60,9 @@ Lead for staff of five comprising the whole of the electronics lab (refurbishmen
  - Moved from a personal workstation system to a hybrid personal/specialized station system to allow batch processing of material and to reduce setup time costs.
  - Outfitted every tech with personal printer, Gigabit switch, KVM switch, USB hub and UPS to allow greater efficiency and flexibility.
  - Ran meetings; scheduled time off; various administrative duties; direct customer service; invoice creation; acted as technical lead for system testing and preparation; wrote/updated SOP and technical documents.
-  
+</div>
 
+<div class="box">
 <span id="refurb">2018.3 — 2018.09: **Computer Refurbishment Technician**</span>
 
  - Refurbishing computers for resale online by Goodwill
@@ -60,27 +70,38 @@ Lead for staff of five comprising the whole of the electronics lab (refurbishmen
  - Replacing faulty parts, cleaning and preparing items for resale. Refurbished laptops (Eg. Macbook, Dell latitude (and other Dell) HP, Lenovo, Asus, etc.), all-in-ones (iMac), Cisco switches, desktops (Eg. Dell Optiplex, other Dell, HP, Lenovo), Dell servers (PowerEdge), monitors, keyboards and other misc. electronic items.
 
  - Caught up a two-month backlog of eBay listing in first six weeks of employment
+</div>
 
+### [Pomeroy](https://www.pomeroy.com) | Boulder, Colorado
 
-#### [Pomeroy](https://www.pomeroy.com) | Boulder, Colorado
-
+<div class="box">
 <span id="ibm">2016.08 — 2018.03: **Computer Tape Operator / Hands & Eyes Support**</span>
 
-After my wife graduated from graduate school we were able to move back home to Colorado and I took about 18 months off to be with my one-year-old son. When I returned to work, IBM Midrange systems jobs being scarcer, I decided I needed to re-invent myself and find my way into more conventional IT work. I started this at the Boulder IBM campus' eight acres worth of raised-floor data center doing tier 1 H&E work.
+After my wife graduated from graduate school we were able to move back home to
+Colorado and I took about 18 months off to be with my one-year-old son. When I
+returned to work, IBM Midrange systems jobs being scarcer, I decided I needed to
+re-invent myself and find my way into more conventional IT work. I started this
+at the Boulder IBM campus' eight acres worth of raised-floor data center doing
+tier 1 H&E work.
 
  - Server reboots, inventories, escorts, cable checks, diagnostics, etc.
  - <span id="tally">Invented what I think is a new [method of keeping tally data](https://www.linkedin.com/pulse/tally-systems-hand-collection-count-data-evans-winner/) with paper and pen</span>
- 
+</div>
 
-#### [Sandia Laboratory Federal Credit Union](https://www.slfcu.org/) | Albuquerque, New Mexico
+### [Sandia Laboratory Federal Credit Union](https://www.slfcu.org/) | Albuquerque, New Mexico
 
+<div class="box">
 <span id="admin2">2014.02 — 2015.02: **IS System Administrator II**</span>
 
 Continuing previous role.
 
-- <span id="upgrade-project">Project (lead): Major production system upgrade 2014–Feb 2015. Simultaneous hardware and OS upgrade (to 7.1 on Power 6) on approximately $500k production IBM i system including research, testing (system, applications, job and process flow) and coordination between Dev, Ops and QA.</span>
+- <span id="upgrade-project">Project (lead): Major production system upgrade
+2014–Feb 2015. Simultaneous hardware and OS upgrade (to 7.1 on Power 6) on
+approximately $500k production IBM i system including research, testing (system,
+applications, job and process flow) and coordination between Dev, Ops and
+QA.</span> </div>
 
-
+<div class="box">
 <span id="admin">2008.08 — 2014.02: **IS System Administrator**</span>
 
 IBM i (aka. AS400 / iSeries) on Power Systems admin (3 physical systems).
@@ -92,10 +113,11 @@ IBM i (aka. AS400 / iSeries) on Power Systems admin (3 physical systems).
  - <span id="tapedb">Implemented Access database for tracking tape library (~400 tapes).</span>
  - <span id="db2">System data gathering and edits to live database (Query/400 and SQL)</span>
  - System resource monitoring and reporting; documentation and responsible for operations checklist maintenance; wrote simple [build tool](https://github.com/EvansWinner/build-checklists) in Windows batch for checklist maintenance.</span>
+</div>
 
+### [Sur La Table](https://www.surlatable.com/) | Seattle, Washington
 
-#### [Sur La Table](https://www.surlatable.com/) | Seattle, Washington
-
+<div class="box">
 <span id="slt">2006.02 — 2007.07: **Computer Operator I → Computer Operator II**</span>
 
 iSeries / Windows system operations.
@@ -105,10 +127,11 @@ iSeries / Windows system operations.
  - Limited-scope system administration services (saves, IPLs, user account setup, etc) on the AS400
  - <span id="sltdoc">Writing & maintaining procedural documentation.</span>
  - Company-wide tier 1 support for Tradewind POS software, Palm-based handheld scanners, touch-screen kiosks, general Windows XP & Mac OS/X desktop & laptops, Island Pacific / CommercialWare software in System i, green screen / GUI clients, network password issues (using Active Directory client), Outlook, Excel, network & VPN connectivity, Monarch & other ticket printers, telephone & VoIP systems. Used TrackIt call tracking software.
+</div>
 
+### [Automatic Data Processing](https://adp.com) | Redmond, Washington → Bothell, Washington
 
-#### [Automatic Data Processing](https://adp.com) | Redmond, Washingto → Bothell, Washington
-
+<div class="box">
 <span id="adp">2000.07 — 2005.11: **Computer Operator**</span>
 
 AS/400 / iServer midrange system operations for payroll processing.
@@ -117,44 +140,56 @@ AS/400 / iServer midrange system operations for payroll processing.
  - Oce 2040 / 750 printer maintenance
  - Managed tape library & printer output
  - 2001 perfect attendance award.
+</div>
 
 
-#### [ParTech](https://partech.com) | Boulder, Colorado
+### [ParTech](https://partech.com) | Boulder, Colorado
 
+<div class="box">
 <span id="par">1999.06 — 2000.06: **Associate Support Engineer**</span>
 
 Customer service-intensive grave shift phone support for Thinnet-based POS systems.
 
  - Fixing operational errors; diagnosing hardware issues with touch-screens, printers, LAN, drives, etc; setup of network routing & other configuration issues & software upgrades on ParTech’s POS software.
  - Used Clarify support database client
+</div>
 
+### [University of Colorado, College of Music](https://www.colorado.edu/music/) | Boulder, Colorado
 
-#### [University of Colorado, College of Music](https://www.colorado.edu/music/) | Boulder, Colorado
-
+<div class="box">
 <span id="cumusic">1999.01 — 1999.06: **Computer Lab Monitor**</span>
 
 Monitored university computer music lab. [Temp employee, not work-study]
 
  - Support for ‘pine’ email client in UNIX & other Internet clients on Macintosh
  - Fixing problems with cabling (mostly MIDI-related) & support for MOTU Digital Performer.
-
+</div>
 
 ### Volunteer
 
+<div class="box">
 #### <span id="abqcivicchorus">2012.10 – 2014.02: [Albuquerque Civic Chorus](https://abqcivicchorus.org/)</span>
 
-Fully redesigned, expanded and maintained the chorus web presence with regular updates per chorus leadership requests. (Note their page no longer uses my code.)
+Fully redesigned, expanded and maintained the chorus web presence with regular
+updates per chorus leadership requests. (Note their page no longer uses my
+code.)
+</div>
 
 
+## Education and Certifications
 
-## Education
-
-<span id="edu">**University**</summary>
+### University
 
  - <span id="unm">[University of New Mexico](http://unm.edu), BA, [English-Philosophy](http://catalog.unm.edu/catalogs/2014-2015/colleges/arts-sciences/english-phil/index.html), *summa cum laude* (GPA 4.03), 2010.</span>
  - Prior miscellaneous college-level coursework in symbolic logic, Pascal, and computer music
 
-<span id="courses">**Courseware**</span>
+### Certifications
+
+ - CompTIA: Linux+, A+, I-Net+ ([transcript](https://www.certmetrics.com/comptia/public/transcript.aspx?transcript=WJKECK5C12R12QBQ))
+ - Brainbench: MS-DOS 6.0 (2001, expired)
+
+
+### Courseware
 
  - Coursera / Google: [IT Automation with Python Professional Certificate](https://www.coursera.org/account/accomplishments/specialization/certificate/4N9LBG8KEASN), consisting of the following courses: _Crash Course in Python_, _Using Python to Interact with the Operating System_, _Introduction to Git and Github_, _Configuration Management and the Cloud_, _Troubleshooting and Debugging Techniques_, _Automating Real-World Tasks with Python_.
  - Coursera / University System of Georgia: [Six Sigma Yellow Belt Specialization](https://www.coursera.org/account/accomplishments/specialization/certificate/QFKW7WLGRJVG), consisting of the following courses: _Six Sigma Principles_, _Six Sigma Tools for Define and Measure_, _Six Sigma Tools for Analyze_, _Six Sigma Tools for Improve and Control_
@@ -163,10 +198,7 @@ Fully redesigned, expanded and maintained the chorus web presence with regular u
  - Coursera / University of Virginia: [Design Thinking for Innovation](https://www.coursera.org/account/accomplishments/records/UT398KTAAJ3R)
  - Coursera / Duke University: [Introduction to Probability and Data](https://www.coursera.org/account/accomplishments/verify/8EP2J944URFP)
 
-
-</details>
-
-<span id="microcourses">**Additional online micro-courses**</span>
+### Additional Micro-courses
 
  - [jQuery Tutorial](https://www.sololearn.com/Certificate/1082-1030178/pdf/) (SoloLearn)
  - Learning Haskell Programming (LinkedIn)
@@ -255,7 +287,3 @@ Fully redesigned, expanded and maintained the chorus web presence with regular u
  - [Programming Best Practices](https://www.udemy.com/certificate/UC-ZOYRSON9/) (Udemy)
 </details>
 
-## Certifications
-
- - CompTIA: Linux+, A+, I-Net+ ([transcript](https://www.certmetrics.com/comptia/public/transcript.aspx?transcript=WJKECK5C12R12QBQ))
- - Brainbench: MS-DOS 6.0 (2001, expired)
