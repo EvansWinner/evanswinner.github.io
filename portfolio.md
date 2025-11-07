@@ -50,12 +50,12 @@ code, a little like Rmarkdown mixes Markdown and R. **Bash** with embedded
 Rmarkdown is to an interpreted language as Kallychore is to a compiled
 one. Kallychore makes a single pass over a plain-text (or Markdown) document
 and interprets the embedded code blocks and outputs a single file with text,
-code, and code output<br />
+code, and code output.<br />
 </div>
 
 <div class="box"><b>
 <img src="todostack.png" style="max-width:20%;float:left">[Todostack.el](https://github.com/EvansWinner/todostack.el)</b> (GitHub, 2011)<br />
-A to-do list as a stack, written in **Emacs Lisp**n. Some
+A to-do list as a stack, written in **Emacs Lisp**. Some
 [description](http://thornepublic.blogspot.com/2018/03/todostack.html) on
 Blogspot. This is for people who have constant interruptions. When something
 interrupts you, push a couple of words about what you are doing onto the
@@ -134,8 +134,8 @@ How to make links with **CSS** that look a little like ancient Egyptian cartouch
 
 <div class="box">
 <b>[SEU editor refcard](https://github.com/EvansWinner/seu-refcard)</b>  (GitHub, 2014)<br />
-A cheatsheet (not written by me) re-coded in **Emacs**’ **org-mode**
-format and convertoed to PDF for IBM's **SEU** editor used on the **IBM
+A cheat-sheet (not written by me) re-coded in **Emacs**’ **org-mode**
+format and converted to PDF for IBM's **SEU** editor used on the **IBM
 i**.</div>
 
 
