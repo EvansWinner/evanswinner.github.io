@@ -36,8 +36,8 @@ footer : footer.html
 footer.html : footer.md
 	pandoc -fmarkdown -thtml5 -o footer.html footer.md
 
-portfolio : portfolio.html header.html footer.html
-portfolio.html : portfolio.md portfolio.css
+portfolio : portfolio.html
+portfolio.html : portfolio.md portfolio.css header.html footer.html
 	pandoc -fmarkdown+pipe_tables -thtml5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o portfolio.html portfolio.md
 
 etceteras : etceteras.html
@@ -66,7 +66,7 @@ about.html : about.md portfolio.css header.html footer.html
 
 index : index.html
 index.html : index.md portfolio.css header.html footer.html
-	pandoc -fmarkdown+pipe_tables -thtml5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o index.html index.md
+	pandoc -fmarkdown+pipe_tables -thtml5 -Bheader.html -Afooter.html --include-in-header=portfolio.css --variable document-css=false -o index.html index.md
 
 status-log : status-log.html
 status-log.html : status-log.csv status-log.Rmd 

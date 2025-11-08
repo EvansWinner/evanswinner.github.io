@@ -827,36 +827,62 @@
     border-color: #4078c0;
   }
 
-  .box {
-      width: 100%;
-      border: 1px solid black;
-      padding: 10px;
-      margin: 10px;
-      overflow: auto;
-  }
-
   #toc {
       padding: 10px;
       margin: 10px;
       overflow: auto;
       float:left;
   }
+
+  .flowing-columns-container {
+
+
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .columns-container {
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    max-width:900px;
+    margin:0 auto;
+  }
+
+  .column {
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    padding:0; 
+    margin:0;
+  }
+
+  .box {
+    width:auto;
+    border:1px solid black;
+    padding:10px;
+    margin:10px 0; 
+    overflow:auto;
+  }
   </style>
 
 </head>
 <body>
-</center>
-<div class="box">
 <center>
-<a href="./about.html">About</a> | <a
-href="./portfolio.html">Portfolio</a> | <a href="./index.html">Blog</a>
-| <a href="./etceteras.html">Etceteras</a> | <a
-href="./resume.html">Resume</a><br /> <a
-href="https://github.com/evanswinner">GitHub</a> | <a
-href="https://x.com/evans_h_winner/">Twitter</a> | <a
-href="https://www.linkedin.com/in/evanswinner/">LinkedIn</a> | <a
-href="./vcard.vcf">vCard</a> | <a
-href="mailto:evans.winner@gmail.com">Email</a> | <a
+<div>
+<center>
+<a href="./about.html">About</a>   <a
+href="./portfolio.html">Portfolio</a>   <a href="./index.html">Blog</a> 
+ <a href="./etceteras.html">Etceteras</a>   <a
+href="./resume.html">Resume</a>   <a
+href="https://github.com/evanswinner">GitHub</a>   <a
+href="https://x.com/evans_h_winner/">Twitter</a>   <a
+href="https://www.linkedin.com/in/evanswinner/">LinkedIn</a>   <a
+href="./vcard.vcf">vCard</a>   <a
+href="mailto:evans.winner@gmail.com">Email</a>   <a
 href="./colophon.html">Colophon</a>
 </center>
 </div>
@@ -877,6 +903,7 @@ href="#coursework-and-exercises">Coursework and Exercises</a> <br /></p>
 </div>
 <p><br /></p>
 <h2 id="experiment-analysis">Experiment &amp; Analysis</h2>
+<div class="flowing-columns-container">
 <div class="box">
 <p><img src="ultradian.png"
 style="max-width:30%;float:left"><b><a href="status-log.html">Do
@@ -904,7 +931,9 @@ expect to be on the floor for more than a few minutes, and might as well
 get in the habit of always having ear protection on hand when entering
 the main datacenter floor.”</p>
 </div>
+</div>
 <h2 id="tools">Tools</h2>
+<div class="flowing-columns-container">
 <div class="box">
 <img src="piltdown.jpg"
 style="max-width:20%;float:left"><b><a
@@ -941,7 +970,9 @@ something interrupts you, push a couple of words about what you are
 doing onto the stack. Once you get back, pop the stack and see what you
 were doing.<br /></p>
 </div>
+</div>
 <h2 id="simulation">Simulation</h2>
+<div class="flowing-columns-container">
 <div class="box">
 <b><a href="https://github.com/EvansWinner/ajsim">AJSIM</a></b> (GitHub,
 2013)<br /> AJSIM is a simulator written from scratch in <strong>Common
@@ -956,7 +987,9 @@ href="https://gist.github.com/EvansWinner/064932a724caa2c816a768792a6903da">auct
 (GitHub Gist, ~2019)<br /> auctions.py is a little eBay auction
 simulator, using <strong>simpy</strong> in <strong>Python</strong>.
 </div>
+</div>
 <h2 id="mathy-stuff">Mathy stuff</h2>
+<div class="flowing-columns-container">
 <div class="box">
 <p><img src="mertens.png"
 style="max-width:35%;float:left;"><b><a href="mobius.txt">Playing with
@@ -973,7 +1006,9 @@ Chunking with Chunky Numbers</a></b> (LinkedIn, 2018.03)<br /></p>
 A slightly tongue-in-cheek analysis of how to chunk multi-digit numbers
 when writing them down. Inspired by a true story.
 </div>
+</div>
 <h2 id="demonstrations">Demonstrations</h2>
+<div class="flowing-columns-container">
 <div class="box">
 <b><a href="sets.html">Set Operations with Bash</a></b> (Local,
 2018.4)<br> A demonstration/tutorial of defining standard set operations
@@ -988,7 +1023,9 @@ Bash</a></b>. (Local, 2019.7)<br /> A demonstration of the power of
 the famous Iris dataset. Written using <strong>Kallychore</strong> (see
 above).
 </div>
+</div>
 <h2 id="documentation-and-howto">Documentation and Howto</h2>
+<div class="flowing-columns-container">
 <div class="box">
 <b><a href="https://github.com/evanswinner/awesome-line-editors">Awesome
 Line Editors</a></b> (GitHub, 2024)<br /> A work-in-progress project to
@@ -1023,7 +1060,9 @@ re-coded in <strong>Emacs</strong>’ <strong>org-mode</strong> format and
 converted to PDF for IBM’s <strong>SEU</strong> editor used on the
 <strong>IBM i</strong>.
 </div>
+</div>
 <h2 id="opinion">Opinion</h2>
+<div class="flowing-columns-container">
 <div class="box">
 <img src="sandbox.jpg" style="max-width:35%;float:left"><b><a
 href="https://www.linkedin.com/pulse/why-your-systems-people-need-sandbox-evans-winner/">Why
@@ -1038,7 +1077,9 @@ Space or Two</a></b> (Blotspot, orig. 2013)<br /> In which is answered
 that age-old and ever-so crucial question: One or two spaces between
 sentences?
 </div>
+</div>
 <h2 id="coursework-and-exercises">Coursework and exercises</h2>
+<div class="flowing-columns-container">
 <div class="box">
 <img src="bmi.png" style="max-width:35%;float:left;"><b><a
 href="intro_data_prob_project.html">Exploring the BRFSS Data</a></b>
@@ -1059,6 +1100,7 @@ Rosetta Code, Project Lovelace, various books, etc.</p>
 My personal favorite is a solution to Project Euler’s problem 19 using
 Dyalog APL in a Jupyter <a
 href="https://github.com/EvansWinner/math-and-coding-exercises/blob/master/euler_19_apl.ipynb">notebook</a>.
+</div>
 </div>
 <center>
 © 1991-2025 E. Hawthorne Winner

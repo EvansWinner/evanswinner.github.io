@@ -827,19 +827,45 @@
     border-color: #4078c0;
   }
 
-  .box {
-      width: 100%;
-      border: 1px solid black;
-      padding: 10px;
-      margin: 10px;
-      overflow: auto;
-  }
-
   #toc {
       padding: 10px;
       margin: 10px;
       overflow: auto;
       float:left;
+  }
+
+  .flowing-columns-container {
+
+
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .columns-container {
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    max-width:900px;
+    margin:0 auto;
+  }
+
+  .column {
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    padding:0; 
+    margin:0;
+  }
+
+  .box {
+    width:auto;
+    border:1px solid black;
+    padding:10px;
+    margin:10px 0; 
+    overflow:auto;
   }
   </style>
 
@@ -848,17 +874,16 @@
 <center>
 <div>
 <center>
-| <a href="./about.html">About</a> |​| <a
-href="./portfolio.html">Portfolio</a> |​| <a
-href="./index.html">Blog</a> |​| <a
-href="./etceteras.html">Etceteras</a> |​| <a
-href="./resume.html">Resume</a> |​| <a
-href="https://github.com/evanswinner">GitHub</a> |​| <a
-href="https://x.com/evans_h_winner/">Twitter</a> |​| <a
-href="https://www.linkedin.com/in/evanswinner/">LinkedIn</a> |​| <a
-href="./vcard.vcf">vCard</a> |​| <a
-href="mailto:evans.winner@gmail.com">Email</a> |​| <a
-href="./colophon.html">Colophon</a> |
+<a href="./about.html">About</a>   <a
+href="./portfolio.html">Portfolio</a>   <a href="./index.html">Blog</a> 
+ <a href="./etceteras.html">Etceteras</a>   <a
+href="./resume.html">Resume</a>   <a
+href="https://github.com/evanswinner">GitHub</a>   <a
+href="https://x.com/evans_h_winner/">Twitter</a>   <a
+href="https://www.linkedin.com/in/evanswinner/">LinkedIn</a>   <a
+href="./vcard.vcf">vCard</a>   <a
+href="mailto:evans.winner@gmail.com">Email</a>   <a
+href="./colophon.html">Colophon</a>
 </center>
 </div>
 </center>
@@ -866,8 +891,33 @@ href="./colophon.html">Colophon</a> |
 <h1 class="title">Thorne’s Old-fashioned Homepage</h1>
 <p class="subtitle">(just like your mom used to make)</p>
 </header>
-<p>This is where the blog will go. Until then, observez-vous the links
-above⤴</p>
+<p>This is “Under Construction,” as we used to say on Web 1.0.</p>
+<p>See <a href="./etceteras.html">Etceteras</a> for a stream of old blog
+posts and Twitter one-liners and the like going back quite some time,
+and which I am slowing working on populating.</p>
+<h3 id="the-last-five">The last five …</h3>
+<style>
+</style>
+<div class="columns-container">
+<div class="column">
+<strong>…tech things…</strong>
+<div class="box">
+<p>Snee</p>
+</div>
+<div class="box">
+<p>Buh</p>
+</div>
+</div>
+<div class="column">
+<strong>…non-tech things…</strong>
+<div class="box">
+<p>Foo</p>
+</div>
+<div class="box">
+<p>Bar</p>
+</div>
+</div>
+</div>
 <center>
 © 1991-2025 E. Hawthorne Winner
 </center>

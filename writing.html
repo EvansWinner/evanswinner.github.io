@@ -828,19 +828,45 @@
     border-color: #4078c0;
   }
 
-  .box {
-      width: 100%;
-      border: 1px solid black;
-      padding: 10px;
-      margin: 10px;
-      overflow: auto;
-  }
-
   #toc {
       padding: 10px;
       margin: 10px;
       overflow: auto;
       float:left;
+  }
+
+  .flowing-columns-container {
+
+
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .columns-container {
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    max-width:900px;
+    margin:0 auto;
+  }
+
+  .column {
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    padding:0; 
+    margin:0;
+  }
+
+  .box {
+    width:auto;
+    border:1px solid black;
+    padding:10px;
+    margin:10px 0; 
+    overflow:auto;
   }
   </style>
 
@@ -849,17 +875,16 @@
 <center>
 <div>
 <center>
-| <a href="./about.html">About</a> |​| <a
-href="./portfolio.html">Portfolio</a> |​| <a
-href="./index.html">Blog</a> |​| <a
-href="./etceteras.html">Etceteras</a> |​| <a
-href="./resume.html">Resume</a> |​| <a
-href="https://github.com/evanswinner">GitHub</a> |​| <a
-href="https://x.com/evans_h_winner/">Twitter</a> |​| <a
-href="https://www.linkedin.com/in/evanswinner/">LinkedIn</a> |​| <a
-href="./vcard.vcf">vCard</a> |​| <a
-href="mailto:evans.winner@gmail.com">Email</a> |​| <a
-href="./colophon.html">Colophon</a> |
+<a href="./about.html">About</a>   <a
+href="./portfolio.html">Portfolio</a>   <a href="./index.html">Blog</a> 
+ <a href="./etceteras.html">Etceteras</a>   <a
+href="./resume.html">Resume</a>   <a
+href="https://github.com/evanswinner">GitHub</a>   <a
+href="https://x.com/evans_h_winner/">Twitter</a>   <a
+href="https://www.linkedin.com/in/evanswinner/">LinkedIn</a>   <a
+href="./vcard.vcf">vCard</a>   <a
+href="mailto:evans.winner@gmail.com">Email</a>   <a
+href="./colophon.html">Colophon</a>
 </center>
 </div>
 </center>

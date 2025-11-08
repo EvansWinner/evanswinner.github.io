@@ -18,6 +18,7 @@ title: Portfolio of Evans Winner
 
 ## Experiment & Analysis
 
+<div class="flowing-columns-container">
 <div class="box"> <img src="ultradian.png"
 style="max-width:30%;float:left"><b>[Do “ultradian\” rhythms mediate my
 productivity throughout the day?](status-log.html)</b> (Local, 2018.1)<br />
@@ -42,9 +43,10 @@ wear ear protection if they expect to be on the floor for more than a few
 minutes, and might as well get in the habit of always having ear protection on
 hand when entering the main datacenter floor."
 </div>
-
+</div>
 ## Tools
 
+<div class="flowing-columns-container">
 <div class="box"> <img src="piltdown.jpg"
 style="max-width:20%;float:left"><b>[Piltdown](https://github.com/EvansWinner/piltdown)</b>  (GitHub, 2021)<br />
 Always wanted to use Python to generate data visualizations for your Twitter
@@ -75,10 +77,11 @@ Blogspot. This is for people who have constant interruptions. When something
 interrupts you, push a couple of words about what you are doing onto the
 stack. Once you get back, pop the stack and see what you were doing.<br />
 </div>
-
+</div>
 
 ## Simulation
 
+<div class="flowing-columns-container">
 <div class="box"><b>[AJSIM](https://github.com/EvansWinner/ajsim)</b> (GitHub, 2013)<br />
 AJSIM is a
 simulator written from scratch in **Common Lisp** for some of IBM’s [AJS job
@@ -87,9 +90,11 @@ I actually used for validating schedules on production machines.<br /></div>
 
 <div class="box"><b>[auctions.py](https://gist.github.com/EvansWinner/064932a724caa2c816a768792a6903da)</b> (GitHub Gist, ~2019)<br />
 auctions.py is a little eBay auction simulator, using **simpy** in **Python**.</div>
+</div>
 
 ## Mathy stuff
 
+<div class="flowing-columns-container">
 <div class="box"> <img src="mertens.png"
 style="max-width:35%;float:left;"><b>[Playing with The Möbius Function in
 bash](mobius.txt)</b> (Local, 2018.4)<br />
@@ -104,10 +109,11 @@ Numbers](https://www.linkedin.com/pulse/group-long-hand-written-numbers-smaller-
 
 A slightly tongue-in-cheek analysis of how to chunk multi-digit numbers when
 writing them down. Inspired by a true story.</div>
-
+</div>
 
 ## Demonstrations
 
+<div class="flowing-columns-container">
 <div class="box"><b>[Set Operations with Bash](sets.html)</b> (Local, 2018.4)<br>
 A demonstration/tutorial of defining standard set operations like union,
 intersection, and Cartesian product, and calculating power sets of files in pure **bash**
@@ -117,10 +123,11 @@ with text lines considered as set elements. Written using **Kallychore** (see ab
 Bash](kNN.html)</b>. (Local, 2019.7)<br /> A demonstration of the power of **bash**,
 implementing a kNN classifier and running it on the famous Iris dataset. Written
 using **Kallychore** (see above).</div>
-
+</div>
 
 ## Documentation and Howto
 
+<div class="flowing-columns-container">
 <div class="box">
 <b>[Awesome Line Editors](https://github.com/evanswinner/awesome-line-editors)</b> (GitHub, 2024)<br />
 A work-in-progress project to document old-fashioned "line editors" like the Unix **ed(1)** editor,
@@ -149,10 +156,11 @@ How to make links with **CSS** that look a little like ancient Egyptian cartouch
 A cheat-sheet (not written by me) re-coded in **Emacs**’ **org-mode**
 format and converted to PDF for IBM's **SEU** editor used on the **IBM
 i**.</div>
-
+</div>
 
 ## Opinion
 
+<div class="flowing-columns-container">
 <div class="box">
 <img src="sandbox.jpg" style="max-width:35%;float:left"><b>[Why Your Systems People Need a
 Sandbox](https://www.linkedin.com/pulse/why-your-systems-people-need-sandbox-evans-winner/)</b> (LinkedIn, 2016.06.14)<br />
@@ -162,10 +170,11 @@ System administrators learn by doing. Give them a place to do it. Opinion piece.
 Two](http://thornepublic.blogspot.com/2018/03/one-space-or-two.html)</b>
 (Blotspot, orig. 2013)<br /> In which is answered that age-old and ever-so
 crucial question: One or two spaces between sentences?</div>
-
+</div>
 
 ## Coursework and exercises
 
+<div class="flowing-columns-container">
 <div class="box">
 <img src="bmi.png" style="max-width:35%;float:left;"><b>[Exploring the
 BRFSS Data](intro_data_prob_project.html)</b> (Local, 2016)<br />
@@ -180,3 +189,4 @@ Lots of little exercises in **APL**, **Python**, **Fortran**, **C**, **Haskell**
 from Project Euler, Rosetta Code, Project Lovelace, various books, etc.
 
 My personal favorite is a solution to Project Euler's problem 19 using Dyalog APL in a Jupyter [notebook](https://github.com/EvansWinner/math-and-coding-exercises/blob/master/euler_19_apl.ipynb).</div>
+</div>
