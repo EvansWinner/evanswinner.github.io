@@ -669,6 +669,12 @@ body :checked+.radio-label {
     margin: 10px;
     overflow: auto;
 }
-</style>
 
+#toc {
+    padding: 10px;
+    margin: 10px;
+    overflow: auto;
+    float:left;
+}
+</style>
 

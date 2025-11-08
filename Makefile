@@ -38,11 +38,11 @@ footer.html : footer.md
 
 portfolio : portfolio.html header.html footer.html
 portfolio.html : portfolio.md portfolio.css
-	pandoc --from markdown+pipe_tables -thtml5 --toc -Bheader.html -Afooter.html --include-in-header=portfolio.css -o portfolio.html portfolio.md
+	pandoc --from markdown+pipe_tables -thtml5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o portfolio.html portfolio.md
 
 etceteras : etceteras.html header.html footer.html
 etceteras.html : etceteras.md portfolio.css
-	pandoc --from markdown+pipe_tables -thtml5 --toc -Bheader.html -Afooter.html --include-in-header=portfolio.css -o etceteras.html etceteras.md
+	pandoc --from markdown+pipe_tables -thtml5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o etceteras.html etceteras.md
 
 colophon : colophon.html header.html footer.html
 colophon.html : colophon.md portfolio.css

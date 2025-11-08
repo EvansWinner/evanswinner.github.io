@@ -1,3 +1,17 @@
-<center>[Blog](./index.html) | [Etceteras](./etceteras.html) | [About](./about.html) | [Portfolio](./portfolio.html) | [Resume](./resume.html) | [GitHub](https://github.com/evanswinner) | [LinkedIn](https://www.linkedin.com/in/evanswinner/) | [vCard](./vcard.vcf) | [Colophon](./colophon.html) | [Email](mailto:evans.winner@gmail.com)</center>
-
-
+</center>
+<div class="box">
+<center>
+[About](./about.html) |
+[Portfolio](./portfolio.html) |
+[Blog](./index.html) |
+[Etceteras](./etceteras.html) |
+[Resume](./resume.html)<br />
+[GitHub](https://github.com/evanswinner) |
+[Twitter](https://x.com/evans_h_winner/) |
+[LinkedIn](https://www.linkedin.com/in/evanswinner/) |
+[vCard](./vcard.vcf) |
+[Email](mailto:evans.winner@gmail.com) |
+[Colophon](./colophon.html)
+</center>
+</div>
+</center>

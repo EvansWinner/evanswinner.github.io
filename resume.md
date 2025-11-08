@@ -2,7 +2,7 @@
 title: Resume of Evans Winner (detail)
 ---
 
-> Phone: (720) 666-8803 | Address: 30734 Pine Cone Lane, Evergreen Colorado, 80439 |
+> Phone: (720) 666-8803 | Address: 30734 Pine Cone Lane, Evergreen Colorado, 80439
 
 
 #### Profile

@@ -835,27 +835,40 @@
       margin: 10px;
       overflow: auto;
   }
+
+  #toc {
+      padding: 10px;
+      margin: 10px;
+      overflow: auto;
+      float:left;
+  }
   </style>
 
 </head>
 <body>
+</center>
+<div class="box">
 <center>
-<a href="./index.html">Blog</a> | <a
-href="./etceteras.html">Etceteras</a> | <a href="./about.html">About</a>
-| <a href="./portfolio.html">Portfolio</a> | <a
-href="./resume.html">Resume</a> | <a
+<a href="./about.html">About</a> | <a
+href="./portfolio.html">Portfolio</a> | <a href="./index.html">Blog</a>
+| <a href="./etceteras.html">Etceteras</a> | <a
+href="./resume.html">Resume</a><br /> <a
 href="https://github.com/evanswinner">GitHub</a> | <a
+href="https://x.com/evans_h_winner/">Twitter</a> | <a
 href="https://www.linkedin.com/in/evanswinner/">LinkedIn</a> | <a
-href="./vcard.vcf">vCard</a> | <a href="./colophon.html">Colophon</a> |
-<a href="mailto:evans.winner@gmail.com">Email</a>
+href="./vcard.vcf">vCard</a> | <a
+href="mailto:evans.winner@gmail.com">Email</a> | <a
+href="./colophon.html">Colophon</a>
+</center>
+</div>
 </center>
 <header id="title-block-header">
 <h1 class="title">Colophon</h1>
 <p class="author">Evans Winner</p>
 </header>
-<p>This website was written with <a
-href="https://www.gnu.org/software/emacs/">GNU Emacs</a>, <a
-href="https://www.vim.org/">Vim</a>, <a
+<h2 id="this-website">This website</h2>
+<p>was written with <a href="https://www.gnu.org/software/emacs/">GNU
+Emacs</a>, <a href="https://www.vim.org/">Vim</a>, <a
 href="https://en.wikipedia.org/wiki/Vi_(text_editor)">vi</a>, <a
 href="https://www.gnu.org/software/ed/">ed(1)</a>, and <a
 href="https://github.com/phonologus/qed-new">qed</a>, depending on my
@@ -863,10 +876,108 @@ mood and the context. It uses <a href="https://pandoc.org/">Pandoc</a>
 and GNU <a href="https://www.gnu.org/software/make/">Make</a> for
 rendering, and <a href="https://git-scm.com/">git</a> for version
 control.</p>
-<p>Some of the pages use other tools, like kallychore and whatver (both
-tools I wrote) and bash and other standard Unix utilities.</p>
-<p>I’m writing on a 2013 Macbook Pro runnning Ubuntu right now, but
-since you’re here, here’s my list:</p>
+<p>Some of the pages use other tools, like <a
+href="https://github.com/evanswinner/kallychore">Kallychore</a> and <a
+href="https://github.com/evanswinner/whatver">whatver</a> (both are
+tools I wrote) and <a href="https://www.gnu.org/software/bash/">bash</a>
+and other standard Unix utilities.</p>
+<p>I’m writing on a 2013 Macbook Pro runnning Ubuntu right now.</p>
+<h2 id="general-preferences">General preferences</h2>
+<p>But since you asked, over the years I’ve done a lot of
+distro-hopping, window manager-hopping, editor-hopping, terminal
+emulator-hopping, browser-hopping, email client-hopping, and
+shell-hopping, and the bottom line is, while I tend to lean toward
+simpler-is-better, <a
+href="http://www.catb.org/esr/writings/taoup/html/">Unix philosophy</a>,
+“<a href="https://suckless.org/">suckless</a>” tools, I also like a good
+web browser and a good Lisp machine emulator/text editor (read: Emacs)
+so it really just depends on what exactly you want to be doing. There is
+no one single tool for everything (no, not even Emacs). But for what
+it’s worth, here’s my general list. Only things that are reasonably good
+for something are below. I leave off anything that I would generally
+avoid.</p>
+<h3 id="just-for-distraction-free-writing-and-basic-things">Just for
+distraction-free writing and basic things:</h3>
+<ul>
+<li>Operating System: <a href="https://www.netbsd.org/">NetBSD</a> &gt;
+<a href="https://www.openbsd.org/">OpenBSD</a> &gt; <a
+href="https://voidlinux.org/">Void Linux</a> &gt; <a
+href="https://www.alpinelinux.org/">Alpine Linux</a> &gt; Other
+Linux/Unix/BSD</li>
+<li>Window Manager: <a
+href="https://www.linuxjournal.com/content/without-gui-how-live-entirely-terminal">none</a>
+&gt; <a href="https://www.gnu.org/software/screen/">Screen</a> &gt; <a
+href="https://www.nongnu.org/ratpoison/">ratpoison</a> &gt; <a
+href="https://stumpwm.github.io/">stumpwm</a> &gt; <a
+href="https://dwm.suckless.org/">dwm</a></li>
+<li>Editor (first drafts): <a
+href="https://github.com/phonologus/qed-new">qed</a> &gt; <a
+href="https://www.gnu.org/software/ed/">ed</a> &gt; <a
+href="https://ex-vi.sourceforge.net/">vi</a> &gt; <a
+href="https://www.vim.org/">Vim</a></li>
+<li>Editor (serious editing): <a
+href="https://www.gnu.org/software/emacs/">Emacs</a> &gt; <a
+href="https://www.vim.org/">Vim</a></li>
+<li>Terminal emulator: console mode &gt; <a
+href="https://alacritty.org/">Alacritty</a> &gt; <a
+href="https://st.suckless.org/">st</a></li>
+<li>Browser (TTY): <a href="https://w3m.sourceforge.net/">w3m</a> &gt;
+<a
+href="https://www.gnu.org/software/emacs/manual/html_mono/eww.html">eww</a>
+&gt; <a href="https://lynx.invisible-island.net/">lynx</a></li>
+<li>Brower (GUI): <a href="https://qutebrowser.org/">Qutebrowser</a>
+&gt; <a href="https://www.firefox.com/en-US/">Firefox</a> (with <a
+href="https://vimium.github.io/">Vimium</a>) &gt; <a
+href="https://www.google.com/chrome/">Chrome</a> (with <a
+href="https://vimium.github.io/">Vimium</a>)</li>
+<li>Email: <a
+href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Rmail.html">rmail</a>
+(Emacs) (if you can get it working) &gt; <a
+href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Rmail.html">Gnus</a>
+(Emacs)</li>
+<li>Shell (scripting): <a
+href="https://www.in-ulm.de/~mascheck/bourne/v7/">sh</a></li>
+<li>Shell (interactive): <a href="https://www.tcsh.org/">tcsh</a> &gt;
+<a href="https://www.mirbsd.org/mksh.htm">mksh</a></li>
+<li>Programming language: <a
+href="https://www.in-ulm.de/~mascheck/bourne/v7/">sh</a> &gt; <a
+href="https://www.gnu.org/software/emacs/manual/html_node/eintr/">Emacs
+Lisp</a> (link is to the best introduction to programming ever
+written)</li>
+</ul>
+<h3 id="for-multimedia-and-other-normal-computer-things">For multimedia
+and other “normal” computer things:</h3>
+<ul>
+<li>Operating System: <a href="https://ubuntu.com/">Ubuntu</a> GNU Linux
+&gt; other mainstream Linux distros</li>
+<li>Window Manager: <a
+href="https://www.nongnu.org/ratpoison/">ratpoison</a> &gt; <a
+href="https://stumpwm.github.io/">stumpwm</a> &gt; <a
+href="https://dwm.suckless.org/">dwm</a> &gt; <a
+href="https://www.gnome.org/">Gnome</a> or whatever</li>
+<li>Editor: GNU <a href="https://www.gnu.org/software/emacs/">Emacs</a>
+&gt; <a href="https://www.vim.org/">Vim</a></li>
+<li>Terminal emulator: <a href="https://alacritty.org/">Alacritty</a>
+&gt; <a href="https://st.suckless.org/">st</a></li>
+<li>Brower: <a href="https://www.firefox.com/en-US/">Firefox</a> (with
+<a href="https://vimium.github.io/">Vimium</a> &gt; <a
+href="https://qutebrowser.org/">Qutebrowser</a> &gt; <a
+href="https://www.google.com/chrome/">Chrome</a> (with <a
+href="https://vimium.github.io/">Vimium</a>)</li>
+<li>Email: <a
+href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Rmail.html">rmail</a>
+(Emacs) (if you can get it working) &gt; <a
+href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Rmail.html">Gnus</a>
+(Emacs)</li>
+<li>Shell (scripting): <a
+href="https://www.in-ulm.de/~mascheck/bourne/v7/">sh</a></li>
+<li>Shell (interactive): <a href="https://www.tcsh.org/">tcsh</a> &gt;
+<a href="https://www.mirbsd.org/mksh.htm">mksh</a></li>
+<li>Programming Language: <a
+href="https://www.gnu.org/software/emacs/manual/html_node/eintr/">Common
+Lisp</a> or <a
+href="https://www.eecg.utoronto.ca/~jzhu/csc326/readings/iverson.pdf">APL</a></li>
+</ul>
 <center>
 © 1991-2025 E. Hawthorne Winner
 </center>

@@ -1,7 +1,20 @@
 ---
-title: <img align="center" src="me.jpg" style="max-width:15%;float:left;">Portfolio of Evans Winner
+title: Portfolio of Evans Winner
 ---
 
+<div id="toc">
+<img src="me.jpg" style="max-width:20%;float:right;border-radius:50%">
+**Categories** <br />
+[Experiment & Analysis](#experiment-and-analysis) <br />
+[Tools](#tools) <br />
+[Simulation](#simulation) <br />
+[Mathy Stuff](#mathy-stuff) <br />
+[Demonstrations](#demonstrations) <br />
+[Documentation and Howto](#documentation-and-howto) <br />
+[Opinion](#opinion) <br />
+[Coursework and Exercises](#coursework-and-exercises) <br />
+</div>
+<br />
 
 ## Experiment & Analysis
 
@@ -29,6 +42,7 @@ wear ear protection if they expect to be on the floor for more than a few
 minutes, and might as well get in the habit of always having ear protection on
 hand when entering the main datacenter floor."
 </div>
+
 ## Tools
 
 <div class="box"> <img src="piltdown.jpg"
@@ -68,13 +82,11 @@ stack. Once you get back, pop the stack and see what you were doing.<br />
 <div class="box"><b>[AJSIM](https://github.com/EvansWinner/ajsim)</b> (GitHub, 2013)<br />
 AJSIM is a
 simulator written from scratch in **Common Lisp** for some of IBM’s [AJS job
-scheduler](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzasn/rzasnajsmanage.htm)
-that I actually used for validating schedules on production machines.<br /></div>
+scheduler](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzasn/rzasnajsmanage.htm), and which
+I actually used for validating schedules on production machines.<br /></div>
 
 <div class="box"><b>[auctions.py](https://gist.github.com/EvansWinner/064932a724caa2c816a768792a6903da)</b> (GitHub Gist, ~2019)<br />
-auctions.py is a little eBay auction simulator, using **simpy** in **Python**.<br />
-</div>
-
+auctions.py is a little eBay auction simulator, using **simpy** in **Python**.</div>
 
 ## Mathy stuff
 
@@ -107,7 +119,7 @@ implementing a kNN classifier and running it on the famous Iris dataset. Written
 using **Kallychore** (see above).</div>
 
 
-## Documentation and How-to
+## Documentation and Howto
 
 <div class="box">
 <b>[Awesome Line Editors](https://github.com/evanswinner/awesome-line-editors)</b> (GitHub, 2024)<br />
@@ -152,7 +164,7 @@ Two](http://thornepublic.blogspot.com/2018/03/one-space-or-two.html)</b>
 crucial question: One or two spaces between sentences?</div>
 
 
-## School work and misc. exercises
+## Coursework and exercises
 
 <div class="box">
 <img src="bmi.png" style="max-width:35%;float:left;"><b>[Exploring the
@@ -165,4 +177,6 @@ less.</div>
 <div class="box">
 <b>[Math and Coding Exercises](http://github.com/evanswinner/math-and-coding-exercises)</b> (GitHub, various dates)<br />
 Lots of little exercises in **APL**, **Python**, **Fortran**, **C**, **Haskell**, **Forth**, and **Lisp**
-from Project Euler, Rosetta Code, Project Lovelace, various books, etc.</div>
+from Project Euler, Rosetta Code, Project Lovelace, various books, etc.
+
+My personal favorite is a solution to Project Euler's problem 19 using Dyalog APL in a Jupyter [notebook](https://github.com/EvansWinner/math-and-coding-exercises/blob/master/euler_19_apl.ipynb).</div>

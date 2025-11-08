@@ -834,41 +834,48 @@
       margin: 10px;
       overflow: auto;
   }
+
+  #toc {
+      padding: 10px;
+      margin: 10px;
+      overflow: auto;
+      float:left;
+  }
   </style>
 
 </head>
 <body>
+</center>
+<div class="box">
 <center>
-<a href="./index.html">Blog</a> | <a
-href="./etceteras.html">Etceteras</a> | <a href="./about.html">About</a>
-| <a href="./portfolio.html">Portfolio</a> | <a
-href="./resume.html">Resume</a> | <a
+<a href="./about.html">About</a> | <a
+href="./portfolio.html">Portfolio</a> | <a href="./index.html">Blog</a>
+| <a href="./etceteras.html">Etceteras</a> | <a
+href="./resume.html">Resume</a><br /> <a
 href="https://github.com/evanswinner">GitHub</a> | <a
+href="https://x.com/evans_h_winner/">Twitter</a> | <a
 href="https://www.linkedin.com/in/evanswinner/">LinkedIn</a> | <a
-href="./vcard.vcf">vCard</a> | <a href="./colophon.html">Colophon</a> |
-<a href="mailto:evans.winner@gmail.com">Email</a>
+href="./vcard.vcf">vCard</a> | <a
+href="mailto:evans.winner@gmail.com">Email</a> | <a
+href="./colophon.html">Colophon</a>
+</center>
+</div>
 </center>
 <header id="title-block-header">
-<h1 class="title"><img align="center" src="me.jpg" style="max-width:15%;float:left;">Portfolio
-of Evans Winner</h1>
+<h1 class="title">Portfolio of Evans Winner</h1>
 </header>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#experiment-analysis"
-id="toc-experiment-analysis">Experiment &amp; Analysis</a></li>
-<li><a href="#tools" id="toc-tools">Tools</a></li>
-<li><a href="#simulation" id="toc-simulation">Simulation</a></li>
-<li><a href="#mathy-stuff" id="toc-mathy-stuff">Mathy stuff</a></li>
-<li><a href="#demonstrations"
-id="toc-demonstrations">Demonstrations</a></li>
-<li><a href="#documentation-and-how-to"
-id="toc-documentation-and-how-to">Documentation and How-to</a></li>
-<li><a href="#opinion" id="toc-opinion">Opinion</a></li>
-<li><a href="#school-work-and-misc.-exercises"
-id="toc-school-work-and-misc.-exercises">School work and misc.
-exercises</a></li>
-</ul>
-</nav>
+<div id="toc">
+<p><img src="me.jpg" style="max-width:20%;float:right;border-radius:50%">
+<strong>Categories</strong> <br /> <a
+href="#experiment-and-analysis">Experiment &amp; Analysis</a> <br /> <a
+href="#tools">Tools</a> <br /> <a href="#simulation">Simulation</a>
+<br /> <a href="#mathy-stuff">Mathy Stuff</a> <br /> <a
+href="#demonstrations">Demonstrations</a> <br /> <a
+href="#documentation-and-howto">Documentation and Howto</a> <br /> <a
+href="#opinion">Opinion</a> <br /> <a
+href="#coursework-and-exercises">Coursework and Exercises</a> <br /></p>
+</div>
+<p><br /></p>
 <h2 id="experiment-analysis">Experiment &amp; Analysis</h2>
 <div class="box">
 <p><img src="ultradian.png"
@@ -940,15 +947,14 @@ were doing.<br /></p>
 2013)<br /> AJSIM is a simulator written from scratch in <strong>Common
 Lisp</strong> for some of IBM’s <a
 href="https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzasn/rzasnajsmanage.htm">AJS
-job scheduler</a> that I actually used for validating schedules on
+job scheduler</a>, and which I actually used for validating schedules on
 production machines.<br />
 </div>
 <div class="box">
-<p><b><a
+<b><a
 href="https://gist.github.com/EvansWinner/064932a724caa2c816a768792a6903da">auctions.py</a></b>
 (GitHub Gist, ~2019)<br /> auctions.py is a little eBay auction
-simulator, using <strong>simpy</strong> in
-<strong>Python</strong>.<br /></p>
+simulator, using <strong>simpy</strong> in <strong>Python</strong>.
 </div>
 <h2 id="mathy-stuff">Mathy stuff</h2>
 <div class="box">
@@ -982,7 +988,7 @@ Bash</a></b>. (Local, 2019.7)<br /> A demonstration of the power of
 the famous Iris dataset. Written using <strong>Kallychore</strong> (see
 above).
 </div>
-<h2 id="documentation-and-how-to">Documentation and How-to</h2>
+<h2 id="documentation-and-howto">Documentation and Howto</h2>
 <div class="box">
 <b><a href="https://github.com/evanswinner/awesome-line-editors">Awesome
 Line Editors</a></b> (GitHub, 2024)<br /> A work-in-progress project to
@@ -1032,8 +1038,7 @@ Space or Two</a></b> (Blotspot, orig. 2013)<br /> In which is answered
 that age-old and ever-so crucial question: One or two spaces between
 sentences?
 </div>
-<h2 id="school-work-and-misc.-exercises">School work and misc.
-exercises</h2>
+<h2 id="coursework-and-exercises">Coursework and exercises</h2>
 <div class="box">
 <img src="bmi.png" style="max-width:35%;float:left;"><b><a
 href="intro_data_prob_project.html">Exploring the BRFSS Data</a></b>
@@ -1044,13 +1049,16 @@ really so bad, and 3) Colorado actually is the healthiest state. Well,
 more or less.
 </div>
 <div class="box">
-<b><a
+<p><b><a
 href="http://github.com/evanswinner/math-and-coding-exercises">Math and
 Coding Exercises</a></b> (GitHub, various dates)<br /> Lots of little
 exercises in <strong>APL</strong>, <strong>Python</strong>,
 <strong>Fortran</strong>, <strong>C</strong>, <strong>Haskell</strong>,
 <strong>Forth</strong>, and <strong>Lisp</strong> from Project Euler,
-Rosetta Code, Project Lovelace, various books, etc.
+Rosetta Code, Project Lovelace, various books, etc.</p>
+My personal favorite is a solution to Project Euler’s problem 19 using
+Dyalog APL in a Jupyter <a
+href="https://github.com/EvansWinner/math-and-coding-exercises/blob/master/euler_19_apl.ipynb">notebook</a>.
 </div>
 <center>
 © 1991-2025 E. Hawthorne Winner
