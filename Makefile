@@ -38,38 +38,38 @@ footer.html : footer.md
 
 portfolio : portfolio.html header.html footer.html
 portfolio.html : portfolio.md portfolio.css
-	pandoc --from markdown+pipe_tables -thtml5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o portfolio.html portfolio.md
+	pandoc -fmarkdown+pipe_tables -thtml5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o portfolio.html portfolio.md
 
-etceteras : etceteras.html header.html footer.html
-etceteras.html : etceteras.md portfolio.css
-	pandoc --from markdown+pipe_tables -thtml5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o etceteras.html etceteras.md
+etceteras : etceteras.html
+etceteras.html : etceteras.md portfolio.css header.html footer.html
+	pandoc -fmarkdown+pipe_tables -thtml5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o etceteras.html etceteras.md
 
-colophon : colophon.html header.html footer.html
-colophon.html : colophon.md portfolio.css
-	pandoc --from markdown+pipe_tables -t html5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o colophon.html colophon.md
+colophon : colophon.html
+colophon.html : colophon.md portfolio.css header.html footer.html
+	pandoc -fmarkdown+pipe_tables -thtml5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o colophon.html colophon.md
 
-writing : writing.html header.html footer.html
-writing.html : writing.md portfolio.css
-	pandoc --from markdown+pipe_tables -t html5 -Bheader.html -Afooter.html --toc --include-in-header=portfolio.css -o writing.html writing.md
+writing : writing.html
+writing.html : writing.md portfolio.css header.html footer.html
+	pandoc -fmarkdown+pipe_tables -thtml5 -Bheader.html -Afooter.html --toc --include-in-header=portfolio.css -o writing.html writing.md
 
-skills : skills.html header.html footer.html
-skills.html : skills.md portfolio.css
-	pandoc --from markdown -t html5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o skills.html skills.md
+skills : skills.html
+skills.html : skills.md portfolio.css header.html footer.html
+	pandoc -fmarkdown+pipe_tables -thtml5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o skills.html skills.md
 
-resume : resume.html header.html footer.html
-resume.html : resume.md portfolio.css
-	pandoc --from markdown -t html5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o resume.html resume.md
+resume : resume.html
+resume.html : resume.md portfolio.css header.html footer.html
+	pandoc -fmarkdown+pipe_tables -thtml5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o resume.html resume.md
 
-about : about.html header.html footer.html
-about.html : about.md portfolio.css
-	pandoc --from markdown -t html5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o about.html about.md
+about : about.html
+about.html : about.md portfolio.css header.html footer.html
+	pandoc -fmarkdown+pipe_tables -thtml5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o about.html about.md
 
-index : index.html header.html footer.html
-index.html : index.md portfolio.css
-	pandoc -s -f markdown -t html5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o index.html index.md
+index : index.html
+index.html : index.md portfolio.css header.html footer.html
+	pandoc -fmarkdown+pipe_tables -thtml5 -Bheader.html -Afooter.html --include-in-header=portfolio.css -o index.html index.md
 
 status-log : status-log.html
-status-log.html : status-log.csv status-log.Rmd
+status-log.html : status-log.csv status-log.Rmd 
 	${rscript} -e "rmarkdown::render('status-log.Rmd')"
 
 sets : sets.html
