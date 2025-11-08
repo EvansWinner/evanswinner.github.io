@@ -692,12 +692,21 @@ body :checked+.radio-label {
   margin:0 auto;
 }
 
+@media (max-width: 600px) {
+  .columns-container {
+    flex-direction: column; 
+    width: 95%; 
+    gap: 0;
+  }
+}
+  
 .column {
   display:flex;
   flex-direction:column;
   flex:1;
   padding:0; 
   margin:0;
+  margin-bottom: 20px;
 }
 
 .box {
