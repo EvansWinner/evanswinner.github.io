@@ -47,8 +47,9 @@ hand when entering the main datacenter floor."
 ## Tools
 
 <div class="flowing-columns-container">
+
 <div class="box"> <img src="piltdown.jpg"
-style="max-width:20%;float:left"><b>[Piltdown](https://github.com/EvansWinner/piltdown)</b>  (GitHub, 2021)<br />
+style="max-width:40%;float:left"><b>[Piltdown](https://github.com/EvansWinner/piltdown)</b>  (GitHub, 2021)<br />
 Always wanted to use Python to generate data visualizations for your Twitter
 posts using pure Unicode? No? Just me? Well, now you can anyway.
 Despite the very tongue-in-cheek README, this does provide Python functions to
@@ -56,6 +57,12 @@ generate -- <b>column sparklines</b>, <b>win/lose sparklines</b>, <b>comparison
 charts</b>, <b>horizontal bar charts</b>, <b>horizontal and vertical dot
 charts</b>, <b>waffle charts</b>, <b>scaled-up
 numbers</b>, <b>contingency and other simple tables</b>, and <b>tally charts</b>.</div>
+
+<div class="box"><b>
+<img src="dashiScreenshot.png" style="max-width:50%;float:left">[Dashi](https://github.com/EvansWinner/dashi)</b> (GitHub, 2025)<br />
+A data dashboard engine for GNU Emacs (**Emacs Lisp**).<br />
+A work in progress.<br />
+</div>
 
 <div class="box"> <img src="kallychore.png"
 style="max-width:40%;float:left"><b>[Kallychore](https://github.com/EvansWinner/kallychore)</b> (GitHub, 2018)<br/>
@@ -77,7 +84,9 @@ Blogspot. This is for people who have constant interruptions. When something
 interrupts you, push a couple of words about what you are doing onto the
 stack. Once you get back, pop the stack and see what you were doing.<br />
 </div>
+
 </div>
+
 
 ## Simulation
 
